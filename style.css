@@ -1,0 +1,227 @@
+
+/** CSS for all web pages :) **/
+body {
+	font-size: 62.5%;
+
+}
+
+.topnav{
+	border-bottom: 3PX solid #fc5f4c;
+	background-color: #ad100f;
+	height: 15vh;
+}
+
+
+@media (max-width:991px) {
+	.nav-item {
+		background-color: #ad100f;
+		border: 2px solid #fc5f4c;
+	}
+}
+  
+
+
+.intro{
+	background-image: linear-gradient(to top, #c4241c, #cf3125, #d93c2e, #e44737, #ee5140, #f35d44, #f86948, #fd744c, #fd824e, #fd9051, #fd9d56, #fca95d);
+	width: 100%;
+	min-height: 90vh;
+	background-size: contain;
+    grid-column-gap: 5%;
+	padding-top: 8%;
+}
+
+
+.info{
+	background-image: linear-gradient(to top, #c4241c, #cf3125, #d93c2e, #e44737, #ee5140, #f35d44, #f86948, #fd744c, #fd824e, #fd9051, #fd9d56, #fca95d);
+	height: 90vh;
+}
+
+.pd_summary{
+	background-image: linear-gradient(to top, #c4241c, #cf3125, #d93c2e, #e44737, #ee5140, #f35d44, #f86948, #fd744c, #fd824e, #fd9051, #fd9d56, #fca95d);
+	background-size: contain;
+	padding-top: 10vh;
+	padding-bottom: 10vh;
+	border-bottom: 3PX solid #fc5f4c;
+}
+
+.pd_header{
+	padding-bottom: 3vh;
+}
+
+.hp_padding{
+	padding-top: 3vh;
+}
+
+.container_1{
+	margin-top: 10vh;
+	margin-bottom: 10vh;
+}
+
+.container_2{
+	margin-top: 5vh;
+	margin-bottom: 5vh;
+}
+
+.pd_weaknesses{
+	background-size: contain;
+	padding-top: 10vh;
+	padding-bottom: 10vh;
+	border-bottom: 3PX solid #fc5f4c;
+}
+
+.about{
+	background-size: contain;
+	margin-top: 8vh;
+	margin-bottom: 8vh;
+}
+
+
+
+.text{
+	font-size: 1.5em;
+}
+
+.smalltext{
+	font-size: 1em;
+}
+.smallertext{
+	font-size: 1em;
+}
+
+
+.pagecontent{
+	height: 90vh;
+}
+
+.logo{
+	width: 30dvw;
+}
+
+.hpimg{
+	width: 30dvw;
+	padding:5%;
+}
+
+.lead{
+	width: auto;
+}
+
+.navlogo{
+	width: 20vh;
+}
+	
+
+
+.title{
+	line-height: 10vh;
+	color:white;
+	padding-bottom: 2%;
+}
+
+.subtitle{
+	line-height: 10vh;
+	color:white;
+	padding-bottom: 5%;
+}
+
+.video{
+	max-width: 100%;
+	height: auto;
+	width: auto\9;
+}
+
+
+.footerintro{
+	background-color: #ad100f;
+	height: 15vh;
+	position: fixed;
+	bottom: 0;
+	margin-top: auto;
+}
+
+.footer{
+	background-color: #ad100f;
+	height: 15vh;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+}
+
+
+h1{
+	color: #470000;
+}
+
+.arrow{
+	position: absolute;
+	bottom: 0;
+	right: 25%;
+}
+
+.card .img-fit {
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+
+.card {
+    /* display: flex; */
+    height: 100%;
+    /* flex-direction: column; */
+}
+
+.card-body {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+}
+
+.card-text {
+    /* flex: 1; */
+    flex-grow: 1;
+}
+
+@media (max-width: 767.98px) {
+    .card .img-fit {
+        aspect-ratio: 1.45 / 1;
+        object-fit: cover;
+    }
+}
+
+
+
+@media screen and (max-width: 925px) {
+
+    .logo {display:none;}
+
+}
+
+@media screen and (max-width: 925px) {
+
+    .hpimg {display:none;}
+
+}
+
+@media (max-width: 925px) {
+    .text{font-size: 0.75em;}
+}
+
+@media (max-width: 925px) {
+    .smalltext{font-size: 0.7em;}
+}
+
+.hidden{
+	display: none;
+}
+
+h5:hover {
+	color: #fc514c;
+  }
+
+@media (max-width: 1208px) {
+    .smallertext{font-size: 0.7em;}
+}
+
+@media (max-width: 925px) {
+    .weaknesses{height: 250vh;}
+}
