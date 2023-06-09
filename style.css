@@ -6,42 +6,171 @@ body {
 }
 
 .topnav{
-	border-bottom: 3PX solid #fc5f4c;
-	background-color: #ad100f;
+	border-bottom: 3PX solid #2f1691;
+	background-color: #07011B;
 	height: 15vh;
 }
 
-
 @media (max-width:991px) {
 	.nav-item {
-		background-color: #ad100f;
-		border: 2px solid #fc5f4c;
+		background-color: #07011B;
+		border: 2px solid #2f1691;
 	}
 }
   
 
+/** Navbar Experiment **/
+::-webkit-scrollbar
+{
+    width: 0;
+}
+#scrollPath
+{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 10 px;
+    height: 100%;
+	background: linear-gradient(to top, #07011b, #600e1c, #bb1b1b, #ec5527, #ffd042);
+}
+
+#progressbar
+{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 10px;
+    height: 50%;
+    border-radius: 10px;
+    background: linear-gradient(to top, #07011b, #600e1c, #bb1b1b, #ec5527, #ffd042);
+    animation: animate 5s linear infinite;
+
+}
+
+#progressbar:before
+{
+    content:'';
+    position: absolute;
+    top: 0;
+    Left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, #07011b, #600e1c, #bb1b1b, #ec5527, #ffd042);
+    filter: blur(10px);
+}
+
+#progressbar:before,
+#progressbar:after
+{
+    content:'';
+    position: absolute;
+    top: 0;
+    Left: 0;
+    width: 10px;
+    height: 100%;
+    background: linear-gradient(to top,  #07011b, #600e1c, #bb1b1b, #ec5527, #ffd042);
+    filter: blur(30px);
+
+}
+#progressbar:after
+{
+    content:'';
+    position: absolute;
+    top: 0;
+    Left: 0;
+    width: 10[x];
+    height: 100%;
+    background: linear-gradient(to top,  #07011b, #600e1c, #bb1b1b, #ec5527, #ffd042);
+    filter: blur(30px);
+
+}
+
+@keyframes animate
+{
+    0%,100%
+    {
+        filter: hue-rotate(0deg);
+    }
+    50%
+    {
+        filter: hue-rotate(15deg);
+    }
+}
+
+/**  **/
+
+
+
+
+
+/** Text CSS **/
+
+.title{
+	line-height: 10vh;
+	color:white;
+	padding-bottom: 2%;
+}
+
+.subtitle{
+	line-height: 10vh;
+	color:white;
+	padding-bottom: 2%;
+}
+
+.text{
+	font-size: 1.5em;
+}
+
+.smalltext{
+	font-size: 1em;
+}
+.smallertext{
+	font-size: 1em;
+}
+
+
+
+
+
+/** Section Blocking Format **/
 
 .intro{
-	background-image: linear-gradient(to top, #c4241c, #cf3125, #d93c2e, #e44737, #ee5140, #f35d44, #f86948, #fd744c, #fd824e, #fd9051, #fd9d56, #fca95d);
+	background-color: #07011b;
 	width: 100%;
 	min-height: 90vh;
 	background-size: contain;
     grid-column-gap: 5%;
 	padding-top: 8%;
+	border-bottom: 3PX solid #2f1691;
 }
 
+.subsection{
+	background-size: contain;
+	background-color: #0f0339;
+	padding-top: 10vh;
+	padding-bottom: 10vh;
+	border-bottom: 3PX solid #2f1691;
+}
 
 .info{
-	background-image: linear-gradient(to top, #c4241c, #cf3125, #d93c2e, #e44737, #ee5140, #f35d44, #f86948, #fd744c, #fd824e, #fd9051, #fd9d56, #fca95d);
+	background-color: #07011b;
 	height: 90vh;
 }
 
 .pd_summary{
-	background-image: linear-gradient(to top, #c4241c, #cf3125, #d93c2e, #e44737, #ee5140, #f35d44, #f86948, #fd744c, #fd824e, #fd9051, #fd9d56, #fca95d);
+	background-color: #07011b;
 	background-size: contain;
 	padding-top: 10vh;
 	padding-bottom: 10vh;
-	border-bottom: 3PX solid #fc5f4c;
+	border-bottom: 3PX solid #2f1691;
+}
+
+.pd_weaknesses{
+	background-size: contain;
+	background-color: #0f0339;
+	padding-top: 10vh;
+	padding-bottom: 10vh;
+	border-bottom: 3PX solid #2f1691;
 }
 
 .pd_header{
@@ -62,13 +191,6 @@ body {
 	margin-bottom: 5vh;
 }
 
-.pd_weaknesses{
-	background-size: contain;
-	padding-top: 10vh;
-	padding-bottom: 10vh;
-	border-bottom: 3PX solid #fc5f4c;
-}
-
 .about{
 	background-size: contain;
 	margin-top: 8vh;
@@ -76,17 +198,6 @@ body {
 }
 
 
-
-.text{
-	font-size: 1.5em;
-}
-
-.smalltext{
-	font-size: 1em;
-}
-.smallertext{
-	font-size: 1em;
-}
 
 
 .pagecontent{
@@ -112,17 +223,9 @@ body {
 	
 
 
-.title{
-	line-height: 10vh;
-	color:white;
-	padding-bottom: 2%;
-}
 
-.subtitle{
-	line-height: 10vh;
-	color:white;
-	padding-bottom: 5%;
-}
+
+
 
 .video{
 	max-width: 100%;
@@ -132,7 +235,7 @@ body {
 
 
 .footerintro{
-	background-color: #ad100f;
+	background-color: #07011B;
 	height: 15vh;
 	position: fixed;
 	bottom: 0;
@@ -140,7 +243,7 @@ body {
 }
 
 .footer{
-	background-color: #ad100f;
+	background-color: #07011B;
 	height: 15vh;
 	position: fixed;
 	left: 0;
@@ -225,3 +328,4 @@ h5:hover {
 @media (max-width: 925px) {
     .weaknesses{height: 250vh;}
 }
+
