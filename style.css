@@ -1,8 +1,101 @@
 
 /** CSS for all web pages :) **/
+
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+	font-family: Calibri;
+}
+
+.top-nav{
+	border-bottom: 3PX solid #2f1691;
+	background-color: #07011B;
+	height: 16vh;
+	line-height: 16vh;
+	padding-left: 5vw;
+	padding-right: 5vw;
+}
+
+@media (max-width:991px) {
+	.nav-item {
+		background-color: #07011B;
+		border: 2px solid #2f1691;
+	}
+}
+  
+.nav-logo {
+	height: 14vh;
+	line-height: 14vh;
+}
+
+#side-bar {
+	width: 30vw;
+	min-height: 800px;
+	background-size: contain;
+	background-color: #0f0339;
+	float: left;
+	padding-left: 3vw;
+	padding-top: 3vw;
+}
+
+
+#main-section {
+	width: 70vw;
+	min-height: 400px;
+	background-size: contain;
+	padding-left: 5vw;
+	padding-top: 5vh;
+	background-color: #07011B;
+	border-bottom: 3PX solid #2f1691;
+}
+
+#sub-section {
+	width: 70vw;
+	background-size: contain;
+	min-height: 400px;
+	padding-left: 5vw;
+	padding-top: 5vh;
+	background-color: #0f0339;
+}
+
+.clearfix::after {
+	content:"";
+	display: block;
+	clear: both;
+}
+
+#main-content-wrapper {
+	display: flex;
+}
+
+#secondary-content-wrapper {
+	border-left: 3PX solid #2f1691;
+	float: right;
+	width: 70vw;
+	background-color: #07011B;
+}
+
+#footer {
+	width: 100vw;
+	height: 15vh;
+	background-color: #07011B;
+	border-top: 3PX solid #2f1691;
+	text-align: center;
+	line-height: 15vh;
+}
+
+
+
+
+
+
+
+
+
+
 body {
 	font-size: 62.5%;
-
 }
 
 .topnav{
@@ -103,7 +196,60 @@ body {
 
 /**  **/
 
+.sidebar{
+	float: left;
+	position: fixed;
+	background-color: #0f0339;
+	width: 30vw;
+	height: 100vh;
+	min-height: 90vh;
+	border-bottom: 3PX solid #2f1691;
+	padding-left: 3vw;
+	padding-bottom: 15vh;
+}
 
+#page-container {
+	position: relative;
+	min-height: 100vh;
+	background-color: #0f0339;
+}
+  
+#content-wrap {
+	margin-bottom: 15vh;
+}
+  
+.footer2 {
+	position: fixed;
+	bottom: 0;
+	width: 100vw;
+	height: 15vh;
+	background-color: #07011B;
+
+}
+
+
+.mainsection2 {
+	float: right;
+	background-color: #07011b;
+	width: 70vw;
+	min-height: 90vh;
+	background-size: contain;
+    grid-column-gap: 5%;
+	padding-top: 8%;
+	border-bottom: 3PX solid #2f1691;
+	border-left: 3PX solid #2f1691;
+}
+
+.subsection2 {
+	float: right;
+	width: 70vw;
+	background-size: contain;
+	background-color: #0f0339;
+	padding-top: 10vh;
+	padding-bottom: 10vh;
+	border-bottom: 3PX solid #2f1691;
+	border-left: 3PX solid #2f1691;
+}
 
 
 
@@ -116,22 +262,22 @@ body {
 }
 
 .subtitle{
-	line-height: 10vh;
+	line-height: 8vh;
 	color:#fbe395;
 	padding-bottom: 2%;
 }
 
 .text{
-	font-size: 1.5em;
-	color:#fbe395;
+	font-size: 6h;
+	color:#fef1c5;
 }
 
 .smalltext{
-	font-size: 1em;
+	font-size: 4vh;
 	color:#fbe395;
 }
 .smallertext{
-	font-size: 1em;
+	font-size: 2vh;
 	color:#fbe395;
 }
 
@@ -142,6 +288,16 @@ body {
 /** Section Blocking Format **/
 
 .intro{
+	background-color: #07011b;
+	width: 100%;
+	min-height: 90vh;
+	background-size: contain;
+    grid-column-gap: 5%;
+	padding-top: 8%;
+	border-bottom: 3PX solid #2f1691;
+}
+
+.mainsection{
 	background-color: #07011b;
 	width: 100%;
 	min-height: 90vh;
@@ -221,9 +377,7 @@ body {
 	padding:5%;
 }
 
-.lead{
-	width: auto;
-}
+
 
 
 	
