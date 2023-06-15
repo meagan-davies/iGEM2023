@@ -67,30 +67,21 @@
 
 #main-content-wrapper {
 	display: flex;
+	background-size: contain;
 }
 
 #secondary-content-wrapper {
 	border-left: 3PX solid #2f1691;
 	float: right;
-	width: 70vw;
+	width: 70vw - 3px;
 	background-color: #07011B;
 }
 
-#footer {
-	width: 100vw;
-	height: 15vh;
-	background-color: #07011B;
-	border-top: 3PX solid #2f1691;
-	text-align: center;
-	line-height: 15vh;
+
+.section {
+	padding-left: 3vw;
+	padding-right: 3vw;
 }
-
-
-
-
-
-
-
 
 
 
@@ -111,10 +102,77 @@ body {
 	}
 }
   
-.navlogo
-{
-	height: 14vh;
+.nav-logo {
+	height: 16vh;
+	display: flex;
 }
+
+
+
+/** FOOTER **/
+
+#page-footer {
+	padding: 2%;
+	/* background-image: url("img/footer-design.svg"); */
+	background-color: #07011B;
+	border-top: 3PX solid #2f1691;
+	color: #fbe395;
+}
+
+
+.footer-logo{
+	width: 10rem;
+}
+
+.social-media{
+	width:1.5rem;
+	padding: 0.1rem;
+}
+
+.fb{
+	width: 1.2rem;
+}
+
+.socials{
+	margin-top: 1rem;
+	padding-left: 0.7rem;
+}
+
+.nav-title{
+	line-height: 10vh;
+	text-decoration: none;
+	color: #fbe395;
+	padding-bottom: 2%;
+}
+
+#footer ul a{
+	color: white; 
+	text-decoration: none;
+	font-weight: 100;
+	padding: 0 0rem;
+	text-align: left;
+}
+
+#footer ul a:hover{
+	text-decoration: underline;
+	color: #fbe395;
+}
+
+#footer h3{
+	color: #fbe395; 
+	text-decoration: none;
+	padding: 0 0rem;
+	text-align: left;
+	font-size: large;
+}
+
+#footer .section {
+	padding-top: 2vh;
+}
+
+
+
+
 
 /** Navbar Experiment **/
 ::-webkit-scrollbar
