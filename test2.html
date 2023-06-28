@@ -65,11 +65,13 @@
                 width: 100;
                 height: 70vh;
                 background-color: #07011B;
+                /*background-image: url("img/Background Design.svg");*/
                 border-bottom: 3PX solid black;
                 color: #fbe395;
-                text-align: center;
-                line-height: 70vh;
+                font-size: 2rem;
                 margin-top: 5rem;
+                padding-top: 15rem;
+                padding-left: 5rem;
             }
 
             #main-div {
@@ -97,8 +99,37 @@
                 background-color: #07011B;
                 color: #fbe395;
                 float: right;
-                text-align: center;
-                line-height: 800px;
+            }
+
+            #main-content p {
+                color: white;
+                font-size: 1.2em;
+            }
+
+            /* Glass Effect */
+            .glass {
+                background: linear-gradient(
+                    325deg,
+                    rgba(0, 0, 0, 0.912),
+                    rgba(255, 255, 255, 0)
+                );
+                backdrop-filter: blur(10px);
+                -webkit-backdrop-filter: blur(10px);
+                border-radius: 20px;
+                border: 3px solid black;
+                box-shadow: 0 10px 32px 0 rgba(0, 0, 0, 0.4);
+            }
+
+            .main-section {
+                height: fit-content;
+                padding: 3rem;
+                margin: 4.5rem;
+            }
+
+            .sub-section {
+                height: fit-content;
+                padding: 3rem;
+                margin: 4.5rem;
             }
 
             @media (max-width: 768px) {
@@ -140,7 +171,30 @@
             }
 
             .social-media{
-                width:1.5rem;
+                width:2.5rem;
+                padding: 0.1rem;
+            }
+
+            .social-media-fb{
+                width:2.5rem;
+                padding: 0.1rem;
+            }
+
+            .social-media-fb:hover{
+                background-image: url("img/Facebook Hover Icon (glow).svg");
+                width:2.5rem;
+                padding: 0.1rem;
+            }
+
+
+            .social-media-tw{
+                width:2.5rem;
+                padding: 0.1rem;
+            }
+
+            .social-media-tw:hover{
+                background-image: url("img/Twitter Hover Icon (glow).svg");
+                width:2.5rem;
                 padding: 0.1rem;
             }
 
@@ -213,7 +267,7 @@
                     </div>
                 
                     <!---- SMALL SCREEN MENU ICON ---->
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                 
@@ -311,7 +365,18 @@
                     Sidebar
                 </div>
                 <div id="main-content">
-                    Body Area
+                    <div class = "main-section glass">
+                        <h3>Main Section</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. Etiam dapibus condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat.</p>
+                    </div>
+                    <div class = "sub-section glass">
+                        <h3>Sub Section</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. Etiam dapibus condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat.</p>
+                    </div>
+                    <div class = "sub-section glass">
+                        <h3>Sub Section</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. Etiam dapibus condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -329,11 +394,12 @@
                             <div class="contact-nav pb-4">
                                 <h3>Follow Us</h3>
                                 <div class="socials pb-2">
-                                    <a href="https://www.facebook.com/igemcalgary/"><img src="images/Facebook Vector.svg"  class="social-media fb" alt="Facebook"></a>
-                                    <a href="https://twitter.com/igemcalgary/"><img src="images/Twitter Vector.svg"  class="social-media" alt="Twitter"></a>
-                                    <a href="https://www.instagram.com/igemcalgary/"><img src="images/Instagram Vector.svg"  class="social-media" alt="Instagram"></a>
-                                    <a href="https://www.linkedin.com/company/igem-calgary/"><img src="images/LinkedIn Vector.svg"  class="social-media" alt="LinkedIn"></a>
-                                    <a href="https://www.youtube.com/user/igemcalgary"><img src="images/Youtube Vector.svg"  class="social-media" alt="Youtube"></a>
+                                    <a href="https://www.facebook.com/igemcalgary/"><img src="img/Facebook Icon.svg"  class="social-media-fb" alt="Facebook"></a>
+                                    <a href="https://twitter.com/igemcalgary/"><img src="img/Twitter Icon.svg"  class="social-media-tw" alt="Twitter"></a>
+                                    <a href="https://www.instagram.com/igemcalgary/"><img src="img/Instagram Icon.svg"  class="social-media" alt="Instagram"></a>
+                                    <a href="https://www.linkedin.com/company/igem-calgary/"><img src="img/LinkedIn Icon.svg"  class="social-media" alt="LinkedIn"></a>
+                                    <a href="https://www.youtube.com/user/igemcalgary"><img src="img/Youtube Icon.svg"  class="social-media" alt="Youtube"></a>
+                                    <a href="https://www.tiktok.com/@igemcalgary"><img src="img/Tiktok Icon.svg"  class="social-media" alt="TikTok"></a>
                                 </div>
                                 <h3 class="pt-2">Contact Us</h3>
                                 <a href="mailto: igemcalgary@ucalgary.ca">igemcalgary@ucalgary.ca</a>
@@ -344,16 +410,16 @@
                                 <a class="nav-title" href="project.html"><h5>Project</h5></a>
                                 <ul id="project-list">
                                     <li>
-                                        <a href="description.html">Description</a>
+                                        <a href="pages/description.html">Description</a>
                                     </li>
                                     <li>
-                                        <a href="implementation.html">Implementation</a>
+                                        <a href="pages/implementation.html">Implementation</a>
                                     </li>
                                     <li>
-                                        <a href="contribution.html">Contribution</a>
+                                        <a href="pages/contribution.html">Contribution</a>
                                     </li>
                                     <li>
-                                        <a href="judging.html">Judging</a>
+                                        <a href="pages/judging.html">Judging</a>
                                     </li>
                                 </ul>
                             </div>
@@ -363,25 +429,25 @@
                                 <a class="nav-title" href="wetlab.html"><h5>Wet Lab</h5></a>
                                 <ul id="wetlab-list">
                                     <li>
-                                        <a href="design.html">Design</a>
+                                        <a href="pages/design.html">Design</a>
                                     </li>
                                     <li>
-                                        <a href="engineering.html">Engineering</a>
+                                        <a href="pages/engineering.html">Engineering</a>
                                     </li>
                                     <li>
-                                        <a href="experiments.html">Experiments</a>
+                                        <a href="pages/experiments.html">Experiments</a>
                                     </li>
                                     <li>
-                                        <a href="results.html">Results</a>
+                                        <a href="pages/results.html">Results</a>
                                     </li>
                                     <li>
-                                        <a href="proofofconcept.html">Proof of Concept</a>
+                                        <a href="pages/proofofconcept.html">Proof of Concept</a>
                                     </li>
                                     <li>
-                                        <a href="parts.html">Parts</a>
+                                        <a href="pages/parts.html">Parts</a>
                                     </li>
                                     <li>
-                                        <a href="safety.html">Safety</a>
+                                        <a href="pages/safety.html">Safety</a>
                                     </li>
                                 </ul>
                             </div>
@@ -391,10 +457,10 @@
                                 <a class="nav-title" href="drylab.html"><h5>Dry Lab</h5></a>
                                 <ul id="drylab-list">
                                     <li>
-                                        <a href="model.html">Model</a>
+                                        <a href="pages/model.html">Model</a>
                                     </li>
                                     <li>
-                                        <a href="software.html">Software</a>
+                                        <a href="pages/software.html">Software</a>
                                     </li>
                                 </ul>
                             </div>
@@ -404,10 +470,10 @@
                                 <a class="nav-title" href="humanpractices.html"><h5>Human Practices</h5></a>
                                 <ul id="humanpractices-list">
                                     <li>
-                                        <a href="integratedhumanpractices.html">Integrated Human Practices</a>
+                                        <a href="pages/integratedhumanpractices.html">Integrated Human Practices</a>
                                     </li>
                                     <li>
-                                        <a href="educationaloutreach.html">Educational Outreach</a>
+                                        <a href="pages/educationaloutreach.html">Educational Outreach</a>
                                     </li>
                                 </ul>
                             </div>
@@ -417,16 +483,16 @@
                                 <a class="nav-title" href="team.html"><h5>Team</h5></a>
                                 <ul id="team-list">
                                     <li>
-                                        <a href="members.html">Members</a>
+                                        <a href="pages/members.html">Members</a>
                                     </li>
                                     <li>
-                                        <a href="attributions.html">Attributions</a>
+                                        <a href="pages/attributions.html">Attributions</a>
                                     </li>
                                     <li>
-                                        <a href="collaborations.html">Collaborations</a>
+                                        <a href="pages/collaborations.html">Collaborations</a>
                                     </li>
                                     <li>
-                                        <a href="partnerships.html">Partnerships</a>
+                                        <a href="pages/partnerships.html">Partnerships</a>
                                     </li>
                                 </ul>
                             </div>
@@ -451,6 +517,19 @@
                 var progress = (window.pageYOffset / totalHeight) * 100;
                 progressbar.style.height = progress + "%";
                 }
+            </script>
+            <script type="text/javascript">
+                const icons = document.querySelectorAll('.socials');
+
+                icons.forEach(function(icon) {
+                    icon.addEventListener('mouseover', function() {
+                        icon.src = icon.src.replace(/(\d+)\.png$/, '2.png');
+                    });
+
+                    icon.addEventListener('mouseout', function() {
+                        icon.src = icon.src.replace(/2\.png$/, '1.png');
+                    });
+                });
             </script>
         </body>
     </html>
