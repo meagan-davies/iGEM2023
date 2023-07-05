@@ -1,0 +1,71 @@
+/*** Testing webpage styling ***/
+
+/* Styling for all pages */
+
+
+/*** FONT ***/
+
+/* Quicksand-Bold */
+@font-face {
+    font-family: 'Quicksand-Bold';
+    src:
+         url('font/quicksand/static/Quicksand-Bold.ttf') format('truetype')
+}
+
+/* Quicksand-Light */
+@font-face {
+    font-family: 'Quicksand-Light';
+    src:
+         url('font/quicksand/static/Quicksand-Light.ttf') format('truetype')
+}
+
+/* Quicksand-Medium */
+@font-face {
+    font-family: 'Quicksand-Medium';
+    src:
+         url('font/quicksand/static/Quicksand-Medium.ttf') format('truetype')
+}
+
+/* Quicksand-Regular */
+@font-face {
+    font-family: 'Quicksand-Regular';
+    src:
+         url('font/quicksand/static/Quicksand-Regular.ttf') format('truetype')
+}
+
+/* Quicksand-SemiBold */
+@font-face {
+    font-family: 'Quicksand-SemiBold';
+    src:
+         url('font/quicksand/static/Quicksand-SemiBold.ttf') format('truetype')
+}
+
+/* Open Sans-Regular */
+@font-face {
+    font-family: 'Open_Sans-Regular';
+    src:
+         url('font/open_sans/static/OpenSans-Regular.ttf') format('truetype')
+}
+
+/* Open Sans-Light */
+@font-face {
+    font-family: 'Open_Sans-Light';
+    src:
+         url('font/open_sans/static/OpenSans-Light.ttf') format('truetype')
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
