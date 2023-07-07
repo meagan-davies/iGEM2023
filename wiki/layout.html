@@ -4,7 +4,6 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="https://static.igem.wiki/common/icons/favicons/igem-2022.svg"/>
     <link rel="license" href="https://creativecommons.org/licenses/by/4.0/"/>
 
     <!-- Bootstrap CSS -->
@@ -13,9 +12,10 @@
     <!-- Custom CSS -->
     <link href="{{ url_for('static', filename = 'style.css') }}" rel="stylesheet">
 
-    <!-- Testing CSS -->
-    <link href="{{ url_for('static', filename = 'styling.css') }}" rel="stylesheet">
+    <!-- Dark/Light Mode CSS -->
+    <link id="css-file" href="{{ url_for('static', filename='dark-mode.css') }}" rel="stylesheet">
 
+    
     <title>{% block title %}{% endblock %} | Calgary - iGEM 2023</title>
 
 </head>
@@ -40,5 +40,20 @@
 
   <!-- Bootstrap Bundle with Popper -->
   <script src="{{ url_for('static', filename = 'bootstrap.bundle.min.js') }}"></script>
-</body>
+  <script>
+    function togglerCSS() {
+      var styleSheet = document.getElementById('css-file');
+      var currentStyle = styleSheet.getAttribute('href');
+      var darkModeStyle = "{{ url_for('static', filename='dark-mode.css') }}";
+      var lightModeStyle = "{{ url_for('static', filename='light-mode.css') }}";
+  
+      if (currentStyle === darkModeStyle) {
+        styleSheet.setAttribute('href', lightModeStyle);
+      } else {
+        styleSheet.setAttribute('href', darkModeStyle);
+      }
+    }
+  </script>
+
+ </body>
 </html>

@@ -9,7 +9,34 @@
     font-family: 'Quicksand-Regular';
 }
 
-
+.dark-mode {
+    background-color: #07011B;
+    color: #fbe395;
+  }
+  
+  .dark-mode .navbar-nav .nav-link {
+    color: #FDF8BE;
+  }
+  
+  .dark-mode .navbar-nav .nav-link:hover {
+    color: #D62923;
+  }
+  
+  .dark-mode .dropdown-menu {
+    background-color: black;
+  }
+  
+  .dark-mode .dropdown-menu a:hover {
+    background-color: #FDF8BE;
+  }
+  
+  .dark-mode .dropdown-menu .dropdown-item {
+    color: white;
+  }
+  
+  .dark-mode .dropdown-menu .dropdown-item:hover {
+    color: #07011B;
+  }
 
 /*** TOP NAV BAR ***/
 

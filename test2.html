@@ -5,7 +5,7 @@
         <meta charset="utf-8">
     	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-		<link id="css-file" rel="stylesheet" href="styles.css">
+		<link id="css-file" rel="stylesheet" href="dark-mode.css">
         <title>CholesterLock</title>
     </head>
    
@@ -340,17 +340,17 @@
             </script>
 
             <script type="text/javascript">
-                var currentStyle = 'styles.css';
+                var currentStyle = 'dark-mode.css';
 
                 function changeCSS() {
                     var styleSheet = document.getElementById('css-file');
                     
-                    if (currentStyle === 'styles.css') {
-                        styleSheet.href = 'light-mode.css';
+                    if (currentStyle === 'dark-mode.css') {
+                        styleSheet.href = 'dark-mode.css';
                         currentStyle = 'light-mode.css';
                     } else {
-                        styleSheet.href = 'styles.css';
-                        currentStyle = 'styles.css';
+                        styleSheet.href = 'dark-mode.css';
+                        currentStyle = 'dark-mode.css';
                     }
                 }
             </script>
