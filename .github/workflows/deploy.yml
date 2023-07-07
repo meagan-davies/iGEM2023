@@ -16,7 +16,7 @@ jobs:
       - name: Build and deploy
         run: |
           mkdir public
-          mv pages/home.html public/index.html
+          mv wiki/pages/home.html public/index.html
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@4.1.1
