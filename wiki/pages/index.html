@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!--<meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+
+  <!-- Bootstrap CSS -->
+  <link href="{{ url_for('static', filename = 'bootstrap.min.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename = 'home-styling.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename = 'style.css') }}" rel="stylesheet">
+  <link id="css-file" href="{{ url_for('static', filename = 'dark-mode.css') }}" rel="stylesheet">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/ScrollTrigger.min.js"></script>
+
+  <title>CholesterLock</title>
+
+  {% block title %}Home{% endblock %}
+
+</head>
+
+ <!-- Navigation -->
+ {% include 'menu.html' %}
+
+
+
+{% block main_content %}
+
+
+
+  <!-- Section 1 Start -->
+  <section class= "section-1">
+    <div>
+      <img src = "images/logo.png" width = "500" length = "1000"></img>
+    </div>
+  </section>
+  <!-- Section 1 End -->
+
+
+<!-- Section 2 Start -->
+<section id="section-2" class = "blackbg">
+  <div>
+    <h2 class = "section-2-text">Did You Know?</h2>
+    <div class="content-container">
+      <img id="heart" src="images/whiteheart.jpg" width="400" height="400">
+      <p id="heart-text" class = "white-text"> 
+        Cardiovascular diseases are the leading cause of 
+        death worldwide and are caused by the buildup of
+        plaque on arterial walls, known as atherosclerosis.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- Section 2 End -->
+
+
+<!-- Section 3 Start -->
+<section class="section-3 grid-3">
+  <h2><strong>In 2017 1.2 billion people suffered from elevated cholesterol levels and caused 4.4 million deaths.</strong> </h2>
+    <div class = "data">44000000</div>
+    <div class = "data">12000000000</div>
+    <img src = '#'></img>
+</section>
+<!-- Section 3 End -->
+
+
+    <!-- Section 4 Start -->
+    <section class="section-4">
+      <h2><strong>Escalating cardiovascular health risks linked to cholesterol are only expected to skyrocket.</strong></h2>
+      <img src = 'images/Cholesterol Molecule.svg'></img>
+    </section>
+    <!-- Section 4 End -->
+
+    <!-- Section 5 Start -->
+     <section class="section-5 grid-5">
+      <h2> <strong>A major concern is the uptake of cholesterol via the protein NPC1L1 found in the brush border membrane of the small intestine. </strong></h2>
+      <p> The current solution is the usage of statins. But there are many potential downsides. Some of these downsides include <strong>liver damage and muscle related side effects.</strong></p>
+      <img src = 'images/NPC1L1.svg'><img>
+    </section>
+    <!-- Section 5 End -->
+
+     <!-- Section 6 Start -->
+      <section class="section-6 grid-6">
+      <h2><strong>This is where Cholesterlock can help.</strong></h2>
+      <img src= '#'></img>
+      <p> By inhibiting the function of NPC1L1, it is possible to reduce the absorption of dietary cholesterol, which can help in reducing the risk of cardiovascular diseases.</p>
+       </div>
+      </section>
+       <!-- Section 6 End -->
+
+
+       <!-- Section 7 Start -->
+      <section class="section-7 grid-7">
+        <div>
+        <h2> text here </h2>
+         </div>
+        </section>
+         <!-- Section 7 End -->
+
+{% endblock %}
+
+
+  <!-- Footer: MUST mention license AND have a link to team wiki's repository on gitlab.igem.org -->
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="{{ url_for('static', filename = 'bootstrap.bundle.min.js') }}"></script>
+
+  {% include 'footer.html' %}
+
+
+
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-pzjYCq+mqQJET5IyDmZqTNRSqf9rdHpf1CGoMv2WU7Y7r8Fp9kSd3b++bQH6Q7N6" crossorigin="anonymous"></script>
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+  function togglerCSS() {
+    var styleSheet = document.getElementById('css-file');
+    var currentStyle = styleSheet.getAttribute('href');
+    var darkModeStyle = "{{ url_for('static', filename='dark-mode.css') }}";
+    var lightModeStyle = "{{ url_for('static', filename='light-mode.css') }}";
+
+    if (currentStyle === darkModeStyle) {
+      styleSheet.setAttribute('href', lightModeStyle);
+    } else {
+      styleSheet.setAttribute('href', darkModeStyle);
+    }
+  }
+</script>
+
+</body>
+
+</html>
