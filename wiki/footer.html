@@ -1,0 +1,99 @@
+<!--FOOTER-->
+<div id="page-footer">
+  <div id="footer">
+      <div class="row pt-3">
+          <div class="col-md-2">
+              <div class="logo-nav">
+                  <a href="index.html">
+                      <img class="footer-logo" src="https://static.igem.wiki/teams/4944/wiki/img/logo.png" alt="Logo"/>
+                  </a>
+              </div>
+                <div class="contact-nav pb-4">
+                    <h3>Follow Us</h3>
+                    <div class="socials pb-2">
+                        <a href="https://www.facebook.com/igemcalgary/" class="social-media fb"><img src="https://static.igem.wiki/teams/4944/wiki/img/icons/facebook-icon.svg" alt="Facebook"></a>
+                        <a href="https://twitter.com/igemcalgary/" class="social-media tw"><img src="https://static.igem.wiki/teams/4944/wiki/img/icons/twitter-icon.svg" alt="Twitter"></a>
+                        <a href="https://www.instagram.com/igemcalgary/" class="social-media in"><img src="https://static.igem.wiki/teams/4944/wiki/img/icons/instagram-icon.svg" alt="Instagram"></a>
+                        <a href="https://www.linkedin.com/company/igem-calgary/" class="social-media li"><img src="https://static.igem.wiki/teams/4944/wiki/img/icons/linkedin-icon.svg" alt="LinkedIn"></a>
+                        <a href="https://www.youtube.com/user/igemcalgary" class="social-media yo"><img src="https://static.igem.wiki/teams/4944/wiki/img/icons/youtube-icon.svg" alt="Youtube"></a>
+                        <a href="https://www.tiktok.com/@igemcalgary" class="social-media ti"><img src="https://static.igem.wiki/teams/4944/wiki/img/icons/tiktok-icon.svg" alt="TikTok"></a>
+                    </div>
+                    <h3 class="pt-2">Contact Us</h3>
+                    <div class="socials pb-2">
+                        <a href="mailto: igemcalgary@ucalgary.ca" class="mail social-media ma"><img src="https://static.igem.wiki/teams/4944/wiki/img/icons/mail-icon.svg" alt="Mail"></a>
+                        <a href="mailto: igemcalgary@ucalgary.ca" class="mail">igemcalgary@ucalgary.ca</a>
+                    </div>
+                </div>
+          </div>
+          <div class="col-md-2">
+              <div class="section">
+                  <a class="nav-title" href="#"><h5>Project</h5></a>
+                  <ul id="project-list">
+                    <li><a href="{{ url_for('pages', page='description') }}">Description</a></li>
+                    <li><a href="{{ url_for('pages', page='implementation') }}">Implementation</a></li>
+                    <li><a href="{{ url_for('pages', page='contribution') }}">Contribution</a></li>
+                    <li><a href="{{ url_for('pages', page='notebook') }}">Notebook</a></li>
+                    <li><a href="{{ url_for('pages', page='judging') }}">Judging</a></li>
+                  </ul>
+              </div>
+          </div>
+          <div class="col-md-2">
+              <div class="section">
+                  <a class="nav-title" href="#"><h5>Wet Lab</h5></a>
+                  <ul id="wetlab-list">
+                    <li><a href="{{ url_for('pages', page='wetlab') }}">Overview</a></li>
+                    <li><a href="{{ url_for('pages', page='design') }}">Design</a></li>
+                    <li><a href="{{ url_for('pages', page='engineering') }}">Engineering</a></li>
+                    <li><a href="{{ url_for('pages', page='experiments') }}">Experiments</a></li>
+                    <li><a href="{{ url_for('pages', page='results') }}">Results</a></li>
+                    <li><a href="{{ url_for('pages', page='proof-of-concept') }}">Proof of Concept</a></li>
+                    <li><a href="{{ url_for('pages', page='parts') }}">Parts</a></li>
+                    <li><a href="{{ url_for('pages', page='safety') }}">Safety</a></li>
+                  </ul>
+              </div>
+          </div>
+          <div class="col-md-2">
+              <div class="section">
+                  <a class="nav-title" href="#"><h5>Dry Lab</h5></a>
+                  <ul id="drylab-list">
+                    <li><a href="{{ url_for('pages', page='drylab') }}">Overview</a></li>
+                    <li><a href="{{ url_for('pages', page='model') }}">Model</a></li>
+                    <li><a href="{{ url_for('pages', page='software') }}">Software</a></li>
+                  </ul>
+              </div>
+          </div>
+          <div class="col-md-2">
+              <div class="section">
+                  <a class="nav-title" href="#"><h5>Human Practices</h5></a>
+                  <ul id="humanpractices-list">
+                    <li><a href="{{ url_for('pages', page='humanpractices') }}">Overview</a></li>
+                    <li><a href="{{ url_for('pages', page='human-practices') }}">Integrated Human Practices</a></li>
+                    <li><a href="{{ url_for('pages', page='education') }}">Educational Outreach</a></li>
+                    <li><a href="{{ url_for('pages', page='sustainable') }}">Sustainability</a></li>
+                    <li><a href="{{ url_for('pages', page='entrepreneurship') }}">Entrepreneurship</a></li>
+                    <li><a href="{{ url_for('pages', page='inclusivity') }}">Inclusivity</a></li>
+                    <li><a href="{{ url_for('pages', page='branding') }}">Branding</a></li>
+                  </ul>
+              </div>
+          </div>
+          <div class="col-md-2">
+              <div class="section">
+                  <a class="nav-title" href="#"><h5>Team</h5></a>
+                  <ul id="team-list">
+                    <li><a href="{{ url_for('pages', page='team') }}">Overview</a></li>
+                    <li><a href="{{ url_for('pages', page='members') }}">Members</a></li>
+                    <li><a href="{{ url_for('pages', page='attributions') }}">Attributions</a></li>
+                    <li><a href="{{ url_for('pages', page='collaborations') }}">Collaborations</a></li>
+                    <li><a href="{{ url_for('pages', page='partnerships') }}">Partnerships</a></li>
+                  </ul>
+              </div>
+          </div>   
+      </div>
+      <div class="row pt-3 pb-3">
+          <div class="license centered col-md-12">
+              <p><small>© 2023 - Content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" rel="license">Creative Commons Attribution 4.0 International license</a>.</small></p>
+              <p><small>The repository used to create this website is available at <a href="https://gitlab.igem.org/2023/calgary">gitlab.igem.org/2023/calgary</a>.</small></p>
+          </div>
+      </div>
+  </div>
+</div>

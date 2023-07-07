@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+  
+{% block header %}Project Description{% endblock %}
+
+{% block main_content %}
+  <div id="main-div" class="clearfix">
+    <div id="sidebar">
+        <div class="side-circle"></div>
+        <div class="side-nav">
+            <ul>
+                <li><a class="side-title" href=".main-section">Overview</a></li>
+                <li><a class="side-title" href="#section1">References</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="main-content">
+        <div class="main-section glass">
+            <h3 class="subtitle">Overview</h3>
+            <p class="text">We aim to tackle the challenge of cardiovascular disease by tackling one of its causes: high cholesterol. 
+
+              Cardiovascular disease (CVD) encompasses a group of related disorders of the heart and circulatory system that can lead to death or disability, and one of the major causes of CVDs is high cholesterol. High cholesterol has two main risk factors, the first being lifestyle and the second genetics. A diet high in saturated fats coinciding with a sedentary lifestyle is often associated with high cholesterol, and for some, genetics lead to greater deposition of fat in their arteries and veins. Our team decided to tackle the issue of high cholesterol from the root, targeting both dietary cholesterol, and the absorption of saturated fatty acids used for cholesterol synthesis. 
+              
+              Looking further into this issue we discovered that current medications can be limited by side effects preventing their use by a portion of the population. With a lack of affordable alternative options, we saw an opening for an alternative therapeutic for high cholesterol to help those in need.
+              
+              To address this challenge we aim to develop an Fc-fusion protein that inhibits NPC1L1. NPC1L1 is a receptor that facilitates cholesterol and fatty acid absorption in the small intestines, and inhibition has been shown to lower cholesterol levels.<sup>1,2</sup> Our Fc-fusion protein will consist of the Immunoglobulin Gamma 1 (IgG1) linked to hedgehog protein attached to cholesterol. IgG1 will act as a chaperone protein to allow for the survival of our fusion protein through the gastrointestinal system to its target in the small intestine.<sup>3</sup> Hedgehog protein is able to undergo autoproteolysis in the presence of cholesterol: a process which results in a portion of hedgehog protein attaching to cholesterol, specifically the N-terminal domain.<sup>4,5</sup> The cholesterol attached to our fusion protein binds to NPC1L1 and blocks the continued uptake of cholesterol into the receptor. Overall this mechanism forms the basis of our Fc-fusion protein which we plan to deliver as a pill-based therapeutic to act as an alternative high cholesterol medication for those who do not benefit from common treatment methods.
+            </p>
+        </div>
+
+        <div class="sub-section">
+            <h3 id="section1" class="subtitle">References</h3>
+            <ol class="text">
+              <li>Betters JL, Yu L. NPC1L1 and cholesterol transport. FEBS Lett. 2010 Mar 19;584(13):2740-7. doi: 10.1016/j.febslet.2010.03.030.</li>
+              <li>Labonte ED, Camarota LM, Rojas JC, et al. Reduced absorption of saturated fatty acids and resistance to diet-induced obesity and diabetes by ezetimibe-treated and Npc1l1-/- mice. Am J Physiol - Gastrointest. 2008 Oct;295(4):G776-83. doi: 10.1152/ajpgi.90275.2008.</li>
+              <li>Jasion VS, Burnett BP. Survival and digestibility of orally-administered immunoglobulin preparations containing IgG through the gastrointestinal tract in humans. Nutr J. 2015 Mar 7;14(1). doi: 10.1186/s12937-015-0010-7.</li>
+              <li>Burglin TR. The Hedgehog protein family. Genome Biol. 2008 Nov 19;(11):241. doi: 10.1186/gb-2008-9-11-241.</li>
+              <li>Mann RK, Beachy PA. Novel lipid modifications of secreted protein signals. Annu Rev Biochem. 2004 Mar;73:891-923. doi: 10.1146/annurev.biochem.73.011303.073933</li>
+            </ol>
+        </div>
+
+    </div>
+  </div>
+{% endblock %}
