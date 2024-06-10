@@ -80,7 +80,7 @@ git pull
 * Note branches can be used to contain updates and prevent overwriting updates
     - When merging branches it is important to avoiding overwriting code
 
-### Vscode Extensions
+#### Vscode Extensions
 
 * Note to simplify the use of GitHub in Vscode the following extensions are utlised:
     - Git Extension Pack
