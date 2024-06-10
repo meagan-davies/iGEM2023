@@ -1,0 +1,668 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="https://static.igem.wiki/teams/4944/wiki/img/favicon.svg" type="image/svg">
+    <link rel="license" href="https://creativecommons.org/licenses/by/4.0/"/>
+
+    <!-- Bootstrap CSS -->
+    <link href="static/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap JavaScript -->
+    <script src="static/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom CSS -->
+    <link href="static/style.css" rel="stylesheet">
+
+    <!-- Dark/Light Mode CSS -->
+    <link id="css-file" href="static/dark-mode.css" rel="stylesheet">
+
+    <title> | Calgary - iGEM 2023</title>
+
+  </head>
+
+<body>
+  <!-- Navigation -->
+  <!--TOP NAVBAR-->
+<nav class="top-nav navbar navbar-expand-lg py-3 fixed-top">
+  <div class="container d-flex align-items-center">
+  
+      <!---- TEAM NAME ---->
+      <div class="logo-nav">
+          <a class="navbar-brand" href="home">
+              <img class="nav-logo" src="https://static.igem.wiki/teams/4944/wiki/img/logo.png" alt="Logo"/>
+          </a>
+      </div>
+  
+      <!---- SMALL SCREEN MENU ICON ---->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <div class="collapse navbar-collapse" id="navmenu">
+          <ul class="navbar-nav ml-auto left-aligned">
+  
+          <!---- HOME ---->
+          <li class="nav-item">
+              <a class="nav-link" href="home">Home</a>
+          </li>
+  
+          <!---- PROJECT ---->
+          <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Project
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="description">Description</a></li>
+                <li><a class="dropdown-item" href="implementation">Implementation</a></li>
+                <li><a class="dropdown-item" href="contribution">Contribution</a></li>
+                <li><a class="dropdown-item" href="engineering">Engineering</a></li>
+                <li><a class="dropdown-item" href="notebook">Notebook</a></li>
+                <li><a class="dropdown-item" href="safety">Safety</a></li>
+              </ul>
+          </li>
+  
+          <!---- WET LAB ---->
+          <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Wet Lab
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="wetlab">Overview</a></li>
+                <li><a class="dropdown-item" href="experiments">Experiments</a></li>
+                <li><a class="dropdown-item" href="results">Results</a></li>
+                <li><a class="dropdown-item" href="parts">Parts</a></li>
+              </ul>
+          </li>
+  
+          <!---- DRY LAB ---->
+          <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Dry Lab
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="drylab">Overview</a></li>
+                <li><a class="dropdown-item" href="model">Model</a></li>
+                <li><a class="dropdown-item" href="software">Software</a></li>
+              </ul>
+          </li>
+
+          <!---- HUMAN PRACTICES ---->
+          <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Human Practices
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="human-practices">Human Practices</a></li>
+                <li><a class="dropdown-item" href="humanpractices">Integrated Human Practices</a></li>
+                <li><a class="dropdown-item" href="education">Educational Outreach</a></li>
+                <li><a class="dropdown-item" href="entrepreneurship">Entrepreneurship</a></li>
+                <li><a class="dropdown-item" href="inclusivity">Inclusivity</a></li>
+                <li><a class="dropdown-item" href="branding">Branding</a></li>
+              </ul>
+          </li>
+
+          <!---- TEAM ---->
+          <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Team
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="members">Members</a></li>
+                <li><a class="dropdown-item" href="attributions">Attributions</a></li>
+                <li><a class="dropdown-item" href="collaborations">Collaborations</a></li>
+                <li><a class="dropdown-item" href="partnerships">Sponsorships</a></li>
+              </ul>
+          </li>
+          </ul>
+      </div>
+  </div>
+</nav>
+
+  <button onclick="topFunction()" id="scrollToTop"><img class="to-top-arrow" src="https://static.igem.wiki/teams/4944/wiki/img/arrow-up-s-line.svg" alt="To Top"/></button>
+  
+  <div id="wrapper-div">
+    <!--CONTENT-->
+        <div id="header-banner-div">
+            Members
+        </div>
+
+        
+
+<head>
+    <link rel="stylesheet" href="static\member-style.css">
+    
+</head>
+
+
+    <div id="main-div" class="clearfix">
+        <!--
+        <div id="sidebar">
+            <div class="side-circle"></div>
+            <div class="side-nav">
+                <ul>
+                    <li><a class="side-title" href="#section1">Section 1</a></li>
+                    <li><a class="side-title" href="#section2">Section 2</a></li>
+                    <li><a class="side-title" href="#section3">Section 3</a></li>
+                </ul>
+            </div>
+        </div>
+        -->
+
+        
+
+        <div id="main-content">
+            <div class="main-section glass">
+                
+                <p class="text" style="text-align: center;">“The strength of the team is each individual member. The strength of each member is the team.” - Phil Jackson</p>
+            </div>
+            <h1 style="font-size: 78px;color: rgb(254, 140, 47) ;text-align: center;">Wet Lab</h1>
+            <div style="margin-bottom: 30px;"></div>
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <div class="card" style="margin-right: 18px;">
+                        <div class="card-image">
+                            <img src="https://static.igem.wiki/teams/4944/wiki/team/muskaan.png" alt="Profile image">
+                        </div>
+                        <p class="name">Muskaan Puri</p>
+                        <p style="font-size: 12px;">Hello! My name is Muskaan. I am pursuing B.S. (honors) Cellular, Molecular and MIcrobial Biology with a concentration in Nanoscience. As the team lead for education and collaboration, I enjoyed discussing the importance of Synthetic Biology and spreading awareness about its advances over the years not only with iGEM and the local community, but also the global community through our various in person and virtual initiatives.I am also very much involved in Yoga, Meditation and Mindfulness activities.
+    
+                        </p>
+                    </div>
+    
+                </div>
+    
+                <div class="col-md-6">
+                    <div class="card d-flex flex-column"style="margin-left: 18px;">
+                        <div class="card-image">
+                            <img src="https://static.igem.wiki/teams/4944/wiki/team/shirin.jpg" alt="Profile image">
+                        </div>
+                        <p class="name">Shirin Rajesh</p>
+                        <p style="font-size: 13px;">Hello everyone! My name is Shirin, and I’m a second year Cellular Molecular Microbiology major.  As a part of CholesterLock’s Wet lab team, my work primarily involved bacteria and PCR but I spent time involved in every aspect of the project. I’m very passionate about science and am always up for the coolest, late lab discussions. 
+    
+    
+                        </p>
+                    </div>
+                </div>
+    
+    
+            </div>
+    
+    
+        <div class="row justify-content-center">
+            <div class="col-md-4">
+                
+
+                
+                <div class="card">
+                    <div class="card-image">
+                        <img src="https://static.igem.wiki/teams/4944/wiki/team/badra.png" alt="Profile image">
+                    </div>
+                    <p class="name">Badra Abbas</p>
+                    <p style="font-size: 14px;">Hello. I’m Badra Abbas and I’m a third year Biomedical Sciences student. So far, I’ve had pretty diverse lab experiences, but I still loved getting to solve all sorts of unexpected problems in iGEM. I spend my time skateboarding (badly), reading, painting, and trying to learn as many cool things as possible. </p>
+                </div>
+            
+                
+
+            </div>
+
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="https://static.igem.wiki/teams/4944/wiki/team/camelia.png" alt="Profile image">
+                    </div>
+                    <p class="name">Camelia Ursu</p>
+                    <p style="font-size: 13px;">Hi! My name is Camelia and I am a first year Medical student finishing my fourth year of a Bachelor’s in Biochemistry :) I have been lucky enough to get to do all sorts of lab work, ranging from zebrafish to bacteria to plants to community based research, but minipreps are still one of my most favorite lab protocols to date. I enjoy spending time with my little siblings, reading anything by Agatha Christie, cooking, and gardening (or at least trying)!
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="https://static.igem.wiki/teams/4944/wiki/team/schein.png" alt="Profile image">
+                    </div>
+                    <p class="name">Schein Chingozho</p>
+                    <p style="font-size: 13px;">Hey, my name is Schein, a third year Biomed student with a minor in Philosophy!  As much as I enjoyed spending hours in the lab running gels, my favorite part of being in iGEM was definitely getting the opportunity to speak with people in different fields, from farmers at our local markets to endocrinologists. I thoroughly enjoyed learning more about what other people are passionate about. I love trying new hobbies and my latest ones are boxing and bouldering!
+                    </p>
+                </div>
+
+        </div>
+
+
+        <div class="row justify-content-center">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="https://static.igem.wiki/teams/4944/wiki/team/eunbi.png" alt="Profile image">
+                    </div>
+                    <p class="name">Eunbi Noh</p>
+                    <p style="font-size: 12px;">Hey! My name is Eunbi and I was a member of the wet lab on team CholesterLock. Most of my time was spent troubleshooting hedgehog protein production and working with bacteria, but I enjoyed learning about the mammalian side of the lab and many new things to help accomplish our project. I have many interests in science, but I am also excited to travel and see different perspectives. Some of my hobbies when I’m not in a lab coat include lots of sports, and listening to music. 
+
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="https://static.igem.wiki/teams/4944/wiki/team/giovanna.png" alt="Profile image">
+                    </div>
+                    <p class="name">Giovanna Acosta</p>
+                    <p style="font-size: 13px;">Salutations. I’m Giovanna, and I’m a fourth year Cellular, Molecular and Microbial Biology student with a minor in Nanoscience. I was part of CholesterLock’s wet lab team and worked with both the bacterial and mammalian cell cultures. Aside from my interest in the sciences, I also have a passion for art, and pride myself as a gelato and film connoisseur. Brought a glorious card game named Cactus to the unenlightened masses in this team. Also chronically sleep-deprived.
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="https://static.igem.wiki/teams/4944/wiki/team/kasib.png" alt="Profile image">
+                    </div>
+                    <p class="name">Kasib Mir</p>
+                    <p style="font-size: 13px;">Hi! My name is Kasib and I’m a third year biomedical sciences student at the University of Calgary. I have a passion for biotechnology and synthetic biology, and played an important role as team lead on CholesterLock. My work encompassed both the wet lab and the dry lab, including mammalian cell work, bacterial troubleshooting, and helping model proteins. When I’m not in the lab, I’m usually somewhere near the mountains, or out with my dog.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+
+        <h1 style="font-size: 78px;color: rgb(254, 140, 47) ;text-align: center;">Dry Lab</h1>
+        <div style="margin-bottom: 30px;"></div>
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card d-flex flex-column"style="margin-right: 35px;">
+                    <div class="card-image">
+                        <img src="https://static.igem.wiki/teams/4944/wiki/team/meagan.png" alt="Profile image">
+                    </div>
+                    <p class="name">Meagan Davies</p>
+                    <p style="font-size: 12px;">Hi! I’m Meagan, a member of the dry lab team on CholesterLock! I am currently in my third year of Biomedical Engineering and Astrophysics. I primarily spent the summer creating our linker web app and helping code the website. My work also included keeping the team on track and ensuring things got handed in on time. I am passionate about many cool engineering projects, as well as volunteering regularly at the University’s observatory! 
+
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="col-md-6">
+                <div class="card d-flex flex-column"style="margin-left: 35px;">
+                    <div class="card-image">
+                        <img src="https://static.igem.wiki/teams/4944/wiki/team/joy.jpg" alt="Profile image">
+                    </div>
+                    <p class="name">Joy Wang</p>
+                    <p style="font-size: 13px;">Hi! I am Joy and I am a third year Geomatics Engineering student with a minor in Biomedical Engineering. My favorite part of iGEM is that I get to work on the project from various aspects and explore new perspectives and skills.  Outside of iGEM, I like to read, watch movies, exercise and learn new things. 
+
+                    </p>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card d-flex flex-column" style="margin-right: 35px;">
+                    <div class="card-image">
+                        <img src="https://static.igem.wiki/teams/4944/wiki/team/becca.png" alt="Profile image">
+                    </div>
+                    <p class="name">Becca Pettigrew</p>
+                    <p style="font-size: 12px;">Hello. I’m Becca, and I am a member of the dry lab. As part of iGEM, I got to focus a lot on the coding aspects of the project and the linker app (with my glowy supercomputer), but was also super involved in community outreach, data collection, and strategizing dry lab goals. In my free time I like to go back home to Vancouver or on long hikes! 
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="col-md-6">
+                <div class="card d-flex flex-column" style="margin-left: 35px;">
+                    <div class="card-image">
+                        <img src="https://static.igem.wiki/teams/4944/wiki/team/parth.png" alt="Profile image">
+                    </div>
+                    <p class="name">Parth Shah</p>
+                    <p style="font-size: 13px;">Hi I’m Parth, and I'm currently pursuing a combined degree in Mechanical Engineering and Astrophysics. I am passionate about developing innovative technology to advance society such as Hybrid Rockets and Augmented Reality Smart Glasses. I was a member of the dry lab team over the summer, where I was part of the programming process and created ways for our lab to keep track of everything we did, from materials to protocols to committee work. 
+
+
+
+
+                    </p>
+                </div>
+            </div>
+
+
+        </div>
+
+        <h1 style="font-size: 78px;color: rgb(254, 140, 47) ;text-align: center;">Advisors</h1>
+        <div style="margin-bottom: 30px;"></div>
+
+        <div class="row justify-content-center">
+            <div class="col-md-4">
+                
+
+                
+                <div class="card" style="height: auto;">
+                    <div class="card-image" >
+                        <img src="https://static.igem.wiki/teams/4944/wiki/team/pratik.png" alt="Profile image">
+                    </div>
+                    <p class="name">Pratik Narain Srivastava</p>
+                    <p style="font-size: 14px;">Teaching Assistant</p>
+                </div>
+            
+                
+
+            </div>
+
+            <div class="col-md-4">
+                <div class="card"  style="height: auto;">
+                    <div class="card-image">
+                        <img src="https://static.igem.wiki/teams/4944/wiki/team/nick.png" alt="Profile image">
+                    </div>
+                    <p class="name">Nicholas Perewernycky</p>
+                    <p style="font-size: 14px;">Teaching Assistant
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-4" >
+                <div class="card" style="height: auto;">
+                    <div class="card-image">
+                        <img src="https://static.igem.wiki/teams/4944/wiki/team/pranev.jpg" alt="Profile image">
+                    </div>
+                    <p class="name">Pranav Saligrama Ramesh</p>
+                    <p style="font-size: 14px;">Teaching Assistant
+                    </p>
+                </div>
+
+        </div>
+
+
+        <h1 style="font-size: 78px;color: rgb(254, 140, 47) ;text-align: center;">Principle Investigators</h1>
+        <div style="margin-bottom: 30px;"></div>
+
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card d-flex flex-column" style="margin-right: 35px; height: auto;">
+                    <div class="card-image">
+                        <img src="https://static.igem.wiki/teams/4944/wiki/team/mayi.png" alt="Profile image">
+                    </div>
+                    <p class="name">Mayi Arcellana-Panlilio</p>
+                    <p style="font-size: 14px;">Professor (Teaching) | Biochem & Molecular Biology
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="col-md-6">
+                <div class="card d-flex flex-column" style="margin-left: 35px;height: auto;">
+                    <div class="card-image">
+                        <img src="https://static.igem.wiki/teams/4944/wiki/team/mark.jpg" alt="Profile image">
+                    </div>
+                    <p class="name">Mark Ungrin</p>
+                    <p style="font-size: 13px;">Associate Professor | Comparative Biology & Experimental Medicine</p>
+
+
+
+
+                    </p>
+                </div>
+            </div>
+
+
+        </div>
+
+  
+
+
+
+        </div>
+    </div>
+
+
+
+        
+    </div>
+  </div>
+
+  <!-- Footer: MUST mention license AND have a link to team wiki's repository on gitlab.igem.org -->
+  <!--FOOTER-->
+<div id="page-footer">
+  <div id="footer">
+      <div class="row pt-3">
+          <div class="col-md-2">
+              <div class="logo-nav">
+                  <a href="index.html">
+                      <img class="footer-logo" src="https://static.igem.wiki/teams/4944/wiki/img/logo.png" alt="Logo"/>
+                  </a>
+              </div>
+                <div class="contact-nav pb-4">
+                    <h3>Follow Us</h3>
+                    <div class="socials pb-2">
+                        <a href="https://www.facebook.com/igemcalgary/" class="social-media fb"><img src="https://static.igem.wiki/teams/4944/wiki/img/icons/facebook-icon.svg" alt="Facebook"></a>
+                        <a href="https://twitter.com/igemcalgary/" class="social-media tw"><img src="https://static.igem.wiki/teams/4944/wiki/img/icons/twitter-icon.svg" alt="Twitter"></a>
+                        <a href="https://www.instagram.com/igemcalgary/" class="social-media in"><img src="https://static.igem.wiki/teams/4944/wiki/img/icons/instagram-icon.svg" alt="Instagram"></a>
+                        <a href="https://www.linkedin.com/company/igem-calgary/" class="social-media li"><img src="https://static.igem.wiki/teams/4944/wiki/img/icons/linkedin-icon.svg" alt="LinkedIn"></a>
+                        <a href="https://www.youtube.com/user/igemcalgary" class="social-media yo"><img src="https://static.igem.wiki/teams/4944/wiki/img/icons/youtube-icon.svg" alt="Youtube"></a>
+                        <a href="https://www.tiktok.com/@igemcalgary" class="social-media ti"><img src="https://static.igem.wiki/teams/4944/wiki/img/icons/tiktok-icon.svg" alt="TikTok"></a>
+                    </div>
+                    <h3 class="pt-2">Contact Us</h3>
+                    <div class="socials pb-2">
+                        <a href="mailto: igemcalgary@ucalgary.ca" class="mail social-media ma"><img src="https://static.igem.wiki/teams/4944/wiki/img/icons/mail-icon.svg" alt="Mail"></a>
+                        <a href="mailto: igemcalgary@ucalgary.ca" class="mail">igemcalgary@ucalgary.ca</a>
+                    </div>
+                </div>
+          </div>
+          <div class="col-md-2">
+              <div class="section">
+                  <a class="nav-title" href="#"><h5>Project</h5></a>
+                  <ul id="project-list">
+                    <li><a href="description">Description</a></li>
+                    <li><a href="implementation">Implementation</a></li>
+                    <li><a href="contribution">Contribution</a></li>
+                    <li><a href="engineering">Engineering</a></li>
+                    <li><a href="notebook">Notebook</a></li>
+                    <li><a href="safety">Safety</a></li>
+                  </ul>
+              </div>
+          </div>
+          <div class="col-md-2">
+              <div class="section">
+                  <a class="nav-title" href="#"><h5>Wet Lab</h5></a>
+                  <ul id="wetlab-list">
+                    <li><a href="wetlab">Overview</a></li>
+                    <li><a href="experiments">Experiments</a></li>
+                    <li><a href="results">Results</a></li>
+                    <li><a href="parts">Parts</a></li>
+                  </ul>
+              </div>
+          </div>
+          <div class="col-md-2">
+              <div class="section">
+                  <a class="nav-title" href="#"><h5>Dry Lab</h5></a>
+                  <ul id="drylab-list">
+                    <li><a href="drylab">Overview</a></li>
+                    <li><a href="model">Model</a></li>
+                    <li><a href="software">Software</a></li>
+                  </ul>
+              </div>
+          </div>
+          <div class="col-md-2">
+              <div class="section">
+                  <a class="nav-title" href="#"><h5>Human Practices</h5></a>
+                  <ul id="humanpractices-list">
+                    <li><a href="human-practices">Human Practices</a></li>
+                    <li><a href="humanpractices">Integrated Human Practices</a></li>
+                    <li><a href="education">Educational Outreach</a></li>
+                    <li><a href="entrepreneurship">Entrepreneurship</a></li>
+                    <li><a href="inclusivity">Inclusivity</a></li>
+                    <li><a href="branding">Branding</a></li>
+                  </ul>
+              </div>
+          </div>
+          <div class="col-md-2">
+              <div class="section">
+                  <a class="nav-title" href="#"><h5>Team</h5></a>
+                  <ul id="team-list">
+                    <li><a href="members">Members</a></li>
+                    <li><a href="attributions">Attributions</a></li>
+                    <li><a href="collaborations">Collaborations</a></li>
+                    <li><a href="partnerships">Sponsorships</a></li>
+                  </ul>
+              </div>
+          </div>   
+      </div>
+      <div class="row pt-3 pb-3">
+          <div class="license centered col-md-12">
+              <p><small>© 2023 - Content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" rel="license">Creative Commons Attribution 4.0 International license</a>.</small></p>
+              <p><small>The repository used to create this website is available at <a href="https://gitlab.igem.org/2023/calgary">gitlab.igem.org/2023/calgary</a>.</small></p>
+          </div>
+      </div>
+  </div>
+</div>
+  
+  <script>
+    function togglerCSS() {
+      var styleSheet = document.getElementById('css-file');
+      var currentStyle = styleSheet.getAttribute('href');
+      var darkModeStyle = "static/dark-mode.css";
+      var lightModeStyle = "static/light-mode.css";
+  
+      if (currentStyle === darkModeStyle) {
+        styleSheet.setAttribute('href', lightModeStyle);
+      } else {
+        styleSheet.setAttribute('href', darkModeStyle);
+      }
+    }
+  </script>
+  <script>
+    // Scroll to Top Button
+    let scrollBtn = document.getElementById("scrollToTop");
+  
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        scrollBtn.style.display = "block";
+      } else {
+        scrollBtn.style.display = "none";
+      }
+    }
+  
+    window.addEventListener('scroll', scrollFunction);
+  
+    function topFunction() {
+      document.body.scrollTop = 0; // For Safari
+      document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    }
+  
+    scrollBtn.addEventListener('click', topFunction);
+  </script>
+  <script>
+    function scrollToSection(sectionId) {
+        const section = document.getElementById(sectionId);
+        if (section) {
+            const headerHeight = 7 * parseFloat(getComputedStyle(document.documentElement).fontSize); // Calculate 5rem in pixels
+            const sectionPosition = section.getBoundingClientRect().top + window.scrollY - headerHeight;
+            window.scrollTo({ top: sectionPosition, behavior: "smooth" });
+        }
+    }
+  </script>
+<script>
+    function updateScrollProgress() {
+        let scrollProgress = document.getElementById("side-progress");
+        let progressValue = document.getElementById("side-progress-value");
+        let pos = document.documentElement.scrollTop;
+        let calcHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        let scrollValue = Math.round(pos * 100 / calcHeight);
+    
+        scrollProgress.style.background = `conic-gradient(white ${scrollValue}%, black ${scrollValue}%)`
+    }
+
+    window.addEventListener('scroll', updateScrollProgress);
+    window.addEventListener('load', updateScrollProgress);
+</script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const sidebar = document.getElementById("sidebar");
+        const headerBanner = document.getElementById("header-banner-div");
+        const sidebarContainer = document.querySelector(".side-container");
+        const footer = document.getElementById("page-footer");
+
+        function updateSidePosition() {
+            const headerHeight = headerBanner.clientHeight;
+            //CH returns the inner height of the element in px and it will remove the border, scrollbar, margin //
+        
+            const sidebarTopOffset = sidebar.offsetTop;
+            // OT will give the distance of the element relative to the top of the offsetParent
+
+            const sidebarBottom = sidebar.getBoundingClientRect().bottom;
+            const footerTop = footer.getBoundingClientRect().top;
+            //Distance from top to bottom of the sidebar in the entire document
+
+            const windowHeight = window.innerHeight;
+
+            if (window.scrollY >= sidebarTopOffset - headerHeight) {
+                sidebarContainer.classList.add("sticky-links");
+                sidebarContainer.style.top = `${-315 + headerHeight}px`; 
+                // Note: -300 can be adjust to change location of links in sidebar
+            } else {
+                sidebarContainer.classList.remove("sticky-links");
+                sidebarContainer.style.top = "0";
+            }
+
+            if (window.scrollY + windowHeight >= footerTop) {
+                sidebarContainer.style.position = "sticky";
+                sidebarContainer.style.bottom = "0";
+            } else {
+                sidebarContainer.style.position = "sticky";
+                sidebarContainer.style.bottom = "initial";
+            }
+        }
+
+        window.addEventListener("scroll", updateSidePosition);
+        window.addEventListener("resize", updateSidePosition);
+
+        // Initially call the function to set the initial state
+        updateSidePosition();
+    });
+</script>
+<script>
+    function updateSectionProgress() {
+        const sections = document.querySelectorAll(".sub-section, .sub-subsection");
+        const sidebarTitles = document.querySelectorAll(".section-link, .subsection-link");
+        let currentSectionIndex = 0;
+
+        // Find the index of the section that is currently in view
+        for (let i = sections.length - 1; i >= 0; i--) {
+            const rect = sections[i].getBoundingClientRect();
+            if (rect.top <= window.innerHeight * 0.5) {
+                currentSectionIndex = i;
+                break;
+            }
+        }
+
+        // Remove the 'active' class from all sidebar titles
+        sidebarTitles.forEach((title) => {
+            title.classList.remove("active");
+        });
+
+        // Add the 'active' class to the corresponding sidebar title
+        sidebarTitles[currentSectionIndex].classList.add("active");
+    }
+
+    // Call the function when the page loads and on scroll
+    window.addEventListener("DOMContentLoaded", updateSectionProgress);
+    window.addEventListener("scroll", updateSectionProgress);
+</script>
+<script>
+  function showRef() {
+      const refText = document.getElementById('ref-text');
+      const toggleRefButton = document.querySelector('#toggle-ref-button');
+
+      // Toggle the display property between 'block' and 'none' for the reference text
+      if (refText.style.display === 'none' || refText.style.display === '') {
+          refText.style.display = 'block';
+          toggleRefButton.style.transform = 'rotate(180deg)'; // Rotate the SVG icon
+      } else {
+          refText.style.display = 'none';
+          toggleRefButton.style.transform = 'rotate(0deg)'; // Reset the rotation
+      }
+  }
+</script>
+</body>
+</html>

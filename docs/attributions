@@ -1,0 +1,667 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="https://static.igem.wiki/teams/4944/wiki/img/favicon.svg" type="image/svg">
+    <link rel="license" href="https://creativecommons.org/licenses/by/4.0/"/>
+
+    <!-- Bootstrap CSS -->
+    <link href="static/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap JavaScript -->
+    <script src="static/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom CSS -->
+    <link href="static/style.css" rel="stylesheet">
+
+    <!-- Dark/Light Mode CSS -->
+    <link id="css-file" href="static/dark-mode.css" rel="stylesheet">
+
+    <title>Attributions | Calgary - iGEM 2023</title>
+
+  </head>
+
+<body>
+  <!-- Navigation -->
+  <!--TOP NAVBAR-->
+<nav class="top-nav navbar navbar-expand-lg py-3 fixed-top">
+  <div class="container d-flex align-items-center">
+  
+      <!---- TEAM NAME ---->
+      <div class="logo-nav">
+          <a class="navbar-brand" href="home">
+              <img class="nav-logo" src="https://static.igem.wiki/teams/4944/wiki/img/logo.png" alt="Logo"/>
+          </a>
+      </div>
+  
+      <!---- SMALL SCREEN MENU ICON ---->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <div class="collapse navbar-collapse" id="navmenu">
+          <ul class="navbar-nav ml-auto left-aligned">
+  
+          <!---- HOME ---->
+          <li class="nav-item">
+              <a class="nav-link" href="home">Home</a>
+          </li>
+  
+          <!---- PROJECT ---->
+          <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Project
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="description">Description</a></li>
+                <li><a class="dropdown-item" href="implementation">Implementation</a></li>
+                <li><a class="dropdown-item" href="contribution">Contribution</a></li>
+                <li><a class="dropdown-item" href="engineering">Engineering</a></li>
+                <li><a class="dropdown-item" href="notebook">Notebook</a></li>
+                <li><a class="dropdown-item" href="safety">Safety</a></li>
+              </ul>
+          </li>
+  
+          <!---- WET LAB ---->
+          <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Wet Lab
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="wetlab">Overview</a></li>
+                <li><a class="dropdown-item" href="experiments">Experiments</a></li>
+                <li><a class="dropdown-item" href="results">Results</a></li>
+                <li><a class="dropdown-item" href="parts">Parts</a></li>
+              </ul>
+          </li>
+  
+          <!---- DRY LAB ---->
+          <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Dry Lab
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="drylab">Overview</a></li>
+                <li><a class="dropdown-item" href="model">Model</a></li>
+                <li><a class="dropdown-item" href="software">Software</a></li>
+              </ul>
+          </li>
+
+          <!---- HUMAN PRACTICES ---->
+          <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Human Practices
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="human-practices">Human Practices</a></li>
+                <li><a class="dropdown-item" href="humanpractices">Integrated Human Practices</a></li>
+                <li><a class="dropdown-item" href="education">Educational Outreach</a></li>
+                <li><a class="dropdown-item" href="entrepreneurship">Entrepreneurship</a></li>
+                <li><a class="dropdown-item" href="inclusivity">Inclusivity</a></li>
+                <li><a class="dropdown-item" href="branding">Branding</a></li>
+              </ul>
+          </li>
+
+          <!---- TEAM ---->
+          <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Team
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="members">Members</a></li>
+                <li><a class="dropdown-item" href="attributions">Attributions</a></li>
+                <li><a class="dropdown-item" href="collaborations">Collaborations</a></li>
+                <li><a class="dropdown-item" href="partnerships">Sponsorships</a></li>
+              </ul>
+          </li>
+          </ul>
+      </div>
+  </div>
+</nav>
+
+  <button onclick="topFunction()" id="scrollToTop"><img class="to-top-arrow" src="https://static.igem.wiki/teams/4944/wiki/img/arrow-up-s-line.svg" alt="To Top"/></button>
+  
+  <div id="wrapper-div">
+    <!--CONTENT-->
+        <div id="header-banner-div">
+            Attributions
+        </div>
+
+        
+
+!-------------------------------------------------------------------------------------------------> 
+<div id="main-div" class="clearfix">
+        
+  <div id="main-content">
+      <div class="main-section glass">
+          <h3 class="subtitle">Attributions</h3>
+        <br><br>
+
+<style>* {box-sizing:border-box}
+
+    /* Slideshow container */
+    .slideshow-container {
+      max-width: 200vh;
+      position: relative;
+       
+      
+    }
+    
+    /* Hide the images by default */
+    .mySlides {
+      display: none;
+      background-color:#f2f2f2;
+      max-width: 100%;
+      position: center;
+      margin-left: 15vh; 
+      margin-right: 15vh;
+      
+    }
+    
+    /* Next & previous buttons */
+    .prev, .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      margin-top: -22px;
+      padding: 16px;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+    }
+    
+    /* Position the "next button" to the right */
+    .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+    
+    /* On hover, add a black background color with a little bit see-through */
+    .prev:hover, .next:hover {
+      background-color: rgba(0,0,0,0.8);
+    }
+    
+    /* Caption text */
+    .slidetext {
+      color: #f2f2f2;
+      font-size: 15px;
+      padding: 8px 12px;
+      position: absolute;
+      bottom: 8px;
+      width: 100%;
+      text-align: center;
+    }
+    
+    /* Number text (1/3 etc) */
+    .numbertext {
+      color: #000000;
+      font-size: 12px;
+      padding: 8px 12px;
+      position: relative;
+      top: 1vh;
+      left: 93%;
+      
+      
+    }
+    
+    /* The dots/bullets/indicators */
+    .dot {
+      cursor: pointer;
+      height: 15px;
+      width: 15px;
+      margin: 0 2px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
+    }
+    
+    .active, .dot:hover {
+      background-color: #717171;
+    }
+    
+    /* Fading animation */
+    .fade {
+      animation-name: fade;
+      animation-duration: 1.s;
+    }
+    
+    @keyframes fade {
+      from {opacity: .4}
+      to {opacity: 100%}
+    }
+    </style>
+<!------------------------------------------------------------------------------------------------->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!------------------------------------------------------------------------------------------------->
+  <!-- Slideshow container -->
+  <div class="slideshow-container">
+
+    <!-- Full-width images with number and caption text -->
+    <div class="mySlides">
+      <div class="numbertext">1 / 13</div>
+      <img src="https://static.igem.wiki/teams/4944/wiki/team/attributions-1.svg" style="width:90%" alt="Attributions-1" >
+      
+    </div>
+    
+    <div class="mySlides">
+      <div class="numbertext">2 / 13</div>
+      <img src="https://static.igem.wiki/teams/4944/wiki/team/attributions-2.svg" style="width:90%" alt="Attributions-2">
+      
+    </div>
+  
+    <div class="mySlides">
+      <div class="numbertext">3 / 13</div>
+      <img src="https://static.igem.wiki/teams/4944/wiki/team/attributions-3.svg" style="width:90%" alt="Attributions-">
+      
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">4 / 13</div>
+      <img src="https://static.igem.wiki/teams/4944/wiki/team/attributions-4.svg" style="width:90%" alt="Attributions-">
+      
+    </div>
+    
+    <div class="mySlides">
+      <div class="numbertext">5 / 13</div>
+      <img src="https://static.igem.wiki/teams/4944/wiki/team/attributions-5.svg" style="width:90%" alt="Attributions-">
+      
+    </div>
+    
+    <div class="mySlides">
+      <div class="numbertext">6 / 13</div>
+      <img src="https://static.igem.wiki/teams/4944/wiki/team/attributions-6.svg" style="width:90%" alt="Attributions-">
+      
+    </div>
+    
+    <div class="mySlides">
+      <div class="numbertext">7 / 13</div>
+      <img src="https://static.igem.wiki/teams/4944/wiki/team/attributions-7.svg" style="width:90%" alt="Attributions-">
+      
+    </div>
+    
+    <div class="mySlides">
+      <div class="numbertext">8 / 13</div>
+      <img src="https://static.igem.wiki/teams/4944/wiki/team/attributions-8.svg" style="width:90%" alt="Attributions-">
+      
+    </div>
+    
+    <div class="mySlides">
+      <div class="numbertext">9 / 13</div>
+      <img src="https://static.igem.wiki/teams/4944/wiki/team/attributions-9.svg" style="width:90%" alt="Attributions-">
+      
+    </div>
+    
+    <div class="mySlides">
+      <div class="numbertext">10 / 13</div>
+      <img src="https://static.igem.wiki/teams/4944/wiki/team/attributions-10.svg" style="width:90%" alt="Attributions-">
+      
+    </div>
+    
+    <div class="mySlides">
+      <div class="numbertext">11 / 13</div>
+      <img src="https://static.igem.wiki/teams/4944/wiki/team/attributions-11.svg" style="width:90%" alt="Attributions-">
+      
+    </div>
+    
+    <div class="mySlides">
+      <div class="numbertext">12 / 13</div>
+      <img src="https://static.igem.wiki/teams/4944/wiki/team/attributions-12.svg" style="width:90%" alt="Attributions-">
+      
+    </div>
+    
+    <div class="mySlides">
+      <div class="numbertext">13 / 13</div>
+      <img src="https://static.igem.wiki/teams/4944/wiki/team/attributions-13.svg" style="width:90%" alt="Attributions-">
+      
+    </div>
+  
+    <!-- Next and previous buttons -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+  </div>
+  <br>
+  
+  <!-- The dots/circles -->
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span>
+    <span class="dot" onclick="currentSlide(5)"></span>
+    <span class="dot" onclick="currentSlide(6)"></span>
+    <span class="dot" onclick="currentSlide(7)"></span>
+    <span class="dot" onclick="currentSlide(8)"></span>
+    <span class="dot" onclick="currentSlide(9)"></span>
+    <span class="dot" onclick="currentSlide(10)"></span>
+    <span class="dot" onclick="currentSlide(11)"></span>
+    <span class="dot" onclick="currentSlide(12)"></span>
+    <span class="dot" onclick="currentSlide(13)"></span>
+
+  </div>
+
+
+                    
+<!-------------------------------------------------------------------------------------------------> 
+<!-------------------------------------------------------------------------------------------------> 
+<script>
+  let slideIndex = 1;
+  showSlides(slideIndex);
+  
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+  
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+  
+  function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}    
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+  }
+  </script>
+<!------------------------------------------------------------------------------------------------->
+
+<!--
+  ======================================================================
+  == VERY IMPORTANT                                                   ==
+  ======================================================================
+  LEAVE THE IFRAME CODE BELOW AS IT IS, THE ATTRIBUTION FORM OF YOUR TEAM
+  WILL BE DISPLAYED ON THIS PAGE. DO NOT REMOVE IT, OTHERWISE YOU RISK OF
+  NOT MEETING BRONZE MEDAL CRITERION #2
+ 
+<div class="row mt-4" style="background-color: white;">
+  <script type="text/javascript">
+    // Listen to size change and update form height
+    window.addEventListener('message', function (e) {
+      const {type, data} = JSON.parse(e.data);
+      if (type === 'igem-attribution-form') {
+        const element = document.getElementById('igem-attribution-form')
+        element.style.height = data + 50 +'px'
+      }
+    });
+  </script>
+  <iframe
+    style='width: 100%'
+    id="igem-attribution-form"
+    src="https://attributions.igem.org?team=Calgary&year=2023"
+  >
+  </iframe> 
+</div>
+-->
+  <!-- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->         
+       </div>
+     </div>
+  </div>
+
+<br><br>
+
+
+        
+    </div>
+  </div>
+
+  <!-- Footer: MUST mention license AND have a link to team wiki's repository on gitlab.igem.org -->
+  <!--FOOTER-->
+<div id="page-footer">
+  <div id="footer">
+      <div class="row pt-3">
+          <div class="col-md-2">
+              <div class="logo-nav">
+                  <a href="index.html">
+                      <img class="footer-logo" src="https://static.igem.wiki/teams/4944/wiki/img/logo.png" alt="Logo"/>
+                  </a>
+              </div>
+                <div class="contact-nav pb-4">
+                    <h3>Follow Us</h3>
+                    <div class="socials pb-2">
+                        <a href="https://www.facebook.com/igemcalgary/" class="social-media fb"><img src="https://static.igem.wiki/teams/4944/wiki/img/icons/facebook-icon.svg" alt="Facebook"></a>
+                        <a href="https://twitter.com/igemcalgary/" class="social-media tw"><img src="https://static.igem.wiki/teams/4944/wiki/img/icons/twitter-icon.svg" alt="Twitter"></a>
+                        <a href="https://www.instagram.com/igemcalgary/" class="social-media in"><img src="https://static.igem.wiki/teams/4944/wiki/img/icons/instagram-icon.svg" alt="Instagram"></a>
+                        <a href="https://www.linkedin.com/company/igem-calgary/" class="social-media li"><img src="https://static.igem.wiki/teams/4944/wiki/img/icons/linkedin-icon.svg" alt="LinkedIn"></a>
+                        <a href="https://www.youtube.com/user/igemcalgary" class="social-media yo"><img src="https://static.igem.wiki/teams/4944/wiki/img/icons/youtube-icon.svg" alt="Youtube"></a>
+                        <a href="https://www.tiktok.com/@igemcalgary" class="social-media ti"><img src="https://static.igem.wiki/teams/4944/wiki/img/icons/tiktok-icon.svg" alt="TikTok"></a>
+                    </div>
+                    <h3 class="pt-2">Contact Us</h3>
+                    <div class="socials pb-2">
+                        <a href="mailto: igemcalgary@ucalgary.ca" class="mail social-media ma"><img src="https://static.igem.wiki/teams/4944/wiki/img/icons/mail-icon.svg" alt="Mail"></a>
+                        <a href="mailto: igemcalgary@ucalgary.ca" class="mail">igemcalgary@ucalgary.ca</a>
+                    </div>
+                </div>
+          </div>
+          <div class="col-md-2">
+              <div class="section">
+                  <a class="nav-title" href="#"><h5>Project</h5></a>
+                  <ul id="project-list">
+                    <li><a href="description">Description</a></li>
+                    <li><a href="implementation">Implementation</a></li>
+                    <li><a href="contribution">Contribution</a></li>
+                    <li><a href="engineering">Engineering</a></li>
+                    <li><a href="notebook">Notebook</a></li>
+                    <li><a href="safety">Safety</a></li>
+                  </ul>
+              </div>
+          </div>
+          <div class="col-md-2">
+              <div class="section">
+                  <a class="nav-title" href="#"><h5>Wet Lab</h5></a>
+                  <ul id="wetlab-list">
+                    <li><a href="wetlab">Overview</a></li>
+                    <li><a href="experiments">Experiments</a></li>
+                    <li><a href="results">Results</a></li>
+                    <li><a href="parts">Parts</a></li>
+                  </ul>
+              </div>
+          </div>
+          <div class="col-md-2">
+              <div class="section">
+                  <a class="nav-title" href="#"><h5>Dry Lab</h5></a>
+                  <ul id="drylab-list">
+                    <li><a href="drylab">Overview</a></li>
+                    <li><a href="model">Model</a></li>
+                    <li><a href="software">Software</a></li>
+                  </ul>
+              </div>
+          </div>
+          <div class="col-md-2">
+              <div class="section">
+                  <a class="nav-title" href="#"><h5>Human Practices</h5></a>
+                  <ul id="humanpractices-list">
+                    <li><a href="human-practices">Human Practices</a></li>
+                    <li><a href="humanpractices">Integrated Human Practices</a></li>
+                    <li><a href="education">Educational Outreach</a></li>
+                    <li><a href="entrepreneurship">Entrepreneurship</a></li>
+                    <li><a href="inclusivity">Inclusivity</a></li>
+                    <li><a href="branding">Branding</a></li>
+                  </ul>
+              </div>
+          </div>
+          <div class="col-md-2">
+              <div class="section">
+                  <a class="nav-title" href="#"><h5>Team</h5></a>
+                  <ul id="team-list">
+                    <li><a href="members">Members</a></li>
+                    <li><a href="attributions">Attributions</a></li>
+                    <li><a href="collaborations">Collaborations</a></li>
+                    <li><a href="partnerships">Sponsorships</a></li>
+                  </ul>
+              </div>
+          </div>   
+      </div>
+      <div class="row pt-3 pb-3">
+          <div class="license centered col-md-12">
+              <p><small>© 2023 - Content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" rel="license">Creative Commons Attribution 4.0 International license</a>.</small></p>
+              <p><small>The repository used to create this website is available at <a href="https://gitlab.igem.org/2023/calgary">gitlab.igem.org/2023/calgary</a>.</small></p>
+          </div>
+      </div>
+  </div>
+</div>
+  
+  <script>
+    function togglerCSS() {
+      var styleSheet = document.getElementById('css-file');
+      var currentStyle = styleSheet.getAttribute('href');
+      var darkModeStyle = "static/dark-mode.css";
+      var lightModeStyle = "static/light-mode.css";
+  
+      if (currentStyle === darkModeStyle) {
+        styleSheet.setAttribute('href', lightModeStyle);
+      } else {
+        styleSheet.setAttribute('href', darkModeStyle);
+      }
+    }
+  </script>
+  <script>
+    // Scroll to Top Button
+    let scrollBtn = document.getElementById("scrollToTop");
+  
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        scrollBtn.style.display = "block";
+      } else {
+        scrollBtn.style.display = "none";
+      }
+    }
+  
+    window.addEventListener('scroll', scrollFunction);
+  
+    function topFunction() {
+      document.body.scrollTop = 0; // For Safari
+      document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    }
+  
+    scrollBtn.addEventListener('click', topFunction);
+  </script>
+  <script>
+    function scrollToSection(sectionId) {
+        const section = document.getElementById(sectionId);
+        if (section) {
+            const headerHeight = 7 * parseFloat(getComputedStyle(document.documentElement).fontSize); // Calculate 5rem in pixels
+            const sectionPosition = section.getBoundingClientRect().top + window.scrollY - headerHeight;
+            window.scrollTo({ top: sectionPosition, behavior: "smooth" });
+        }
+    }
+  </script>
+<script>
+    function updateScrollProgress() {
+        let scrollProgress = document.getElementById("side-progress");
+        let progressValue = document.getElementById("side-progress-value");
+        let pos = document.documentElement.scrollTop;
+        let calcHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        let scrollValue = Math.round(pos * 100 / calcHeight);
+    
+        scrollProgress.style.background = `conic-gradient(white ${scrollValue}%, black ${scrollValue}%)`
+    }
+
+    window.addEventListener('scroll', updateScrollProgress);
+    window.addEventListener('load', updateScrollProgress);
+</script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const sidebar = document.getElementById("sidebar");
+        const headerBanner = document.getElementById("header-banner-div");
+        const sidebarContainer = document.querySelector(".side-container");
+        const footer = document.getElementById("page-footer");
+
+        function updateSidePosition() {
+            const headerHeight = headerBanner.clientHeight;
+            //CH returns the inner height of the element in px and it will remove the border, scrollbar, margin //
+        
+            const sidebarTopOffset = sidebar.offsetTop;
+            // OT will give the distance of the element relative to the top of the offsetParent
+
+            const sidebarBottom = sidebar.getBoundingClientRect().bottom;
+            const footerTop = footer.getBoundingClientRect().top;
+            //Distance from top to bottom of the sidebar in the entire document
+
+            const windowHeight = window.innerHeight;
+
+            if (window.scrollY >= sidebarTopOffset - headerHeight) {
+                sidebarContainer.classList.add("sticky-links");
+                sidebarContainer.style.top = `${-315 + headerHeight}px`; 
+                // Note: -300 can be adjust to change location of links in sidebar
+            } else {
+                sidebarContainer.classList.remove("sticky-links");
+                sidebarContainer.style.top = "0";
+            }
+
+            if (window.scrollY + windowHeight >= footerTop) {
+                sidebarContainer.style.position = "sticky";
+                sidebarContainer.style.bottom = "0";
+            } else {
+                sidebarContainer.style.position = "sticky";
+                sidebarContainer.style.bottom = "initial";
+            }
+        }
+
+        window.addEventListener("scroll", updateSidePosition);
+        window.addEventListener("resize", updateSidePosition);
+
+        // Initially call the function to set the initial state
+        updateSidePosition();
+    });
+</script>
+<script>
+    function updateSectionProgress() {
+        const sections = document.querySelectorAll(".sub-section, .sub-subsection");
+        const sidebarTitles = document.querySelectorAll(".section-link, .subsection-link");
+        let currentSectionIndex = 0;
+
+        // Find the index of the section that is currently in view
+        for (let i = sections.length - 1; i >= 0; i--) {
+            const rect = sections[i].getBoundingClientRect();
+            if (rect.top <= window.innerHeight * 0.5) {
+                currentSectionIndex = i;
+                break;
+            }
+        }
+
+        // Remove the 'active' class from all sidebar titles
+        sidebarTitles.forEach((title) => {
+            title.classList.remove("active");
+        });
+
+        // Add the 'active' class to the corresponding sidebar title
+        sidebarTitles[currentSectionIndex].classList.add("active");
+    }
+
+    // Call the function when the page loads and on scroll
+    window.addEventListener("DOMContentLoaded", updateSectionProgress);
+    window.addEventListener("scroll", updateSectionProgress);
+</script>
+<script>
+  function showRef() {
+      const refText = document.getElementById('ref-text');
+      const toggleRefButton = document.querySelector('#toggle-ref-button');
+
+      // Toggle the display property between 'block' and 'none' for the reference text
+      if (refText.style.display === 'none' || refText.style.display === '') {
+          refText.style.display = 'block';
+          toggleRefButton.style.transform = 'rotate(180deg)'; // Rotate the SVG icon
+      } else {
+          refText.style.display = 'none';
+          toggleRefButton.style.transform = 'rotate(0deg)'; // Reset the rotation
+      }
+  }
+</script>
+</body>
+</html>

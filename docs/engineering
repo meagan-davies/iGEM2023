@@ -1,0 +1,453 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="https://static.igem.wiki/teams/4944/wiki/img/favicon.svg" type="image/svg">
+    <link rel="license" href="https://creativecommons.org/licenses/by/4.0/"/>
+
+    <!-- Bootstrap CSS -->
+    <link href="static/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap JavaScript -->
+    <script src="static/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom CSS -->
+    <link href="static/style.css" rel="stylesheet">
+
+    <!-- Dark/Light Mode CSS -->
+    <link id="css-file" href="static/dark-mode.css" rel="stylesheet">
+
+    <title>Engineering Success | Calgary - iGEM 2023</title>
+
+  </head>
+
+<body>
+  <!-- Navigation -->
+  <!--TOP NAVBAR-->
+<nav class="top-nav navbar navbar-expand-lg py-3 fixed-top">
+  <div class="container d-flex align-items-center">
+  
+      <!---- TEAM NAME ---->
+      <div class="logo-nav">
+          <a class="navbar-brand" href="home">
+              <img class="nav-logo" src="https://static.igem.wiki/teams/4944/wiki/img/logo.png" alt="Logo"/>
+          </a>
+      </div>
+  
+      <!---- SMALL SCREEN MENU ICON ---->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <div class="collapse navbar-collapse" id="navmenu">
+          <ul class="navbar-nav ml-auto left-aligned">
+  
+          <!---- HOME ---->
+          <li class="nav-item">
+              <a class="nav-link" href="home">Home</a>
+          </li>
+  
+          <!---- PROJECT ---->
+          <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Project
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="description">Description</a></li>
+                <li><a class="dropdown-item" href="implementation">Implementation</a></li>
+                <li><a class="dropdown-item" href="contribution">Contribution</a></li>
+                <li><a class="dropdown-item" href="engineering">Engineering</a></li>
+                <li><a class="dropdown-item" href="notebook">Notebook</a></li>
+                <li><a class="dropdown-item" href="safety">Safety</a></li>
+              </ul>
+          </li>
+  
+          <!---- WET LAB ---->
+          <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Wet Lab
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="wetlab">Overview</a></li>
+                <li><a class="dropdown-item" href="experiments">Experiments</a></li>
+                <li><a class="dropdown-item" href="results">Results</a></li>
+                <li><a class="dropdown-item" href="parts">Parts</a></li>
+              </ul>
+          </li>
+  
+          <!---- DRY LAB ---->
+          <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Dry Lab
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="drylab">Overview</a></li>
+                <li><a class="dropdown-item" href="model">Model</a></li>
+                <li><a class="dropdown-item" href="software">Software</a></li>
+              </ul>
+          </li>
+
+          <!---- HUMAN PRACTICES ---->
+          <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Human Practices
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="human-practices">Human Practices</a></li>
+                <li><a class="dropdown-item" href="humanpractices">Integrated Human Practices</a></li>
+                <li><a class="dropdown-item" href="education">Educational Outreach</a></li>
+                <li><a class="dropdown-item" href="entrepreneurship">Entrepreneurship</a></li>
+                <li><a class="dropdown-item" href="inclusivity">Inclusivity</a></li>
+                <li><a class="dropdown-item" href="branding">Branding</a></li>
+              </ul>
+          </li>
+
+          <!---- TEAM ---->
+          <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Team
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="members">Members</a></li>
+                <li><a class="dropdown-item" href="attributions">Attributions</a></li>
+                <li><a class="dropdown-item" href="collaborations">Collaborations</a></li>
+                <li><a class="dropdown-item" href="partnerships">Sponsorships</a></li>
+              </ul>
+          </li>
+          </ul>
+      </div>
+  </div>
+</nav>
+
+  <button onclick="topFunction()" id="scrollToTop"><img class="to-top-arrow" src="https://static.igem.wiki/teams/4944/wiki/img/arrow-up-s-line.svg" alt="To Top"/></button>
+  
+  <div id="wrapper-div">
+    <!--CONTENT-->
+        <div id="header-banner-div">
+            Engineering Success
+        </div>
+
+        
+   
+    <div id="main-div" class="clearfix">
+
+        <div id="main-content">
+            <div class="main-section glass">
+                <h3 class="subtitle">Overview</h3>
+                <p class="text">Design. Build. Test. Learn. <br>
+                    These are the four major steps CholesterLock diligently followed in the engineering design cycle to achieve vital project milestones and enhance the team’s future performance. This iterative approach allowed the team to adapt, make informed decisions, and improve the overall quality of the project.
+                </p>
+            </div>
+
+            <div class="sub-section">
+                <p class="text">
+                    The heart of CholesterLock lies in the auto-processing capabilities of the Sonic Hedgehog Protein alongside its ability to bind to cholesterol. Therefore, it was of utmost importance that the process of producing the protein was an iterative and dynamic process focused around optimization and design. The process involved cycling between testing, design and learning to continually improve upon our methodologies and approaches.
+                    <br><br>
+                    To develop a concrete course of action, our team worked on developing a detailed and systematic workflow for our project development. The team identified three primary sub-projects that would later be integrated to synthesise and test mShh and its auto-processing capabilities with native cholesterol and as a component of CholesterLock.  In order to produce mShh in our bacterial system, it was pivotal to produce a cloning vector with the Sonic Hedgehog gene as an insert that could be used for transformations in protein expression DE3 competent cells. This would include a set of bacterial experiments including Restriction Digests, Ligations alongside Gel Electrophoresis and PCR as verification mechanisms. Once the construct was successfully cloned and characterised,  it would be used in a series of experiments to produce and purify our protein using experimental methodologies such as NiNTA Purification and Ammonium Sulfate Precipitation. 
+                    <br><br>
+                    At this point, the purified mShh would have to be tested to ensure it functioned similarly to the native molecule, retaining its cholesterol-induced auto-processing characteristics. Experiments would include Buffer Exchanges, Autoprocessing with DTT and Autoprocessing with Cholesterol. As seen in Figure 1, a crucial part of our engineering cycle was outlining our process to ensure a streamlined course of experimentation.
+                </p>
+                <div class="figure">
+                    <img class="glass img-format" src="https://static.igem.wiki/teams/4944/wiki/project/implementation.png" alt=""/>
+                    <div class="fig-label">Figure 1: Graphical overview of Implementation and Experimental Workflow for mShh Production and Testing.</div>
+                </div>
+                <p>
+                    Our sequence fragment for mShh, existed in a backbone without the necessary machinery for expression of production of the protein. Therefore, it would need to be transferred into an expression backbone that could be used for experimentation down the line. Before we started with cloning experiments to produce this expression vector (which is referred to as “pD-mShh”), it was essential to confirm the presence of our insert in the vector. PCR reactions were set up and optimised across various factors including program modifications including elongation, denaturation and number of cycles in tandem with additions to our reaction mix such as reducing reagents like DMSO. After amplification and a successful gel, the fragment would have to be gel extracted, digested and ligated as outlined in Figure 2.
+                </p>
+                <div class="figure">
+                    <img class="glass img-format" src="https://static.igem.wiki/teams/4944/wiki/project/mshh-cloning.png" alt=""/>
+                    <div class="fig-label">Figure 2: Graphical overview of Experimental Workflow for mShh cloning to produce pD-mShh.</div>
+                </div>
+                <p>Throughout this cycle of experimentation, our protocols and approaches to achieving the successful production of pD-mShh had to be modified and optimised. For instance, we found that the length of nucleotides between the insert and cut sites were insufficient which made it difficult to perform PCR and successfully ligate the construct.
+                    <br><br>
+                    One obstacle we faced through the cloning process was the progressive loss of DNA due to the multitude of experiments being performed before ligation. More specifically, following PCR and gel extraction of the insert DNA, mShh would have to be digested to cut at sticky ends compatible for ligation with the MSP backbone. Once this was identified as a potential avenue of error, our team was more intentional with continual certification to help us pin-point errors in our methodology whilst identifying sources of improvement and optimization. 
+                    <br><br>
+                    Anticipating the need to optimise the protocols for protein purification and production, a section of our team worked on purifying MSP’s, the vector we were using as a backbone for mShh! By optimising the protocols and simultaneously cloning our construct, we would be working more efficiently and allowing for iterative reviews of the procedure. This proved to be invaluable experience as we moved to working with pD-mShh.
+                    <br><br>
+                    As a starting point, the protein production team read papers to get a general understanding of protein production and its requirements, and were able to develop a protocol tailored for MSP production. Once they confirmed the successful production of the protein through an SDS-PAGE gel, they repeated the process of researching and generating a protocol, but this time for protein purification. Following purification, they performed an SDS-PAGE gel electrophoresis to confirm the purification of our protein, which demonstrated that our protein was properly purified.
+                </p>
+                <div class="figure">
+                    <img class="glass img-format" src="https://static.igem.wiki/teams/4944/wiki/project/notebook1.png" alt=""/>
+                    <div class="fig-label2">Figure 3: SDS Gel following an SDS Page electrophoresis delineating the results of Protein Purification of MSP Clones C and D though the subsequent crude lysates, washes and elutions.</div>
+                </div>
+                <p>
+                    Despite having successfully purified MSP proteins, the team observed the presence of other elements in the purified product. Therefore, they decided that their next steps should involve protocol optimization. This involved experimenting with different sonicators for efficient cell lysis, inducing cells with different IPTG concentrations, comparing purification methods, and using different SDS-PAGE gels to obtain distinct bands with minimal streaking. Practicing protein production and purification techniques with MSP allowed for a smoother transition to working with the mShh protein.
+                    <br><br>
+                    Having previously worked out the troubleshooting of MSP production, expressing our mShh gene that was inserted in a similar backbone as the MSP vector was straightforward. Although the protocol drafted for MSP production was also effective in producing mShh protein, we ran into some problems when trying to purify the hedgehog protein using Ni-NTA affinity chromatography, the same method we used to purify MSP. Despite having figured out a detailed protein purification protocol using MSP proteins and closely following it for mShh purification, we were unsuccessful in purifying mShh. We suspected it was due to the difference in size as well as the chemical characteristics and properties between the two proteins.
+                    <br><br>
+                    In an attempt to determine the reason behind our failed experiment, we closely analysed our SDS-PAGE gel, which had samples taken from every step of the experiment, including crude lysates, pellets, unbound fraction, multiple washes, and multiple elutions. We noticed that the band corresponding to our protein in the crude lysate could no longer be seen in the supernatant after centrifugation of the sample. Based on this observation, we deduced that mShh had formed inclusion bodies, becoming incorporated into the pellet alongside other proteins. Therefore, our next step was to explore ways to solubilize mShh so that it could be expelled into the solution for purification. 
+                    <br><br>
+                    Our initial attempt at protein solubilization was unsuccessful, most likely because it was our first time and we followed a very generalised protocol. Rather than trying to optimise the solubilization protocol, our team decided to shift our focus to optimising something we were familiar with and had more experience working with – the induction protocol. After conducting research and discussing it with our TAs, we realised that with just the right amount of IPTG induction, DE3 cells could be prevented from forming inclusion bodies altogether. In addition, the experience of optimising MSP induction could serve as a template and guidance as we endeavoured to optimise the mShh induction protocol.
+                    <br><br>
+                    For induction optimization, we conducted a series of experiments with varying IPTG concentrations (0.4mM-1.5mM), temperature (4°C, 25°C, and 37°C) and incubation period (2 hrs, 3 hrs, 6 hrs, 24 hrs, 48 hrs, 72 hrs), all of which are crucial variables that influence induction. Moreover, in an attempt to solve our problem with producing mShh, we turned to papers on DE3 mShh production and brainstormed potential reasons for the absence of protein production. After discussing the matter with our TAs and supervisors, we suspected that there might be a problem with the plasmid backbone containing the mShh gene.
+                    <br><br>
+                    We soon realised that the new backbone we had used for the fragment instead of the MSP backbone, after the series of ligations had not worked, lacked a LacI gene. The LacI gene, responsible for repressing lac induced genes until IPTG or Lactose are added into the system would result in overinduction and section of bacteria. Since no IPTG would be required to induce protein production, induction would select for bacteria with lower expression efficiency as the high efficiency bacteria would die in the growth stage. 
+                    <br><br>
+                    However, it would not be possible to conduct experimentation without induction entirely as the cultures would eventually reach log phase growth and start to produce proteins on their own without a quantifiable way of knowing when enough protein had been produced and no estimate for how long that would take. Therefore, we tried to use a sequence of mShh with the correct cut sites to retry insertion into the MSP backbones. 
+                    <br><br>
+                    This time we decided to try with Gibson Assembly as well. The first step for this was to run a set of digestions using EcoRI and HindIII to digest the insert sequence out of the current plasmid. Since the bands were located at the right sizes, we proceeded to excise them out of the gel and extracted them to obtain insert DNA. This was followed by a set of PCR’s to verify our sequence for further experimentation.
+                </p>
+                <div class="figure">
+                    <img class="glass img-format" src="https://static.igem.wiki/teams/4944/wiki/project/notebook2.png" alt=""/>
+                    <div class="fig-label2">Figure 4 and 5: Agarose gel-electrophoresis’ delineating the results of digestions of mShh using EcoRI and HindIII enzymes to cut out and verify the presence of the insert prior to gel extraction for Gibson Assembly between the mShh insert and MSP backbone.</div>
+                </div>
+                <p>
+                In true iterative and cyclic fashion, the completion of our engineering cycle for mShh production brought us back to the drawing board with Bacterial Cloning to develop a second iteration of pD-mShh. The continued  experimentation would follow a similar sequence as outlined by Figure 1 and described through this page but key pivots would help us move closer to a functional protein for auto-processing. For one, the switch to Gibson Assembly recognizes the need for straight-forward cloning techniques to minimise losses of DNA and potential error propagation. Furthermore, the inclusion of techniques such as Ammonium Sulphate precipitation and Solubilization pivot towards looking at trouble-shooting with the existing protein as opposed to modifying the construct in itself. Future experimentation will aim to work on both of these avenues (Gibson for pD-mShh and Optimization for mShh protein) simultaneously and cohesively for a more informed and intentional workflow. 
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+
+        
+    </div>
+  </div>
+
+  <!-- Footer: MUST mention license AND have a link to team wiki's repository on gitlab.igem.org -->
+  <!--FOOTER-->
+<div id="page-footer">
+  <div id="footer">
+      <div class="row pt-3">
+          <div class="col-md-2">
+              <div class="logo-nav">
+                  <a href="index.html">
+                      <img class="footer-logo" src="https://static.igem.wiki/teams/4944/wiki/img/logo.png" alt="Logo"/>
+                  </a>
+              </div>
+                <div class="contact-nav pb-4">
+                    <h3>Follow Us</h3>
+                    <div class="socials pb-2">
+                        <a href="https://www.facebook.com/igemcalgary/" class="social-media fb"><img src="https://static.igem.wiki/teams/4944/wiki/img/icons/facebook-icon.svg" alt="Facebook"></a>
+                        <a href="https://twitter.com/igemcalgary/" class="social-media tw"><img src="https://static.igem.wiki/teams/4944/wiki/img/icons/twitter-icon.svg" alt="Twitter"></a>
+                        <a href="https://www.instagram.com/igemcalgary/" class="social-media in"><img src="https://static.igem.wiki/teams/4944/wiki/img/icons/instagram-icon.svg" alt="Instagram"></a>
+                        <a href="https://www.linkedin.com/company/igem-calgary/" class="social-media li"><img src="https://static.igem.wiki/teams/4944/wiki/img/icons/linkedin-icon.svg" alt="LinkedIn"></a>
+                        <a href="https://www.youtube.com/user/igemcalgary" class="social-media yo"><img src="https://static.igem.wiki/teams/4944/wiki/img/icons/youtube-icon.svg" alt="Youtube"></a>
+                        <a href="https://www.tiktok.com/@igemcalgary" class="social-media ti"><img src="https://static.igem.wiki/teams/4944/wiki/img/icons/tiktok-icon.svg" alt="TikTok"></a>
+                    </div>
+                    <h3 class="pt-2">Contact Us</h3>
+                    <div class="socials pb-2">
+                        <a href="mailto: igemcalgary@ucalgary.ca" class="mail social-media ma"><img src="https://static.igem.wiki/teams/4944/wiki/img/icons/mail-icon.svg" alt="Mail"></a>
+                        <a href="mailto: igemcalgary@ucalgary.ca" class="mail">igemcalgary@ucalgary.ca</a>
+                    </div>
+                </div>
+          </div>
+          <div class="col-md-2">
+              <div class="section">
+                  <a class="nav-title" href="#"><h5>Project</h5></a>
+                  <ul id="project-list">
+                    <li><a href="description">Description</a></li>
+                    <li><a href="implementation">Implementation</a></li>
+                    <li><a href="contribution">Contribution</a></li>
+                    <li><a href="engineering">Engineering</a></li>
+                    <li><a href="notebook">Notebook</a></li>
+                    <li><a href="safety">Safety</a></li>
+                  </ul>
+              </div>
+          </div>
+          <div class="col-md-2">
+              <div class="section">
+                  <a class="nav-title" href="#"><h5>Wet Lab</h5></a>
+                  <ul id="wetlab-list">
+                    <li><a href="wetlab">Overview</a></li>
+                    <li><a href="experiments">Experiments</a></li>
+                    <li><a href="results">Results</a></li>
+                    <li><a href="parts">Parts</a></li>
+                  </ul>
+              </div>
+          </div>
+          <div class="col-md-2">
+              <div class="section">
+                  <a class="nav-title" href="#"><h5>Dry Lab</h5></a>
+                  <ul id="drylab-list">
+                    <li><a href="drylab">Overview</a></li>
+                    <li><a href="model">Model</a></li>
+                    <li><a href="software">Software</a></li>
+                  </ul>
+              </div>
+          </div>
+          <div class="col-md-2">
+              <div class="section">
+                  <a class="nav-title" href="#"><h5>Human Practices</h5></a>
+                  <ul id="humanpractices-list">
+                    <li><a href="human-practices">Human Practices</a></li>
+                    <li><a href="humanpractices">Integrated Human Practices</a></li>
+                    <li><a href="education">Educational Outreach</a></li>
+                    <li><a href="entrepreneurship">Entrepreneurship</a></li>
+                    <li><a href="inclusivity">Inclusivity</a></li>
+                    <li><a href="branding">Branding</a></li>
+                  </ul>
+              </div>
+          </div>
+          <div class="col-md-2">
+              <div class="section">
+                  <a class="nav-title" href="#"><h5>Team</h5></a>
+                  <ul id="team-list">
+                    <li><a href="members">Members</a></li>
+                    <li><a href="attributions">Attributions</a></li>
+                    <li><a href="collaborations">Collaborations</a></li>
+                    <li><a href="partnerships">Sponsorships</a></li>
+                  </ul>
+              </div>
+          </div>   
+      </div>
+      <div class="row pt-3 pb-3">
+          <div class="license centered col-md-12">
+              <p><small>© 2023 - Content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" rel="license">Creative Commons Attribution 4.0 International license</a>.</small></p>
+              <p><small>The repository used to create this website is available at <a href="https://gitlab.igem.org/2023/calgary">gitlab.igem.org/2023/calgary</a>.</small></p>
+          </div>
+      </div>
+  </div>
+</div>
+  
+  <script>
+    function togglerCSS() {
+      var styleSheet = document.getElementById('css-file');
+      var currentStyle = styleSheet.getAttribute('href');
+      var darkModeStyle = "static/dark-mode.css";
+      var lightModeStyle = "static/light-mode.css";
+  
+      if (currentStyle === darkModeStyle) {
+        styleSheet.setAttribute('href', lightModeStyle);
+      } else {
+        styleSheet.setAttribute('href', darkModeStyle);
+      }
+    }
+  </script>
+  <script>
+    // Scroll to Top Button
+    let scrollBtn = document.getElementById("scrollToTop");
+  
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        scrollBtn.style.display = "block";
+      } else {
+        scrollBtn.style.display = "none";
+      }
+    }
+  
+    window.addEventListener('scroll', scrollFunction);
+  
+    function topFunction() {
+      document.body.scrollTop = 0; // For Safari
+      document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    }
+  
+    scrollBtn.addEventListener('click', topFunction);
+  </script>
+  <script>
+    function scrollToSection(sectionId) {
+        const section = document.getElementById(sectionId);
+        if (section) {
+            const headerHeight = 7 * parseFloat(getComputedStyle(document.documentElement).fontSize); // Calculate 5rem in pixels
+            const sectionPosition = section.getBoundingClientRect().top + window.scrollY - headerHeight;
+            window.scrollTo({ top: sectionPosition, behavior: "smooth" });
+        }
+    }
+  </script>
+<script>
+    function updateScrollProgress() {
+        let scrollProgress = document.getElementById("side-progress");
+        let progressValue = document.getElementById("side-progress-value");
+        let pos = document.documentElement.scrollTop;
+        let calcHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        let scrollValue = Math.round(pos * 100 / calcHeight);
+    
+        scrollProgress.style.background = `conic-gradient(white ${scrollValue}%, black ${scrollValue}%)`
+    }
+
+    window.addEventListener('scroll', updateScrollProgress);
+    window.addEventListener('load', updateScrollProgress);
+</script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const sidebar = document.getElementById("sidebar");
+        const headerBanner = document.getElementById("header-banner-div");
+        const sidebarContainer = document.querySelector(".side-container");
+        const footer = document.getElementById("page-footer");
+
+        function updateSidePosition() {
+            const headerHeight = headerBanner.clientHeight;
+            //CH returns the inner height of the element in px and it will remove the border, scrollbar, margin //
+        
+            const sidebarTopOffset = sidebar.offsetTop;
+            // OT will give the distance of the element relative to the top of the offsetParent
+
+            const sidebarBottom = sidebar.getBoundingClientRect().bottom;
+            const footerTop = footer.getBoundingClientRect().top;
+            //Distance from top to bottom of the sidebar in the entire document
+
+            const windowHeight = window.innerHeight;
+
+            if (window.scrollY >= sidebarTopOffset - headerHeight) {
+                sidebarContainer.classList.add("sticky-links");
+                sidebarContainer.style.top = `${-315 + headerHeight}px`; 
+                // Note: -300 can be adjust to change location of links in sidebar
+            } else {
+                sidebarContainer.classList.remove("sticky-links");
+                sidebarContainer.style.top = "0";
+            }
+
+            if (window.scrollY + windowHeight >= footerTop) {
+                sidebarContainer.style.position = "sticky";
+                sidebarContainer.style.bottom = "0";
+            } else {
+                sidebarContainer.style.position = "sticky";
+                sidebarContainer.style.bottom = "initial";
+            }
+        }
+
+        window.addEventListener("scroll", updateSidePosition);
+        window.addEventListener("resize", updateSidePosition);
+
+        // Initially call the function to set the initial state
+        updateSidePosition();
+    });
+</script>
+<script>
+    function updateSectionProgress() {
+        const sections = document.querySelectorAll(".sub-section, .sub-subsection");
+        const sidebarTitles = document.querySelectorAll(".section-link, .subsection-link");
+        let currentSectionIndex = 0;
+
+        // Find the index of the section that is currently in view
+        for (let i = sections.length - 1; i >= 0; i--) {
+            const rect = sections[i].getBoundingClientRect();
+            if (rect.top <= window.innerHeight * 0.5) {
+                currentSectionIndex = i;
+                break;
+            }
+        }
+
+        // Remove the 'active' class from all sidebar titles
+        sidebarTitles.forEach((title) => {
+            title.classList.remove("active");
+        });
+
+        // Add the 'active' class to the corresponding sidebar title
+        sidebarTitles[currentSectionIndex].classList.add("active");
+    }
+
+    // Call the function when the page loads and on scroll
+    window.addEventListener("DOMContentLoaded", updateSectionProgress);
+    window.addEventListener("scroll", updateSectionProgress);
+</script>
+<script>
+  function showRef() {
+      const refText = document.getElementById('ref-text');
+      const toggleRefButton = document.querySelector('#toggle-ref-button');
+
+      // Toggle the display property between 'block' and 'none' for the reference text
+      if (refText.style.display === 'none' || refText.style.display === '') {
+          refText.style.display = 'block';
+          toggleRefButton.style.transform = 'rotate(180deg)'; // Rotate the SVG icon
+      } else {
+          refText.style.display = 'none';
+          toggleRefButton.style.transform = 'rotate(0deg)'; // Reset the rotation
+      }
+  }
+</script>
+</body>
+</html>
