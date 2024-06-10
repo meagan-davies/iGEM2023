@@ -1,40 +1,88 @@
 {% extends "layout.html" %}
-  
+
+{% block title %}Entrepreneurship{% endblock %}
 {% block header %}Entrepreneurship{% endblock %}
 
 {% block main_content %}
+   
+    <div id="main-div" class="clearfix">
+        <div id="sidebar">
+            <div class="side-container">
+                <div class="side-circle side-item">
+                    <div id="side-progress">
+                        <div id="side-progress-value">
+                            <img class="side-lock" src="https://static.igem.wiki/teams/4944/wiki/img/lock.svg" alt=""/>
+                        </div>
+                    </div>
+                </div>
+                <div class="side-nav side-item">
+                    <ul>
+                        <div class="side-title section-link" onclick="scrollToSection('section1')">Existing Solutions Cost Analysis</div>
+                        <div class="side-title section-link" onclick="scrollToSection('section2')">CholesterLock vs PCSK9 Inhibitors</div>
+                    </ul>
+                </div>
+            </div>
+        </div>
 
-<div class="row mt-4">
-  <div class="col">
-    <div class="bd-callout bd-callout-info">
-      <h4>Best Supporting Entrepreneurship</h4>
-      <p>The Best Supporting Entrepreneurship award recognizes exceptional effort to build a business case and commercialize an iGEM project. This award is open to all teams to show that entrepreneurship is something all teams can aspire to do with their project. This award can go to an new project, or to a previous project that a team aimed to commercialize. Have you filed a provisional patent on your project/device/process? Have you raised money to build and ship products? Have you pitched your idea to investors and received money? As always in iGEM, the aim is to impress the judges!</p>
-      <p>To compete for the Best Supporting Entrepreneurship prize, please describe your work on this page and also fill out the description on the <a href="https://competition.igem.org/deliverables/judging-form">judging form</a>.</p>
-      <hr>
-      <p>Please see the <a href="https://competition.igem.org/judging/awards">2023 Awards Page</a> for more information.</p>
+        <div id="main-content">
+            <div class="main-section glass">
+                <h3 class="subtitle">Overview</h3>
+                <p class="text">Cost effectiveness is a methodology to evaluate which interventions provide the highest value for the cost associated in a cost effectiveness analysis. The value of an intervention is measured using Quality Adjusted Life Years, also referred to as QALYs, which is a generic measure of disease burden that includes not just the quantity, but the quality of life lived following the intervention.In a cost effectiveness analysis, the costs include not only the cost of the intervention of interest, but importantly what happens later. Most cost effectiveness analyses take a lifetime horizon, meaning that the costs and effects of the interventions are modelled for the patient's entire life <sup>1</sup>.Cost effectiveness analysis compares the cost and effect of two interventions, usually the intervention of interest compared with the standard of care, and is summarised using an Incremental Cost Effectiveness Ratio, also known as an ICER. This ratio shows the incremental costs over incremental quality adjusted life years between the two comparators<sup>1</sup>.
+                    <br><br>
+                    When the incremental cost effectiveness ratio falls beneath the willingness to pay threshold, it is deemed cost effective, meaning the associated cost and outcomes are considered good value compared to the alternative intervention. Cost effectiveness analysis in the cardiovascular space is controlled by the American College of Cardiology and American Heart Association guideline<sup>1</sup>. This guideline proposes that an intervention with an ICER of less than $150,000 per quality gained to be cost effective and an ICER of less than $50,000 per quality gained to be highly cost effective<sup>1</sup>.
+                </p>
+            </div>
+
+            <div class="sub-section">
+                <h3 id="section1" class="subtitle">Existing Solutions Cost Analysis</h3>
+                <p class="text">Cardiovascular disease remains the leading cause of death all over the world.  PCSK9 (Proprotein convertase subtilisin/kexin 9) Inhibitor Monoclonal Antibodies such as Alirocumab and Evolocumab substantially reduce cholesterol levels and present an exciting new approach against hypercholesterolemia <sup>2</sup>. However, these U.S. Food and Drug Administration–approved PCSK9 monoclonal antibodies, were marketed at $14 000 per year, which is more than 100 times the cost of a generic statin.
+                    <br><br>
+                    Although they lead to 50% reduction in cholesterol levels and major adverse cardiovascular events such as cardiovascular death, acute myocardial infarction, and ischemic stroke <sup>3</sup> as shown by two large randomised trials of PCSK9 inhibitors in patients with clinically evident atherosclerotic disease wherein patients who were already receiving statins showed reductions in cardiac events of 14% <sup>4</sup> to 20% <sup>5</sup>, and both trials combined showed a 5% decrease in all-cause mortality, the published models projected that lifetime medical costs will be much higher in patients prescribed a PCSK9 inhibitor as list price of $14 000 per year was well over the generous willingness-to-pay threshold of $150 000 per QALY and far from the threshold of $50 000 per QALY in every model<sup>6</sup>.
+                    <br><br>
+                    The ODYSSEY Outcomes (Evaluation of Cardiovascular Outcomes After an Acute Coronary Syndrome During Treatment With Alirocumab) study were published <sup>5</sup>, and manufacturers of PCSK9 inhibitors lowered prices from $14000 per year to $3484 per year would yet had a cost-effectiveness ratio of $150 000 per QALY <sup>7</sup>.
+                    <br><br>
+                    In China, Cardiovascular disease (CVD) plays an increasing role in years of life lost currently, leading to 40% deaths. Low-density lipoprotein cholesterol (LDL-C) is a modifiable risk factor for CVD and the effective reduction of LDL-C benefits cardiovascular events<sup>8</sup>. Compared with statin monotherapy, the ICER of alirocumab therapy at its present price of 34,355 CNY annually, at 33% rebate was 1,613,997 CNY per QALY gained. If the annual cost of alirocumab was reduced by 88% from the full official price to 6071 CNY, then only the willingness-to-pay threshold of 212,676 CNY per QALY would be achieved despite the therapeutic effect evaluation estimated by the magnitude of Low Density Lipid reduction being much superior<sup>8</sup>. 
+                </p>
+            </div>
+
+            <div class="sub-section">
+                <h3 id="section2" class="subtitle">CholesterLock vs PCSK9 Inhibitors</h3>
+                <p class="text">One big factor in decreased cost effectiveness of Alirocumab and other PCSK9 inhibitors is their high production cost. Alirocumab is a PCSK9 inhibitor produced by recombinant DNA technology in Chinese Hamster Ovary cell suspension culture<sup>9,10</sup>. Additionally Alirocumab is delivered in the form of IV injection, which adds into the cost of production of this product. However, CholesterLock, also an Fc-fusion protein with the Immunoglobulin Gamma 1 (IgG1) linked to hedgehog protein attached to cholesterol, uses E. Coli instead of Chinese Hamster Ovary (CHO) cell suspension and would be delivered in the pill form . This would significantly reduce the production costs as CHO cells roughly cost 974 USD /ml whereas E coli BL-21 cost 192 USD/ml , producing protein with no discernable qualitative differences <sup>11</sup> therefore reducing the production costs by an estimate of 80%. While the exact details of production costs of Alirocumab have been kept confidential by companies, median annual profit margins of pharmaceutical companies have been kept  significantly greater, usually around gross profit margin of 76.5% <sup>12</sup>,  therefore, alirocumab marketed priced at $14 000 per year per patient would have an estimated production price of $ 3100 per year per patient. With CholesterLock, we estimate this production cost to around $700 per year per patient with a marketed price of $1260 per year per patient, which would bring cost effectiveness analysis under $50 000 per QALY gained.                </p>
+                <div class="figtext-container">
+                    <div class="figure">
+                        <img class="glass img-format" src="https://static.igem.wiki/teams/4944/wiki/human-centred-design/cost-analysis-graph.png" alt=""/>
+                        <div class="fig-label">Figure 1: Demonstrates the relationship between value and clinical effectiveness of A. PCSK9 inhibitor therapy costing $14000/ year; B. PCSK9 inhibitor therapy costing $ 3484/ year and C. Estimated cost of CholesterLock at $1260/year. The dark blue area indicates an ICER of $50 000 per QALY or less, the light blue area an ICER between $50 000 and $150 000 per QALY, and the white area an ICER of $150 000 per QALY or greater. </div>
+                    </div>
+                    <div class="fig-text">
+                        <p class="text">However it must be noted that CholesterLock would involve going through the clinical trials and extensive evaluations to fare upon numerous complexities, including factors such as pricing, competition, regulatory compliance, market demand, long-term effects and uncertainties, ethical and societal considerations, potential adverse effects, and patient for a comprehensive cost effectiveness analysis to ensure both safety and economic viability of the product.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ref-section glass" onclick="showRef()">
+                <h3 class="sub-subtitle pb-2">References
+                    <svg id="toggle-ref-button" width="15" height="10" viewBox="0 0 42 25">
+                        <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round"/>
+                    </svg>
+                </h3>
+                <div id="ref-text" style="display: none;"> <!-- Initially hide the reference text -->
+                    <ol class="text">
+                        <li>Jamison DT, Breman JG, Measham AR, et al., editors. Priorities in Health. Washington (DC): The International Bank for Reconstruction and Development ; The World Bank. Chapter 3, Cost-Effectiveness Analysis.2006; Available from https://www.ncbi.nlm.nih.gov/books/NBK10253/</li>
+                        <li>Navarese EP, Kołodziejczak M, Schulze V, Gurbel PA, Tantry U, Lin Y, et al. Effects of proprotein convertase subtilisin/kexin type 9 antibodies in adults with hypercholesterolemia. Annals of Internal Medicine. 2015;163(1):40–51. doi:10.7326/m14-2957 </li>
+                        <li>Hlatky MA, Kazi DS. PCSK9 inhibitors. Journal of the American College of Cardiology. 2017;70(21):2677–87. doi:10.1016/j.jacc.2017.10.001</li>
+                        <li>Schwartz GG, Steg PG, Szarek M, Bhatt DL, Bittner VA, Diaz R, et al. Alirocumab and cardiovascular outcomes after acute coronary syndrome. New England Journal of Medicine. 2018;379(22):2097–107. doi:10.1056/nejmoa1801174 </li>
+                        <li>Sabatine MS, Giugliano RP, Keech AC, Honarpour N, Wiviott SD, Murphy SA, et al. EVOLOCUMAB and clinical outcomes in patients with cardiovascular disease. New England Journal of Medicine. 2017;376(18):1713–22. doi:10.1056/nejmoa1615664 </li>
+                        <li>Hlatky MA. A pound of prevention? assessing the value of new cholesterol-lowering drugs. Annals of Internal Medicine. 2019;170(4):264. doi:10.7326/m18-3632 </li>
+                        <li>Dhruva SS, Ross JS, Desai NR. Alirocumab’s price reduction. Circulation. 2018;138(15):1502–4. doi:10.1161/circulationaha.118.036069</li>
+                        <li>Yang H, Li N, Zhou Y, Xiao Z, Tian H, Hu M, et al. cost-effectiveness analysis of Ezetimibe as the add-on treatment to moderate-dose rosuvastatin versus high-dose rosuvastatin in the secondary prevention of cardiovascular diseases in China: A markov model analysis<p></p>. Drug Design, Development and Therapy. 2020;Volume 14:157–65. doi:10.2147/dddt.s213968</li>
+                        <li>BACCARA-DINET M, Hanotin C, Harada Y, Sato T, Suzuki H. Methods for treating subjects with primary hypercholesterolemia that is not adequately controlled. 2015.</li>
+                        <li>Sleemen MW, Martin JH, Huang TT, Macdonald D. High affinity human antibodies to pcsk9. 2011.</li>
+                        <li>Lee J, Lee EN, Yoon J, Chung S, Prasad H, Susin C, et al. Comparative study of chinese hamster ovary cell versus Escherichia coli‐derived bone morphogenetic protein‐2 using the critical‐size Supraalveolar peri‐implant defect model. Journal of Periodontology. 2013;84(3):415–22. doi:10.1902/jop.2012.110369</li>
+                        <li>Ledley FD, McCoy SS, Vaughan G, Cleary EG. Profitability of large pharmaceutical companies compared with other large public companies. JAMA. 2020;323(9):834. doi:10.1001/jama.2020.0442 </li>
+                    </ol>
+                </div>
+            </div>            
+        </div>
     </div>
-  </div>
-</div>
-
-<div class="row mt-4">
-  <div class="col-lg-8">
-    <h2>Patents and intellectual property</h2>
-    <hr>
-    <p>If your team is seriously considering commercializing and looking into building a company after the competition, you may want to look at how you are going to protect your work and secure investment. Investors will usually require some form of intellectual protection, so you may want to investigate how to apply for a patent or provisional patent in your country and region before disclosing your project at iGEM. Remember that you can only be evaluated in iGEM based on what you share on your wiki and at the Jamboree, so any work you don't present can't count towards your project.</p>
-    <p>This is an area where we are different as we care about sharing, openness and contributing to the community and investors don't always agree with these values. It is up to you and your team to decide what to do. Remember that most universities have a commercialization department and that you can talk to them before coming to a decision.</p>
-  </div>
-  <div class="col-lg-4">
-    <h2>Inspirations</h2>
-    <hr>
-    <ul>
-      <li><a href="https://2019.igem.org/Team:UCopenhagen/Entrepreneurship">2019 UCopenhagen</a></li>
-      <li><a href="https://2019.igem.org/Team:Thessaly/Entrepreneurship">2019 Thessaly</a></li>
-      <li><a href="https://2019.igem.org/Team:NCKU_Tainan/Entrepreneurship">2019 NCKU Tainan</a></li>
-      <li><a href="https://2020.igem.org/Team:TAS_Taipei/Entrepreneurship">2020 TAS Taipei</a></li>
-      <li><a href="https://2020.igem.org/Team:KCL_UK/Entrepreneurship">2020 KCL UK</a></li>
-      <li><a href="https://2020.igem.org/Team:Calgary/Entrepreneurship">2020 Calgary</a></li>
-    </ul>
-  </div>
-</div>
 
 {% endblock %}

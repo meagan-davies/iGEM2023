@@ -9,34 +9,6 @@
     font-family: 'Quicksand-Regular';
 }
 
-.dark-mode {
-    background-color: #07011B;
-    color: #fbe395;
-  }
-  
-  .dark-mode .navbar-nav .nav-link {
-    color: #FDF8BE;
-  }
-  
-  .dark-mode .navbar-nav .nav-link:hover {
-    color: #D62923;
-  }
-  
-  .dark-mode .dropdown-menu {
-    background-color: black;
-  }
-  
-  .dark-mode .dropdown-menu a:hover {
-    background-color: #FDF8BE;
-  }
-  
-  .dark-mode .dropdown-menu .dropdown-item {
-    color: white;
-  }
-  
-  .dark-mode .dropdown-menu .dropdown-item:hover {
-    color: #07011B;
-  }
 
 /*** TOP NAV BAR ***/
 
@@ -50,24 +22,47 @@
     padding: auto;
 }
 
+.navbar-toggler {
+    background-color: white;
+}
+
+.navbar-toggler .navbar-toggler-icon {
+    background-color: black; /* Set the color for the three lines inside the hamburger button */
+}
+
+.navbar-toggler {
+    background-color: white !important;
+}
+
 .nav-logo {
     height: 3rem;
 }
 
 .navbar-nav .nav-link {
     color: #FDF8BE; 
+    font-size: 1rem;
 }
 
 .navbar-nav .nav-link:hover {
-    color: #D62923;
+    color: #f99c1c;
+    font-size: 1rem;
+}
+
+.nav-item {
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
 }
 
 .dropdown-menu {
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
 .dropdown-menu a:hover {
-    background-color: #FDF8BE;
+    background-color: black;
+}
+
+.dropdown-menu button:hover {
+    background-color: black;
 }
 
 .dropdown-menu .dropdown-item {
@@ -75,7 +70,7 @@
 }
 
 .dropdown-menu .dropdown-item:hover {
-    color: #07011B;
+    color: #FDF8BE;
 }
 
 
@@ -125,22 +120,80 @@ body {
     height: 12rem;
     border-radius: 50%;
     border: 3px solid white;
+    box-shadow: 0 0 5px 5px #ffffff51;
     margin: 0 auto;
-    text-align: center;
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Horizontally center content */
+    align-items: center; /* Vertically center content */
+}
+
+#side-progress {
+    width: 11rem;
+    height: 11rem;
+    background-color: white;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+}
+
+#side-progress-value {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    background-color: black;
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Horizontally center content */
+    align-items: center; /* Vertically center content */
+}
+
+.side-lock {
+    width: 4rem;
+    height: 4rem;
+    line-height: 12rem; /* Vertically center text within the icon */
 }
 
 .side-nav {
     padding-top: 2rem;
-    padding-left: 2.5rem;
+    padding-left: 1rem;
 }
 
+
 .side-title {
-    color: #fbe395;
+    color: white;
+    padding-bottom: 5px;
 }
 
 .side-title:hover {
-    color: #D62923;
+    color: #f99c1c;
 }
+
+.side-subtitle {
+    margin-left: 15px; 
+    color: white;
+    padding-bottom: 5px;
+    font-size: 1rem;
+}
+
+.side-subtitle:hover {
+    color: #f99c1c;
+}
+
+.sub-subtitle {
+    font-family: 'Quicksand-Regular';
+    font-size: 1.8rem;
+    color: #f99c1c;
+    padding-top: 20px;
+}
+
+/* Highlighted style */
+.section-link.active {
+    color: #FDF8BE; /* Change color as needed */
+}
+
+.subsection-link.active {
+    color: #FDF8BE; /* Change color as needed */
+}
+
 
 @media (max-width: 900px) {
     #sidebar {
@@ -178,17 +231,69 @@ body {
     font-size: 1.2em;
 }
 
+#main-content li {
+    color: white;
+    font-size: 1.2em;
+}
+
+.list-text {
+    color: white;
+    font-size: 1em !important;
+}
+
 .main-section {
     height: fit-content;
     border-radius: 20px;
     padding: 2rem;
-    margin: 4.5rem;
+    margin: 2.5rem;
 }
 
 .sub-section {
     height: fit-content;
+    padding: 3rem;
+}
+
+.ref-section {
+    height: fit-content;
+    border-radius: 20px;
     padding: 2rem;
-    margin: 4.5rem;
+    margin: 2rem;
+    cursor: pointer;
+}
+
+.ref-section.active .toggle-ref-button {
+    transform: rotate(180deg);
+}
+
+.toggle-ref-button {
+    transition: transform 0.5s ease-in;
+    margin-top: 5px;
+    align-items: center;
+}
+
+.ref-text {
+    display: none; /* Initially hide the additional text */
+    color: #fff;
+    padding-bottom: 10px;
+}
+
+.ref-text li {
+    font-size: 1em;
+}
+
+@media (max-width: 1000px) {
+    .main-section {
+        height: fit-content;
+        border-radius: 20px;
+        padding: 1rem;
+        margin: 1rem;
+    }
+    
+    .sub-section {
+        height: fit-content;
+        padding: 1rem;
+        margin: 1rem;
+    }
 }
 
 /* Figure */
@@ -203,18 +308,147 @@ body {
     height: 14rem;
     border-radius: 50%;
     display: inline-block;
-    margin-right: 1.5rem;
-    margin-left: 1.5rem;
+    margin: 1rem;
     line-height: 14rem;
 }
 
+.circle-nav:hover {
+    box-shadow: 0 0 8px 8px #ffffff51;
+}
+
 /* Figure */
+
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Adjust the width as needed */
+    gap: 2rem;
+    place-content: center;
+    place-items: center;
+    place-self: center;
+}
+
+.photo-grid2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); /* Adjust the width as needed */
+    gap: 5rem;
+    place-content: center;
+    place-items: center;
+    place-self: center;
+}
+
+/* Media query to change the layout to a single column on small screens */
+@media (max-width: 600px) {
+    .photo-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.img-form {
+    width: 20rem;
+    height: 25rem;
+    border-radius: 20px;
+    display: inline-block;
+    margin: 1rem;
+    object-fit: cover; /* Fill the available space while maintaining aspect ratio */
+    object-position: center center; /* Center the image within the container */
+    overflow: hidden;
+}
+
+.img-form2 {
+    width: 30rem;
+    height: 20rem;
+    border-radius: 20px;
+    display: inline-block;
+    margin: 1rem;
+    object-fit: cover; /* Fill the available space while maintaining aspect ratio */
+    object-position: center center; /* Center the image within the container */
+    overflow: hidden;
+}
+
+.img-format { /* Scalable rectangle format */
+    max-height: 30rem;
+    max-width: 85%;
+    width: auto;
+    height: auto;
+    border-radius: 20px;
+    display: inline-block;
+    margin: 1rem;
+    object-fit: cover; /* Fill the available space while maintaining aspect ratio */
+    object-position: center center; /* Center the image within the container */
+    overflow: hidden;
+}
+
+.img-format2 { /* Circle format */
+    max-height: 30rem;
+    max-width: 85%;
+    width: auto;
+    height: auto;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 1rem;
+    object-fit: cover; /* Fill the available space while maintaining aspect ratio */
+    object-position: center center; /* Center the image within the container */
+    overflow: hidden;
+}
+
+.img-format3 { /* Shorter scalable rectangle format */
+    max-height: 15rem;
+    max-width: 85%;
+    width: auto;
+    height: auto;
+    border-radius: 20px;
+    display: inline-block;
+    margin: 1rem;
+    object-fit: cover; /* Fill the available space while maintaining aspect ratio */
+    object-position: center center; /* Center the image within the container */
+    overflow: hidden;
+}
+
+.img-format4 { /* Even Shorter scalable rectangle format */
+    max-height: 10rem;
+    max-width: 85%;
+    width: auto;
+    height: auto;
+    border-radius: 20px;
+    display: inline-block;
+    margin: 1rem;
+    object-fit: cover; /* Fill the available space while maintaining aspect ratio */
+    object-position: center center; /* Center the image within the container */
+    overflow: hidden;
+}
+
+.img-format5 { /* Shorter scalable rectangle format */
+    max-height: 20rem;
+    max-width: 85%;
+    width: auto;
+    height: auto;
+    border-radius: 20px;
+    display: inline-block;
+    margin: 1rem;
+    object-fit: cover; /* Fill the available space while maintaining aspect ratio */
+    object-position: center center; /* Center the image within the container */
+    overflow: hidden;
+}
+
+.img-format6 { 
+    max-height: 5rem;
+    max-width: 85%;
+    width: auto;
+    height: auto;
+    border-radius: 20px;
+    display: inline-block;
+    margin: 1rem;
+    object-fit: cover; /* Fill the available space while maintaining aspect ratio */
+    object-position: center center; /* Center the image within the container */
+    overflow: hidden;
+}
 
 .figtext-container {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    width: 100%;
 }
 
 .figure {
@@ -222,6 +456,7 @@ body {
     max-width: 100%;
     margin: 1.5rem;
     align-items: center;
+    place-items: center;
     display: flex;
     flex-direction: column;
 }
@@ -231,6 +466,59 @@ body {
     height: 20rem;
     border-radius: 20px;
     margin-bottom: 1rem;
+    object-fit: cover; /* Fill the available space while maintaining aspect ratio */
+    object-position: center center; /* Center the image within the container */
+    overflow: hidden;
+}
+
+.square-img {
+    width: 25rem;
+    height: 25rem;
+    border-radius: 20px;
+    margin-bottom: 1rem;
+    object-fit: cover; /* Fill the available space while maintaining aspect ratio */
+    object-position: center center; /* Center the image within the container */
+    overflow: hidden;
+}
+
+.wide-box-img {
+    width: 40rem;
+    height: 20rem;
+    border-radius: 20px;
+    margin-bottom: 1rem;
+    object-fit: cover; /* Fill the available space while maintaining aspect ratio */
+    object-position: center center; /* Center the image within the container */
+    overflow: hidden;
+}
+
+.tall-box-img {
+    width: 20rem;
+    height: 25rem;
+    border-radius: 20px;
+    margin-bottom: 1rem;
+    object-fit: cover; /* Fill the available space while maintaining aspect ratio */
+    object-position: center center; /* Center the image within the container */
+    overflow: hidden;
+}
+
+.taller-box-img {
+    width: 20rem;
+    height: 40rem;
+    border-radius: 20px;
+    margin-bottom: 1rem;
+    object-fit: cover; /* Fill the available space while maintaining aspect ratio */
+    object-position: center center; /* Center the image within the container */
+    overflow: hidden;
+}
+
+.tall-big-box-img {
+    width: 35rem;
+    height: auto;
+    border-radius: 20px;
+    margin-bottom: 1rem;
+    object-fit: cover; /* Fill the available space while maintaining aspect ratio */
+    object-position: center center; /* Center the image within the container */
+    overflow: hidden;
 }
 
 .circle-img {
@@ -238,11 +526,31 @@ body {
     height: 25rem;
     border-radius: 50%;
     margin-bottom: 1rem;
+    object-fit: cover; /* Fill the available space while maintaining aspect ratio */
+    object-position: center center; /* Center the image within the container */
+    overflow: hidden;
+}
+
+.hp-box-img {
+    width: 15rem;
+    height: 20rem;
+    border-radius: 20px;
+    margin-bottom: 1rem;
+    object-fit: cover; /* Fill the available space while maintaining aspect ratio */
+    object-position: center center; /* Center the image within the container */
+    overflow: hidden;
+    border: 3px solid white;
+    box-shadow: 0 10px 32px 0 rgba(0, 0, 0, 0.4);
 }
 
 .fig-label {
     text-align: center;
-    max-width: 25rem;;
+    max-width: 25rem;
+}
+
+.fig-label2 {
+    text-align: center;
+    max-width: 80%;
 }
 
 .fig-text {
@@ -251,12 +559,58 @@ body {
     min-width: 45%;
 }
 
+/* Add a media query for screens smaller than 1000px */
 @media (max-width: 1000px) {
     .figtext-container {
-        flex-direction: column;
-        align-items: center;
+        flex-direction: column; /* Stack text below figures */
+    }
+
+    .figure {
+        flex-basis: 100%; /* Take up the full width of the container */
+        display: grid; /* Use CSS Grid for layout */
+        grid-template-columns: 1fr; /* Create a single column grid */
+        grid-template-rows: auto auto; /* Allow rows to expand based on content */
+        grid-gap: 1rem; /* Add some spacing between images and text */
+    }
+
+    .box-img {
+        width: 100%; /* Take up 100% of the column width */
+        object-fit: cover; /* Fill the available space while maintaining aspect ratio */
+    }
+
+    .square-img {
+        width: 100%; /* Take up 100% of the column width */
+        object-fit: cover; /* Fill the available space while maintaining aspect ratio */
+    }
+
+    .wide-box-img {
+        width: 100%; /* Take up 100% of the column width */
+        object-fit: cover; /* Fill the available space while maintaining aspect ratio */
+    }
+
+    .tall-box-img {
+        width: 100%; /* Take up 100% of the column width */
+        object-fit: cover; /* Fill the available space while maintaining aspect ratio */
+    }
+
+    .tall-big-box-img {
+        width: 100%; /* Take up 100% of the column width */
+        object-fit: cover; /* Fill the available space while maintaining aspect ratio */
+    }
+
+    .circle-img {
+        width: 100%; /* Take up 100% of the column width */
+        object-fit: cover; /* Fill the available space while maintaining aspect ratio */
+    }
+
+    .fig-label,
+    .fig-text {
+        max-width: 100%; /* Text takes up full width */
+        margin: 1rem 0; /* Add spacing between text elements */
     }
 }
+
+
 
 /* Glass Effect */
 .glass {
@@ -276,7 +630,7 @@ body {
 /*** FOOTER ***/
 
 #page-footer {
-    padding: 2%;
+    padding: 2rem;
     background-color: black;
     border-top: 3PX solid white;
     color: #fbe395;
@@ -436,8 +790,15 @@ body {
     color: #f99c1c;
 }
 
+.subtitle2{
+    font-family: 'Quicksand-Regular';
+    font-size: 1.8rem;
+    color: #fbe395;
+    padding-top: 1%;
+}
+
 .text{
-    font-family: 'Open_Sans-Light';
+    font-family: 'Quicksand-Light';
     font-size: 6h;
     color: white;
 }

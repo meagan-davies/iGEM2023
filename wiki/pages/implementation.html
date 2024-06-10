@@ -1,107 +1,233 @@
 {% extends "layout.html" %}
-  
+
+{% block title %}Implementation{% endblock %}
 {% block header %}Implementation{% endblock %}
 
 {% block main_content %}
+   
     <div id="main-div" class="clearfix">
         <div id="sidebar">
-            <div class="side-circle"></div>
-            <div class="side-nav">
-                <ul>
-                    <li><a class="side-title" href="#section1">Section 1</a></li>
-                    <li><a class="side-title" href="#section2">Section 2</a></li>
-                    <li><a class="side-title" href="#section3">Section 3</a></li>
-                </ul>
+            <div class="side-container">
+                <div class="side-circle side-item">
+                    <div id="side-progress">
+                        <div id="side-progress-value">
+                            <img class="side-lock" src="https://static.igem.wiki/teams/4944/wiki/img/lock.svg" alt=""/>
+                        </div>
+                    </div>
+                </div>
+                <div class="side-nav side-item">
+                    <ul>
+                        <div class="side-title section-link" onclick="scrollToSection('section1')">Stage 1</div>
+                        <div class="side-title section-link" onclick="scrollToSection('section2')">Stage 2</div>
+                        <div class="side-title section-link" onclick="scrollToSection('section3')">Stage 3</div>
+                        <div class="side-title section-link" onclick="scrollToSection('section4')">Stage 4</div>
+                        <div class="side-title section-link" onclick="scrollToSection('section5')">Stage 5</div>
+                    
+                    </ul>
+                </div>
             </div>
         </div>
 
         <div id="main-content">
             <div class="main-section glass">
                 <h3 class="subtitle">Overview</h3>
-                <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. Etiam dapibus condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat.</p>
+                <p class="text">Ultimately, the goal with CholesterLock is market entry as a novel therapeutic agent for people who have unique needs when it comes to their elevated cholesterol. With this information in mind, our team had consultations with field industry experts, including Dr. Robert Mayall, in the early development stages of our project to learn about the general commercialisation process. The following pages detail the commercialisation process for a therapeutic agent in Canada, touching on the physiological aspects of our product’s creation, but also the social context of our product being implemented into the medical market.
+                    <br><br>
+                    Following the initial drug research stages, health products in Canada go through a rigorous review and authorisation process by Health Canada’s Health Products and Food Branch (HPFB).<sup>1</sup> CholesterLock being a therapeutic would be reviewed and authorised by the Therapeutic Product Directorate specifically. This evaluation process allows for a thorough review of three important factors of our therapeutic which include its safety, effectiveness and overall quality.<sup>2</sup> If we successfully pass the bureau’s review process, CholesterLock will be released into the market. It is important to note that even after the drug authorization, we must continue to monitor the product’s safety and effectiveness for the public through continuous surveys, data collection and communications with our Stakeholders as identified in the Human practice section. 
+                    <sup>1</sup>
+                    </p>
+                    <div class="figure">
+                        <img class="img-format" src="https://static.igem.wiki/teams/4944/wiki/project/implementation-overview-complete.png" style="max-height: 500px;">
+                        <div class="fig-label">Figure 1: Implementation Stages and Future Scope.</div>
+                    </div>
+                
             </div>
 
-            <div class="circle-container">
-                <div class="circle-nav glass subtitle">Section 1</div>
-                <div class="circle-nav glass subtitle">Section 2</div>
-                <div class="circle-nav glass subtitle">Section 3</div>
+
+            <div class="sub-section">
+                <h3 id="section1" class="subtitle">Stage 1: Initial Drug Research</h3>
+                <p class="text">After extensive discussions with quantitative stakeholders, including academia professors who participated in our faculty talk, suggestions were made to explore CholesterLock's potential as an externally administered drug, considering its properties that prevent absorption in the small intestine due to the IgG and linker construct. In the context of this cholesterol-lowering medication, the production of CholesterLock will encompass three primary stages.
+                    <br><br>                    
+                </p>
+
+
+                <h3 class="title">Production of the Hedgehog Protein</h3>
+                <div class="figtext-container">
+                    <div class="figure">
+                        <img class="img-format" src="https://static.igem.wiki/teams/4944/wiki/project/hedgehog-overview.png" style="max-height: 500px;">
+                        <div class="fig-label">Figure 2: Hedgeghog Protein Production Overview.</div>
+                    </div>
+                    <div class="fig-text">
+                        <p class="text">This series of steps starts by introducing the mShh Hedgehog Plasmid into E. Coli via transformations, and this is followed by producing the protein. Next, we verify the plasmid and if the plasmid is detected in the gels, we purify the protein by following Ni-NTA purification protocols. Afterward, the mShh protein self-processes to yield two parts: Shh-N terminal and Shh-C. We then confirm and purify the Shh-N terminal for the next phase.
+                        </p>
+                    </div>
+                </div>
+                <div class="sub-subsection">
+                    <h3 id="subsection1" class="title">Transfection of HEK 293 Cells with NPC1L1</h3>
+                    <div class="figtext-container">
+                        <div class="fig-text">
+                            <p class="text">The next steps begin by introducing our NPC1L1 protein with GFP into HEK293 (human Embryonic Kidney) cells through transfection. We use doxycycline induction to stimulate protein expression. Subsequently, amplex fluorescent verification is done to check for signs of a successful transfection. Afterward, we dilute puromycin solution in a series of steps and apply it to the transfected cells while replacing the doxycycline-containing media. If the cells withstand the puromycin treatment, it indicates a successful linear transfection and the establishment of a stable monoclonal cell line.
+                            </p>
+                        </div>
+                        <div class="figure">
+                            <img class="img-format" src="https://static.igem.wiki/teams/4944/wiki/project/hek-cell-overview.png" style="max-height: 500px;">
+                            <div class="fig-label">Figure 3: Tranfection of HEK 293 cells with NPC1L1.</div>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sub-subsection">
+                    <h3 id="subsection1" class="title">Production of CholesterLock</h3>
+                    <div class="figtext-container">
+                        <div class="fig-text">
+                            <p class="text">The final step in our production process begins by introducing the CholesterLock plasmid into E. Coli, similar to how we produced mShh. This step is followed by protein production and plasmid verification. If the plasmid is present, we move on to autoprocessing, a protocol requiring cholesterol and inhibitor molecules. After all the components are combined, the CholesterLock undergoes Ammonium Sulphate purification and Ni-NTA purification to ensure that mostly our desired protein is left. Subsequently, a series of stability tests are conducted using the CholesterLock and transfected HEK 293 cells.
+                                <br><br>                                
+                            </p>
+                        </div>
+                        <div class="figure">
+                            <img class="img-format" src="https://static.igem.wiki/teams/4944/wiki/project/making-cholesterlock.png" style="max-height: 500px;">
+                            <div class="fig-label">Figure 4: CholesterLock Production Process.</div>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sub-subsection">
+                    <h3 id="section2" class="title">Intellectual Property<sup>1</sup></h3>
+                    <p class="text">Following successful results from our production process as well as the optimisation of each step, the next steps will be for us to contact stakeholders and companies that can help us with the legalisation process as per Dr Robert Mayall’s advice. He suggested that we reach out to Innovate Calgary which is the innovation company of the University Of Calgary.<sup>3</sup> They offer various resources, facilities and expert guidance that can help us bring commercialisation and protect our product. Through them, we would receive the necessary guidance to acquire a patent which according to the Government of Canada gives the inventor the right to stop others from making, using or selling our invention. It is advised that we obtain a patent as soon as possible as this would protect our intellectual property.<sup>3</sup>
+                    </p>
+                </div>
+                
             </div>
 
             <div class="sub-section">
-                <h3 id="section1" class="subtitle">Section 1</h3>
-                <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. <b>Etiam dapibus</b> condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. Etiam dapibus condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat.
-                    <b>Lorem ipsum dolor</b> sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. Etiam dapibus condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. Etiam dapibus condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat.
-                </p>
-                <div class="figtext-container">
-                    <div class="figure">
-                        <div class="circle-img glass"></div>
-                        <div class="fig-label">Figure 1: A nice glass circle for testing the layout of the circle shaped figure</div>
-                    </div>
-                    <div class="fig-text">
-                        <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. <b>Etiam dapibus</b> condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. Etiam dapibus condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat.</p>
-                    </div>
-                </div>
-                <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. <b>Etiam dapibus</b> condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. Etiam dapibus condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat.</p>
-                <div class="figtext-container">
-                    <div class="fig-text">
-                        <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. <b>Etiam dapibus</b> condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. Etiam dapibus condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat.</p>
-                    </div>
-                    <div class="figure">
-                        <div class="box-img glass"></div>
-                        <div class="fig-label">Figure 2: A nice glass box for testing the layout of the box shaped figure</div>
-                    </div>
-                </div>
-                <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. <b>Etiam dapibus</b> condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. Etiam dapibus condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat.
-                    <b>Lorem ipsum dolor</b> sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. Etiam dapibus condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. Etiam dapibus condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat.
-                </p>
+                    <h3 id="section2" class="subtitle">Stage 2: Pre-Clinical Studies in Canada</h3>
+                    <p class="text">Once promising results are obtained from our initial drug research stage, further  animal and laboratory tests are conducted to determine the potential side-effects of the CholesterLock and the optimal dosage required to achieve a specific effect. These initial studies before a drug is tested in humans are known as preclinical studies. They involve tests on animals (in-vivo) or cells (in vitro)<sup>2</sup>. To maintain high standards the FDA requires researchers to follow Good Laboratory Practises (GLP) during preclinical laboratory studies and this includes</p>
+
+                    <ul>
+                        <li>the conduct of study</li>
+                        <li>personnel qualifications</li>
+                        <li>facility conditions</li>
+                        <li>equipment usage</li>
+                        <li>written protocols and procedures</li>
+                        <li>study reports,</li>
+                        <li>and a system of quality assurance<sup>4</sup></li>
+                    </ul>
+
+                    <p class="text">This ensures the safety of FDA regulated products. The goal of the pre-clinical trials is to provide detailed information regarding dosing and toxicity levels and a mindful evaluation of these results to determine whether it is safe to proceed testing the drug in humans.<sup>2</sup></p>
+    
+
             </div>
 
             <div class="sub-section">
-                <h3 id="section2" class="subtitle">Section 2</h3>
-                <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. <b>Etiam dapibus</b> condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. Etiam dapibus condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat.
-                    <b>Lorem ipsum dolor</b> sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. Etiam dapibus condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. Etiam dapibus condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat.
+                <h3 id="section3" class="subtitle">Stage 3: Clinical Trials in Canada
+                </h3>
+                <p class="text">According to the Government of Canada, clinical trials are done to research and collect information on a drug’s dose, effectiveness and safety in humans <sup>1</sup>. They are undertaken by informed and consensual human subjects as per good clinical practices and conducted in an environment where results can be closely monitored. In the Clinical trial Application (CTA) several key documents such as administrative form, protocol, protocol summary (Health Canada’s Template), informed consent form, Investigator’s Brochure, and a quality dossier (Health Canada’s Template per study phase)  summary are required. Health Canada will then review the CTA and provide a response within 30 calendar days and during the review if Health Canada has any questions the sponsor has a limited time frame to respond <sup>4</sup>. Once Canada health grants authorisation the clinical trial proceeds with informed and consenting participants and guided by a canadian Ethics Committee’s standards. In summary, there are four (4) phases in the clinical trial process and each phase serves a unique purpose: 
+
                 </p>
                 <div class="figtext-container">
+ 
                     <div class="figure">
-                        <div class="box-img glass"></div>
-                        <div class="fig-label">Figure 3: A nice glass box for testing the layout of the box shaped figure</div>
-                    </div>
-                    <div class="fig-text">
-                        <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. <b>Etiam dapibus</b> condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. Etiam dapibus condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat.</p>
+                        <img src="https://static.igem.wiki/teams/4944/wiki/project/drug-development-process-in-canada.png" style="max-width: 700px;">
+                        <div class="fig-label">Figure 5: Image from “The Drug Review and Approval Process in Canada.”<sup>2</sup></div>
                     </div>
                 </div>
-                <div class="figtext-container">
-                    <div class="fig-text">
-                        <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. <b>Etiam dapibus</b> condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. Etiam dapibus condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat.</p>
-                    </div>
-                    <div class="figure">
-                        <div class="circle-img glass"></div>
-                        <div class="fig-label">Figure 4: A nice glass circle for testing the layout of the circle shaped figure</div>
-                    </div>
-                </div>
-                <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. <b>Etiam dapibus</b> condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. Etiam dapibus condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat.
-                    <b>Lorem ipsum dolor</b> sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. Etiam dapibus condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. Etiam dapibus condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat.
-                </p>
+
+
+                    <h2>Phase 1: The Safety Phase</h2>
+                    <p><strong>Study Participants:</strong> 20 to 100 healthy volunteers or people with the disease/condition.</p>
+                    <p><strong>Length of Study:</strong> Several months.<sup>4</sup></p>
+                    <p>Involves testing the investigational drug on a small group of healthy individuals to determine the drug’s safety, dosage range, pharmacological action, and identify adverse drug reactions.<sup>2</sup></p>
+
+                    <h2>Phase 2: The Effectiveness Phase</h2>
+                    <p><strong>Study Participants:</strong> Up to several hundred people with the disease/condition.</p>
+                    <p><strong>Length of Study:</strong> Several months to 2 years.<sup>4</sup></p>
+                    <p>Expands the study to a larger group of people with the condition the drug intends to treat. The focus here is to assess effectiveness, safety, and determine the optimal dosage. The size of the cohort is usually in the hundreds.<sup>2</sup></p>
+
+                    <h2>Phase 3: The Confirmation Phase</h2>
+                    <p><strong>Study Participants:</strong> 300 to 3,000 volunteers who have the disease or condition.</p>
+                    <p><strong>Length of Study:</strong> 1 to 4 years.<sup>4</sup></p>
+                    <p>If the results from Phase 2 are promising, the trial proceeds to this phase where a larger cohort, typically in the thousands, is involved. The goal of this phase is to confirm effectiveness, monitor side effects, compare the drugs to existing treatments and gather data for safe marketing and use.<sup>2</sup></p>
+
+                    <h2>Phase 4: The Monitoring Phase</h2>
+                    <p><strong>Study Participants:</strong> Several thousand volunteers who have the disease/condition.<sup>2</sup></p>
+                    <p>This phase occurs after the drug is approved and available on the market. Its purpose is to collect more information about the drug’s usage, long-term benefits, and risks. Typically, these studies do not require a Clinical Trial Application if they align with the market approval terms.<sup>2</sup></p>
+                <p class="text">Overall, the CTA is a crucial step in the drug development process in Canada to ensure safety and efficacy. However, before a clinical trial can go through in Canada, the HPFB reviews information submitted in the CTA. The purpose of this application is to obtain permission to distribute the drug to responsible clinical investigators that are named in the application. Ultimately, the clinical trial studies must show that the drug has potential therapeutic value that outweigh its toxicity.<sup>1</sup></p>
             </div>
 
             <div class="sub-section">
-                <h3 id="section3" class="subtitle">Section 3</h3>
-                <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. <b>Etiam dapibus</b> condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. Etiam dapibus condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat.
-                    <b>Lorem ipsum dolor</b> sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. Etiam dapibus condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. Etiam dapibus condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat.
-                </p>
+                <h3 id="section4" class="subtitle">Stage 4: The Drug Approval Process </h3>
+                <p class="text">Once we have evidence from preclinical and clinical studies that CholesterLock is safe and effective for its purpose, the sponsor can file the New Drug Submission. Everything about the therapeutic must be included in this file from preclinical data, phase 3 trial data, the results of the chemistry and manufacturing (the quality).<sup>2</sup> Additionally, we will need to provide:</p>
+                <ul style="margin-left: 20px;">
+                    <li>Safety updates</li>
+                    <li>Drug abuse information</li>
+                    <li>Patent information</li>
+                    <li>Directions for use</li>
+                    <li>Institutional review board compliance information</li>
+                </ul>
+
                 <div class="figtext-container">
-                    <div class="fig-text">
-                        <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. <b>Etiam dapibus</b> condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. Etiam dapibus condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat.</p>
-                    </div>
                     <div class="figure">
-                        <div class="circle-img glass"></div>
-                        <div class="fig-label">Figure 5: A nice glass circle for testing the layout of the circle shaped figure</div>
+                        <img class="glass img-format" src="https://static.igem.wiki/teams/4944/wiki/project/hp-ctd-triangle-image.jpeg" style="max-width: 400px;">
+                        <div class="fig-label">Figure 6: CTD Triangle, Image from “The Drug Review and Approval Process in Canada.”<sup>2</sup></div>
+                    </div>
+                    <div class="fig-text">
+                        <h4>Health Canada Review</h4>
+                        <p class="text">The HPFB reviews the NDS, all information pertaining to the therapeutic, and evaluates the risks versus the benefits the therapeutic may have to the Canadian population.<sup>1</sup> Information such as manufacturing, labeling, and packaging, as well as the drugs' claimed side-effects, are also evaluated, as this is the information provided to healthcare professionals. If the product meets the Food and Drugs Act and its Regulations requirements, the sponsor receives a Notice of Compliance as evidence of compliance with the Food and Drugs Act and its Regulations.<sup>2</sup> The review time for a drug in Canada varies based on factors such as drug type and information quality. Typically, it takes 7 months to 1 year, but occasionally it takes up to 2 years. The drug development process as a whole takes 12 years on average.<sup>2</sup></p>
+
+                        <h4>Approval</h4>
+                        <p class="text">Once the review is complete and the benefits associated with the therapeutic outweigh the risks and the risks can be managed, the sponsor receives a Notice of Compliance (NOC) and a Drug Identification Number (DIN), which is specific to the drug product being sold on the Canadian market.<sup>2</sup> For it to receive these documents, according to Health Canada, the drug must provide effective treatment, prevention, or diagnosis or it must provide substantial improvement in effectiveness or a significant reduction in risk compared to existing therapies.<sup>2</sup></p>
                     </div>
                 </div>
-                <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. <b>Etiam dapibus</b> condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. Etiam dapibus condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat.
-                    <b>Lorem ipsum dolor</b> sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. Etiam dapibus condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. Etiam dapibus condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat.
-                </p>
+            
             </div>
-        </div>
+            <div class="sub-section">
+                <h3 id="section5" class="subtitle"> Stage 5: After Health Canada Approval 
+                    <sup>1</sup>
+                    </h3>
+
+                    <h4>Monitoring</h4>
+                    <ul>
+                        <li>After getting approval from Health Canada, it is important that the work on CholesterLock does not stop here. The therapeutic will need to be used as authorized, and various post-approval activities will need to be conducted, like submitting updates for new users or changes in manufacturing. It is crucial that compliance with regulations is maintained.<sup>1</sup></li>
+                    </ul>
+                
+                    <h4>Market Surveillance and Continued Stakeholder Involvement</h4>
+                    <ul>
+                        <li>The FDA is creating a new system called the Sentinel initiative to rapidly identify potential safety concerns related to approved medical products. This system will utilize extensive health databases, including health records, insurance claims data, and registries, to continuously monitor the safety of these products as they are used. This system is part of the FDA’s existing tools for assessing post-market safety.<sup>2</sup></li>
+                        <li>Additionally, it is important to us that we continue to obtain the various perspectives of healthcare practitioners during this process to find ways to stay true as a product for the people and designed with the people.<sup>2</sup></li>
+                    </ul>
+
+                    <div class="sub-subsection">
+                        <h3 id="subsection1" class="sub-subtitle">To the Market!<sup>1</sup></h3>
+                        <h4>Developing a Business Plan </h4>
+                            <ul>
+                                <li>Following market authorization, the next crucial step is market entry and to do this we would need a practical business plan. From our meeting with Dr Robert, we learnt that the success of many start-ups is dependent on their ability to network and market their product. In order for us to create this market plan, we would need to speak to more industry experts and pharmaceutical companies to learn more about how they would want us to communicate our product. It would be important for us to have a clear narrative as to what exactly CholesterLock aims to do and who exactly it is for. We will need to clearly outline how our product engages with the public in ways that existing cholesterol-lowering medications in Canada  do not. We would need to show that CholesterLock was made for the people, by the people.  </li>
+                            </ul>
+                        
+                            <h4>Stakeholders-identified from Human Practises </h4>
+                            <ul>
+                               <li>From our work in Human practises we had categorised our stakeholders as being either quantitative (field professionals) or qualitative (users of the product). At this stage, it will be important for us to focus on the end-users who are physicians that prescribe CholesterLock and the patients with high-cholesterol. As CholesterLock enters the market and makes its way into pharmacies, hospitals and various medical centres, it is their experiences with our product that will either propel our product further into the market or stunt its trustability. For us to maintain customer trust, continuous surveys and input from our end-users not just on their experience with CholesterLock as a therapeutic but with high-cholesterol and their needs is something we will need to pay attention to and incorporate into our design.</li>
+                            </ul>
+                    </div>
+            </div>
+
+            <div class="ref-section glass" onclick="showRef()">
+                <h3 class="sub-subtitle pb-2">References
+                    <svg id="toggle-ref-button" width="15" height="10" viewBox="0 0 42 25">
+                        <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round"/>
+                    </svg>
+                </h3>
+                <div id="ref-text" style="display: none;"> <!-- Initially hide the reference text -->
+                    <ol class="text">
+                        <li>Government of Canada. How drugs are reviewed in Canada [Internet]. Ottawa: Pharmaceutical Drugs Directorate; 2015 [updated 2015 02 12]. Available from: https://www.canada.ca/en/health-canada/services/drugs-health-products/drug-products/fact-sheets/drugs-reviewed-canada.html%22</li>
+                        <li>SPharm. The drug review and approval process in Canada - an eGuide [Internet]. Val-d'Or: SPharm; c2023. Available from: https://spharm-inc.com/the-drug-review-and-approval-process-in-canada-an-eguide/</li>
+                        <li>Innovate Calgary. Maximizing impact through innovation [Internet]. Calgary. Innovate Calgary; c2023. Available from: https://innovatecalgary.com</li>
+                        <li>Food and Drug Administration. Research C for DE and drug trials snapshot: praluent [Internet]. Maryland: Office of Economics and Analysis; 2021. Available from: https://www.fda.gov/drugs/drug-approvals-and-databases/drug-trials-snapshot-praluent%22</li>
+                    </ol>
+                </div>
+            </div>  
+
     </div>
+
 {% endblock %}

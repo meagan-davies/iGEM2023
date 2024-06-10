@@ -1,107 +1,260 @@
 {% extends "layout.html" %}
-  
+
+{% block title %}Collaborations{% endblock %}
 {% block header %}Collaborations{% endblock %}
 
 {% block main_content %}
+
     <div id="main-div" class="clearfix">
         <div id="sidebar">
-            <div class="side-circle"></div>
-            <div class="side-nav">
-                <ul>
-                    <li><a class="side-title" href="#section1">Section 1</a></li>
-                    <li><a class="side-title" href="#section2">Section 2</a></li>
-                    <li><a class="side-title" href="#section3">Section 3</a></li>
-                </ul>
+            <div class="side-container">
+                <div class="side-circle side-item">
+                    <div id="side-progress">
+                        <div id="side-progress-value">
+                            <img class="side-lock" src="https://static.igem.wiki/teams/4944/wiki/img/lock.svg" alt=""/>
+                        </div>
+                    </div>
+                </div>
+                <div class="side-nav side-item">
+                    <ul>
+                        <div class="side-title section-link" onclick="scrollToSection('section1')">JulyGEM</div>
+                        <div class="side-subtitle subsection-link" onclick="scrollToSection('subsection1')">Featured Speakers</div>
+                        <div class="side-subtitle subsection-link" onclick="scrollToSection('subsection2')">Participating Teams</div>
+                        <div class="side-subtitle subsection-link" onclick="scrollToSection('subsection3')">Judges</div>
+                        <div class="side-title section-link" onclick="scrollToSection('section2')">University of Alberta</div>
+                    </ul>
+                </div>
             </div>
         </div>
 
         <div id="main-content">
             <div class="main-section glass">
                 <h3 class="subtitle">Overview</h3>
-                <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. Etiam dapibus condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat.</p>
-            </div>
-
-            <div class="circle-container">
-                <div class="circle-nav glass subtitle">Section 1</div>
-                <div class="circle-nav glass subtitle">Section 2</div>
-                <div class="circle-nav glass subtitle">Section 3</div>
+                <p class="text">The research community is one that is rooted in the principles of community and collaboration. It's through our collective efforts and diverse perspectives that genuine progress is achieved. As CholesterLock, our goal was not only to unite teams within Canada, but also to create a space where teams from different continents could come and share ideas. Through our collaborations with The University of Alberta and our subsequent partnerships with a group of nine other iGEM teams, we were able to learn so much, share so much and enjoy the wonderful company of fellow iGEMers!</p>
             </div>
 
             <div class="sub-section">
-                <h3 id="section1" class="subtitle">Section 1</h3>
-                <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. <b>Etiam dapibus</b> condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. Etiam dapibus condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat.
-                    <b>Lorem ipsum dolor</b> sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. Etiam dapibus condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. Etiam dapibus condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat.
+                <h3 id="section1" class="subtitle">JulyGEM</h3>
+                <p class="text">For the fifth year in a row, iGEM Calgary has successfully organised JulyGEM. This international conference offers teams a platform to receive constructive feedback from various experts such as biosafety specialists, past iGEM judges, and scientists in the industry and research fields. Participants were given the opportunity to pitch their project ideas and gain valuable feedback from these experts, as well as their peers on other teams. The event also encouraged teams to reflect on their project narratives and presentation strategies, which can help make them more impactful.
+                    <br><br>
+                    In addition to the pitching, JulyGEM featured three distinguished speakers who shared their perspectives on entrepreneurship, advancing iGEM projects beyond the startup phase, and real-life success stories of iGEM members. The speakers also discussed the art of impactful storytelling. These presentations aimed to provide a holistic learning experience by offering diverse perspectives on building a successful project.
                 </p>
-                <div class="figtext-container">
-                    <div class="figure">
-                        <div class="circle-img glass"></div>
-                        <div class="fig-label">Figure 1: A nice glass circle for testing the layout of the circle shaped figure</div>
-                    </div>
-                    <div class="fig-text">
-                        <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. <b>Etiam dapibus</b> condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. Etiam dapibus condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat.</p>
+                <div class="sub-subsection">
+                    <h3 id="subsection1" class="sub-subtitle">Featured Speakers</h3>
+
+<!-------------------------------------------------------------------------------------------------> 
+
+<style>* {box-sizing:border-box}
+
+    /* Slideshow container */
+    .slideshow-container {
+      max-width: 200vh;
+      position: relative;
+    
+      
+    }
+    
+    /* Hide the images by default */
+    .mySlides {
+      display: none;
+      max-width: 180vh;
+      position: relative;
+      margin-left: 15vh; 
+      margin-right: auto;
+
+    }
+    
+    /* Next & previous buttons */
+    .prev, .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      margin-top: -22px;
+      padding: 16px;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+    }
+    
+    /* Position the "next button" to the right */
+    .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+    
+    /* On hover, add a black background color with a little bit see-through */
+    .prev:hover, .next:hover {
+      background-color: rgba(0,0,0,0.8);
+    }
+    
+    /* Caption text */
+    .slidetext {
+      color: #f2f2f2;
+      font-size: 15px;
+      padding: 8px 12px;
+      position: absolute;
+      bottom: 8px;
+      width: 100%;
+      text-align: center;
+    }
+    
+    /* Number text (1/3 etc) */
+    .numbertext {
+      color: #f2f2f2;
+      font-size: 12px;
+      padding: 8px 12px;
+      position: absolute;
+      top: 0;
+    }
+    
+    /* The dots/bullets/indicators */
+    .dot {
+      cursor: pointer;
+      height: 15px;
+      width: 15px;
+      margin: 0 2px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
+    }
+    
+    .active, .dot:hover {
+      background-color: #717171;
+    }
+    
+    /* Fading animation */
+    .fade {
+      animation-name: fade;
+      animation-duration: 1.s;
+    }
+    
+    @keyframes fade {
+      from {opacity: .4}
+      to {opacity: 100%}
+    }
+    </style>
+<!------------------------------------------------------------------------------------------------->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!------------------------------------------------------------------------------------------------->
+  <!-- Slideshow container -->
+  <div class="slideshow-container">
+
+    <!-- Full-width images with number and caption text -->
+    <div class="mySlides">
+      <div class="numbertext">1 / 3</div>
+      <img src="https://static.igem.wiki/teams/4944/wiki/team/julygem-speaker1.png" style="width:90%" alt="Photo 1" >
+      
+    </div>
+  
+    <div class="mySlides">
+      <div class="numbertext">2 / 3</div>
+      <img src="https://static.igem.wiki/teams/4944/wiki/team/julygem-speaker2.png" style="width:90%" alt="Photo 2">
+      
+    </div>
+  
+    <div class="mySlides">
+      <div class="numbertext">3 / 3</div>
+      <img src="https://static.igem.wiki/teams/4944/wiki/team/julygem-speaker3.png" style="width:90%" alt="Photo 3">
+      
+    </div>
+  
+    <!-- Next and previous buttons -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+  </div>
+  <br>
+  
+  <!-- The dots/circles -->
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+  </div>
+
+
+                    
+<!------------------------------------------------------------------------------------------------->
+                    
+                </div>
+                <div class="sub-subsection">
+                    <h3 id="subsection2" class="sub-subtitle">Participating Teams</h3>
+                    <div class="figtext-container">
+                        <div class="fig-text">
+                            <ul>
+                                <li>Ionis Paris</li>
+                                <li>UAlberta</li>
+                                <li>Lethbridge High School</li>
+                                <li>UBC</li>
+                                <li>McGill</li>
+                                <li>Cambridge</li>
+                                <li>UM Macau</li>
+                                <li>UBCO</li>
+                                <li>ABOA-Turku</li>
+                            </ul>
+                        </div>
+                        <div class="figure">
+                            <img class="box-img glass" src="https://static.igem.wiki/teams/4944/wiki/team/julygem-team.png" alt="Photo 1">
+                        </div>
                     </div>
                 </div>
-                <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. <b>Etiam dapibus</b> condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. Etiam dapibus condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat.</p>
-                <div class="figtext-container">
-                    <div class="fig-text">
-                        <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. <b>Etiam dapibus</b> condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. Etiam dapibus condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat.</p>
-                    </div>
-                    <div class="figure">
-                        <div class="box-img glass"></div>
-                        <div class="fig-label">Figure 2: A nice glass box for testing the layout of the box shaped figure</div>
+                <div class="sub-subsection">
+                    <h3 id="subsection3" class="sub-subtitle">Judges</h3>
+                    <div class="photo-grid2">
+                        <img class="glass img-form2" src="https://static.igem.wiki/teams/4944/wiki/team/julygem-judges1.png" alt="Photo 1">
+                        <img class="glass img-form2" src="https://static.igem.wiki/teams/4944/wiki/team/julygem-judges2.png" alt="Photo 2">
                     </div>
                 </div>
-                <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. <b>Etiam dapibus</b> condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. Etiam dapibus condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat.
-                    <b>Lorem ipsum dolor</b> sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. Etiam dapibus condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. Etiam dapibus condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat.
-                </p>
             </div>
 
             <div class="sub-section">
-                <h3 id="section2" class="subtitle">Section 2</h3>
-                <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. <b>Etiam dapibus</b> condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. Etiam dapibus condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat.
-                    <b>Lorem ipsum dolor</b> sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. Etiam dapibus condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. Etiam dapibus condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat.
-                </p>
+                <h3 id="section2" class="subtitle">University of Alberta</h3>
                 <div class="figtext-container">
                     <div class="figure">
-                        <div class="box-img glass"></div>
-                        <div class="fig-label">Figure 3: A nice glass box for testing the layout of the box shaped figure</div>
+                        <img class="box-img glass" src="https://static.igem.wiki/teams/4944/wiki/team/uofa-call.png" alt="Photo 1">
                     </div>
                     <div class="fig-text">
-                        <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. <b>Etiam dapibus</b> condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. Etiam dapibus condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat.</p>
+                        <p class="text">Our one-on-one meeting on 7th June 2023 involved participants from the University of Alberta (UofA) iGEM team. The meeting discussed our respective projects: an Agricultural Project focused on early detection of Fusaria in Wheat and Grain Crops by University of Alberta and CholesterLock- Development of Fc Fusion protein targeting NPC1L1 receptor by University of Calgary. We discussed various technical as well as non-technical aspects of our projects with each other and showed dedication to exploring Human Practices related to patient perspectives, safety, and cost justification. We discussed possible event themes, formats, and workshops, emphasising the need for a mix of iGEM-specific topics and broader subjects. UofA's willingness to host a synthetic biology workshop and their preference for involving nearby teams were also highlighted.
+                        </p>
                     </div>
                 </div>
-                <div class="figtext-container">
-                    <div class="fig-text">
-                        <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. <b>Etiam dapibus</b> condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. Etiam dapibus condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat.</p>
-                    </div>
-                    <div class="figure">
-                        <div class="circle-img glass"></div>
-                        <div class="fig-label">Figure 4: A nice glass circle for testing the layout of the circle shaped figure</div>
-                    </div>
-                </div>
-                <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. <b>Etiam dapibus</b> condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. Etiam dapibus condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat.
-                    <b>Lorem ipsum dolor</b> sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. Etiam dapibus condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. Etiam dapibus condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat.
-                </p>
-            </div>
-
-            <div class="sub-section">
-                <h3 id="section3" class="subtitle">Section 3</h3>
-                <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. <b>Etiam dapibus</b> condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. Etiam dapibus condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat.
-                    <b>Lorem ipsum dolor</b> sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. Etiam dapibus condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. Etiam dapibus condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat.
-                </p>
-                <div class="figtext-container">
-                    <div class="fig-text">
-                        <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. <b>Etiam dapibus</b> condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. Etiam dapibus condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat.</p>
-                    </div>
-                    <div class="figure">
-                        <div class="circle-img glass"></div>
-                        <div class="fig-label">Figure 5: A nice glass circle for testing the layout of the circle shaped figure</div>
-                    </div>
-                </div>
-                <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. <b>Etiam dapibus</b> condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. Etiam dapibus condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat.
-                    <b>Lorem ipsum dolor</b> sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. Etiam dapibus condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. Etiam dapibus condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat.
-                </p>
-            </div>
+            </div>    
         </div>
     </div>
+
+<!-------------------------------------------------------------------------------------------------> 
+<script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+    
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+    
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+    }
+    </script>
+  <!------------------------------------------------------------------------------------------------->
 {% endblock %}

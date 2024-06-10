@@ -1,17 +1,28 @@
 {% extends "layout.html" %}
-  
+
+{% block title %}Design{% endblock %}
 {% block header %}Design{% endblock %}
 
 {% block main_content %}
+   
     <div id="main-div" class="clearfix">
         <div id="sidebar">
-            <div class="side-circle"></div>
-            <div class="side-nav">
-                <ul>
-                    <li><a class="side-title" href="#section1">Section 1</a></li>
-                    <li><a class="side-title" href="#section2">Section 2</a></li>
-                    <li><a class="side-title" href="#section3">Section 3</a></li>
-                </ul>
+            <div class="side-container">
+                <div class="side-circle side-item">
+                    <div id="side-progress">
+                        <div id="side-progress-value">
+                            <img class="side-lock" src="https://static.igem.wiki/teams/4944/wiki/img/lock.svg" alt=""/>
+                        </div>
+                    </div>
+                </div>
+                <div class="side-nav side-item">
+                    <ul>
+                        <div class="side-title section-link" onclick="scrollToSection('section1')">Section 1</div>
+                        <div class="side-subtitle subsection-link" onclick="scrollToSection('subsection1')">Subsection 1</div>
+                        <div class="side-title section-link" onclick="scrollToSection('section2')">Section 2</div>
+                        <div class="side-title section-link" onclick="scrollToSection('section3')">Section 3</div>
+                    </ul>
+                </div>
             </div>
         </div>
 
@@ -21,10 +32,10 @@
                 <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. Etiam dapibus condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat.</p>
             </div>
 
-            <div class="circle-container">
-                <div class="circle-nav glass subtitle">Section 1</div>
-                <div class="circle-nav glass subtitle">Section 2</div>
-                <div class="circle-nav glass subtitle">Section 3</div>
+            <div type="button" class="circle-container">
+                <button type="button" class="circle-nav glass subtitle" onclick="scrollToSection('section1')">Section 1</button>
+                <button type="button" class="circle-nav glass subtitle" onclick="scrollToSection('section2')">Section 2</button>
+                <button type="button" class="circle-nav glass subtitle" onclick="scrollToSection('section3')">Section 3</button>
             </div>
 
             <div class="sub-section">
@@ -41,19 +52,22 @@
                         <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. <b>Etiam dapibus</b> condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. Etiam dapibus condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat.</p>
                     </div>
                 </div>
-                <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. <b>Etiam dapibus</b> condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. Etiam dapibus condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat.</p>
-                <div class="figtext-container">
-                    <div class="fig-text">
-                        <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. <b>Etiam dapibus</b> condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. Etiam dapibus condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat.</p>
+                <div class="sub-subsection">
+                    <h3 id="subsection1" class="sub-subtitle">Subsection 1</h3>
+                    <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. <b>Etiam dapibus</b> condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. Etiam dapibus condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat.</p>
+                    <div class="figtext-container">
+                        <div class="fig-text">
+                            <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. <b>Etiam dapibus</b> condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. Etiam dapibus condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat.</p>
+                        </div>
+                        <div class="figure">
+                            <div class="tall-box-img glass"></div>
+                            <div class="fig-label">Figure 2: A nice glass box for testing the layout of the tall box shaped figure</div>
+                        </div>
                     </div>
-                    <div class="figure">
-                        <div class="box-img glass"></div>
-                        <div class="fig-label">Figure 2: A nice glass box for testing the layout of the box shaped figure</div>
-                    </div>
+                    <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. <b>Etiam dapibus</b> condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. Etiam dapibus condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat.
+                        <b>Lorem ipsum dolor</b> sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. Etiam dapibus condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. Etiam dapibus condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat.
+                    </p>
                 </div>
-                <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. <b>Etiam dapibus</b> condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. Etiam dapibus condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat.
-                    <b>Lorem ipsum dolor</b> sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. Etiam dapibus condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. Etiam dapibus condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat.
-                </p>
             </div>
 
             <div class="sub-section">
@@ -102,6 +116,24 @@
                     <b>Lorem ipsum dolor</b> sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. Etiam dapibus condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. Etiam dapibus condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat.
                 </p>
             </div>
+
+            <div class="ref-section glass" onclick="showRef()">
+                <h3 class="sub-subtitle pb-2">References
+                    <svg id="toggle-ref-button" width="15" height="10" viewBox="0 0 42 25">
+                        <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round"/>
+                    </svg>
+                </h3>
+                <div id="ref-text" style="display: none;"> <!-- Initially hide the reference text -->
+                    <ol class="text">
+                        <li>Betters JL, Yu L. NPC1L1 and cholesterol transport. FEBS Lett. 2010 Mar 19;584(13):2740-7. doi: 10.1016/j.febslet.2010.03.030.</li>
+                        <li>Labonte ED, Camarota LM, Rojas JC, et al. Reduced absorption of saturated fatty acids and resistance to diet-induced obesity and diabetes by ezetimibe-treated and Npc1l1-/- mice. Am J Physiol - Gastrointest. 2008 Oct;295(4):G776-83. doi: 10.1152/ajpgi.90275.2008.</li>
+                        <li>Jasion VS, Burnett BP. Survival and digestibility of orally-administered immunoglobulin preparations containing IgG through the gastrointestinal tract in humans. Nutr J. 2015 Mar 7;14(1). doi: 10.1186/s12937-015-0010-7.</li>
+                        <li>Burglin TR. The Hedgehog protein family. Genome Biol. 2008 Nov 19;(11):241. doi: 10.1186/gb-2008-9-11-241.</li>
+                        <li>Mann RK, Beachy PA. Novel lipid modifications of secreted protein signals. Annu Rev Biochem. 2004 Mar;73:891-923. doi: 10.1146/annurev.biochem.73.011303.073933</li>
+                    </ol>
+                </div>
+            </div>            
         </div>
     </div>
+
 {% endblock %}

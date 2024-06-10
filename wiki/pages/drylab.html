@@ -1,107 +1,30 @@
 {% extends "layout.html" %}
-  
+
+{% block title %}Dry Lab{% endblock %}
 {% block header %}Dry Lab{% endblock %}
 
 {% block main_content %}
+   
     <div id="main-div" class="clearfix">
-        <div id="sidebar">
-            <div class="side-circle"></div>
-            <div class="side-nav">
-                <ul>
-                    <li><a class="side-title" href="#section1">Section 1</a></li>
-                    <li><a class="side-title" href="#section2">Section 2</a></li>
-                    <li><a class="side-title" href="#section3">Section 3</a></li>
-                </ul>
-            </div>
-        </div>
+       
 
         <div id="main-content">
             <div class="main-section glass">
                 <h3 class="subtitle">Overview</h3>
-                <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. Etiam dapibus condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat.</p>
-            </div>
-
-            <div class="circle-container">
-                <div class="circle-nav glass subtitle">Section 1</div>
-                <div class="circle-nav glass subtitle">Section 2</div>
-                <div class="circle-nav glass subtitle">Section 3</div>
-            </div>
-
-            <div class="sub-section">
-                <h3 id="section1" class="subtitle">Section 1</h3>
-                <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. <b>Etiam dapibus</b> condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. Etiam dapibus condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat.
-                    <b>Lorem ipsum dolor</b> sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. Etiam dapibus condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. Etiam dapibus condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat.
-                </p>
-                <div class="figtext-container">
-                    <div class="figure">
-                        <div class="circle-img glass"></div>
-                        <div class="fig-label">Figure 1: A nice glass circle for testing the layout of the circle shaped figure</div>
-                    </div>
-                    <div class="fig-text">
-                        <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. <b>Etiam dapibus</b> condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. Etiam dapibus condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat.</p>
-                    </div>
-                </div>
-                <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. <b>Etiam dapibus</b> condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. Etiam dapibus condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat.</p>
-                <div class="figtext-container">
-                    <div class="fig-text">
-                        <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. <b>Etiam dapibus</b> condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. Etiam dapibus condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat.</p>
-                    </div>
-                    <div class="figure">
-                        <div class="box-img glass"></div>
-                        <div class="fig-label">Figure 2: A nice glass box for testing the layout of the box shaped figure</div>
-                    </div>
-                </div>
-                <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. <b>Etiam dapibus</b> condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. Etiam dapibus condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat.
-                    <b>Lorem ipsum dolor</b> sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. Etiam dapibus condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. Etiam dapibus condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat.
+                <p class="text">The iGEM Calgary Dry Lab team played a pivotal role in designing fusion proteins and providing crucial support to the Wet Lab team in comprehending the initial protein designs. Our Dry Lab efforts primarily revolved around two key areas: fusion protein modelling and the development of a linker database web app.
+                    <br><br>
+                    To investigate the effect of different linker sequences on fusion protein design, we created multiple models featuring linker sequences with diverse characteristics. Fusion proteins are intricate constructs formed by combining distinct protein domains, making the choice of linker sequence critical for preserving the structural and functional integrity of these fused proteins. We utilised a variety of protein modelling software tools, starting from tools to construct and adjust the parameters of our models and continuing to simulate their journey in the digestive tract. Additionally, we explored the abilities and restrictions of different software, to provide a complete understanding of their effectiveness.
+                    <br><br>
+                    Our search for a suitable linker was met with significant challenges. The lack of a dedicated linker-specific database, similar to the Protein Data Bank (PDB), presented difficulties. Additionally, it was challenging for the researchers on the Dry Lab team to use the available content for self-learning. In response to this, we took on the task of developing a web application named "LINKED." The primary goal of this web app is to assist researchers in the initial screening and preliminary analysis of potential linkers, thereby paving the way for further linker modifications and improvements. In this way, we aimed to bridge the gap between linker sequence design and making the material more accessible to researchers, ultimately advancing the field of synthetic biology.
                 </p>
             </div>
 
-            <div class="sub-section">
-                <h3 id="section2" class="subtitle">Section 2</h3>
-                <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. <b>Etiam dapibus</b> condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. Etiam dapibus condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat.
-                    <b>Lorem ipsum dolor</b> sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. Etiam dapibus condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. Etiam dapibus condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat.
-                </p>
-                <div class="figtext-container">
-                    <div class="figure">
-                        <div class="box-img glass"></div>
-                        <div class="fig-label">Figure 3: A nice glass box for testing the layout of the box shaped figure</div>
-                    </div>
-                    <div class="fig-text">
-                        <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. <b>Etiam dapibus</b> condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. Etiam dapibus condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat.</p>
-                    </div>
-                </div>
-                <div class="figtext-container">
-                    <div class="fig-text">
-                        <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. <b>Etiam dapibus</b> condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. Etiam dapibus condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat.</p>
-                    </div>
-                    <div class="figure">
-                        <div class="circle-img glass"></div>
-                        <div class="fig-label">Figure 4: A nice glass circle for testing the layout of the circle shaped figure</div>
-                    </div>
-                </div>
-                <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. <b>Etiam dapibus</b> condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. Etiam dapibus condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat.
-                    <b>Lorem ipsum dolor</b> sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. Etiam dapibus condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. Etiam dapibus condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat.
-                </p>
+            <div class="circle-container pb-5">
+                <a class="circle-nav glass subtitle" href="{{ url_for('pages', page='model') }}">Model</a>
+                <a class="circle-nav glass subtitle" href="{{ url_for('pages', page='software') }}">Software</a>
             </div>
-
-            <div class="sub-section">
-                <h3 id="section3" class="subtitle">Section 3</h3>
-                <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. <b>Etiam dapibus</b> condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. Etiam dapibus condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat.
-                    <b>Lorem ipsum dolor</b> sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. Etiam dapibus condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. Etiam dapibus condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat.
-                </p>
-                <div class="figtext-container">
-                    <div class="fig-text">
-                        <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. <b>Etiam dapibus</b> condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. Etiam dapibus condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat.</p>
-                    </div>
-                    <div class="figure">
-                        <div class="circle-img glass"></div>
-                        <div class="fig-label">Figure 5: A nice glass circle for testing the layout of the circle shaped figure</div>
-                    </div>
-                </div>
-                <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. <b>Etiam dapibus</b> condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. Etiam dapibus condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat.
-                    <b>Lorem ipsum dolor</b> sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. Etiam dapibus condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. Etiam dapibus condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat.
-                </p>
-            </div>
+            
         </div>
     </div>
+
 {% endblock %}

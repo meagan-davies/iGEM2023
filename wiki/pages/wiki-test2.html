@@ -1,10 +1,10 @@
 {% extends "layout.html" %}
 
-{% block title %}Sustainablility{% endblock %}
-{% block header %}Sustainable Development Goals{% endblock %}
+{% block title %}Test Page{% endblock %}
+{% block header %}Test Page{% endblock %}
 
 {% block main_content %}
-   
+
     <div id="main-div" class="clearfix">
         <div id="sidebar">
             <div class="side-container">
@@ -116,24 +116,104 @@
                     <b>Lorem ipsum dolor</b> sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. Etiam dapibus condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. Etiam dapibus condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat.
                 </p>
             </div>
-
-            <div class="ref-section glass" onclick="showRef()">
-                <h3 class="sub-subtitle pb-2">References
-                    <svg id="toggle-ref-button" width="15" height="10" viewBox="0 0 42 25">
-                        <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round"/>
-                    </svg>
-                </h3>
-                <div id="ref-text" style="display: none;"> <!-- Initially hide the reference text -->
-                    <ol class="text">
-                        <li>Betters JL, Yu L. NPC1L1 and cholesterol transport. FEBS Lett. 2010 Mar 19;584(13):2740-7. doi: 10.1016/j.febslet.2010.03.030.</li>
-                        <li>Labonte ED, Camarota LM, Rojas JC, et al. Reduced absorption of saturated fatty acids and resistance to diet-induced obesity and diabetes by ezetimibe-treated and Npc1l1-/- mice. Am J Physiol - Gastrointest. 2008 Oct;295(4):G776-83. doi: 10.1152/ajpgi.90275.2008.</li>
-                        <li>Jasion VS, Burnett BP. Survival and digestibility of orally-administered immunoglobulin preparations containing IgG through the gastrointestinal tract in humans. Nutr J. 2015 Mar 7;14(1). doi: 10.1186/s12937-015-0010-7.</li>
-                        <li>Burglin TR. The Hedgehog protein family. Genome Biol. 2008 Nov 19;(11):241. doi: 10.1186/gb-2008-9-11-241.</li>
-                        <li>Mann RK, Beachy PA. Novel lipid modifications of secreted protein signals. Annu Rev Biochem. 2004 Mar;73:891-923. doi: 10.1146/annurev.biochem.73.011303.073933</li>
-                    </ol>
-                </div>
-            </div>            
         </div>
     </div>
+    <script>
+        function scrollToSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            if (section) {
+                const headerHeight = 7 * parseFloat(getComputedStyle(document.documentElement).fontSize); // Calculate 5rem in pixels
+                const sectionPosition = section.getBoundingClientRect().top + window.scrollY - headerHeight;
+                window.scrollTo({ top: sectionPosition, behavior: "smooth" });
+            }
+        }
+    </script>
+    <script>
+        function updateScrollProgress() {
+            let scrollProgress = document.getElementById("side-progress");
+            let progressValue = document.getElementById("side-progress-value");
+            let pos = document.documentElement.scrollTop;
+            let calcHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            let scrollValue = Math.round(pos * 100 / calcHeight);
+        
+            scrollProgress.style.background = `conic-gradient(white ${scrollValue}%, black ${scrollValue}%)`
+        }
+    
+        window.addEventListener('scroll', updateScrollProgress);
+        window.addEventListener('load', updateScrollProgress);
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const sidebar = document.getElementById("sidebar");
+            const headerBanner = document.getElementById("header-banner-div");
+            const sidebarContainer = document.querySelector(".side-container");
+            const footer = document.getElementById("page-footer");
 
+            function updateSidePosition() {
+                const headerHeight = headerBanner.clientHeight;
+                //CH returns the inner height of the element in px and it will remove the border, scrollbar, margin //
+            
+                const sidebarTopOffset = sidebar.offsetTop;
+                // OT will give the distance of the element relative to the top of the offsetParent
+
+                const sidebarBottom = sidebar.getBoundingClientRect().bottom;
+                const footerTop = footer.getBoundingClientRect().top;
+                //Distance from top to bottom of the sidebar in the entire document
+
+                const windowHeight = window.innerHeight;
+
+                if (window.scrollY >= sidebarTopOffset - headerHeight) {
+                    sidebarContainer.classList.add("sticky-links");
+                    sidebarContainer.style.top = `${-300 + headerHeight}px`; 
+                    // Note: -300 can be adjust to change location of links in sidebar
+                } else {
+                    sidebarContainer.classList.remove("sticky-links");
+                    sidebarContainer.style.top = "0";
+                }
+
+                if (window.scrollY + windowHeight >= footerTop) {
+                    sidebarContainer.style.position = "sticky";
+                    sidebarContainer.style.bottom = "0";
+                } else {
+                    sidebarContainer.style.position = "sticky";
+                    sidebarContainer.style.bottom = "initial";
+                }
+            }
+
+            window.addEventListener("scroll", updateSidePosition);
+            window.addEventListener("resize", updateSidePosition);
+
+            // Initially call the function to set the initial state
+            updateSidePosition();
+        });
+    </script>
+    <script>
+        function updateSectionProgress() {
+            const sections = document.querySelectorAll(".sub-section, .sub-subsection");
+            const sidebarTitles = document.querySelectorAll(".section-link, .subsection-link");
+            let currentSectionIndex = 0;
+
+            // Find the index of the section that is currently in view
+            for (let i = sections.length - 1; i >= 0; i--) {
+                const rect = sections[i].getBoundingClientRect();
+                if (rect.top <= window.innerHeight * 0.5) {
+                    currentSectionIndex = i;
+                    break;
+                }
+            }
+
+            // Remove the 'active' class from all sidebar titles
+            sidebarTitles.forEach((title) => {
+                title.classList.remove("active");
+            });
+
+            // Add the 'active' class to the corresponding sidebar title
+            sidebarTitles[currentSectionIndex].classList.add("active");
+        }
+
+        // Call the function when the page loads and on scroll
+        window.addEventListener("DOMContentLoaded", updateSectionProgress);
+        window.addEventListener("scroll", updateSectionProgress);
+
+    </script>
 {% endblock %}

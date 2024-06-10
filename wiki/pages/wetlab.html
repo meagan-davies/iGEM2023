@@ -1,107 +1,183 @@
 {% extends "layout.html" %}
-  
+
+{% block title %}Wet Lab{% endblock %}
 {% block header %}Wet Lab{% endblock %}
 
 {% block main_content %}
+   
     <div id="main-div" class="clearfix">
         <div id="sidebar">
-            <div class="side-circle"></div>
-            <div class="side-nav">
-                <ul>
-                    <li><a class="side-title" href="#section1">Section 1</a></li>
-                    <li><a class="side-title" href="#section2">Section 2</a></li>
-                    <li><a class="side-title" href="#section3">Section 3</a></li>
-                </ul>
+            <div class="side-container">
+                <div class="side-circle side-item">
+                    <div id="side-progress">
+                        <div id="side-progress-value">
+                            <img class="side-lock" src="https://static.igem.wiki/teams/4944/wiki/img/lock.svg" alt=""/>
+                        </div>
+                    </div>
+                </div>
+                <div class="side-nav side-item">
+                    <ul>
+                        <div class="side-title section-link" onclick="scrollToSection('section1')">Mammalian Cell Culture</div>
+                        <div class="side-subtitle subsection-link" onclick="scrollToSection('subsection1')">Why we pivoted to testing in cell culture:</div>
+                        <div class="side-subtitle subsection-link" onclick="scrollToSection('subsection2')">How were the mammalian cells used?</div>
+                        <div class="side-subtitle subsection-link" onclick="scrollToSection('subsection3')">Important further future directions:</div>
+                        <div class="side-title section-link" onclick="scrollToSection('section2')">Protein Purification</div>
+                        <div class="side-title section-link" onclick="scrollToSection('section3')">Hedgehog Family Proteins</div>
+                    </ul>
+                </div>
             </div>
         </div>
 
         <div id="main-content">
             <div class="main-section glass">
                 <h3 class="subtitle">Overview</h3>
-                <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. Etiam dapibus condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat.</p>
+                <p class="text">CholesterLock’s Wet Lab team worked on engineering and synthesizing the individual components of our construct and characterizing our parts by employing bacterial cloning techniques and mammalian cell culturing. Our efforts primarily focused on the Sonic Hedgehog Protein and NPC1L1.
+                    <br><br>
+                    The characteristic auto-processing capabilities of the Sonic Hedgehog Protein (Shh) was integral to the cholesterol binding mechanism of our construct. We used bacterial cloning through restriction digests and ligations to create pD-mShh, an expression vector with the Shh insert. This was followed by a series of protein production and purification optimizations to produce the protein for future testing.
+                    <br><br>
+                    NPC1L1 is a membrane transporter that facilitates fatty acid absorption in the small intestines. In order to test the binding and absorption mechanisms of CholesterLock, the Wet Lab worked engineering an NPC1L1 producing HEK293 cell line that could be employed in testing. Through Gateway Cloning, we inserted NPC1L1 into an overexpression destination vector and transfected the plasmid into HEK293 cells to achieve a stable cell line.
+                    </p>
             </div>
+            <div class="sub-section">
+                <h3 id="section1" class="subtitle">Mammalian Cell Culture</h3>
+                <div class="sub-subsection">
+                    <h3 id="subsection1" class="title">Why we pivoted to testing in cell culture:</h3>
 
-            <div class="circle-container">
-                <div class="circle-nav glass subtitle">Section 1</div>
-                <div class="circle-nav glass subtitle">Section 2</div>
-                <div class="circle-nav glass subtitle">Section 3</div>
+                    <div class="figtext-container">
+                        <div class="fig-text">
+                            <p class="text">Mammalian cells such as human embryonic kidney 293 or HEK293 cells are widely used as hosts to express recombinant proteins due to their ability to reconstitute key post-translational modifications, high transfection efficiency, faithful translation of protein. They have been used in the past to express receptor proteins and ion channels and have been described an extremely valuable host to conduct studies of membrane proteins.<sup>1</sup> However, high level expression of complex membrane proteins is a challenging task.1  NPC1L1 poses unique difficulties due to the multiple hydrophobic transmembrane regions and low expression rates. Additionally, membrane proteins are sometimes co-translationally inserted directly into the lipid membrane during synthesis which enables its proper folding.<sup>2</sup> Because the structure and function of MPs are so dependent on their interactions with the lipid bilayer, removing them usually has detrimental effects on their biological activity.<sup>2</sup></p>
+                        </div>
+                        <div class="figure">
+                            <img class="glass tall-box-img" src="https://static.igem.wiki/teams/4944/wiki/wet-lab/mammalian-cells1.jpeg">
+                            <div class="fig-label">Figure 1: Transfected HEK293 cells being grown up in a 6 well plate for a stable cell line.</div>
+                        </div>
+                    </div>
+                    <p class="text">
+                        Since NPC1L1 is a complex human protein, it was unlikely that the folding and posttranslational modifications such as glycosylation needed could have been expressed in bacteria. So the team devised a proposal for cell free expression which involved nanodiscs to solubilize the hydrophobic protein. To isolate a full-length membrane protein synthesised within a cell, the lipid bilayer must first be disrupted while avoiding damaging effects to the MP, then the MP needs to be reconstituted into a membrane environment (nanodiscs), typically using detergents.<sup>3</sup> However, because no universal detergents can reconstitute every MP, achieving successful solubilization from the membrane becomes a time-consuming process as one tries to find the delicate balance between the solubilization efficiency of the detergent and the stability of the protein.<sup>3</sup> 
+                        <br><br>
+                        The complexities of nanodiscs and the recommendation from HP contacts to use mammalian cells led the team to pivot toward expressing NPC1L1 and testing it while it was expressed in HEK293 cells. 
+                    </p>
+                    <div class="figtext-container">
+                        <div class="figure">
+                            <img class="glass img-format" src="https://static.igem.wiki/teams/4944/wiki/wet-lab/mammalian-cells2.png" alt="">
+                            <div class="fig-label">Figure 2: Regular HEK293 cells 24 hours after passaging.</div>
+                        </div>
+                        <div class="figure">
+                            <img class="glass img-format" src="https://static.igem.wiki/teams/4944/wiki/wet-lab/mammalian-cells3.jpeg" alt="">
+                            <div class="fig-label">Figure 3: An image of the T25 flask used to contain untransfected HEK293 cells (taken at passage 24).</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sub-subsection">
+                    <h3 id="subsection2" class="title">How were the mammalian cells used?</h3>
+                    <div class="figtext-container">
+                        <div class="fig-text">
+                            <p class="text">The first step in making this a reality was generating a plasmid that contained NPC1L1, a GFP sequence so that transfection could be identified, and a puromycin resistance gene. The backbone used was the PB-TAG-ERP2 plasmid backbone from Addgene, and Gateway cloning was utilised to add the NPC1L1 sequence in between the attb sites on the plasmid.<sup>4</sup></p>
+                        </div>
+                        <div class="figure">
+                            <img class="glass img-format" src="https://static.igem.wiki/teams/4944/wiki/wet-lab/mammalian-plasmid-map.jpeg">
+                            <div class="fig-label">Figure 4: The plasmid map for the PB-TAG-ERP2 plasmid backbone containing the NPC1L1 sequence and GFP that HEK293 cells were transfected with.</div>
+                        </div>
+                    </div>
+                    <p>
+                        After training with the mammalian cells was complete, there was a lot of troubleshooting done as transfected HEK293 cells kept lifting and dying. This troubleshooting included both lipofectamine and doxycycline. It was hypothesised during lab meetings that the lipofectamine concentration could be too high and damaging or that the doxycycline could be over-expressing a membrane protein to the point of cytotoxicity. Therefore, a lipofectamine optimization test was done, trying to find an ideal ratio of how much lipofectamine 2000 to use compared to DNA. 
+                        <br><br>
+                        Qualitatively, the cells that transfected and survived the best either had a 0.5uL lipofectamine to 1ug DNA ratio or a 1uL lipofectamine for 1ug DNA ratio. Higher concentrations of lipofectamine, such as using ratios that were 1ug DNA: 2ul lipofectamine up to 4 resulted in necrosis and cell lifting. 
+                        <br><br>
+                        The second optimization tests conducted were doxycycline tests, which tested a range of concentrations of doxycycline fold dilutions, going from 8000x up to 500x. The cells exposed to these differing dox concentrations were then stained with propidium iodide and Hoechst staining. The propidium iodide stained dead cells, while Hoechst stained cells in general with the intention to merge images and see if greater expression of the membrane protein translated to higher levels of cell death. There were two ways this was observed, by merging images of GFP fluorescence (which indicates transfected cells) with fluorescence under Texas Red (causes fluorescence in propidium iodide) to see if transfection coincided more heavily with cell death. The second method that the dox test was quantified was using a microplate reader to get a more objective observation of the different fluorescence in the wells. 
+                    </p>
+                    <div class="photo-grid2">
+                        <img class="glass img-format" src="https://static.igem.wiki/teams/4944/wiki/wet-lab/dox-test1.jpeg" alt="Photo 1">
+                        <img class="glass img-format" src="https://static.igem.wiki/teams/4944/wiki/wet-lab/dox-test2.png" alt="Photo 2">
+                    </div>
+                    <div class="figure">
+                        <div class="fig-label2">Figure 5: An image from the 8000x doxycycline concentration test. The green represents fluorescing cells and red indicates dead cells stained with propidium iodide. Overlap (yellow-orange) indicates glowing dead cells, while separate colours indicate that the fluorescing cells are not dead. The test, which included concentrations from 8000x to 500x dilutions, was done to determine whether increasing the doxycycline concentration (and in turn increasing expression of NPC1L1 membrane protein) resulted in increases in cell death or stressed out the cells. </div>
+                    </div>
+                    <p>The merged image was taken at 10x of the 8000x Dox dilution. The green indicates transfected cells expressing GFP, while the red is propidium iodide staining indicating death. There was very little overlap overall, indicating that the dox-induced over-expression of plasmid likely doesn’t decrease cell viability. The graph represents the microplate reader data gathered from the doxycycline testing. 
+                        <br><br>
+                        Both the merged images and the data gathered from the microplate reader indicated that the levels of cell death were more or less the same across the different doxycycline concentrations. 
+                        <br><br>
+                        The project used a 1000x dilution on the recommendation of one of our TAs who had experience using dox-inducible systems, and the results demonstrated that there was fluorescence and limited cell death, so the 1000x dilution continued to be used. The doxycycline testing and results made it seem less likely that doxycycline was responsible for the cell death and lifting observed early on in the process of transfecting mammalian cells. 
+                        <br><br>
+                        By early July, the team had replaced the old HEK293 cells, which had reached passage 50 with a newly thawed batch. The lipofectamine tests provided a ratio and volume that led to less cell death during and after transfections, and the doxycycline concentration was kept constant. At this point, further transfections were successfully done, however, puromycin exposure kept leading to cell death. When the wet lab checked our plasmid backbone and puromycin resistance gene in Benchling it was determined that the plasmid lacked the sequences necessary to be integrated into the genome of the HEK293s as hoped and that the puromycin resistance gene was likely not being expressed for more than a week as cells lost the plasmid. 
+                        <br><br>
+                        These transiently transfected cells were still utilised in our preliminary cholesterol assay to functionally test the cholesterol absorbance of transfected versus untransfected cells. The Results indicated that transfected cells that were induced with dox did absorb more cholesterol than transfected cells that were not induced and untransfected cells. 
+                        <br><br>
+                        Linear transfections were conducted to integrate the plasmid into the genome of the HEK293 cells. Our plasmid DNA could be linearized using the restriction enzymes Sap1 and Bmt1, and both of these were separately used to get two sets of stably transfected HEK293 cells that were expressing NPC1L1. These cut sites were chosen as they would linearize the plasmid, Bmt1 only cut once, and they wouldn’t interfere with any important coding regions. Two attempts were made to use serial dilutions to isolate for a single colony in order to develop a stable cell line. Once the dilution is completed and the cells are grown sufficiently, we will be able to establish a stable cell line that produces NPC1L1 and can be shared with other teams. 
+                    </p>
+
+                    <div class="figtext-container">
+                        <div class="figure">
+                            <img class="glass img-format" src="https://static.igem.wiki/teams/4944/wiki/wet-lab/restriction1.jpeg" alt="">
+                            <div class="fig-label">Figure 6: The annotated plasmid map, listing all the possible restriction sites available on our plasmid.</div>
+                        </div>
+                        <div class="figure">
+                            <img class="glass img-format" src="https://static.igem.wiki/teams/4944/wiki/wet-lab/restriction2.jpeg" alt="">
+                            <div class="fig-label">Figure 7: The restriction enzymes that were used in the linear transfection SAP1 and Bmt1. These were used in separate reactions to cut the plasmid and linearize it without cutting any vital parts of the plasmid.</div>
+                        </div>
+                    </div>
+
+                    <p>The next steps from here with the mammalian cells involve verification of the presence of NPC1L1 and running a secondary cholesterol assay that determines the impact that including hedgehog has on cholesterol absorption. This will serve as the proof of concept for our proposed fusion protein medication by testing the binding of the key element of it with the receptor we are interested in.</p>
+                </div>
+                <div class="sub-subsection">
+                    <h3 id="subsection3" class="title">Important further future directions:</h3>
+                    <p>Inhibition Testing:</p>
+                    <ol>
+                        <li>Action duration - ways to extend the duration of inhibition of NPC1L1</li>
+                        <li>Estimating the dose-response relationship</li>
+                        <li>Compare the performance of CholesterLock to other small molecule inhibitors</li>
+                        <li>General cholesterol uptake assays:
+                            <ul>
+                                <li class="list-text">Comparing how CholesterLock’s performance changes if the NPC1L1 cells produce more membrane protein (increased doxycycline)</li>
+                                <li class="list-text">Comparing CholesterLock’s performance and binding affinity with NPC1L1 in the presence of more or less cholesterol</li>
+                            </ul>
+                        </li>
+                    </ol>
+
+                    <p>Stability Testing:</p>
+                    <ol>
+                        <li>Testing the protein’s survival and stability in the conditions of the small intestine and digestive tract</li>
+                        <li>Testing the protein’s survival and features after heating, freezing, thawing, drying</li>
+                        <li>Testing the protein’s durability against proteolytic enzymes</li>
+                    </ol>
+                </div>
             </div>
 
             <div class="sub-section">
-                <h3 id="section1" class="subtitle">Section 1</h3>
-                <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. <b>Etiam dapibus</b> condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. Etiam dapibus condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat.
-                    <b>Lorem ipsum dolor</b> sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. Etiam dapibus condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. Etiam dapibus condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat.
-                </p>
-                <div class="figtext-container">
-                    <div class="figure">
-                        <div class="circle-img glass"></div>
-                        <div class="fig-label">Figure 1: A nice glass circle for testing the layout of the circle shaped figure</div>
-                    </div>
-                    <div class="fig-text">
-                        <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. <b>Etiam dapibus</b> condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. Etiam dapibus condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat.</p>
-                    </div>
-                </div>
-                <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. <b>Etiam dapibus</b> condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. Etiam dapibus condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat.</p>
-                <div class="figtext-container">
-                    <div class="fig-text">
-                        <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. <b>Etiam dapibus</b> condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. Etiam dapibus condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat.</p>
-                    </div>
-                    <div class="figure">
-                        <div class="box-img glass"></div>
-                        <div class="fig-label">Figure 2: A nice glass box for testing the layout of the box shaped figure</div>
-                    </div>
-                </div>
-                <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. <b>Etiam dapibus</b> condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. Etiam dapibus condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat.
-                    <b>Lorem ipsum dolor</b> sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. Etiam dapibus condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. Etiam dapibus condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat.
+                <h3 id="section2" class="subtitle">Protein Purification</h3>
+                <p class="text">The purification of mShh was a comprehensive process that entailed various troubleshooting and optimisation stages. Given the unique nature of our 6xHis-tagged protein, we determined that Ni-NTA purification offered the most viable method for obtaining a pure product. While we had previous experience in purifying Membrane Scaffold Proteins (MSP’s), the fundamental methodology remained consistent. Our task was to adjust the purification protocol to also suit mShh, and this was possible due to the adaptability of the HisPur Ni-NTA Resin, which allows for customization based on specific purification requirements.
+                    <br><br>
+                    Throughout this process, we discovered that the purification conditions could be readily scaled as needed. This flexibility also allowed us to choose between batch preparation and a gravity flow column, depending on our specific needs. However, we quickly discovered that the flow column set-up was often too fast and didn’t allow for thorough washes and elutions.  Before delving into the protein purification, we diligently optimised various stages of the workflow. This involved fine-tuning the induction stages using IPTG, experimenting with different IPTG concentrations, induction temperatures, and durations. We utilised a 24-well plate setup, varying IPTG concentrations, to observe variations in band darkness. Additionally, we explored the impact of loading different pellet sizes on the resulting gels.
+                    <br><br>
+                    Following the successful optimization of the induction stages, we proceeded to refine various aspects of the purification protocol. Collaborating with our TA’s, we considered adjusting the imidazole content in certain buffers, especially in the wash buffer. After optimising the earlier stages, we followed the standard purification procedure, ensuring meticulous bead preparation, conducting thorough washes and elutions, and finally analysing the results by loading them onto a gel. It is also worth noting that we experimented with cloning mShh into the MSP backbone to produce an expression vector that could be transformed into DE3’s. The original mShh backbone did not have the required expression components and given that we had practised protein purification with MSP’s it followed that we could use the MSP backbone as a vector for the mShh. 
                 </p>
             </div>
 
             <div class="sub-section">
-                <h3 id="section2" class="subtitle">Section 2</h3>
-                <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. <b>Etiam dapibus</b> condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. Etiam dapibus condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat.
-                    <b>Lorem ipsum dolor</b> sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. Etiam dapibus condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. Etiam dapibus condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat.
-                </p>
-                <div class="figtext-container">
-                    <div class="figure">
-                        <div class="box-img glass"></div>
-                        <div class="fig-label">Figure 3: A nice glass box for testing the layout of the box shaped figure</div>
-                    </div>
-                    <div class="fig-text">
-                        <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. <b>Etiam dapibus</b> condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. Etiam dapibus condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat.</p>
-                    </div>
-                </div>
-                <div class="figtext-container">
-                    <div class="fig-text">
-                        <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. <b>Etiam dapibus</b> condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. Etiam dapibus condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat.</p>
-                    </div>
-                    <div class="figure">
-                        <div class="circle-img glass"></div>
-                        <div class="fig-label">Figure 4: A nice glass circle for testing the layout of the circle shaped figure</div>
-                    </div>
-                </div>
-                <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. <b>Etiam dapibus</b> condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. Etiam dapibus condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat.
-                    <b>Lorem ipsum dolor</b> sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. Etiam dapibus condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. Etiam dapibus condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat.
+                <h3 id="section3" class="subtitle">Hedgehog Family Proteins</h3>
+                <p class="text">As an integral part of the CholesterLock construct, the Sonic Hedgehog Protein’s characteristic autoprocessing is key to cholesterol binding.  In order to produce an expression vector with the mShh protein insert, it was essential to conduct bacterial cloning experiments to ligate the insert into an MSP Backbone. Experimental troubleshooting included optimization through the various verification techniques including PCR and electrophoresis whilst our experimental methodology to obtain the mShh insert was to optimise the experiments between extraction and ligation. 
+                    <br><br>
+                    Further experimentation includes plans to verify the functionality of the purified protein through a series of autoprocessing experiments including DTT and Native Cholesterol autoprocessing. Dithiothreitol (DTT) is a small molecule redox reagent able to stimulate Hh autoprocessing in vitro by substituting for cholesterol in the autoprocessing reaction and mediating the autocatalytic cleavage reaction. This would allow for a simple way to test the autoprocessing process outside of the cell. We would then test the ability of Hh to autoprocess with cholesterol and compare the processed protein yield following both cleavage reactions<sup>5</sup>. 
                 </p>
             </div>
 
-            <div class="sub-section">
-                <h3 id="section3" class="subtitle">Section 3</h3>
-                <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. <b>Etiam dapibus</b> condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. Etiam dapibus condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat.
-                    <b>Lorem ipsum dolor</b> sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. Etiam dapibus condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. Etiam dapibus condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat.
-                </p>
-                <div class="figtext-container">
-                    <div class="fig-text">
-                        <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. <b>Etiam dapibus</b> condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. Etiam dapibus condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat.</p>
-                    </div>
-                    <div class="figure">
-                        <div class="circle-img glass"></div>
-                        <div class="fig-label">Figure 5: A nice glass circle for testing the layout of the circle shaped figure</div>
-                    </div>
+            <div class="ref-section glass" onclick="showRef()">
+                <h3 class="sub-subtitle pb-2">References
+                    <svg id="toggle-ref-button" width="15" height="10" viewBox="0 0 42 25">
+                        <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round"/>
+                    </svg>
+                </h3>
+                <div id="ref-text" style="display: none;"> <!-- Initially hide the reference text -->
+                    <ol class="text">
+                        <li>Ooi A, Wong A, Esau L, Lemtiri-Chlieh F, Gehring C. A Guide to Transient Expression of Membrane Proteins in HEK-293 Cells for Functional Characterization. Front Physiol. 2016 Jul 19;7:300. doi: 10.3389/fphys.2016.00300. PMID: 27486406; PMCID: PMC4949579.</li>
+                        <li>Fewell SW, Brodsky JL. Entry into the Endoplasmic Reticulum: Protein Translocation, Folding and Quality Control. In: Madame Curie Bioscience Database [Internet]. Austin (TX): Landes Bioscience; 2000-2013. Available from: https://www.ncbi.nlm.nih.gov/books/NBK6210/</li>
+                        <li>Manzer ZA, Selivanovitch E, Ostwalt AR, Daniel S. Membrane protein synthesis: no cells required. Trends Biochem Sci. 2023 Jul;48(7):642-654. doi: 10.1016/j.tibs.2023.03.006. Epub 2023 Apr 20. PMID: 37087310.</li>
+                        <li>Kim S-I, Oceguera-Yanez F, Sakurai C, Nakagawa M, Yamanaka S, Woltjen K. Inducible Transgene Expression in Human iPS Cells Using Versatile All-in-One piggyBac Transposons. In: Turksen K, Nagy A, editors. Induced Pluripotent Stem (iPS) Cells, vol. 1357, New York, NY: Springer New York; 2015, p. 111–31. https://doi.org/10.1007/7651_2015_251.</li>
+                        <li>Hall TMT, Porter JA, Young KE, Koonin EV, Beachy PA, Leahy DJ. Crystal Structure of a Hedgehog Autoprocessing Domain: Homology between Hedgehog and Self-Splicing Proteins. Cell 1997;91:85–97. https://doi.org/10.1016/S0092-8674(01)80011-8.</li>
+                    </ol>
                 </div>
-                <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. <b>Etiam dapibus</b> condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. Etiam dapibus condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat.
-                    <b>Lorem ipsum dolor</b> sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. Etiam dapibus condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a eleifend urna. In egestas ut erat id molestie. Etiam dapibus condimentum magna ut vestibulum. Donec quis leo in dui facilisis feugiat. Quisque ultricies sollicitudin suscipit. Phasellus in mollis felis. Phasellus eget laoreet felis. Etiam lacinia at sem a placerat.
-                </p>
-            </div>
+            </div>            
         </div>
     </div>
+
 {% endblock %}

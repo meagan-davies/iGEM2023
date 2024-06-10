@@ -4,10 +4,14 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="https://static.igem.wiki/teams/4944/wiki/img/favicon.svg" type="image/svg">
     <link rel="license" href="https://creativecommons.org/licenses/by/4.0/"/>
 
     <!-- Bootstrap CSS -->
     <link href="{{ url_for('static', filename = 'bootstrap.min.css') }}" rel="stylesheet">
+
+    <!-- Bootstrap JavaScript -->
+    <script src="{{ url_for('static', filename='bootstrap.bundle.min.js') }}"></script>
 
     <!-- Custom CSS -->
     <link href="{{ url_for('static', filename = 'style.css') }}" rel="stylesheet">
@@ -15,15 +19,16 @@
     <!-- Dark/Light Mode CSS -->
     <link id="css-file" href="{{ url_for('static', filename='dark-mode.css') }}" rel="stylesheet">
 
-    
     <title>{% block title %}{% endblock %} | Calgary - iGEM 2023</title>
 
-</head>
+  </head>
 
 <body>
   <!-- Navigation -->
   {% include 'menu.html' %}
 
+  <button onclick="topFunction()" id="scrollToTop"><img class="to-top-arrow" src="https://static.igem.wiki/teams/4944/wiki/img/arrow-up-s-line.svg" alt="To Top"/></button>
+  
   <div id="wrapper-div">
     <!--CONTENT-->
         <div id="header-banner-div">
@@ -37,9 +42,7 @@
 
   <!-- Footer: MUST mention license AND have a link to team wiki's repository on gitlab.igem.org -->
   {% include 'footer.html' %}
-
-  <!-- Bootstrap Bundle with Popper -->
-  <script src="{{ url_for('static', filename = 'bootstrap.bundle.min.js') }}"></script>
+  
   <script>
     function togglerCSS() {
       var styleSheet = document.getElementById('css-file');
@@ -54,6 +57,138 @@
       }
     }
   </script>
+  <script>
+    // Scroll to Top Button
+    let scrollBtn = document.getElementById("scrollToTop");
+  
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        scrollBtn.style.display = "block";
+      } else {
+        scrollBtn.style.display = "none";
+      }
+    }
+  
+    window.addEventListener('scroll', scrollFunction);
+  
+    function topFunction() {
+      document.body.scrollTop = 0; // For Safari
+      document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    }
+  
+    scrollBtn.addEventListener('click', topFunction);
+  </script>
+  <script>
+    function scrollToSection(sectionId) {
+        const section = document.getElementById(sectionId);
+        if (section) {
+            const headerHeight = 7 * parseFloat(getComputedStyle(document.documentElement).fontSize); // Calculate 5rem in pixels
+            const sectionPosition = section.getBoundingClientRect().top + window.scrollY - headerHeight;
+            window.scrollTo({ top: sectionPosition, behavior: "smooth" });
+        }
+    }
+  </script>
+<script>
+    function updateScrollProgress() {
+        let scrollProgress = document.getElementById("side-progress");
+        let progressValue = document.getElementById("side-progress-value");
+        let pos = document.documentElement.scrollTop;
+        let calcHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        let scrollValue = Math.round(pos * 100 / calcHeight);
+    
+        scrollProgress.style.background = `conic-gradient(white ${scrollValue}%, black ${scrollValue}%)`
+    }
 
- </body>
+    window.addEventListener('scroll', updateScrollProgress);
+    window.addEventListener('load', updateScrollProgress);
+</script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const sidebar = document.getElementById("sidebar");
+        const headerBanner = document.getElementById("header-banner-div");
+        const sidebarContainer = document.querySelector(".side-container");
+        const footer = document.getElementById("page-footer");
+
+        function updateSidePosition() {
+            const headerHeight = headerBanner.clientHeight;
+            //CH returns the inner height of the element in px and it will remove the border, scrollbar, margin //
+        
+            const sidebarTopOffset = sidebar.offsetTop;
+            // OT will give the distance of the element relative to the top of the offsetParent
+
+            const sidebarBottom = sidebar.getBoundingClientRect().bottom;
+            const footerTop = footer.getBoundingClientRect().top;
+            //Distance from top to bottom of the sidebar in the entire document
+
+            const windowHeight = window.innerHeight;
+
+            if (window.scrollY >= sidebarTopOffset - headerHeight) {
+                sidebarContainer.classList.add("sticky-links");
+                sidebarContainer.style.top = `${-315 + headerHeight}px`; 
+                // Note: -300 can be adjust to change location of links in sidebar
+            } else {
+                sidebarContainer.classList.remove("sticky-links");
+                sidebarContainer.style.top = "0";
+            }
+
+            if (window.scrollY + windowHeight >= footerTop) {
+                sidebarContainer.style.position = "sticky";
+                sidebarContainer.style.bottom = "0";
+            } else {
+                sidebarContainer.style.position = "sticky";
+                sidebarContainer.style.bottom = "initial";
+            }
+        }
+
+        window.addEventListener("scroll", updateSidePosition);
+        window.addEventListener("resize", updateSidePosition);
+
+        // Initially call the function to set the initial state
+        updateSidePosition();
+    });
+</script>
+<script>
+    function updateSectionProgress() {
+        const sections = document.querySelectorAll(".sub-section, .sub-subsection");
+        const sidebarTitles = document.querySelectorAll(".section-link, .subsection-link");
+        let currentSectionIndex = 0;
+
+        // Find the index of the section that is currently in view
+        for (let i = sections.length - 1; i >= 0; i--) {
+            const rect = sections[i].getBoundingClientRect();
+            if (rect.top <= window.innerHeight * 0.5) {
+                currentSectionIndex = i;
+                break;
+            }
+        }
+
+        // Remove the 'active' class from all sidebar titles
+        sidebarTitles.forEach((title) => {
+            title.classList.remove("active");
+        });
+
+        // Add the 'active' class to the corresponding sidebar title
+        sidebarTitles[currentSectionIndex].classList.add("active");
+    }
+
+    // Call the function when the page loads and on scroll
+    window.addEventListener("DOMContentLoaded", updateSectionProgress);
+    window.addEventListener("scroll", updateSectionProgress);
+</script>
+<script>
+  function showRef() {
+      const refText = document.getElementById('ref-text');
+      const toggleRefButton = document.querySelector('#toggle-ref-button');
+
+      // Toggle the display property between 'block' and 'none' for the reference text
+      if (refText.style.display === 'none' || refText.style.display === '') {
+          refText.style.display = 'block';
+          toggleRefButton.style.transform = 'rotate(180deg)'; // Rotate the SVG icon
+      } else {
+          refText.style.display = 'none';
+          toggleRefButton.style.transform = 'rotate(0deg)'; // Reset the rotation
+      }
+  }
+</script>
+</body>
 </html>

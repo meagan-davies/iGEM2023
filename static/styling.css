@@ -18,17 +18,9 @@
 }
 
 .top-nav{
-    border-bottom: 3PX solid black;
-    background-color: white;
+    border-bottom: 3PX solid white;
+    background-color: black;
     padding: auto;
-}
-
-.navbar-toggler {
-    background-color: #f99c1c;
-}
-
-.navbar-toggler .navbar-toggler-icon {
-    background-color: white; /* Set the color for the three lines inside the hamburger button */
 }
 
 .nav-logo {
@@ -36,33 +28,23 @@
 }
 
 .navbar-nav .nav-link {
-    color: black;
-    font-size: 1rem;
+    color: #FDF8BE; 
 }
 
 .navbar-nav .nav-link:hover {
-    color: #07011B;
-    font-size: 1rem;
-}
-
-.nav-item {
-    margin-right: 0.5rem;
-    margin-left: 0.5rem;
+    color: #D62923;
 }
 
 .dropdown-menu {
-    background-color: rgba(255, 255, 255, 0.8);;
+    background-color: black;
 }
 
 .dropdown-menu a:hover {
-    background-color: white;
-}
-.dropdown-menu button:hover {
-    background-color: white;
+    background-color: #FDF8BE;
 }
 
 .dropdown-menu .dropdown-item {
-    color: black;
+    color: white;
 }
 
 .dropdown-menu .dropdown-item:hover {
@@ -73,16 +55,16 @@
 /*** CONTENT ***/
 
 body {
-    background-color: white;
+    background-color: #07011B;
 }
 
 #header-banner-div {
     width: 100;
     height: 70vh;
-    background-color: #f99c1c;
+    background-color: #07011B;
     /*background-image: url("img/Background Design.svg");*/
-    border-bottom: 3PX solid black;
-    color: #fffbee;
+    border-bottom: 3PX solid white;
+    color: #fbe395;
     font-size: 2rem;
     margin-top: 5rem;
     padding-top: 15rem;
@@ -104,9 +86,9 @@ body {
 
 #sidebar {
     min-height: 800px;
-    background-color: white;
-    border-right: 3px solid black;
-    color: black;
+    background-color: black;
+    border-right: 3px solid white;
+    color: #FDF8BE;
     float: left;
     padding: 2rem;
 }
@@ -115,7 +97,7 @@ body {
     width: 12rem;
     height: 12rem;
     border-radius: 50%;
-    border: 3px solid #f99c1c;
+    border: 3px solid white;
     margin: 0 auto;
     text-align: center;
 }
@@ -126,11 +108,11 @@ body {
 }
 
 .side-title {
-    color: black;
+    color: #fbe395;
 }
 
 .side-title:hover {
-    color: #2f1691;
+    color: #D62923;
 }
 
 @media (max-width: 900px) {
@@ -159,13 +141,13 @@ body {
 
 #main-content {
     min-height: 800px;
-    background-color: #fffbee;
-    color: #07011B;
+    background-color: #07011B;
+    color: #fbe395;
     float: right;
 }
 
 #main-content p {
-    color: #07011B;
+    color: white;
     font-size: 1.2em;
 }
 
@@ -251,11 +233,15 @@ body {
 
 /* Glass Effect */
 .glass {
-    background-color: white;
+    background: linear-gradient(
+        325deg,
+        rgba(47, 22, 145, 0.2),
+        rgba(255, 255, 255, 0)
+    );
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    border: 3px solid #f99c1c;
-    box-shadow: 0 10px 32px 0 rgba(255, 58, 14, 0.4);
+    border: 3px solid white;
+    box-shadow: 0 10px 32px 0 rgba(0, 0, 0, 0.4);
 }
 
 
@@ -264,9 +250,9 @@ body {
 
 #page-footer {
     padding: 2%;
-    background-color: white;
-    border-top: 3PX solid black;
-    color: #07011B;
+    background-color: black;
+    border-top: 3PX solid white;
+    color: #fbe395;
 }
 
 
@@ -321,19 +307,19 @@ body {
 .nav-title{
     line-height: 10vh;
     text-decoration: none;
-    color: #07011B;
+    color: #fbe395;
     padding-bottom: 2%;
 }
 
 .nav-title:hover {
     line-height: 10vh;
     text-decoration: none;
-    color: #2f1691;
+    color: #D62923;
     padding-bottom: 2%;
 }
 
 #footer ul a{
-    color: #07011B; 
+    color: white; 
     text-decoration: none;
     font-weight: 100;
     padding: 0 0rem;
@@ -342,11 +328,11 @@ body {
 
 #footer ul a:hover{
     text-decoration: underline;
-    color: #2f1691;
+    color: #FDF8BE;
 }
 
 #footer h3{
-    color: #2f1691; 
+    color: #fbe395; 
     text-decoration: none;
     padding: 0 0rem;
     text-align: left;
@@ -413,7 +399,7 @@ body {
 
 .title{
     line-height: 10vh;
-    color: #2f1691;
+    color: #fbe395;
     padding-bottom: 2%;
 }
 
@@ -426,22 +412,22 @@ body {
 .text{
     font-family: 'Open_Sans-Light';
     font-size: 6h;
-    color: #07011B;
+    color: white;
 }
 
 .label {
     font-family: 'Quicksand-Light';
     font-size: 4h;
-    color: #2f1691;
+    color: #fbe395;
 }
 
 .smalltext{
     font-size: 4vh;
-    color: #2f1691;
+    color:#fbe395;
 }
 .smallertext{
     font-size: 2vh;
-    color: #2f1691;
+    color:#fbe395;
 }
 
 
