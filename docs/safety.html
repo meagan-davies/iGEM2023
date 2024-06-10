@@ -1,0 +1,77 @@
+{% extends "layout.html" %}
+
+{% block title %}Safety{% endblock %}
+{% block header %}Safety{% endblock %}
+
+{% block main_content %}
+   
+    <div id="main-div" class="clearfix">
+        <div id="sidebar">
+            <div class="side-container">
+                <div class="side-circle side-item">
+                    <div id="side-progress">
+                        <div id="side-progress-value">
+                            <img class="side-lock" src="https://static.igem.wiki/teams/4944/wiki/img/lock.svg" alt=""/>
+                        </div>
+                    </div>
+                </div>
+                <div class="side-nav side-item">
+                    <ul>
+                        <div class="side-title section-link" onclick="scrollToSection('section1')">Lab Safety</div>
+                        <div class="side-title section-link" onclick="scrollToSection('section2')">Ethical Considerations and Participant's Safety</div>
+                        <div class="side-title section-link" onclick="scrollToSection('section3')">Ethical Review Process</div>
+                        <div class="side-title section-link" onclick="scrollToSection('section4')">Informed Consent and Participant Privacy</div>
+                        <div class="side-title section-link" onclick="scrollToSection('section5')">Data Retention and Protection</div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div id="main-content">
+            <div class="main-section glass">
+                <h3 class="subtitle">Overview</h3>
+                <p class="text">Throughout the entirety of our iGEM season, our team regarded safety and security as the highest priority and developed our project with these values in mind. By recognizing the importance of engaging in responsible safety practices, we continuously considered possible risks and how best to mitigate them. This page details the specific steps we took to ensure a safe and secure research environment both inside and outside of the laboratory.</p>
+            </div>
+
+            <div class="sub-section">
+                <h3 id="section1" class="subtitle">Lab Safety</h3>
+                <p class="text">Prior to beginning work in the lab, all members of our iGEM team were required to complete a variety of lab safety courses and pass examinations based on their content. The required courses were the following:</p>
+                <ul>
+                    <li>Occupational Health and Safety Orientation</li>
+                    <li>Spill response training</li>
+                    <li>Laboratory safety training</li>
+                    <li>Hazard assessment training</li>
+                    <li>WHMIS 2015</li>
+                    <li>Biosafety (program) training</li>
+                    <li>Fire safety</li>
+                    <li>Biosafety (Bloodborne Pathogens)</li>
+                </ul>
+                <p class="text">Additionally, all wet lab members spent a week training in the lab and practising the various experimental techniques we would be employing throughout the development of our project. We became familiar with our lab space and the different equipment within it in order to be well informed of the potential hazards and be vigilant on how to prevent them. All training was conducted under the close supervision of our Principal Investigator, Teaching Assistants and the resident lab technician.<br><br>
+                    When working in the lab, all members wore the appropriate PPE and dressed as per standard protocol (long hair tied back, long pants, closed-toed shoes, etc.). Members followed the actions expected from researchers in a lab setting by employing aseptic technique during experiments, including washing our hands when entering and exiting the lab, disinfecting lab benches before and after use, regularly cleaning the lab and maintaining an organised and sterilised environment. All the chemicals and reagents used in the lab were meticulously catalogued and properly stored after every use.<br><br>
+                    We began our project in a Level 1 biosafety laboratory (BSL-1), working with E. coli strains classified under Biosafety Risk Group 1. Later into our project we pivoted toward conducting research on mammalian cell lines, at which point we transferred operations to a Level 2 biosafety laboratory (BSL-2) to ensure safety standards would continue to be upheld. Research conducted on mammalian cell lines was all performed inside a Biosafety Cabinet (BSC) in a separate tissue culture room to minimise foot traffic and reduce the risk of contamination. Wet lab members received additional lab training prior to working with the mammalian cell cultures.
+                </p>
+            </div>
+
+            <div class="sub-section">
+                <h3 id="section2" class="subtitle">Ethical Considerations and Participant's Safety</h3>
+                <p class="text">As part of our integrated human practices effort, we recognized the importance of prioritising ethical conduct and safeguarding the well-being of the individuals involved. Our team embarked on a journey to understand patients' perspectives on current high cholesterol treatments and the challenges around them. We initiated a survey and interview, capturing insights from patients and addressing the problem from their perspective. To ensure the study proposal met the ethical standards, we approached the University of Calgary Ethics Review Board (REB) to review and approve our study protocol, consent forms, and survey/interview questions, ensuring we addressed all ethical considerations.</p>
+            </div>
+
+            <div class="sub-section">
+                <h3 id="section3" class="subtitle">Ethical Review Process</h3>
+                <p class="text">The University of Calgary promotes high ethics standards consistent with the Tri-Council Policy Statement (TCPS2 2022), Ethical Conduct for Research Involving Humans, thereby ensuring respect for persons, concern for their welfare and justice. The review and approval process with REB is collaborative and iterative. They conducted a thorough review of our ethics approval application, including our study proposal, assessing its design, methods, and potential impact on participants. We worked closely with them to continue modifying and improving our study design to ensure that the research approach aligns with established guidelines.</p>
+            </div>
+
+            <div class="sub-section">
+                <h3 id="section4" class="subtitle">Informed Consent and Participant Privacy</h3>
+                <p class="text">Respecting the autonomy of participating and their right to informed consent was a crucial part of our human practices effort. The survey is anonymous and no personal identifiers such as name, location, and contact information are recorded. The interview participants' identities are only known to the primary investigators listed in the ethics approval, and their personal information remains protected and encrypted on the REB-approved data retention software. Every participant in the survey and interviews received comprehensive information about the study's purpose, procedures, potential risks, and benefits. Since the interviews are also recorded and shared on various podcast platforms, we ensured that participants were aware of the interview questions and granted us media consent to release their audio to the public.</p>
+            </div>
+
+            <div class="sub-section">
+                <h3 id="section5" class="subtitle">Data Retention and Protection</h3>
+                <p class="text">We adhere to strict data retention and protection from the REB, ensuring that all collected information is stored securely on the University of Calgary's authorised data retention software. Personal information is stored encrypted and anonymized. All data collected will be retained for five years after the data project is closed in adherence to the retention period enforced by the University of Calgary and will be deleted at the discretion of the principal investigator or the University after the retention period. </p>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

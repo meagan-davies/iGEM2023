@@ -1,0 +1,144 @@
+{% extends "layout.html" %}
+
+{% block title %}Project Description{% endblock %}
+{% block header %}Project Description{% endblock %}
+
+{% block main_content %}
+<div id="main-div" class="clearfix">
+  <div id="sidebar">
+      <div class="side-container">
+          <div class="side-circle side-item">
+              <div id="side-progress">
+                  <div id="side-progress-value">
+                      <img class="side-lock" src="https://static.igem.wiki/teams/4944/wiki/img/lock.svg" alt=""/>
+                  </div>
+              </div>
+          </div>
+          <div class="side-nav side-item">
+              <ul>
+                  <div class="side-title section-link" onclick="scrollToSection('section1')">The Challenge</div>
+                  <div class="side-title section-link" onclick="scrollToSection('section2')">The Motivation and Inspiration</div>
+                  <div class="side-title section-link" onclick="scrollToSection('section3')">The Solution</div>
+                  <div class="side-title section-link" onclick="scrollToSection('section4')">The Fusion Protein Unfused</div>
+                  <div class="side-subtitle subsection-link" onclick="scrollToSection('subsection1')">Hedgehog</div>
+                  <div class="side-subtitle subsection-link" onclick="scrollToSection('subsection2')">Immunoglobulin Gamma 1</div>
+                  <div class="side-title section-link" onclick="scrollToSection('section5')">The Receptor</div>
+                  <div class="side-subtitle subsection-link" onclick="scrollToSection('subsection3')">The Mechanism of Cholesterol Uptake</div>
+                  <div class="side-title section-link" onclick="scrollToSection('section6')">The Utility, Goals, and Methodology</div>
+              </ul>
+          </div>
+      </div>
+  </div>
+
+  <div id="main-content">
+      <div class="main-section glass">
+        <h3 class="subtitle">Overview</h3>
+        <p class="text">At the heart of our project are our efforts to address cardiovascular disease by tackling one of its imminent causes: high cholesterol. </p>
+      </div>
+      <div class="sub-section">
+          <h3 id="section1" class="subtitle">The Challenge</h3>
+          <p class="text">Cardiovascular disease (CVD) is a major global health concern, encompassing a group of disorders pertinent to the heart and circulatory system, with high cholesterol identified as one of the primary causes of CVD. High cholesterol levels in the body can arise due to both lifestyle factors, such as a sedentary life coupled with a high saturated fat diet, and genetic predispositions that lead to the excessive deposition of plaque in the arteries. Our project, "CholesterLock", uses synthetic biology to tackle this problem at its root. We aim to develop a unique therapeutic strategy that will reduce cholesterol absorption from dietary intake and impede synthesis of cholesterol from saturated fatty acids.</p>
+      </div>
+
+      <div class="sub-section">
+          <h3 id="section2" class="subtitle">The Motivation and Inspiration</h3>
+          <p class="text">Our motivation for CholesterLock stems from the limitations that current high cholesterol medications impose on patients, many of whom experience side effects that make these medicines unsuitable for a segment of the population. With a lack of affordable alternative options, we saw an opening for an alternative therapeutic for high cholesterol to help those in need. Given this gap that is founded in a broad range of social determinants of health, including financial capacities, the ability to take time off for rigorous appointments to address side effects, and multiple others, our team recognized the need for an innovative and alternative therapeutic solution that can cater to those who cannot benefit from existing treatments. 
+            <br><br>
+            Once the goal of developing a therapeutic protein had been established, research was conducted to develop how cholesterol levels would be lowered. Studies on Fc-fusion proteins, their production in mammalian cell-based processes, and the roles of NPC1L1 in cholesterol transport offered critical insights that shaped our project's direction. The use of immunoglobulins in therapeutic agents was a novel and interesting concept for our team, and we could immediately see the potential uses in our own project. A key component of CholesterLock’s design was the Fc region of IgG, included for its resistance to deteriorative environments. Learning that Fc fusion proteins and other complex proteins were expressed in mammalian cells spurred a key pivot for CholesterLock, as previously the membrane receptor protein, hedgehog protein and other components were going to be expressed in a cell free system. This pivot allowed NPC1L1 to be expressed in a more physiologically-relevant manner. Research on the capability of hedgehog protein to bind to cholesterol and the mechanisms of the NPC1L1 receptor were foundational notions in our project's conceptualization.
+          </p>
+      </div>
+
+      <div class="sub-section">
+          <h3 id="section3" class="subtitle">The Solution</h3>
+          <p class="text">Our research drew heavily from various sources that focused on the unique proteins comprising our final product. The work we carried out had its foundations in multiple avenues of research, into the properties and capacities of proteins that make up CholesterLock, the receptor that ‘takes up’ CholesterLock, and social components of our product. To address the challenges faced by the broader community, our team aims to develop an Fc-fusion protein that inhibits NPC1L1. We began by studying the role of NPC1L1, a membrane transporter that facilitates cholesterol and fatty acid absorption in the small intestines, and how its inhibition could reduce cholesterol levels in a similar fashion to statin inhibition mechanisms. By characterising the receptor, we were able to delve deep into the potential of using a fusion protein to harness the properties of various proteins and inhibit the receptor, preventing cholesterol uptake. We determined that our Fc-fusion protein will consist of the Immunoglobulin Gamma 1 (IgG1) linked to hedgehog protein (mShh), and finally fused to cholesterol. IgG1 will act as a chaperone protein to allow for the survival of our fusion protein through the gastrointestinal system to its target in the small intestine. Overall this mechanism forms the basis of our Fc-fusion protein which we plan to deliver as a pill-based therapeutic to act as an alternative high cholesterol medication for those who do not benefit from common treatment methods.</p>
+      </div>
+
+      <div class="sub-section">
+        <h3 id="section4" class="subtitle">The Fusion Protein Unfused</h3>
+        <p class="text">Fc-Fusion proteins represent a class of novel biopharmaceutical products that combine the multimodal functions of the Fc fragment of antibodies with a variety of ligands. This marries the highly stable and crystal-prone character of the Fc region with the clinical potential of various biomolecules, which is often harboured by the inherently short serum survival of these molecules.<sup>1</sup> This also improves the solubility of certain ligands or hydrophobic proteins.</p>
+        <div class="figtext-container">
+          <div class="fig-text">
+              <p class="text">It was important for our team to consider the chassis of our fusion protein production and implementation, as well. Glycosylation, for instance, was thought to be necessary for maintenance of biophysical properties and serum stability in addition to having effector functions in immune responses. However, comparison of glycosylated versus aglycosylated antibodies, made either in mammalian cell lines or in E.coli., demonstrated nearly identical properties in vitro and in vivo.<sup>2</sup> While the effector properties were altered, considering that the serum stability was consistent, we were able to employ both bacterial and mammalian models to bring our project to fruition. Currently, Fc-fusion proteins are developed in mammalian cell based processes, such as Chinese Hamster Ovary (CHO) cell lines, to ensure correct conformation and post-translational modifications, a notion that we strictly adhered to in our own experimental design.</p>
+          </div>
+          <div class="figure">
+            <img class="glass img-format" src="https://static.igem.wiki/teams/4944/wiki/project/cholesterlock-fusion-protein.png" alt="">
+          </div>
+        </div>
+
+        <div class="sub-subsection">
+          <h3 id="subsection1" class="sub-subtitle">Hedgehog</h3>
+          <div class="figtext-container">
+            <div class="figure">
+                <img class="glass img-format5" src="https://static.igem.wiki/teams/4944/wiki/project/hedgehog.png" alt=""/>
+            </div>
+            <div class="fig-text">
+                <p class="text">The Hedgehog protein family consists of proteins that are uniquely modified with lipids, specifically cholesterol and palmitic acid, at each end after their synthesis. These lipids integrate directly into the protein chain. While hedgehog (Hh) protein is formed as an inactive precursor, it undergoes an autocatalytic cleavage between Gly-257 and Cys-258 that leads to the creation of two distinct domains: an approximately 19 kDa amino-terminal and a roughly 25 kDa carboxy-terminal domain. The latter domain encompasses essential determinants for the protein's autoprocessing capacities, while the former is crucial for its signalling activity.<sup>2</sup> </p>
+            </div>
+          </div>
+          <p class="text">The intricate proteolysis mechanism is underpinned by an intramolecular N-to-S acyl transfer on the protein's backbone, templated by the Hedgehog INTein (Hint) fold. This acyl shift results in a thioester, which cholesterol then intercepts. Such an interaction leads to the esterification of the N-terminal fragment's last residue. The combined features of the C-terminal Sterol Recognition Region (SRR) and the Hint domain give rise to the "Hog" region of the Hedgehog protein. This configuration is pivotal for attaching cholesterol to the protein's N-terminal domain.<sup>3</sup> Notably, the Hedgehog protein's ability to autoprocess with other molecules, like certain soy proteins and 25-hydroxycholesterol, offers the potential for flexibility in our drug design.</p>
+        </div>
+
+        <div class="sub-subsection">
+            <h3 id="subsection2" class="sub-subtitle">Immunoglobulin Gamma 1</h3>
+            <div class="figtext-container">
+              <div class="figure">
+                  <img class="glass img-format5" src="https://static.igem.wiki/teams/4944/wiki/project/igg.png" alt=""/>
+              </div>
+              <div class="fig-text">
+                  <p class="text">Because IgG has shown notable resilience in the gastric environment of the small intestine, it is promising in the deliverance aspects of our product. Administering IgG orally has been identified as a safe and potentially efficacious treatment for a variety of gastrointestinal conditions and diseases. Notably, the hinge area, which connects the antigen-binding and Fc regions, is the most susceptible to enzymatic degradation, however, despite this vulnerable region, IgG maintains its stability even in the acidic environment of the digestive tract and remains unaffected at body temperature.<sup>4</sup> Ultimately, our project places a significant emphasis on the Fc fragment, as our primary objective is to develop an Fc fusion protein.</p>
+              </div>
+            </div>
+        </div>
+      </div>
+
+      <div class="sub-section">
+        <h3 id="section5" class="subtitle">The Receptor</h3>
+        <p class="text">The focus of CholesterLock is the Niemann-Pick C1-Like 1 receptor, commonly known as NPC1L1. This receptor is a multipass transmembrane protein playing a pivotal role in cholesterol absorption within the small intestine. Structurally, NPC1L1 boasts 13 transmembrane regions, with five of these forming the sterol-sensing domain (SSD). Positioned between the third and seventh transmembrane regions (TM3 to TM7), the SSD exhibits a distinct V-shaped hydrophobic cavity. This unique shape grants accessibility from both the luminal domains and the lipid bilayer, thereby allowing the protein to undergo necessary structural and conformational changes in response to variations in surrounding sterol concentrations.</p>
+        <div class="figure">
+          <img class="glass img-format5" src="https://static.igem.wiki/teams/4944/wiki/project/npc1l1.png" alt=""/>
+        </div>
+        <p class="text">
+          Delving deeper into its architecture, NPC1L1 encompasses four distinct domains: the N-terminal domain (NTD), the middle domain (MLD), the central domain (CTD), and the transmembrane domain (TMD). Interconnectivity is a prominent feature within this protein. For instance, the MLD links with the transmembrane region through the second and third transmembrane proteins (TM2 and TM3), while the CTD forms connections with TM8 and TM9. The tight intertwining of the MLD and CTD creates a vast network of interaction interfaces.<sup>6</sup>
+          <br><br>
+          A notable feature of NPC1L1 is its NTD, which is theorised to be the initial capture point for cholesterol from the small intestine, leading to its accumulation on the plasma membrane. Cryo-EM models have indicated that the NTD's high mobility and flexibility result in poor resolution. In stark contrast to the stable interactions observed between the other luminal domains, the NTD doesn't maintain close interactions with either the MLD or CTD. This inherent flexibility of the NTD, the most dynamic component of the protein, is believed to be instrumental in ensuring effective cholesterol substrate engagement and subsequent capture.
+        </p>
+      
+        <div class="sub-subsection">
+          <h3 id="subsection3" class="sub-subtitle">The Mechanism of Cholesterol Uptake</h3>
+          <p class="text">Cholesterol in the small intestine is initially captured and recruited to NPC1L1 by binding the cysteine-rich sterol-binding pocket at the NTD. When no cholesterol is bound, NPC1L1 exists in an open state. Upon binding cholesterol, NPC1L1 switches to a closed state and the dynamic nature of the NTD allows it to undergo conformational changes that create a continuous tunnel between the NTD and the SSD buried in the plasma membrane. The tunnel then facilitates the delivery of cholesterol from its initial recruitment site to the SSD. The cholesterol binding cavity in the SSD is open to the outer leaflet of the lipid bilayer, which allows cholesterol to diffuse freely and accumulate into cholesterol-enriched microdomains. This accumulation is thought to locally affect the structure of the plasma membrane, which triggers a signal that begins clathrin/AP2-dependent endocytosis. This mediates the internalisation of NPC1L1 together with the cholesterol microdomains to endocytic recycling compartments.</p>
+          <div class="figure">
+              <img class="glass img-format" src="https://static.igem.wiki/teams/4944/wiki/project/npc1l1-cholesterol-uptake.png" alt=""/>
+          </div>
+        </div>
+      </div>
+
+      <div class="sub-section">
+        <h3 id="section6" class="subtitle">The Utility, Goals, and Methodology</h3>
+        <p class="text">We believe our approach exemplifies the power of synthetic biology to address complex medical challenges, even in areas that are seemingly tolerated with contemporary medical care. By engineering an Fc-fusion protein that inhibits NPC1L1, we are directly creating a solution that combines the therapeutic potentials of multiple biological molecules, offering a targeted and efficient way to manage high cholesterol. Our fusion mechanisms would allow future researchers and synthetic biologists to harness the characteristics, properties, and potential of a multitude of biomolecules for a variety of medical reasons. 
+          <br><br>
+          Our goal is to design and synthesise an Fc-fusion protein that can effectively inhibit the NPC1L1 receptor. This protein will consist of an IgG1 component linked to a hedgehog protein that will finally adhere to cholesterol. The IgG1 will act as a protective chaperone, ensuring the fusion protein's survival through the digestive system, guiding it to the small intestine where it is needed. The hedgehog proteins will be employed for their ability to undergo autoproteolysis in the presence of cholesterol, a mechanism we intend to harness to block NPC1L1's cholesterol uptake function.
+          <br><br>
+          Ultimately, while high cholesterol is a dramatic concern, current medications have been praised for their efficacy by field professionals and users, however, it is important for nobody to fall through the cracks of medicine - this includes the population of persons who may not benefit from the end-all-be-all solutions currently available. We want our project to convey this notion at its roots, the concept that even in areas where problems may not be obvious, there are those who have fallen through the cracks of medicine who need solutions to their unique issues and circumstances. 
+        </p>
+      </div>
+
+      <div class="ref-section glass" onclick="showRef()">
+          <h3 class="sub-subtitle pb-2">References
+              <svg id="toggle-ref-button" width="15" height="10" viewBox="0 0 42 25">
+                  <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round"/>
+              </svg>
+          </h3>
+          <div id="ref-text" style="display: none;"> <!-- Initially hide the reference text -->
+              <ol class="text">
+                  <li>Duivelshof BL, Murisier A, Camperi J, Fekete S, Beck A, Guillarme D, D'Atri V. Therapeutic Fc-fusion proteins: Current analytical strategies. J Sep Sci. 2021;44(1):35-62. Available from: https://doi.org/10.1002/jssc.202000765.</li>
+                  <li>Rashid MH. Full-length recombinant antibodies from Escherichia coli: production, characterization, effector function (Fc) engineering, and clinical evaluation. MAbs. 2022 Jan-Dec;14(1):2111748. doi: 10.1080/19420862.2022.2111748. PMID: 36018829; PMCID: PMC9423848. https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9423848/</li>
+                  <li>Porter JA, Ekker SC, Park WJ, Kessler DP von, Young KE, Chen CH, et al. Hedgehog Patterning Activity: Role of a Lipophilic Modification Mediated by the Carboxy-Terminal Autoprocessing Domain. Cell. 1996 Jul 12;86(1):21–34.</li>
+                  <li>Mafi A, Purohit R, Vielmas E, Lauinger AR, Lam B, Cheng YS, et al. Hedgehog proteins create a dynamic cholesterol interface. PLOS ONE. 2021 Feb 25;16(2):e0246814. </li>
+                  <li>Jasion VS, Burnett BP. Survival and digestibility of orally-administered immunoglobulin preparations containing IgG through the gastrointestinal tract in humans. Nutr J. 2015;14:22. Available from: https://doi.org/10.1186/s12937-015-0010-7.</li>
+                  <li>Huang CS, Yu X, Fordstrom P, Choi K, Chung BC, Roh SH, et al. Cryo-EM structures of NPC1L1 reveal mechanisms of cholesterol transport and ezetimibe inhibition. Science Advances. 2020 June 19;6(25):eabb1989.</li>
+              </ol>
+          </div>
+      </div>            
+  </div>
+</div>
+{% endblock %}

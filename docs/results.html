@@ -1,0 +1,76 @@
+{% extends "layout.html" %}
+
+{% block title %}Results{% endblock %}
+{% block header %}Results{% endblock %}
+
+{% block main_content %}
+    <style>
+        .pof-img {
+            background-color: white;
+            border: 3px solid white;
+            box-shadow: 0 10px 32px 0 rgba(0, 0, 0, 0.4);
+            display: flex;
+        }
+    </style>
+
+    <div id="main-div" class="clearfix">
+        <div id="sidebar">
+            <div class="side-container">
+                <div class="side-circle side-item">
+                    <div id="side-progress">
+                        <div id="side-progress-value">
+                            <img class="side-lock" src="https://static.igem.wiki/teams/4944/wiki/img/lock.svg" alt=""/>
+                        </div>
+                    </div>
+                </div>
+                <div class="side-nav side-item">
+                    <ul>
+                        <div class="side-title section-link" onclick="scrollToSection('section1')">Protein Expression and Purification for Transfection</div>
+                        <div class="side-title section-link" onclick="scrollToSection('section2')">Cholesterol Binding Assays</div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div id="main-content">
+            <div class="main-section glass">
+                <h3 class="subtitle">Overview</h3>
+                <div class="figtext-container">
+                    <div class="fig-text">
+                        <p class="text">The overarching goal of our project was to implement NPC1L1 receptors in HEK293 cells to allow for appropriate cholesterol binding assays in a mammalian cell context. We aimed to assess the binding properties of NPC1L1 to cholesterol as the foundation of our project, allowing for further studies into competitive binding of cholesterol in the altered environments. In order to accomplish this, appropriate transfections, transformations, and purification steps were required. In an attempt to be sustainable with our resources, we reused a lot of the backbones from various vector constructs when expressing new plasmid inserts for bacterial transfection; this provides context for the use of mShh vector backbones, from the mShh protein we expressed to use as a part of our fusion protein, in the expression of NPC1L1, for instance.</p>
+                    </div>
+                    <div class="figure">
+                        <img class="glass img-format" src="https://static.igem.wiki/teams/4944/wiki/wet-lab/proof-of-concept-overview.png" alt=""/>
+                        <div class="fig-label">Figure 1: Graphical outline of results and proof of concept process</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sub-section">
+                <h3 id="section1" class="subtitle">Protein Expression and Purification for Transfection</h3>
+                <div class="figtext-container">
+                    <div class="figure">
+                        <img class="glass img-format" src="https://static.igem.wiki/teams/4944/wiki/wet-lab/npc1l1-gateway-cloning.png" alt=""/>
+                        <div class="fig-label">Figure 2: Agarose gel-electrophoresis delineating the results of an enzymatic digest of NPC1L1 following Gateway cloning using SacI-Hf enzyme to verify the presence of the insert in the plasmid in order to prepare for subsequent transfection of the plasmid into HEK293 mammalian cell lines for cholesterol binding and uptake assays.</div>
+                    </div>
+                    <div class="fig-text">
+                        <p class="text">Gateway cloning was used to express NPC1L1, which would then be transfected into HEK293 cells for mammalian cell expression of the cholesterol binding and uptake receptor. The cloning was followed by a digest with high fidelity Sac-I enzyme to verify the expression of the protein, which proved to be successful and allowed for subsequent transfection and transformation in the mammalian cell line.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sub-section">
+                <h3 id="section2" class="subtitle">Cholesterol Binding Assays</h3>
+                <p class="text">Amplex Red Cholesterol Assays allowed us to determine the affinity of NPC1L1 for cholesterol in a mammalian environment that was best suited to represent this incidence in a biological setting. This assay employs a series of enzymatic reactions, culminating in the fluorescence of resorufin, enabling precise cholesterol quantification. This fluorescence emerges when the Amplex Red reagent reacts with hydrogen peroxide, a byproduct from the oxidation of cholesterol driven by cholesterol oxidase. To address the presence of cholesteryl esters, which comprise a significant fraction of blood cholesterol, cholesterol esterase is introduced to convert these esters into free cholesterol. By conducting the assay both with and without cholesterol esterase, it's feasible to discern the cholesterol distribution between its free and esterified forms. Cholesterol levels down to 200 nM can be evaluated in mere 0.01 µl of human serum. Given that resorufin's absorption and emission peaks are at 571 nm and 585 nm respectively, any inherent autofluorescence from biological samples is unlikely to disrupt the assay's results. <br><br>
+                    These tests were imperative to ascertain the foundation of our product by assessing the natural binding capacity of the NPC1L1 receptor to its substrate. The fluorimetric method entailed the detection of free cholesterol and cholesteryl esters using a fluorescence microplate reader. As a result, we expected increased fluorescence to be associated with large amounts of cholesterol in solution and reduced cholesterol uptake, whereas decreased fluorescence would be associated with increased cellular uptake of cholesterol, leaving less in solution. The assays helped us to delineate the ability of HEK293 cells to express NPC1L1 uptake of cholesterol in various environments, thereby introducing us to a cell model that we can use down the road to test receptor binding to other molecules that include cholesterol in their construct. 
+                </p>
+                <div class="figure">
+                    <img class="glass img-format" src="https://static.igem.wiki/teams/4944/wiki/wet-lab/hek-absorbance.png" alt=""/>
+                    <div class="fig-label2">Figure 3: The fluorescence produced by enzymatic reagent reactions in solutions containing HEK293 cells that were untransfected, transfected and treated with Doxycycline, and transfected and left untreated with Doxycycline to determine the binding of cholesterol to NPC1L1.</div>
+                </div>
+                <p class="text">In our investigation, we observed varying levels of red fluorescence across different cell treatment groups, which directly relates to the presence and activity of the NPC1L1 receptor protein. Our baseline, represented by untransfected cells, displayed high red fluorescence, suggesting a high level of cholesterol present in solution and alternatively, a low fraction of cholesterol being absorbed into the cells. This result is crucial as it provides insight into the natural levels of cholesterol uptake in the untransfected cells lacking NPC1L1. Interestingly, upon transfection, even without the addition of doxycycline, there was an immediate reduction in red fluorescence. This suggests that merely introducing NPC1L1 to the cells resulted in cholesterol absorbance and reduced cholesterol in solution. Most notably, when the transfected cells were treated with doxycycline, we observed the highest levels of red fluorescence. This pronounced response implies a significant role of doxycycline in either upregulating NPC1L1 expression or enhancing its activity in the transfected cells. The findings highlight doxycycline's potential as a modulator of NPC1L1 in this cellular context, warranting further investigations to decipher the underlying molecular mechanisms of a potential receptor blocker, such as CholesterLock. </p>
+            </div>        
+        </div>
+    </div>
+
+{% endblock %}

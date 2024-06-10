@@ -1,0 +1,1038 @@
+{% extends "layout.html" %}
+
+{% block title%}Notebook{% endblock %}
+{% block header %}Notebook{% endblock %}
+
+{% block main_content %}
+
+<style>
+
+  .faq{
+      max-width: 90vw;
+      margin-top: 2rem;
+      padding-bottom: 1rem;
+      border-bottom: 2px solid #fff;
+      cursor: pointer;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 50px;
+
+  }
+
+  .question {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Adjust the space between title and svg */
+    text-align: center;
+  }
+
+  .question h3 {
+      font-size: 1.8rem;
+  }
+
+  .answer {
+      max-height: 0;
+      overflow: hidden;
+      overflow-y: auto;
+      transition: max-height 1s ease;
+  }
+
+  .answer p {
+      padding-top: 1rem;
+      line-height: 1.6;
+      font-size: 1.4rem;
+  }
+
+  .faq.active .answer {
+      max-height: 300px;
+      animation: fade 1s ease-in-out;
+  }
+
+  .faq.active svg {
+      transform: rotate(180deg);
+  }
+
+  svg {
+      transition: transform 0.5s ease-in;
+      margin-top: -5px;
+  }
+
+  @keyframes fade {
+      from{
+          opacity: 0;
+          transform: translateY(0px);
+      }
+  }
+
+  .n-dropdown {
+      display: none;
+  }
+
+  .n-dropdown.active {
+      display: block;
+  }
+
+  .title-dropdown{
+      margin-top: 3rem;
+      text-align: center;
+      margin-bottom: 3rem;
+      border:3px solid white;
+      padding: 2rem;
+  }
+
+  .centered-h3{
+      margin-left: auto;
+      margin-right: auto;
+  }
+
+  .centered-text{
+      margin-left: auto;
+      margin-right: auto;
+  }
+  
+  .button:hover{
+      background-color: white;
+      opacity: 0.7;
+  }
+
+  #notebook-page {
+    background-color: #07011B;
+    margin-bottom: 3rem;
+  }
+
+  .n-title {
+    font-family: 'Quicksand-Regular';
+    font-size: 2rem;
+    color: #fbe395;
+    padding: 1rem;
+  }
+
+  .n-text {
+    font-family: 'Quicksand-Regular';
+    font-size: 1.5rem;
+    color: white;
+    padding: 1rem;
+  }
+
+  .n-text2 {
+    font-family: 'Quicksand-Regular';
+    font-size: 1.5rem;
+    color: white;
+  }
+
+</style>
+
+<div id="notebook-page">
+  <div id="myDropdown">
+      <div class="main-section glass">
+          <h3 class="subtitle">Overview</h3>
+          <p class="n-text2">An integral component of CholesterLock’s workflow throughout the project involved meticulous and consistent recording and documentation of our progress. This was achieved through comprehensive weekly summaries outlining the advancements made by both the wet lab and dry lab subteams aiding us in evaluating our project goals and refining our strategic approaches.</p>
+      </div>
+
+      <div class="circle-container">
+          <button onclick="showwet()" class="circle-nav glass subtitle button">Dry Lab</button>
+          <button onclick="showdry()" class="circle-nav glass subtitle button">Wet Lab</button>
+      </div>
+
+    <div id="dry" class="n-dropdown">
+    <h2 class="title-dropdown glass subtitle"><strong>Dry Lab</strong></h2>
+
+    <div class="faq">
+        <div class="question">
+            <h3 class="centered-h3 n-title">May 2023</h3>
+            <svg width="15" height="10" viewBox="0 0 42 25">
+                <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round"/>
+            </svg>
+        </div>
+        <div class="answer">
+          <h1 class="subtitle">Week 1 (May 1-May 5)</h1>
+          <p class="n-text">
+            In the first week of the iGEM season, we began by ideating potential dry lab subprojects, identifying the project’s overall goals, focuses, and how the sub projects contributed to the project. We constructed a list of potential dry lab projects and solidified a meeting schedule and form of communications. We started researching programming languages, methods, and tools and looking into the feasibility of each project. 
+
+            In this period, we also started to create a workflow for our wiki. The dry lab's primary focus for wiki was directed towards acquiring proficiency in programming languages pertinent to front-end web development. A design documentation was crafted, outlining the visual and functional aspects of our website. The underlying question of workflow organization was a pivotal consideration during this phase, guiding our decisions on how to coordinate the development process.
+
+            We selected the programs best suited for the development of each webpage. Delegating tasks with precision, we started by deciding that our project's wiki would be focused on interactivity and user friendliness, a strategic move that aligned with our overarching objective of effectively communicating intricate scientific concepts to the wider public. This initiative was driven by a tangible commitment to bridging the gap between complex subject matter and general understanding.
+
+          </p>
+
+          <h1 class="subtitle">Week 2 (May 8-May 12)</h1>
+          <p class="n-text">
+            In the second week of May, we invited Genome Alberta to our lab to provide feedback on our project. During the presentation, the dry lab had the opportunity to share our ideas, discuss with the team and professionals and evaluate the feasibility of the subprojects. Given the nature of our project, we decided to focus primarily on software and model aspects of the dry lab subprojects. The Genome Alberta also provided great inspiration on potential dry lab subprojects for human practices, such as developing machine learning algorithms for predicting the future relevance of high cholesterol in different demographics in compliance with creating a survey. In the second half of the week, we focused on making a presentation for a pitching competition called Mindfuel. We shared our ideas for the dry lab subject once again for receiving more feedback from the judges. The judges’ feedback further solidified our focus on the software and modeling software side of our project. 
+          </p>
+
+          <h1 class="subtitle">Week 3 (May 15-May 19)</h1>
+          <p class="n-text">
+            We evaluated the medal and special prize requirements and selected three dry lab projects to focus on; Linker Database, Modeling, and Machine Learning Model for predicting the relevance of high cholesterol in the future. Since our project revolved around developing and constructing a fusion protein, linker sequence is critical for designing our protein, therefore, we shift our focus to modeling this week. We delegated a series of research to each dry lab member on modeling tools, molecular dynamic simulation, and linker design. We established a preliminary selection criteria for our linker sequences, and looked into potential linkers we can use for our fusion protein. 
+
+          </p>
+
+          <h1 class="subtitle">Week 4 (May 22-May 26)</h1>
+          <p class="n-text">
+            The dry lab team  continued the search for linker sequences and organized a list of them for modeling. We identified different modeling tools for constructing the models, and started to learn the functionality of each software. We selected Chimera as our preferred modeling tool due to its user friendliness and diverse functionality. This week, we primarily focused on learning the fundamentals of modeling and protein structures, building the foundation for modeling our fusion protein later. 
+
+            The dry lab team focused on trying different protein prediction methods, homology and artificial intelligence based methods. Due to the complicated and heavy computational requirement of the AI based methods, we decided to try the homology protein prediction. However, the resulting models did not retain all the amino acid sequences. Since IgG and hedgehog protein have well studied structure, we developed a new strategy of using the existing PDB file and piecing them together with the linker sequence generated by the modeling software. However, we faced an obstacle in how to implement this strategy in the software, so we also met with a postdoctoral researcher, Pratik, who specializes in protein structural analysis, to assist us in constructing our model. Pratik gave us a crash course on protein modeling and molecular dynamic basics. 
+
+          </p>
+
+          <h1 class="subtitle">Week 5 (May 29-June 2)</h1>
+          <p class="n-text">
+            The dry team continued to focus on constructing our fusion protein models. We successfully made one model with GS linker and started learning the basics for molecular dynamics. Some dry lab members also started researching docking software including HADDOCK. We also met with a previous iGEM Calgary member, Andrew Symes to go over the basics of GROMACS molecular dynamic software. 
+          </p>
+        </div>
+    </div>
+
+    <div class="faq">
+        <div class="question">
+            <h3 class="centered-h3 n-title">June 2023</h3>
+            <svg width="15" height="10" viewBox="0 0 42 25">
+                <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round"/>
+            </svg>
+        </div>
+        <div class="answer">
+          <h1 class="subtitle">Week 6 (June 5-June 9)</h1>
+          <h2 class="title">Modeling </h2>
+          <p class="n-text">
+            We decided to pause on molecular dynamic simulation due to the complicated structure of our fusion protein. We shifted our focus to docking stimulation as we wanted to evaluate the behavior of our fusion protein and targeted receptors. The dry lab members continued the research for docking stimulation, and followed tutorials to learn the basics and functionality of HADDOCK. 
+          </p>
+
+          <h2 class="title">Machine Learning</h2>
+          <p class="n-text">
+            The dry team members started learning the fundamentals and basics of machine learning using tutorials from Kaggle. In addition to learning the skills, we also researched past papers on high cholesterol relevance prediction and potential data set we want to use. We decided to use external dataset instead of data from our survey because it is unlikely for us to collect enough responses in the span of iGEM season and quality of data is unclear at this point
+          </p>
+
+          <h1 class="subtitle">Week 7 (June 12-June 16)</h1>
+          <h2 class="title">Modeling </h2>
+          <p class="n-text">
+            We met with Pratik several times this week to go over our models and seek guidance on solving the obstacles in running the model through molecular dynamics simulation. He also identified a couple problematic areas of our model that could lead to complications in running the model through stimulation. Pratik helped us optimize our models, and he assisted us in making a patch file for cholesterol and glycine bonds. 
+          </p>
+
+          <h2 class="title">Machine Learning</h2>
+          <p class="n-text">
+            Dry lab had a team meeting this week to re-evaluate our project objectives and focuses, and we decided to pause on the machine learning algorithm as the software and modeling components were becoming more demanding. We decided to shift our focus to developing a web app for organizing linker sequence databases and modeling of our fusion protein. 
+          </p>
+
+          <h2 class="title">Linker Web App</h2>
+          <p class="n-text">
+            We started the research on the current linker sequences database and existing linker program. We found that the current available database is hard to use and does not let us select the linker sequence with our desired properties directly. The user interface is not intuitive and it was not helpful for identifying a potential linker for us. Other linker design softwares is also no longer available for the end users. 
+            The dry lab team decided this is an area we can focus on for helping us find potential linker sequences and future teams working on fusion protein. We decided to design a web app for helping us and future users filter the linker database based on their desired criteria. We started researching methods for extracting linkers from existing multi-domain proteins and tools for evaluating their properties.  
+          </p>
+
+          <h1 class="subtitle">Week 8 (June 19-June 23)</h1>
+          <h2 class="title">Modeling </h2>
+          <p class="n-text">
+            We fixed the missing residues on our fusion protein model. We also had a meeting with Pratik again to learn about the energy minimization process of our model, and we submitted a job for energy minimization in ARC. The energy minimization failed because there are some missing files and parameters.
+          </p>
+
+
+          <h2 class="title">Linker Web App</h2>
+          <p class="n-text">
+            We conducted research on linker sequence extraction, and identified the workflow and processing required. We started the development of the web app by setting up Django, and developed a workflow and plan for both backend and frontend development. In the second half of the week, we started a programming function for processing the hydrophobicity property of linker sequences on existing linker databases. 
+          </p>
+
+          <h1 class="subtitle">Week 9 (June 26-June 30)</h1>
+
+          <h2 class="title">Modeling </h2>
+          <p class="n-text">
+            No Updates.
+          </p>
+
+
+          <h2 class="title">Linker Web App</h2>
+          <p class="n-text">
+            We reassessed the workflow of our linker program and we decided to use the existing database as our main database as extracting linkers is very difficult. Due to our constrained time limit, it will not be feasible to extract linkers from the protein database. We reconstructed our workflow, shifting our focus to the functionality of the web app and data processing of the existing linker database. We conducted research on how to determine the flexibility of linkers, and developed functions for calculating hydrophobicity of linkers. We continued our research on properties of linkers for designing a selection criteria, and it ultimately contributed to the final functions of the linker web app. 
+          </p>
+         
+        </div>
+    </div>
+
+    <div class="faq">
+        <div class="question">
+            <h3 class="centered-h3 n-title">July 2023</h3>
+            <svg width="15" height="10" viewBox="0 0 42 25">
+                <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round"/>
+            </svg>
+        </div>
+        <div class="answer">
+          <h1 class="subtitle">Week 10 (July 3-July 7)</h1>
+
+          <h2 class="title">Modeling </h2>
+          <p class="n-text">
+            This week, a few issues related to sequences and how we model our protein were raised after meeting with Pratik. Pratik suggested using Alphafold to predict the structure of proteins so all residues will be present in the model, and he also went through a tutorial of protein modeling with us. We rebuilt our models using Alpha fold and attached the cholesterol in Chimera. 
+          </p>
+
+
+          <h2 class="title">Linker Web App</h2>
+          <p class="n-text">
+            We continued the backend and frontend development of the linker web app using Django and python. We completed the hydrophobicity calculator and continued the research on the flexibility calculator. We found that the determination of flexibility of protein is complicated and may require molecular dynamic simulation. We found a tool called DynaMine which can predict the flexibility of protein using only sequence and attempted to connect to the API so it can run our sequences. 
+          </p>
+
+
+          <h1 class="subtitle">Week 11 (July 10-July 14)</h1>
+
+          <h2 class="title">Modeling </h2>
+          <p class="n-text">
+            No Updates.
+          </p>
+
+
+          <h2 class="title">Linker Web App</h2>
+          <p class="n-text">
+            We successfully connected to the DynaMine API and we started writing functions for running through our database and outputting its relative flexibility for each amino acid. The flexibility calculator was completed in the second half of the week and the database was processed.    Functionalities such as importing and exporting files on the web app backend were implemented into the web app, and we started styling the web app using Bootstrap. Plotting the hydrophobicity distribution graph for the linkers was implemented along with the hydrophobicity calculator. 
+          </p>
+
+
+
+          <h1 class="subtitle">Week 12 (July 17-July 21)</h1>
+
+          <h2 class="title">Modeling </h2>
+          <p class="n-text">
+            Our fusion protein model was missing the sugar residues from glycosylation, so we installed a software COOT for attaching the glycosylation to the model. We went through a series of troubleshooting for installing COOT because it does not run on the Windows system. We started conducting research on IgG and glycosylation. 
+          </p>
+
+
+          <h2 class="title">Linker Web App</h2>
+          <p class="n-text">
+            This week we focused on importing the processed data to the django backend, we successfully imported the processed data to the backend after fixing the file formatting and coding issues. We implemented search functionality in the web app which allows users to search the database based on their input. We also started to draft up content for the web app including instructions and information related to our database. 
+          </p>
+
+          <h1 class="subtitle">Week 13 (July 31-Aug 4)</h1>
+
+          <h2 class="title">Modeling </h2>
+          <p class="n-text">
+            We glycosylated our model and submitted a job to the molecular dynamic simulation. We started to  prepare more models with different linkers  for future submission. 
+          </p>
+
+
+          <h2 class="title">Linker Web App</h2>
+          <p class="n-text">
+            We combined the existing functionalities together and imported process data. We started implementing the multi-search filter functionality in the web app. We also started writing content for the web app and constructed a database diagram that showed the workflow and organization of the database.
+          </p>
+        </div>
+    </div>
+
+    <div class="faq">
+        <div class="question">
+            <h3 class="centered-h3 n-title">August 2023</h3>
+            <svg width="15" height="10" viewBox="0 0 42 25">
+                <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round"/>
+            </svg>
+        </div>
+        <div class="answer">
+          <h1 class="subtitle">Week 14 (Aug 7-Aug 11)</h1>
+
+          <h2 class="title">Modeling </h2>
+          <p class="n-text">
+            No updates
+          </p>
+
+
+          <h2 class="title">Linker Web App</h2>
+          <p class="n-text">
+            Implemented the multi-search function and started the calculator and submission forms function. We continued to work on organizing the database and started to incorporate hydrophobicity and general linker sequences dataset into the web app. 
+          </p>
+
+          <h1 class="subtitle">Week 15 (Aug 14-Aug 18)</h1>
+
+          <h2 class="title">Modeling </h2>
+          <p class="n-text">
+            No updates
+          </p>
+
+
+          <h2 class="title">Linker Web App</h2>
+          <p class="n-text">
+            Implemented the multi-search function and started the calculator and submission forms function. We continued to work on organizing the database and started to incorporate hydrophobicity and general linker sequences dataset into the web app. 
+          </p>
+
+
+          <h1 class="subtitle">Week 16 (Aug 21-Aug 25)</h1>
+
+          <h2 class="title">Modeling </h2>
+          <p class="n-text">
+            No updates
+          </p>
+
+
+          <h2 class="title">Linker Web App</h2>
+          <p class="n-text">
+            We completed the multi-searched function and added hydrophobicity data to the multi-search. We used the web app to output linkers in different search criteria and planned to test them in the molecular dynamic to check the quality and reliability of the linker program. We completed the basic layout of calculator and submission functionality and continued to refine them.
+          </p>
+
+
+          <h1 class="subtitle">Week 17 (Aug 28-Sept 1)</h1>
+
+          <h2 class="title">Modeling </h2>
+          <p class="n-text">
+            No updates
+          </p>
+
+
+          <h2 class="title">Linker Web App</h2>
+          <p class="n-text">
+            No Updates
+         </p>
+
+        </div>
+    </div>
+
+    <div class="faq">
+        <div class="question">
+            <h3 class="centered-h3 n-title">September 2023</h3>
+            <svg width="15" height="10" viewBox="0 0 42 25">
+                <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round"/>
+            </svg>
+        </div>
+        <div class="answer">
+
+          <h1 class="subtitle">Modeling </h2>
+          <p class="n-text">
+            No updates
+          </p>
+
+
+          <h1 class="subtitle">Linker Web App</h2>
+          <p class="n-text">
+            Cleaned up the source codes and worked on the front end of the web app.
+         </p>
+
+            
+        </div>
+    </div>
+
+    <div class="faq">
+        <div class="question">
+            <h3 class="centered-h3 n-title">October 2023</h3>
+            <svg width="15" height="10" viewBox="0 0 42 25">
+                <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round"/>
+            </svg>
+        </div>
+        <div class="answer">
+
+          <h1 class="subtitle">Modeling </h2>
+            <p class="n-text">
+              No updates
+            </p>
+  
+  
+            <h1 class="subtitle">Linker Web App</h2>
+            <p class="n-text">
+              We tried to deploy the web app and host it on AWS or google cloud run, but unfortunately it didn't work out:(
+           </p>
+
+        </div>
+    </div>
+
+    </div>
+
+
+
+    <div id="wet" class="n-dropdown">
+        <h2 class="title-dropdown glass subtitle"><strong>Wet Lab</strong></h2>
+
+        <div class="faq">
+            <div class="question">
+                <h3 class="centered-h3 n-title">May 2023</h3>
+                <svg width="15" height="10" viewBox="0 0 42 25">
+                    <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round"/>
+                </svg>
+            </div>
+            <div class="answer">
+              <h1 class="subtitle">Week 1 (May 1-May 7)</h1>
+              <p class="n-text">
+                To ensure our team was working in accordance within the health and safety regulations of the University of Calgary, we worked through a series of OHS Training and Orientation certifications in anticipation of the wet-lab work that would commence in the following weeks. A crucial aspect of intentional and well planned experimentation was identified to be having industry professionals and experts informing our work-flow from the get go. Therefore, the team focused on preparing an outline of CholesterLock's mechanism of action to pitch at the Mindfuel Tech Futures challenge. This included ideation into the potential requirements of our linker and gaining a better understanding of the general NPC1L1 pathway/mechanism in the small intestine.  
+
+                From our pitch, we learned that we would need to further look into the stability of our molecule in the harsh pH conditions of the intestinal tracts by understanding the biochemical principles behind it. Furthermore, the judges gave us various ideas on our linkers including identifying amino acids with specific target properties and using a GC linker as a base template. We also recognized the need to work in tandem with the dry-lab as one of their primary sub-projects was identified to be simulating the CholesterLock-NPC1L1 interactions and the behavior of different linkers in the intestinal environment.
+                
+              </p>
+
+              <h1 class="subtitle">Week 2 (May 8-May 14)</h1>
+              <p class="n-text">
+                Having identified some potential areas of our project that would need to be researched further, we invited Genome Alberta to present the “draft” of the wet-lab’s plan to achieve the development of CholesterLock and our NPC1L1 cells.  Many questions came up on the proposed removal of glycosylation in the IgG section of CholesterLock for bacterial expression and production. Concerns were expressed over how sugar removal would alter the function of the antibody but we were able to identify that we didn’t necessarily need the original function of IgG for CholesterLock’s mechanism to work. Furthermore, concerns about the pH requirements were brought up again making it a priority for us to focus on through the course of the project. 
+              </p>
+
+
+              <h1 class="subtitle">Week 3 (May 15-May 21)</h1>
+              <p class="n-text">
+                Equipped with the feedback from the Mindfuel pitch competition and Genome Alberta presentation, the wet lab team worked on developing a detailed workflow for our experimentation over the summer whilst continuing to conduct a meta-analysis on current literature to build upon and start preliminary protocol writing. The team also identified a general outline for how “training” would be implemented in the weeks to come. 
+
+                CholesterLock, will be made using 3 distinct components- IgG, a linker and the Sonic Hedgehog protein (mShh). The end of the hedgehog protein is knocked off when cholesterol binds to it due to the autoprocessing of the N-terminal domain. This protein is also attached to an Immunoglobulin G (IgG) antibody, which helps it stay stable in the stomach. This creates a "lock and key" effect that will  prevent cholesterol from being absorbed by the body. The receptor that cholesterol is absorbed by, NPC1L1, can be used to verify binding and test the efficacy of cholesterol induced autoprocessing in the final construct.
+
+                Therefore, the team identified 4 primary sub-projects that would later be integrated to synthesize and test CholesterLock and its binding mechanism. In order to produce the protein, bacterial cloning experiments will need to be conducted to produce pD-mShh- an expression vector that will be transformed into protein production cells later on. Simultaneously, NPC1L1 will need to be produced in bacterial cells so assays can be performed to test autoprocessing of mShh in isolation and the overall CholesterLock construct once the protein has been purified. Once both of the bacterial constructs have successfully been produced and verified, 6-His Protein Purification will need to be conducted to purify and amplify the target proteins. These projects will work in tandem with dry-lab simulations to help our team decide on our linker and make informed decisions on our experimentation. As a final culmination of these individual experiments, nanodiscs will be made using MSP proteins to create a membrane with NPC1L1 cells that can be used for our assays and characterisation experiments.
+
+              </p>
+
+              <h1 class="subtitle">Week 4 (May 22-May 28)</h1>
+              <p class="n-text">
+                Before our team started with in-lab experiments, we worked on finishing our meta-analysis and writing up proposed protocols for the 3 sub-projects. As we read into NPC1L1 production, concerns were raised on the structural integrity of the protein produced in bacteria and whether the lack of glycosylation machinery would affect the functioning of the protein. Therefore, a few members of our team worked on researching bacterial expressions which lead to us looking into cell-free systems. Based on the lysate used in the system, we would be able to accommodate for glycosylation and previous literature cited  bacterial cell-free systems as a reliable system to produce membrane bound proteins.
+
+                Meanwhile, the reset of the lab team worked on researching and writing our protocols for the synthesis of nanodiscs using apo-lipoproteins for characterisation experiments. This was done alongside sourcing and listing the various reagents and equipment we would need over the iGEM season for our experiments. 
+
+              </p>
+
+
+              <h1 class="subtitle">Week 5 (May 29-June 4)</h1>
+              <p class="n-text">
+                On week 5 of our iGEM season, the wet lab commenced on our wet-lab “bootcamp” geared at teaching/refreshing the team the essential syn-bio techniques we would be employing over the course of the summer. With the help of our TA’s and Lab tech, we started by learning to resuspend primers for the iGEM Distribution kits that would be used later in the week to transform into Top10 BL21 competent cells.
+              </p>
+
+              <p class="n-text">
+                We chose to work with one set of DNA from the 2018 iGEM distribution kits, an Ampicillin (AMP) resistant  cyan-fluorescent protein (CFP) and a Kanamycin (KAN) resistant red-fluorescent protein (RFP):
+
+              </p>
+
+              <ul class="n-text">
+                <li>RFP Protein: 2018 Kit Plate 4.6F (BBa_J04450/pSB3K3) </li>
+                <li>CFP Protein: 2018 Kit Plate 4.5B (BBa_E0020/pSB1A2)</li>
+              </ul>
+              <figure style="text-align: center;">
+                <img class="glass img-format" src="https://static.igem.wiki/teams/4944/wiki/project/notebook1.png" alt=""  style="max-height: 600px;">
+                <figcaption style='color: rgb(253, 186, 15);'>Figure 1: Graphical Overview of procedure for digestions and ligations of RFP and CFP to which antibiotic resistance markers
+                </figcaption>
+            </figure>
+
+            <p class="n-text"> 
+            The purpose of the experiment will be to digest the RFP and CFP inserts and ligate them into the opposite backbones to produce an AMP resistant RFP and KAN resistant CFP. The following schematic was drawn up to visualize the plan for experimentation in the following weeks. In preparation of the transformations we would be performing with the resuspended DNA, the team also learned how to make antibiotic stocks with a filter syringe and pour agar plates whilst reviewing aseptic technique.
+            </p>
+
+            <figure style="text-align: center;">
+              <img class="glass img-format" src="https://static.igem.wiki/teams/4944/wiki/project/notebook2.png" alt=""  style="max-height: 500px;">
+              <figcaption style='color: rgb(253, 186, 15);'>Figure 2: Agar Plates after addition of KAN antibiotic
+              </figcaption>
+          </figure>
+
+  
+
+          
+
+
+            </div>
+        </div>
+
+        <div class="faq">
+            <div class="question">
+                <h3 class="centered-h3 n-title">June 2023</h3>
+                <svg width="15" height="10" viewBox="0 0 42 25">
+                    <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round"/>
+                </svg>
+            </div>
+            <div class="answer">
+              <h1 class="subtitle">Week 6 (June 5-June 11)</h1>
+
+              <h2 class="title">Bacterial Cloning</h2>
+              <p class="n-text">
+                In order to verify our transformations were successful, we needed to perform a PCR on the colonies grown on either plate through a PCR. Therefore, the team worked on making overnight cultures of the colonies grown from the transformation and using a Quiprep Miniprep Kit for plasmid DNA purification. Although the procedure was relatively straightforward, it was immensely valuable to learn the various “tricks” our TA’s had for us to improve our yields. Once such tip eluting with pre-warmed Purified water and dry spinning the column to remove trace amounts of ethanol. The team also learned how to use laboratory apparatus including the Nanodrop and Thermocycler.
+    
+                Unfortunately, the PCR’s products were run on an agarose gel and did not yield the correct band sizes indicating either the transformations or PCR’s hadn’t been successful. To test the efficacy of our DNA Polymerases, we ran a set of trial PCR’s with previously characterized DNA using both Taq and Pfu Polymerases with 4 different sets of primers. Although the bands were faint, these PCR’s worked indicating something wasn’t done correctly during the transformation step.
+                
+              </p>
+    
+    
+              <h2 class="title">Mammalian Cell</h2>
+              <p class="n-text">
+                To address the concerns over the bacterial expression of NPC1L1, the team decided to move to expressing NPC1L1 in mammalian cells. The cells that we decided to use were HEK293 (human Embryonic Kidney cells) due to their ability to quickly reach confluency and their general “forgiving” nature. However, recognizing our current lab wasn’t equipped with the necessary equipment to conduct experiments on mammalian cell lines, we decided to move operations to a Level 2 Biosafety Laboratory (BSL-2). The additional safety certification needed to work in the BSL-2 lab was acquired by everyone on the wet-lab team. However, to minimize foot traffic around the BSC in our tissue culture room, two members of our team were assigned to the sub-project to receive preliminary training.
+              </p>
+              
+              <h1 class="subtitle">Week 7 (June 12-June 18)</h1>
+    
+              <h2 class="title">Bacterial Cloning</h2>
+              <p class="n-text">
+                Over the course of Week 7, we worked on redoing the transformations with both the RFP and CFP DNA. Having reviewed our protocol against the protocols from other labs, we noticed that we had warmed our SOC in a water bath set to 42℃ after it was stored in the fridge whilst most protocols used SOC at room temp. Fortunately, once the transformations done using the modified protocol were incubated, colony growth was observed.
+              </p>
+ 
+              <figure style="text-align: center;">
+                <img class="glass img-format" src="https://static.igem.wiki/teams/4944/wiki/project/notebook-fig3-4.png" alt=""  style="max-width: 600px;">
+                <figcaption style='color: rgb(253, 186, 15);'>Figure 3 and 4: Colonies of the KAN resistant Red-Fluorescent Protein after transformation in BL21 competent cells and the Bacterial pellets obtained following centrifugation of the overnight cultures made from both the RFP and CFP colonies
+                </figcaption>
+            </figure>
+
+            <p class="n-text">
+              After plasmid extraction, digests with each set of the standardized iGEM cuts sites (EcoRI, SpeI, XbaI and PstI) were performed to cut the RFP and CFP inserts out of their backbones for the ligation. Given the E/P and X/P cut sites worked the best, the inserts and backbones bands were excised and gel extracted using a QiaGen Gel Extraction kit.  
+            </p>
+            <figure style="text-align: center;">
+              <img class="glass img-format" src="https://static.igem.wiki/teams/4944/wiki/project/notebook-fig5.jpeg" alt=""  style="max-width: 600px;">
+              <figcaption style='color: rgb(253, 186, 15);'>Figure 5: Agarose gel-electrophoresis delineating the results of a series of enzymatic digests of the RFP and CFP plasmids resuspended from the 2018 Distribution kits using EcoRI, PstI, SpeI and XbaI enzymes to separate the inserts from their vector backbones for gel extraction
+
+              </figcaption>
+          </figure>
+          <h2 class="title">Mammalian Cell</h2>
+          <p class="n-text">
+            Week 7 also marked the commencement of work on the HEK293 cells. Although general lab practices such as aseptic technique could be carried over from the bacterial experiments conducted over the previous weeks, the mammalian cells would be much more prone to contamination, need to regularly be passaged and all work would need to happen in the BSC. Our TA decided to start mammalian cell training with learning how to passage the cells and a practice transformation with GFP and RFP DNA.  Both the passaging and transfections were completed at the start of the week so the cells could be imaged using Fluorescent Microscopy once they reached confluence.
+
+After imaging the transfected cells, both the RFP and GFP controls showed no fluorescence whilst a few glowing red and green cells were observed in the transfected wells. It was also observed that lot’s of the cells had lifted off the surface of the wells but it was determined that this was due to pipetting the cells too aggressively. 
+
+          </p>
+
+          <h1 class="subtitle">Week 8 (June 19-June 25)</h1>
+
+              <h2 class="title">Bacterial Cloning</h2>
+              <p class="n-text">
+                Ligations were performed on the gel extracted backbones and inserts after they were PCR purified to remove traces of buffers left from the extraction procedure. We decided to perform the ligations with a 3:1 ratio as it was the recommended ratio between the insert and vector for the T4 DNA Ligase we were using. The first ligation contained the RFP insert with the AMP backbone and the second ligation with a CFP insert with the KAN backbone.
+
+                This set of ligations was unsuccessful due to the large amounts of DNA that were lost following gel extraction and PCR purification. Therefore, instead of running a gel on the digested products, they were PCR purified and used as template DNA for a single ligation reaction containing both of the inserts and backbones together. The backbones would either ligate with the target insert or self-ligate to reform the original plasmid. Since the RFP colonies were visibly red, we plated the ligation mixture on both AMP and KAN plates following a transformation to select for colonies.
+                
+              </p>
+              <figure style="text-align: center;">
+                <img class="glass img-format" src="https://static.igem.wiki/teams/4944/wiki/project/notebook-fig6.png" alt=""  style="max-width: 600px;">
+                <figcaption style='color: rgb(253, 186, 15);'>Figure 6: Ampicillin agar plate with RPF and CFP colonies transformed into BL21 competent cells following a 3:1 ligation to give both inserts the antibiotic resistance marker for Ampicillin. Colonies were  illuminated using a UV transilluminator
+
+                </figcaption>
+            </figure>
+
+            <h2 class="title">
+              Mammalian Cell</h2>
+              <p class="n-text">
+                The original flask of HEK293 cells was split up into an experimental and a practice flask so the rest of the wet-lab could learn how to passage the cells. A passaging schedule of Tuesday and Thursday was established based on how fast the cells had reached confluence from last week’s experiments Further training was commenced within the team by passaging the practice flask to get comfortable with working in the BSC and the protocol.
+              </p>
+
+              <h2 class="title">
+                General</h2>
+                <p class="n-text">
+                  As a part of HP outreach, our team conducted the annual UofC iGEM Faculty talk where we presented our project to esteemed UofC professors and researchers specialized in a multitude of different fields to discuss our progress with them and get feedback on the project. Alongside gaining valuable presentation experience, the faculty members bounced ideas and questions off each other during an enlightening discussion. Overall, questions about the stability of the construct in the intestinal tract came up alongside the large amount of work that needed to be completed in a very short timeframe. It was suggested that we perform our verification tests with the HEK293-NPC1L1 cells instead of transferring them to a nanodisc as removing the protein from the membrane would be difficult and may change its structure. Therefore, it was decided that the nanodiscs would not be used for verification. However, a section of the wet-lab would continue to practice protein purification of MSP’s to optimize the protocol for when the bacterial mShh construct was ready. 
+                </p>
+
+              <h1 class="subtitle">Week 9 (June 26-July 2)</h1>
+
+              <h2 class="title">Bacterial Cloning</h2>
+              <p class="n-text">
+                Having ordered the sequences for NPC1L1, mShh, IgG and MSP in AddGene Plasmids, we needed to verify our constructs by conducting a series of digestions and gel verifications on each of the plasmids. Each of the plasmids was transformed into Top10 BL21 competent cells and overnight cultures were made. Once the DNA was purified, the plasmids were digested and gels were rams to compare to the virtual digested run on the sequences through Benchling. 
+
+              </p>
+              <figure style="text-align: center;">
+                <img class="glass img-format" src="https://static.igem.wiki/teams/4944/wiki/project/notebook-fig7-8.png" alt=""  style="max-width: 600px;">
+                <figcaption style='color: rgb(253, 186, 15);'>
+                  Figures 7 and 8: Virtual Digestion run on Snap Gene and Benchling of Sonic Hedgehog with multi-cutter enzyme SacII
+                </figcaption>
+            </figure>
+
+            <p class="n-text">
+              Once the gel was run and the expected bands were observed the DNA was used in different experiments based on its future purposes. We noticed that mShh and IgG were not in expression vectors and did not contain the required components including a Promoter, RBS and stop codon. The MSP plasmid on the other hand was already in an expression backbone and could be used immediately for protein purification experiments.
+
+            </p>
+            <p class="n-text">
+              MSP’s were therefore transformed into Top10 competent cells followed by transformations into DE3 Protein Expression cells for protein production and purification. The insert sequences of mShh and IgG would have to be digested and ligated into the MSP expression vector backbone before being transformed (similarly to the RFP and CFP protein experiments).
+
+            </p>
+            <p class="n-text">
+              NPC1L1 would need to be transferred into an overexpression vector with a GFP marker so that HEK293 cells that took up the DNA would fluoresce when imaged to indicate the success of a transfection. It was suggested that a destination vector be used for Gateway cloning to produce the target plasmid so protocols were drafted for the experiment. The NPC1L1 plasmid would act as an entry clone and would form the plasmid as it has the same Att sites as the destination vector.
+
+            </p>
+            <h2 class="title">Mammalian Cell</h2>
+              <p class="n-text">
+                Passaging and continuation of mammalian cell training
+
+              </p>
+              <h2 class="title">Protein Production & Purification</h2>
+              <p class="n-text">
+                Following the move away from making nanodiscs for verification, protocols were drafted and researched on the purification of 6-His Proteins. The successful production and purification of MSP would speed up the process with mShh as both the proteins are 6-His tagged and the mShh insert will be ligated into the MSP backbone.
+              </p>
+
+              
+  
+  
+
+
+
+
+
+
+
+            </div>
+        </div>
+
+        <div class="faq">
+            <div class="question">
+                <h3 class="centered-h3 n-title">July 2023</h3>
+                <svg width="15" height="10" viewBox="0 0 42 25">
+                    <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round"/>
+                </svg>
+            </div>
+            <div class="answer">
+              <h1 class="subtitle">Week 10 (July 3 - July 9)</h1>
+
+              <h2 class="title">Bacterial Cloning</h2>
+              <p class="n-text">
+                This week was primarily focused on producing and verifying the NPC1L1 Gateway plasmid using the over-expression vector we had obtained. The protocol was very similar to a typical ligation but used 5X LR Clonase in a 1:1 ratio between the Entry clone (NPC1L1) and the Overexpression Destination Vector. Following the addition of Proteinase K, the gateway clone was transformed into Top 10’s, cultured and mini-prepped to obtain the target DNA. A series of digests with SacI-HF to verify the presence of the insert in the plasmid and a gel run to verify based on the band sizes.
+                
+              </p>
+              <figure style="text-align: center;">
+                <img class="glass img-format" src="https://static.igem.wiki/teams/4944/wiki/project/notebook-fig8.png" alt=""  style="max-width: 600px;">
+                <figcaption style='color: rgb(253, 186, 15);'>
+                  Figure 9: Agarose gel-electrophoresis delineating the results of an enzymatic digest of NPC1L1 following Gateway cloning using SacI-Hf enzyme to verify the presence of the insert in the plasmid in order to prepare for subsequent transfection of the plasmid into HEK293 mammalian cell lines for cholesterol binding and uptake assays
+
+
+                </figcaption>
+            </figure>
+
+            
+            <h2 class="title">Mammalian Cell</h2>
+            <p class="n-text">
+              Alongside regular passaging, the NPC1L1 DNA obtained by the bacterial cloning team was used to transfect a 24-well plate. Given that the NPC1L1 was placed in a destination vector that required induction using Doxycycline (Dox), preliminary experimentation with concentrations of Dox was performed to determine optimum concentrations of dox to induce expression without killing the cells due to overexpression of a membrane protein. 
+              
+            </p>
+
+            <h2 class="title">Protein Production & Purification</h2>
+            <p class="n-text">
+              In preparation of protein purification that would start next week, the Wash, Lysis and Elution buffers were made alongside SDS gels that were stored in the fridge for future use. The samples obtained from the primary cultures of the transformed MSP colonies were prepared by washing and elution for later purification.     
+            </p>
+
+            <h1 class="subtitle">Week 11 (July 10 - July 16)</h1>
+
+            <h2 class="title">Bacterial Cloning</h2>
+            <p class="n-text">
+              Junctional Primers were made for mShh and NPC1L1 to perform PCR’s that would act as a secondary verification mechanism that the ligations/Gateway cloning was successful. A set of gradient Colony PCR’s (cPCR) were set up for the transformed NPC1L1 colonies under gradient PCR conditions with the addition of DMSO. DMSO, a reducing agent, ensures the prevention of secondary structure formation during the PCR and avoids self-complementation. The agarose gel that was run following PCR Purification indicated that the vector used for transfection had taken up the NPC1L1 insert and that Gateway cloning was successful.  
+              
+            </p>
+            <figure style="text-align: center;">
+              <img class="glass img-format" src="https://static.igem.wiki/teams/4944/wiki/project/notebook-fig10-11.png" alt=""  style="max-width: 600px;">
+              <figcaption style='color: rgb(253, 186, 15);'>
+                Figure 10 and 11: Agarose gel-electrophoresis’ delineating the results of an PCR  and cPCR of NPC1L1 prior to and following Gateway cloning using a GFP Tagged Over-Expression Vector to verify the presence of the insert in the plasmid used for transfections of HEK293 mammalian cell lines 
+
+              </figcaption>
+          </figure>
+          <p class="n-text">
+            Towards the end of the week, a set of PCR’s were run for mShh to verify its location on the plasmid so that digestion and ligations could be planned for next week. Glycerol stocks of the primary cultures were also made for MSP’s. mShh, IgG and the Gateway Clone
+            
+          </p>
+
+          
+          <h2 class="title">Mammalian Cell</h2>
+          <p class="n-text">
+            A 0.3 ug/mL puromycin solution was diluted in a serial dilution and added to the transfected cells and doxycycline media was replaced. Experiments were planned, and since the transfected HEK cells kept lifting, they were moved to another incubator while troubleshooting occurred. Under the inverted microscope, it was determined that the transfected cells were dead. A new set of 96 wells was seeded for transfection, and the flask was passaged. Another member of the team was trained in passaging techniques.             
+          </p>
+
+          <h2 class="title">Protein Production & Purification</h2>
+          <p class="n-text">
+            For preliminary confirmation that MSP’s were successfully transformed into the DE3 cells, the solution was lysed and ran on an SDS Gel to verify. Based on the protocols written out in the weeks prior, the samples were lysed using repeated heat-cool cycles with boiling water and dry ice. This was soon found to be ineffectual as the samples were still coagulated when the SDS-PAGE electrophoresis was run. The protocol was modified for future use by lysing in Lysis Buffer and using a sonicator.  Having successfully transformed, the glycerol stock was used to make primary culture that would be used to make secondary cultures.
+          </p>
+          <p class="n-text">
+            The MSP1D1 Backbone contained a lac-Operon making it necessary for the the cultures to be induced with IPTG or lactose for protein production to be triggered. Therefore, secondary cultures were made by measuring the OD600 value of the samples till they reached log phase growth and OD600 or 0.4-0.6. The cultures were then induced with 1M IPTG and allowed to induce for 3 hours before being spun down and stored for purification.  The crude lysates of the secondaries were run on SDS gels following resuspension of the pellets obtained.
+          </p>
+
+          <h1 class="subtitle">Week 12 (July 17 - July 23)</h1>
+
+          <h2 class="title">Bacterial Cloning</h2>
+          <p class="n-text">
+            The PCR’s performed on the mShh plasmid were redone and the gel was run at a lower voltage for clearer band separation. The mShh insert was then excised from the gel and a gel extraction was performed to obtain a sample of just the insert. However, in order to have compatible sticky ends, the gel extracted insert would then have to be digested and gel extracted once again before a ligation could be performed. Digests of the MSP plasmid obtained from the DE3 transformation were also performed for verification.
+          </p>
+          <figure style="text-align: center;">
+            <img class="glass img-format" src="https://static.igem.wiki/teams/4944/wiki/project/notebook-fig11.png" alt=""  style="max-width: 600px;">
+            <figcaption style='color: rgb(253, 186, 15);'>
+              Figure 12: Graphical outline of the procedure for producing the pD-mShh vector through insertion of the mShh insert into the MSP backbone to produce an expression plasmid
+            </figcaption>
+        </figure>
+
+        
+        <h2 class="title">Mammalian Cell</h2>
+        <p class="n-text">
+          Potential reasons the transfected cells are so susceptible to lifting and death could include too high a lipofectamine concentration. The amount of DNA used, 0.2ug was kept constant. For the best result with lipofectamine 2000, we kept the DNA constant and varied the DNA (ug): lipofectamine ratio from 1:0.5 to 1:4. This was done in a 96 well, after which dox was added to induce glowing and the wells were imaged. After imaging, the pictures were analyzed to determine which ratio worked best. 
+
+        </p>
+
+        <h2 class="title">Protein Production & Purification</h2>
+        <p class="n-text">
+          Continued with making secondaries and running a gel to verify MSP’s were being produced. Our team was also working in tandem with the bacterial cloning team who performed digests on the colonies from the transformed DE3 cells we used for primaries.
+        </p>
+
+        <h1 class="subtitle">Week 13 (July 24 - July 30)</h1>
+
+          <h2 class="title">Bacterial Cloning</h2>
+          <p class="n-text">
+            After the digests from last week were completed and a gel was run, the insert DNA was used in a ligation with the MSP backbone. The ligation was performed using a 3:1 ratio between mShh and the MSP Backbone and transformed into Top 10 competent cells. After DNA was purified from the primary cultures, a digest was run to linearize the plasmid so a gel could be run. Unfortunately, the gel was inconclusive as not all of the ligated plasmids were digested and the presence of supercoiled, nicked and linearized DNA simultaneously prevented the gel from being analyzed. 
+
+            cPCR’s were run on the colonies to test for a successful ligation but the gels only showed up with primer dimers. Various trial of the PCR’s were run using varying program settings in the thermocycler including gradient PCR’s, altering the total number of cycles and varying the addition of reaction additives such as DMSO and MgCl<sub>2</sub>
+            
+          </p>
+
+          <h2 class="title">Mammalian Cell</h2>
+          <p class="n-text">
+            A 24 well was seeded with 40,000 cells for transfection, and the flask of HEK293 cells was passaged. Transfection protocol research was also conducted over the course of the week. 7 wells were transfected, and from the lipofectamine test, two ratios, 1ug DNA: 0.5uL lipofectamine and 1ug DNA: 1uL lipofectamine were seen to work best, so the 1:1 ratio was used to transfect. There was still a lot of lifting with the transfected HEK cells, so the lipofectamine changes had not fixed the issue of lifting. Dead, floating clumps of cells were removed from the wells. Dox-continaing media was added to the transfected cells. The sterile water in the incubator was replaced, and another member of the wet lab was trained in passaging techniques. A new set of wells was seeded at 30,000 cells for another transfection. 
+
+            
+          </p>
+
+          <h2 class="title">Protein Production & Purification</h2>
+          <p class="n-text">
+            After confirming MSP production using DE3 cells last week, we proceeded with the protein purification of MSP on two different clones. We first read papers on Ni-NTA protein purification and collected all the information needed to develop a protocol tailored to our protein of interest. We conducted an SDS-PAGE gel electrophoresis to confirm the purification of our protein, which demonstrated that our protein was properly purified.    
+          </p>
+          <figure style="text-align: center;">
+            <img class="glass img-format" src="https://static.igem.wiki/teams/4944/wiki/project/notebook-fig12.jpeg" alt=""  style="max-width: 600px;">
+            <figcaption style='color: rgb(253, 186, 15);'>
+              Figure 13: SDS Gel following an SDS Page electrophoresis delineating the results of Protein Purification of MSP Clones C and D though the subsequent crude lysates, washes and elutions
+
+            </figcaption>
+        </figure>
+        <h1 class="subtitle">Week 14 (July 31 - Aug 6)</h1>
+
+          <h2 class="title">Bacterial Cloning</h2>
+          <p class="n-text">
+            Continued to work on producing pD-mShh through ligation
+            
+          </p>
+
+          <h2 class="title">Mammalian Cell</h2>
+          <p class="n-text">
+            The flask of regular HEK293 cells was passaged. The newest set of transfected cells had 1000x doxycycline-containing media added to them. The transfected cells were examined under the inverted microscope and cells were imaged. Dox media was replaced during this time, with the exception of weekends, it is replaced every two days. The wells became over-confluent and were split using trypsin, before getting fresh dox-media added to them. Once again, new wells were seeded with 30,000 cells so that they could be transfected.   
+          </p>
+
+          <h2 class="title">Protein Production & Purification</h2>
+          <p class="n-text">
+            Although we were able to successfully purify our MSP proteins last week, we also observed the presence of other elements in our purified product. Therefore, we decided that our next steps should involve optimizing our protein purification protocol to obtain a sample containing only our desired protein. We first addressed the problem of lysing cells using heat-thaw cycles, which took approximately 2 hours due to our lack of access to a sonicator. To improve efficiency in conducting purification in the future, we reached out to other labs to inquire about getting access to a sonicator for bacterial cell lysis. We also explored alternative methods for Ni-NTA purification such as a gravity flow purification. When we performed protein purification this week, everything was kept the same as the previous week, except for the use of a sonicator for cell lysis and gravity flow Ni-NTA for purification. After running an SDS-PAGE gel, it became clear that our cells were neither properly induced nor lysed. This was expected since it was our first time using a sonicator. We also observed bands in the empty lanes, which hinted our SDS running buffer or SDS loading dye might be contaminated.
+          </p>
+
+          <figure style="text-align: center;">
+            <img class="glass img-format" src="https://static.igem.wiki/teams/4944/wiki/project/notebook-fig13.jpeg" alt=""  style="max-width: 600px;">
+            <figcaption style='color: rgb(253, 186, 15);'>​​​​
+              Figure 14: SDS Gel following an SDS Page electrophoresis delineating the results of Protein Purification of MSP Clones A after induction with 1M IPTG at an OD600 of 0.4 though the subsequent crude lysates, washes and elutions
+              
+            </figcaption>
+          </figure>
+
+          
+
+            </div>
+        </div>
+
+        <div class="faq">
+            <div class="question">
+                <h3 class="centered-h3 n-title">August 2023</h3>
+                <svg width="15" height="10" viewBox="0 0 42 25">
+                    <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round"/>
+                </svg>
+            </div>
+            <div class="answer">
+              <h1 class="subtitle">Week 15 (Aug 7 - Aug 13)</h1>
+
+              <h2 class="title">Bacterial Cloning</h2>
+              <p class="n-text">
+                Continued to work on producing pD-mShh through ligation
+              </p>
+              <h2 class="title">Mammalian Cell</h2>
+              <p class="n-text">
+                The transfections done in the past week were successful, as the cells were glowing, demonstrating that the plasmid was transfected into the cells and the cells were still adherent to the wells and normal in appearance. Doxycycline media was always added the day after a transfection, and was added again. As the week progressed and the wells became over confluent, the wells were split and the cells in the 24 well plate were moved to a 6 well. Puromycin concentration was calculated. To determine whether the puromycin resistance sequence of the plasmid was dox controlled or not, the doxycycline was discontinued. Diluted puromycin was added to the cells, and images were taken. When the flask of regular HEK293 cells was passaged, a 96 well plate was seeded. 
+    
+              </p>
+    
+              <figure style="text-align: center;">
+                <img class="glass img-format"  src="https://static.igem.wiki/teams/4944/wiki/project/notebook-fig14.png" alt=""  style="max-width: 600px;">
+                <figcaption style='color: rgb(253, 186, 15);'>​​​​
+                  Figure 15: Graphical outline of the modified procedure for sonication to lyse the pellets obtained from centrifugation of secondary protein cultures
+                  
+                </figcaption>
+              </figure>
+    
+    
+              <p class="n-text">
+                This week, we performed MSP induction troubleshooting and sonicator troubleshooting simultaneously. For IPTG induction, we tried inducing our cells for a longer period of time. At the same time, we conducted an experiment to see which of the two sonicators we had access to was more effective in lysing the cells. Using the results from our sonicator troubleshooting experiment, we were able to come up with an effective protocol for cell lysis, which we referred to when we purified our induced cells. The SDS-PAGE gel verified that our cells were successfully lysed and purification was successful, but needed to be optimized to obtain better results. We also performed a Bradford Assay to quantify our purified product.
+    
+              </p>
+    
+              <figure style="text-align: center;">
+                <img class="glass img-format" src="https://static.igem.wiki/teams/4944/wiki/project/notebook-fig15.jpeg" alt=""  style="max-width: 600px;">
+                <figcaption style='color: rgb(253, 186, 15);'>​​​​
+                  Figure 16: SDS Gel following an SDS Page electrophoresis delineating the results of  the troubleshooting protocol for sonication protein pellets using both the small and large sonicators              
+                </figcaption>
+              </figure>
+
+              <h1 class="subtitle">Week 16 (Aug 14 - Aug 20)</h1>
+
+              <h2 class="title">Bacterial Cloning</h2>
+              <p class="n-text">
+                pD-mShh was transformed into Top 10’s and digests were performed to linearize the plasmid and verify the plasmid on a gel. DE3 competent cells were transformed following this to make primaries that would be used for protein production.
+              </p>
+
+              <h2 class="title">Mammalian Cell</h2>
+              <p class="n-text">
+                The cells were examined under the microscope and puromycin media was replaced in the 6 well. There was an observation made that the puromycin is very damaging to the cells, despite the relatively loose dosage being applied. The 96 well seeded last week was transfected, and dox was added the day after transfection. As the week progressed, all transfected cells in the 6 well plate died. A new 24 well plate was seeded with about 150,000 cells per well in order for a new transfection, it was noted that there was some necrosis in the cells. This could be due to the fact that the previously optimized lipofectamine ran out and a new batch was being used. Optimization is recommended for each batch. To understand the potential effect doxycycline could have on the cells (possibly making them weaker, overloading the cells, and causing cell death), the doxycycline concentrations were varied. Dilutions from 8000x dilution, 4000x dilution, 2000x dilution, 1000x and 500x doxycycline dilutions were used. For the test, the cells were stained with propidium iodide to make dead cells glow red. The intention behind this test was to see if higher dox concentrations (500x) would overlap more with dead cells, showing whether increasing dox concentrations lead to more cell death. Cells were imaged, under GFP and RFP. The dox cells were also put through a microplate reader, to get an overall reading instead of just pictures of parts of the well. 
+              </p>
+
+              
+              <h2 class="title">Protein Production & Purification</h2>
+              <p class="n-text">
+                MSP served as a placeholder and was used to familiarize ourselves with the purification techniques in preparation for working with mouse sonic hedgehog (mShh). Because the mShh production team provided us with the mShh protein required for the project this week, we decided to switch to producing and purifying mShh while still applying the tips and tricks we learned from working with MSP protein. We successfully produced mShh using the same protocol used to produce MSP. In addition, to address the concern of gel contamination, we prepared a fresh batch of 1X SDS running buffer and 4X SDS loading dye, which successfully solved the problem.              </p>
+
+              <h1 class="subtitle">Week 17 (Aug 21 - Aug 27)</h1>
+
+              <h2 class="title">Mammalian Cell</h2>
+              <p class="n-text">
+                Transfection protocol altered slightly. If the experiments with the cells last up to a week or less, we no longer add the piggyback system, as we are not generating a stable cell line. Mammalian cell work this week involved preparing for a preliminary cholesterol assay using the Amplex Red Cholesterol Assay Kit. By this point it had been noted that multiple sets of cells that were transfected with the piggybac system and should have had lasting transfections died when they were exposed to puromycin, even if the doxycycline was included in media. As it happened, the plasmid backbone being used was not compatible with a piggyback system when the map was studied. The preliminary cholesterol assay was run, comparing the cholesterol intake of regular HEK293 cells and the cholesterol intake of transfected cells that should have the NPC1L1 membrane receptor protein. Microplate reader programmed as required to analyze the results of the assay, which reacted with cholesterol in solution and produced red fluorescence, which could be detected. However the results of the first assay were inconclusive. 
+              </p>
+
+              
+              <h2 class="title">Protein Production & Purification</h2>
+              <p class="n-text">
+                We followed the same protocol we used for MSP to purify mShh. However, when we examined the SDS-PAGE gel, we observed that the band corresponding to our protein was present in the crude lysate but disappeared in the supernatant after centrifugation of the sample. This indicated that our protein of interest had formed inclusion bodies and became incorporated into the pellet, along with the other proteins. Therefore, we experimented ways we could solubilize mShh so it would be expelled into the solution to be purified.
+              </p>
+
+
+              
+              <h1 class="subtitle">Week 18 (Aug 28 - Sept 3)</h1>
+
+              <h2 class="title">Mammalian Cell</h2>
+              <p class="n-text">
+                Considering that our starting plasmid was unable to be stably integrated into the HEK293 cells’ genetic material as it lacked the necessary sequences for a piggybac system to add it in, it was decided that a linear transfection was a better idea. Two restriction enzymes, Sap1 and Bmt1 showed promise as they didn’t cut in a vital region of the NPC1L1 sequence or the GFP sequence and would linearize the plasmid. A digest and then a linear transfection was carried out. The cells survived the transfection and were looking quite good, so doxycycline and puromycin was introduced into the media. Unlike the previous attempts, the cells survived the puromycin this time, indicating a further success for the linear transfection. At the same time, another circular transfection was also carried out, but no puromycin was added. Instead the cells from the circular transfection were trypsinized and spit into 96 well plates for another cholesterol assay. Regular HEK293 cells were also added to the 96 well to serve as controls and comparisons. 
+              </p>
+
+              <figure style="text-align: center;">
+                <img class="glass img-format"  src="https://static.igem.wiki/teams/4944/wiki/project/notebook-fig16-17-18-19.png" alt=""  style="max-width: 600px;">
+                <figcaption style='color: rgb(253, 186, 15);'>​​​​
+                  Figures 17, 18, 19, and 20: Images following linear transfection of NPC1L1 plasmid into HEK293s. The enzyme name listed on the image refers to the cut site used, and this is after two media changes.  Both sets of images show glowing colonies, and successful transfection. 
+                </figcaption>
+              </figure>
+
+              
+              <h2 class="title">Protein Production & Purification</h2>
+              <p class="n-text">
+                The SDS-PAGE gel showed that the solubilization from last week did not work. We had two routes we could take at this point. We could either continue working on the solubilization protocol to solubilize mShh protein or optimize induction, including IPTG concentration and incubation period, to prevent DE3 cells from forming inclusion bodies altogether. For the sake of time and resources, we decided to optimize the induction protocol for mShh.
+              </p>
+
+
+
+
+
+
+
+
+
+    
+    
+    
+            </div>
+        </div>
+
+        <div class="faq">
+            <div class="question">
+                <h3 class="centered-h3 n-title">September 2023</h3>
+                <svg width="15" height="10" viewBox="0 0 42 25">
+                    <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round"/>
+                </svg>
+            </div>
+            <div class="answer">
+              <h1 class="subtitle">Week 19 (Sept 4 - Sept 10)</h1>
+
+
+              <p class="n-text">
+                Puromycin media was changed for all linear transfected wells, and the media was changed for the regular HEK293 flask as well. The linear transfections have developed distinct, glowing colonies. Next steps were planned. 
+              </p>
+
+              
+              <h2 class="title">Protein Production & Purification</h2>
+              <p class="n-text">
+                For induction optimization, we conducted a series of experiments with varying IPTG concentrations, temperature and incubation period. All experiments were run on a gel alongside uninduced samples to look for visual differences between the bands of the uninduced and induced samples at the size of our protein. However, there was significant streaking on our gel, making it challenging to compare bands between different lanes.
+              </p>
+
+              <h1 class="subtitle">Week 20 (Sept 11 - Sept 17)</h1>
+
+              <h2 class="title">Mammalian Cell</h2>
+              <p class="n-text">
+                Media was changed for the regular HEK293s. The linear transfections were trypsinized due to overcrowding and were split into a 24 well plate. Three wells were allocated to each linear transfection, 3 to Sap1 and 3 to BmtI. Cell isolation was discussed. 
+              </p>
+
+              
+              <h2 class="title">Protein Production & Purification</h2>
+              <p class="n-text">
+                We thought it would be important to troubleshoot the gel before proceeding with further experiments because the gel provides us with the results of our experiments. We consulted with one of our lab supervisors who offered valuable feedback: 1. Load less of the samples and create a dilution series. 2. Adjust the separating gel percentage to be more suitable for the protein we are working with. 3. Wash our pellets with TB after centrifugation. Following this advice, we were able to successfully achieve high-quality gels with minimal streaking.
+              </p>
+
+
+              
+              <h1 class="subtitle">Week 21 (Sept 18 - Sept 24)</h1>
+
+              <h2 class="title">Mammalian Cell</h2>
+              <p class="n-text">
+                The linear transfections were checked on. They looked healthy, had expanded out of their small colonies and were showing signs of glowing, indicating a successful linear transfection. The BmtI and Sap1 transfections had also survived puromycin. It was noted that Sap1 was much slower than BmtI when it came to becoming more confluent. Cells were grown up in the 24 well plate until they reached a little over a million cells. At this point, two of the Bmt1 wells were frozen using DMSO, and cryo tubes. The other was trypsinized, and diluted repeatedly to get single colony isolation in a 96 well in order to get a stable cell line. 
+              </p>
+
+              
+              <h2 class="title">Protein Production & Purification</h2>
+              <p class="n-text">
+                In an attempt to solve our problem with producing mShh, we referred to papers on mShh production in DE3 specifically, and brainstormed potential reasons for the absence of protein production. After discussing it with our TA, we suspected that they may be an issue with the plasmid backbone containing the mShh gene.
+              </p>
+            
+
+            <h1 class="subtitle">Week 22 (Sept 25 - Oct 1)</h1>
+
+            <h2 class="title">Bacterial Cloning</h2>
+            <p class="n-text">
+              Since we were unable to successfully produce mShh, both the bacterial and protein teams continued to conduct literature reviews and trouble-shoot with our protocols and previous experiments. We soon realized that the new backbone we had used for the fragment instead of the MSP backbone, after the series of ligations had not worked, lacked a LacI gene. The LacI gene represses lac induced genes until IPTG or Lactose are added into the system. Therefore, no IPTG would be required to induce protein production and induction would select for bacteria with lower expression efficiency as the high efficiency bacteria would die in the growth stage. 
+            </p>  
+            <p class="n-text">
+              However, it would not be possible to conduct experimentation without induction entirely as the cultures would eventually reach log phase growth and start to produce proteins on their own but there would be no quantifiable way of knowing when enough protein had been produced and no estimate for how long that would take. Therefore, we tried to use a sequence of mShh with the correct cut sites to retry insertion into the MSP backbones. However, this time we decided to try with Gibson Assembly as well. The first step for this was to run a set of digestions using EcoRI and HindIII to digest the insert sequence out of the current plasmid. Since the bands were located at the right sizes, we proceeded to excise them out of the gel and extracted them to obtain insert DNA. This was followed by a set of PCR’s to verify our sequence for further experimentation.            </p>
+          
+              <figure style="text-align: center;">
+                <img class="glass img-format" src="https://static.igem.wiki/teams/4944/wiki/project/notebook-fig20-21.png" alt=""  style="max-width: 600px;">
+                <figcaption style='color: rgb(253, 186, 15);'>​​​​
+                  Figure 21, and 22: Agarose gel-electrophoresis’ delineating the results of digestions of mShh using EcoRI and HindIII enzymes to cut out and verify the presence of the insert prior to gel extraction for Gibson Assembly between the mShh insert and MSP backbone
+                </figcaption>
+              </figure>
+
+              <h2 class="title">Mammalian Cell</h2>
+              <p class="n-text">
+                Cells were passaged. Attempts to dilute Bmt1 cells into getting just a single colony in a 96 well had failed twice. The cells still glowed, and grew, but there wasn’t just one in any of the wells. 
+              </p>
+
+          
+          
+          
+          
+            </div>
+        </div>
+
+        <div class="faq">
+            <div class="question">
+                <h3 class="centered-h3 n-title">October 2023</h3>
+                <svg width="15" height="10" viewBox="0 0 42 25">
+                    <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round"/>
+                </svg>
+            </div>
+            <div class="answer">
+
+              <h1 class="subtitle">Week 23 (Oct 2 - Oct 8)</h1>
+
+            <h2 class="title">Mammalian Cell</h2>
+            <p class="n-text">
+              Mammalian cells, both regular HEK293s and the Bmt1 linearly transfected HEK-293s were passaged). The Sap1 cells in the 6 well plate were trypsinized and fresh media was added twice. Protocols for another cholesterol assay (this time with hedgehog protein) are being formulated. 
+            </p>  
+
+            <h1 class="subtitle">Week 24 (Oct 9 - Oct 15)</h1>
+
+            <h2 class="title">Mammalian Cell</h2>
+            <p class="n-text">
+              The mammalian cells were passaged twice that week, both regular HEK-293 cells and the linear-transfected NPC1L1 expressing cells. New wells of both regular and transfected cells were seeded at approximately 20,000 cells in a 96-well plate for a cholesterol assay.
+            </p>  
+
+            <h1 class="subtitle">Week 25 (Oct 16 - Oct 22)</h1>
+
+            <h2 class="title">Mammalian Cell</h2>
+            <p class="n-text">
+              An assay was run during this last week in an experiment using hedgehog protein bound to cholesterol and HEK293s that expressed NPC1L1. This assay was meant to determine whether hedgehog was able to inhibit NPC1L1. Cholesterol levels were measured using the Red Amplex Cholesterol Assay Kit.
+            </p>  
+                
+            </div>
+        </div>
+    </div>
+    <div class="pb-5"></div>
+</div>
+
+<script>
+    const faqs = document.querySelectorAll(".faq");
+
+    faqs.forEach(faq => {
+        faq.addEventListener("click", () => {
+            faq.classList.toggle("active")
+        })
+    })
+
+    function showdry() {
+        document.getElementById('wet').style.display = 'block';
+        document.getElementById('dry').style.display = 'none';
+    }
+
+    function showwet() {
+        document.getElementById('wet').style.display = 'none';
+        document.getElementById('dry').style.display = 'block';    
+    }
+
+</script>
+
+{% endblock %}
+

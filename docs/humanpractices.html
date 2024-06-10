@@ -1,0 +1,725 @@
+{% extends "layout.html" %}
+
+{% block title %}Integrated Human Practices{% endblock %}
+{% block header %}Integrated Human Practices{% endblock %}
+
+{% block main_content %}
+
+<style>
+
+  .container-hp {
+    width: 80%;
+    padding: 50px 0;
+    margin: 50px auto;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .container-hp:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -1px;
+    width: 2px;
+    height: 100%;
+    background: #CCD1D9;
+    z-index: 1
+  }
+
+  .card-hp {
+    background-color: black; /* Background color for the card */
+    border-radius: 10px; /* Rounded corners for the card */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Box shadow for a card-like effect */
+    display: flex; /* Use flexbox for centering */
+    flex-direction: column; /* Stack card contents vertically */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    text-align: center;
+    padding: 1rem;
+    margin: 10px;
+  }
+
+  .timeline-block {
+    width: calc(50% + 8px);
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px; /* Add margin for spacing between blocks */
+  }
+
+  .timeline-block-right {
+    float: right;
+  }
+
+  .timeline-block-left {
+    float: left;
+    direction: rtl;
+  }
+
+  .marker-hp {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 3px solid #F5F7FA;
+    background: #D62923;
+    margin-top: 10px;
+    padding-right: 5px;
+    padding-left: 5px;
+    z-index: 3;
+  }
+
+  .timeline-block .marker-hp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .timeline-content {
+    width: 95%;
+  }
+
+  .expand-button {
+    margin-bottom: 5px;
+  }
+
+  .additional-text {
+    display: none; /* Initially hide the additional text */
+    color: #fff; /* Style the additional text */
+    padding-bottom: 10px;
+  }
+
+  .hp-button {
+    text-align: center; /* Center the button horizontally */
+    margin-top: 5px; /* Adjust the spacing between content and button */
+    border: 2px solid white; 
+    background-color: #07011B;
+    color: white; 
+    border-radius: 2px;
+    padding: 3px;
+    cursor: pointer;
+    opacity: 0.7;
+  }
+
+  .hp-button:hover {
+    background-color: #07011B;
+    color: white; 
+    opacity: 1;
+  }
+
+  .title-hp {
+    font-family: 'Quicksand-Regular';
+    font-size: 2rem;
+    color: #f99c1c;
+  }
+
+  .subtitle-hp {
+    font-family: 'Quicksand-Regular';
+    font-size: 1.5rem;
+    color: #fbe395;
+  }
+
+  .timeline-block-left .ltr-text {
+    direction: ltr; /* Set left-to-right direction for this text */
+  }
+
+
+  @media screen and (max-width: 768px) {
+    .container-hp:before {
+        left: 8px;
+        width: 2px;
+    }
+    .timeline-block {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .timeline-block-right {
+        float: none;
+    }
+
+    .timeline-block-left {
+        float: none;
+        direction: ltr;
+    }
+  }
+</style>
+<div id="main-div" class="clearfix">
+    <div id="main-content">
+        <div class="main-section glass">
+            <p class="subtitle2">"It's not 'us versus them' or even 'us on behalf of them.' For a design thinker it has to be 'us with them' " – Tim Brown, CEO and President of IDEO</p>
+        </div>
+
+        <div class="sub-section">
+            <p class="text">
+                To ensure our project's success, we prioritised input from <b>field professionals,</b> allowing their expertise to guide us in creating a design that not only met feasibility criteria but also held market appeal for our stakeholders. Our journey toward crafting a product that our community would desire began with a fundamental principle: <b>safety and approval</b> from field professionals.We understand that developing a pharmaceutical product, particularly one destined for the healthcare industry, is a <b>multi-year endeavour.</b> It encompasses an intricate process that includes design, experimentation,  preclinical and clinical testing, regulatory compliance, upscaling and production, and eventual market release. Yet, even after a product reaches the market, its effectiveness must be unquestionable for clinicians to prescribe it. It must stand as a testament to sound scientific design and <b>patient-centricity.</b>
+                Following Kolb's Reflective model as our compass, the following pages illustrate how we engaged with an array of field professionals, each possessing invaluable industry experience.
+            </p>
+            <div class="figure">
+                <img class="wide-box-img" src="https://static.igem.wiki/teams/4944/wiki/human-centred-design/stakeholders.png" alt="">
+            </div>
+        </div> 
+
+        <div class="sub-section">
+            <h3 id="section1" class="subtitle">Quantitative Stakeholders</h3>
+            <ul>
+                <li><b>Industry leads:</b> insights into the commercialization process within Calgary, Canada</li>
+                <li><b>Doctors:</b> insights on the patient experience. Highlighted the strong and weak aspects of leading cholesterol medications, thus, helping us position our product as a strong contender.</li>
+                <li><b>Professors:</b> insights on critical project workflows, from wet lab experimentation to dry lab work, guiding pivotal shifts in our proof of concept. </li>
+            </ul>
+        </div>
+        
+        <div class="main-section glass">
+            <h3 class="subtitle-hp">Quantitative - Field professional input.</h3>
+        </div>
+    </div>  
+</div>
+
+
+<div class="container-hp">
+
+    <div class="timeline-block timeline-block-right">
+        <div class="marker-hp"></div>
+        <div class="card-hp">
+            <div class="timeline-content">
+                <h1 class="title-hp">Dr. Robert Mayall</h1>
+                <h3 class="subtitle-hp">March 25th</h3>
+                <div class="figure">
+                    <img class="hp-box-img glass" src="https://static.igem.wiki/teams/4944/wiki/human-centred-design/25-robert-mayall.png" alt=""/>
+                </div>
+                <p class="text">Dr. Robert Mayall - CTO & Founder at FREDsense Technologies | Synthetic Biologist, Chemist, Nanoscientist</p>
+            </div>
+            <div class="additional-text">
+                <h3 class="subtitle-hp">Purpose/Planning</h3>
+                <p class="text">Our very first meeting was with the former project manager of the 2013 FREDsense iGEM team, Dr Robert Mayall, and it was to provide insights into what his journey of transforming an iGEM project into a start-up would look like. This, in-turn, would give us the information necessary to visualise the steps we would take with our project, CholesterLock.</p>
+                <br><br>
+                <h3 class="subtitle-hp">Highlights</h3>
+                <p class="text">During the interview Dr Mayall explained that their journey involved three main aspects including establishing network systems, attracting investment and scaling up. The first two aspects were intertwined in that they were achieved through the same means which were pitching competitions. Dr Mayall and his team participated in many more competitions after iGEM and it was through these that they attracted investment and technical validation. They were then able to secure a lab space outside the university and began developing the field kits for water analysis. Next, Dr Mayall highlighted the challenges that may come with moving from small benches to larger vessels for commercial production. Some of the issues we discussed included mixing, temperature distribution and the need for oxygen. To address these issues, he proposed the use of pilot scale bioreactors which could be potentially rented from external companies. Last, we discussed the importance of protein modelling and other computational tools we may need for our project and for this he referred us to professors at our universities. He also recommended other resources offered by our universities for small startups such as Innovate Calgary, the innovation company of UofC, for resources, facilities, and expert guidance.</p>
+                <br><br>
+                <h3 class="subtitle-hp">Reflection</h3>
+                <p class="text">This first meeting with Dr Mayall showed us a glimpse of what our project would look like if we pursued it with the intent of going beyond the competition. It was insightful in that it also helped us know early on some of the challenges we may have later on such as scaling up and commercialisation.</p>
+                <br><br>
+                <h3 class="subtitle-hp">Making Sense/Next Steps</h3>
+                <ul>
+                    <li>Moving forward, we knew it was still too early to start considering scaling up before we began experimentation.</li>
+                    <li>However, the recommendations he shared about professors we could reach out to that could directly affect how we planned our wet-lab and dry-lab experiments were invaluable.</li>
+                </ul>
+            </div>
+            <div class="expand-button">
+                <button class="hp-button">Show More</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="timeline-block timeline-block-left">
+        <div class="marker-hp"></div>
+        <div class="card-hp">
+        <div class="timeline-content">
+            <h1 class="title-hp">Dr. Michael Kallos</h1>
+            <h3 class="subtitle-hp">March 29th</h3>
+            <div class="figure">
+                <img class="hp-box-img glass" src="https://static.igem.wiki/teams/4944/wiki/human-centred-design/29-dr-michael-kallos.jpeg" alt=""/>
+            </div>
+            <p class="text ltr-text">Dr. Kallos - Professor at the Schulich School of Engineering, as the department head of Biomedical Engineering,  University of Calgary</p>
+        </div>
+        <div class="additional-text ltr-text">
+            <h3 class="subtitle-hp">Purpose/Planning</h3>
+                <p class="text">This preliminary meeting presented a unique opportunity to gain direction and advice from an expert in the field of biomedical engineering while CholesterLock's design was still in its nascent stages. </p>
+                <br><br>
+                <h3 class="subtitle-hp">Highlights</h3>
+                <p class="text">Two members of the team presented the concept of a therapeutic probiotic that would release a protein in the digestive tract to lower cholesterol levels. At this point, many elements of the finished product, like the individual components of the fusion protein and even the feasibility of the project were unclear. Dr.Kallos was extremely supportive of the challenge iGEM Calgary was taking on, and provided valuable feedback that helped generate the eventual design of CholesterLock. The team planned on relying heavily on modelling software, and Dr.Kallos recommended Matlab and certain molecular simulations that could be utilised. He explained the insights we might gain on the stability of our protein in various conditions. However, due to the difficulty of modelling a new molecule with no data, and the labour-intensive nature of protein modelling he advised us to focus more on wet lab experimentation. Secondly, Dr.Kallos prompted us to consider optimising and purifying a protein rather than developing a probiotic. This was a suggestion that the team ended up incorporating into the final design. Lastly, Dr.Kallos helped refine CholesterLock’s finished design by describing characteristics we should research. This included membrane permeability, bond stability in low pH, and the type of protein that could bind to NPC1L1, amongst other relevant traits. </p>
+                <br><br>
+                <h3 class="subtitle-hp">Reflection</h3>
+                <p class="text">This meeting was instrumental in convincing the rest of the team of CholesterLock's promise, as well as giving everyone a clearer picture of the challenges of bringing this project to life.</p>
+                <br><br>
+                <h3 class="subtitle-hp">Making Sense/Next Steps</h3>
+                <ul>
+                    <li>Research into MatLAB or use of molecular simulations.</li>
+                    <li>Focus more on wet lab experimentation.</li>
+                </ul>
+        </div>
+        <div class="expand-button">
+            <button class="hp-button">Show More</button>
+        </div>
+        </div>
+    </div>
+
+<div class="timeline-block timeline-block-right">
+    <div class="marker-hp"></div>
+    <div class="card-hp">
+        <div class="timeline-content">
+            <h1 class="title-hp">Dr. David Loewen</h1>
+            <h3 class="subtitle-hp">May 4th</h3>
+            <div class="figure">
+                <img class="img-form2 glass" src="https://static.igem.wiki/teams/4944/wiki/human-centred-design/4-dr-david-loewen.png" alt=""/>
+            </div>
+            <p class="text">Dr. David Loewen - Clinical Lecturer, Family Medicine.</p>
+        </div>
+        <div class="additional-text">
+            <h3 class="subtitle-hp">Purpose/Planning</h3>
+            <p class="text">Before we began any experimentation on the project it was important to us that we understand the needs of one of our primary stakeholders, healthcare practitioners. Our primary goal with this meeting was to learn about his approach to prescribing cholesterol-lowering medication and understand his criteria for treatment decisions.</p>
+            <br><br>
+            <h3 class="subtitle-hp">Highlights</h3>
+            <p class="text">We discovered that as a clinician, his primary objective is to reduce cardiovascular risk by using the most well-known and thoroughly tested forms of treatment on individuals. Dr Loewen said he starts by recommending lifestyle changes by promoting physical activity for patients with high cholesterol If necessary, he initiates treatment with a low dosage of statins, typically starting at 2.5mg and adjusts based on the patient's response. Other medications such as Praluent and Ezetimibe are rarely prescribed due to their costly nature and limited cardiovascular reduction. Dr. Loewen also illustrated a patient case where statins were gradually introduced, emphasising the importance of patient monitoring and response assessment. Lastly, although statins are his go-to treatment for patients with high cholesterol, he acknowledged that some patients experience adverse side effects such as aches, pains, and muscle stiffness as reported by patients in our previous interviews but this is rare.</p>
+            <br><br>
+            <h3 class="subtitle-hp">Reflection</h3>
+            <p class="text">From our first meeting with a clinician we learnt that Statins are a preferred treatment option due to their proven effectiveness but there are rare cases where individuals experience adverse side effects such as aches and muscle stiffness. This highlights the need for cost-effective and side-effect free alternatives and suggests a potential role for CholesterLock.</p>
+            <br><br>
+            <h3 class="subtitle-hp">Making Sense/Next Steps</h3>
+            <ul>
+                <li>In order for CholesterLock to integrate into healthcare we would need more than a proof of concept, but years of clinical trials to reassure medical professionals.</li>
+                <li>Additionally, although understanding how the majority of high-cholesterol patients are treated, we need to understand how the rare, complex cases of high-cholesterol are treated when statins are not effective.</li>
+            </ul>
+        </div>
+        <div class="expand-button">
+            <button class="hp-button">Show More</button>
+        </div>
+    </div>
+</div>
+
+<div class="timeline-block timeline-block-left">
+    <div class="marker-hp"></div>
+    <div class="card-hp">
+    <div class="timeline-content">
+        <h1 class="title-hp">Genome Alberta</h1>
+        <h3 class="subtitle-hp">May 14th</h3>
+        <p class="text ltr-text">Genome Alberta - Georgia Balsevich (Manager, Project Development) and Tom Finn (Senior Program Officer). Genome Alberta is an economic and social impact organisation at the forefront of enhancing Alberta’s future through research and innovation, focusing on genomics research and its application in various fields.</p>
+    </div>
+    <div class="additional-text ltr-text">
+        <h3 class="subtitle-hp">Purpose/Planning</h3>
+            <p class="text">In the beginning of May, we had the honour to present our project to Tom and Georgia from Genome Alberta. We presented our plan for the research term to them and received invaluable feedback in the ideation phase of the project. </p>
+            <br><br>
+            <h3 class="subtitle-hp">Highlights</h3>
+            <p class="text">Tom and Georgia brought some concerns over our protein  regarding the mode of delivery and protein structure. They emphasised the importance of exploring different modes of drug delivery to ensure the effective targeting of the receptor. Additionally, Tom and Georgia raised concern regarding the absence of glycosylation in the protein, as a result of producing our protein in bacteria cells. They pointed out that the lack of sugar molecules might disrupt the stability and functionality of the protein in the digestive tract. 
+                <br><br>
+                We proposed the implementation of a survey aimed at capturing the perspectives of patients. Tom and Georgia endorsed this idea, emphasising the importance of initiating this outreach process early in the project. This approach would enable us to incorporate end users’ viewpoints right from the start, ensuring user oriented solutions. Furthermore, they strongly encouraged us to maintain ongoing engagement with stakeholders throughout both the dry lab and wet lab phases of development. This collaborative approach would facilitate integration of valuable insights and expertise, thereby enhancing the project’s overall success. 
+            </p>
+            <br><br>
+            <h3 class="subtitle-hp">Reflection</h3>
+            <p class="text">Tom and Georgia provided invaluable feedback and recommendation that shaped our next step, specifically the human practices efforts. Their emphasis on exploring modes of protein delivery was a reminder that the effectiveness of our solution is not solely dependent on the protein itself but also on how effectively we can implement it in the real-world. It prompted us to look into the feasibility and implementation of our solution in the long term. Their concern regarding the glycosylation also spurred us to explore deeper into the scientific literature and explore solutions to mitigate any stability issues, it is also something we need to later test in the lab to ensure the lack of sugar molecules will not affect the functionality of our protein. 
+                <br><br>
+                Furthermore, they reminded us that it is important for us to continue to reach out and stay in touch with our stakeholders throughout the project. The success of our project is not isolated within the laboratory but extends to the broader community of experts and stakeholders. It prompted us to reevaluate our human practices effort and perform an in depth stakeholder analysis. 
+            </p>
+            <br><br>
+            <h3 class="subtitle-hp">Making Sense/Next Steps</h3>
+            <ul>
+                <li>Investigate and research different modes of delivery to ensure effective delivery of drug system.</li>
+                <li>Research the effect of glycosylation on the functionality and stability of protein.</li>
+                <li>Start the ethical approval application and survey.</li>
+                <li>Perform stakeholder analysis and outreach effort.</li>
+            </ul>
+    </div>
+    <div class="expand-button">
+        <button class="hp-button">Show More</button>
+    </div>
+    </div>
+</div>
+
+<div class="timeline-block timeline-block-right">
+    <div class="marker-hp"></div>
+    <div class="card-hp">
+        <div class="timeline-content">
+            <h1 class="title-hp">Dr. William Pardridge</h1>
+            <h3 class="subtitle-hp">June 1st</h3>
+            <div class="figure">
+                <img class="hp-box-img glass" src="https://static.igem.wiki/teams/4944/wiki/human-centred-design/1-dr-william-pardridge.png" alt=""/>
+            </div>
+            <p class="text">Dr. Pardridge - Professor of Medicine at the University of California.</p>
+        </div>
+        <div class="additional-text">
+            <h3 class="subtitle-hp">Purpose/Planning</h3>
+            <p class="text">By the end of May, the main components of CholesterLock had been determined: a partial hedgehog fragment attached to the Fc region of IgG by a linker. This was the result of extensive research into fusion proteins and what made them stable, and whether IgG-based fusion proteins had been used therapeutically. The team came across a 2014 paper by Dr.William Pardridge, a distinguished professor of Medicine at the University of California, titled: “Blood–brain barrier drug delivery of IgG fusion proteins with a transferrin receptor monoclonal antibody”. This paper described how an IgG fusion protein carried a medication through the complex blood-brain barrier via receptor-mediated transport. 
+                <br><br>
+                While this wasn't exactly what we were trying to achieve, there were several key similarities, and research on orally-delivered IgG fusion proteins for receptors in the digestive tract was difficult to find. As such, we reached out to Dr.Pardridge, and were immensely grateful that he agreed to a phone call to discuss an element of the project we were struggling with: the linker sequence. 
+            </p>
+            <br><br>
+            <h3 class="subtitle-hp">Highlights</h3>
+            <p class="text">Dr. Pardridge heard about our current plan to use a short, flexible linker that was composed primarily of glycine-serine repeats. In our quest, however, to develop an amphipathic one, we were struggling to determine which linker would be best, or what characteristics to focus on. Dr.Pardridge cautioned that certain residues, particularly arginine in an amphipathic linker could be susceptible to proteolytic cleavage, which would reduce the viability of our fusion protein in the gut. Furthermore, his recommendation was to keep serines at the c-terminus, or even use the hinge regions of IgG as a linker, due to its length and flexibility. He also advised us not to rely too heavily on modelling, and instead conduct multiple wet lab experiments with different linkers to gauge how they impacted the protein’s function and interactions in the gut. Additionally, after hearing about our methodology for producing the fusion protein, he said a longer linker, up to 28 amino acids, might alleviate some of the difficulty that came with secreting fusion proteins. </p>
+            <br><br>
+            <h3 class="subtitle-hp">Reflection</h3>
+            <p class="text">Dr. Pardridge provided nuanced insights that the team was grateful to receive and were shared with the dry lab in order to narrow down potential linker candidates.</p>
+            <br><br>
+            <h3 class="subtitle-hp">Making Sense/Next Steps</h3>
+            <ul>
+                <li>Find ways to keep serines at the c-terminus, or even use the hinge regions of IgG as a linker, due to its length and flexibility.</li>
+                <li>Conduct multiple wet lab experiments with different linkers to gauge how they impacted the protein’s function and interactions in the gut.</li>
+            </ul>
+        </div>
+        <div class="expand-button">
+            <button class="hp-button">Show More</button>
+        </div>
+    </div>
+</div>
+
+<div class="timeline-block timeline-block-left">
+    <div class="marker-hp"></div>
+    <div class="card-hp">
+    <div class="timeline-content">
+        <h1 class="title-hp">Dr. MacNaughton</h1>
+        <h3 class="subtitle-hp">June 5th</h3>
+        <div class="figure">
+            <img class="hp-box-img glass" src="https://static.igem.wiki/teams/4944/wiki/human-centred-design/5-dr-macnaughton.png" alt=""/>
+        </div>
+        <p class="text ltr-text">Dr MacNaughton- Professor at the Cumming School of Medicine, Department of Physiology and Pharmacology, University of Calgary.</p>
+    </div>
+    <div class="additional-text ltr-text">
+        <h3 class="subtitle-hp">Purpose/Planning</h3>
+            <p class="text">TAs a researcher in intestinal epithelial biology, our meeting with Dr.Wallace MacNaughton was focused on understanding the mechanisms of the NPC1l1 Cholesterol pathway and determining the feasibility of expressing and extracting the membrane for testing. The biological activity of each section of CholesterLock alongside testing in epithelial cell lines were discussed.</p>
+            <br><br>
+            <h3 class="subtitle-hp">Highlights</h3>
+            <p class="text">Dr. MacNaughton highlighted the importance of understanding the impact that CholesterLock’s size could have on its ability to bind to NPC1L1. For one, larger molecules would have higher steric hindrance potentially masking the ability of cholesterol to bind the site. Furthermore, he emphasised the importance of the linker not being too long or water soluble as this would lead to difficulties in binding to NPC1L1. Furthermore, the biological activity of CholesterLock as a construct and as a sum of its individual part was brought up because pathways other than the cholesterol absorption pathway could not be interrupted. Dr. MacNaughton also mentioned that individual components including mShh, the linker and IgG would have to be biologically inactive in isolation in case they were separated from the overall molecule so that other signalling pathways wouldn’t be triggered. Although we had previously identified papain as a potential molecule for a “kill” switch, further exploration would need to be conducted. The most important discussion during the meeting was on our plan to use nanodiscs for testing as it was brought up that extracting NPC1L1 from the membrane of our HEK293 cells could alter the tertiary structure of the protein potentially causing a loss of function. It was suggested that we test cholesterol flux across an epithelial monolayer to test cholesterol absorption and test preferential displacement between CholesterLock and native cholesterol.</p>
+            <br><br>
+            <h3 class="subtitle-hp">Reflection</h3>
+            <p class="text">Our meeting with Dr. MacNaughton was enlightening as it allowed us to look at more efficient and realistic mechanisms of using NPC1L1 to test our construct. His advice to look further into the pharmacokinetics of Ezetimibe to compare the efficacy of CholesterLock helped us understand the importance of looking at each component of CholesterLock individually in addition to an overall view. It has also become evident that our proposed methods of testing through nanodiscs may prove to be ineffectual due to the difficulty of isolating NPC1L1.</p>
+            <br><br>
+            <h3 class="subtitle-hp">Making Sense/Next Steps</h3>
+            <ul>
+                <li>In order to successfully produce NPC1L1 to test cholesterol flux, we will need to re-evaluate whether or not nanodiscs are still a feasible course of action.</li>
+                <li>Furthermore, it might be useful to look at assays that can measure cholesterol concentration as NPC1L1 absorbs in-solution cholesterol and compare displacement interactions between native cholesterol as compared to CholesterLock.</li>
+            </ul>
+    </div>
+    <div class="expand-button">
+        <button class="hp-button">Show More</button>
+    </div>
+    </div>
+</div>
+
+<div class="timeline-block timeline-block-right">
+    <div class="marker-hp"></div>
+    <div class="card-hp">
+        <div class="timeline-content">
+            <h1 class="title-hp">Dr. Alexander Leung</h1>
+            <h3 class="subtitle-hp">June 16th</h3>
+            <div class="figure">
+                <img class="img-form2 glass" src="https://static.igem.wiki/teams/4944/wiki/human-centred-design/16-dr-alexander-leung.png" alt=""/>
+            </div>
+            <p class="text">Dr Leung - Endocrinologist and also an Associate Professor at the Cumming School of Medicine, University of Calgary.</p>
+        </div>
+        <div class="additional-text">
+            <h3 class="subtitle-hp">Purpose/Planning</h3>
+            <p class="text">In our meeting with Dr Leung, an experienced endocrinologist, we had two main agendas: to gain insight into the use of cholesterol-regulating medications other than Statins in clinical practice and secondly, to explore potential areas for research improvement.</p>
+            <br><br>
+            <h3 class="subtitle-hp">Highlights</h3>
+            <p class="text">Dr Leung, similar to Dr Loewen, informed us that Statins are commonly prescribed as the first choice for cholesterol management due to their extensive clinical trial data and proven effectiveness. For individuals with complex genetic disorders, Dr Leung considers alternative tools such as Ezetimibe, other pharmaceuticals and methods for treatment but he highlighted the importance of cost and insurance when determining medication choices. Different from our first meeting, Dr Leung acknowledged the impact of social determinants on health but highlighted the limitation of frontline physicians in addressing them and informed us on the importance of diverse approaches in public health research, encompassing clinical research, database analysis, and stakeholder engagement. Lastly, we discussed the need for larger cholesterol reductions in the development of lipid drugs and the importance of targeting LDL receptors.</p>
+            <br><br>
+            <h3 class="subtitle-hp">Reflection</h3>
+            <p class="text">From this meeting, the dominance of statins in clinical practice due to their extensive clinical trial data became clearer to us. This highlighted the need for a clear proof of concept on our part but also showed us that beyond these stages, a lot more research and work would need to go into CholesterLock before being released. Additionally, the impact of social determinants on high cholesterol management in communities is one that is evident but difficult to challenge.</p>
+            <br><br>
+            <h3 class="subtitle-hp">Making Sense/Next Steps</h3>
+            <ul>
+                <li>Moving forward, we knew we needed to put in a lot of work to provide evidence for our proof of concept.</li>
+                <li>Additionally, we needed to conduct a survey that can voice out the opinions of not only healthcare practitioners but members of our community to hear the patient’s opinion of High Cholesterol and whether they would prefer alternative medications from the healthcare industry.</li>
+            </ul>
+        </div>
+        <div class="expand-button">
+            <button class="hp-button">Show More</button>
+        </div>
+    </div>
+</div>
+
+
+<div class="timeline-block timeline-block-left">
+    <div class="marker-hp"></div>
+    <div class="card-hp">
+    <div class="timeline-content">
+        <h1 class="title-hp">Faculty Talk</h1>
+        <h3 class="subtitle-hp">June 5th</h3>
+        <div class="figure">
+            <img class="hp-box-img glass" src="https://static.igem.wiki/teams/4944/wiki/human-centred-design/faculty-talk.png" alt=""/>
+        </div>
+        <p class="text ltr-text">Faculty Talk - Meeting with various University of Calgary faculty members.</p>
+    </div>
+    <div class="additional-text ltr-text">
+        <h3 class="subtitle-hp">Purpose/Planning</h3>
+            <p class="text">Throughout the project, the Calgary iGEM strived to get feedback from multiple experts in order to improve the project. One of the most consequential ways the team accomplished this was through the Faculty Talk. Held June 20, 2023, the team invited experts such as researchers from Foothills Hospital and the University of Calgary to hear about the idea behind CholesterLock and its envisioned implementation. 
+                <br><br>
+                The attendees included immunology researchers Dr.Craig Jenne and Dr.Van Marle, biochemistry professors Dr.Burkinshaw and Dr. Omid Haji-Ghassemi, Dr. Lars Petersen from the Department of Biological Sciences at the University of Calgary, physiology and pharmacology expert Dr.Wallace MacNaughton, as well as iGEM alumnus and biotechnology entrepreneur Dr.Robert Mayall, amongst others. 
+            </p>
+            <br><br>
+            <h3 class="subtitle-hp">Highlights</h3>
+            <p class="text">Hosting multiple experts from different fields at once was a unique opportunity to allow them to discuss and share their thoughts in an organic, real-time manner. Faculty members bounced ideas off one another and build off preceding questions from a variety of perspectives. The conversation was greatly enlightening and many different exciting future directions for the project were discussed. 
+                <br><br>
+                The team also benefited heavily from having to present the project to a new audience, practising both presentation skills as well as developing figures and organising the many ideas that CholesterLock was generated from. 
+                <br><br>
+                The brief presentation went over the wet lab and dry lab components of CholesterLock to date before inviting the faculty to share their feedback and answer questions. 
+                <br><br>
+                While the team conducted extensive literature reviews into every aspect of our project, the expertise of the researchers and faculty members provided invaluable insights and critiques. Some of the questions posed by the faculty included:
+            </p>
+            <ol>
+                <li>Could the Fc component of CholesterLock’s protein cause off-target immune activity once the protein broke down? </li>
+                <li>What was the purpose of using IgG when IgA had a greater ability to withstand conditions in the gut? </li>
+                <li>The placeholder linker CholesterLock was using, made of amino acids GGGGS, may be a common linker, but it has an issue with aggregation. Had the team considered this problem? </li>
+                <li>What is the plan B if the nanodisc does not work? What about isolating and purifying a smaller portion of the NPC1L1 that is soluble to assess its activity? Or is the entire protein needed for the correct structure and function?</li>
+                <li>As it is hard to purify membrane proteins, why not just use mammalian cells to express them? </li>
+            </ol>
+            <p>The faculty members were extremely impressed by the concept of CholesterLock and could see the value in developing it. The logo and design elements were also received well. Other feedback included concern that the methodology, which included nanodiscs for solubilizing a membrane protein for testing, was too ambitious for the resources, timeframe, and expertise that the team had. Lastly, Team Calgary received some notes on presentation skills and potential improvements for the Jamboree.
+            <br><br>
+            After the Faculty Talk, a debrief was held to consolidate the advice and impressions CholesterLock had received. Faculty members pointed out numerous difficulties in producing complex proteins like gut receptors in bacterial cells; there was a pivot to using mammalian cells instead to produce NPC1L1.  A realisation that CholesterLock’s rationale and story needed to be emphasised more in presentations, as the listeners had many questions about that. Instead of testing the entire construct, the team should focus on testing just the binding with different readout mechanisms. </p>
+            <br><br>
+            <h3 class="subtitle-hp">Reflection</h3>
+            <p class="text">The faculty talk allowed us to reflect on the work we had planned to do and reconsider certain things due to feasibility and time constraints. Overall, we were honoured to have a range of faculty members present to guide and mentor us. </p>
+            <br><br>
+            <h3 class="subtitle-hp">Making Sense/Next Steps</h3>
+            <ul>
+                <li>We needed to highlight our “why” and make sure the story behind our project was clear.</li>
+                <li>Focus on testing just the binding with different readout mechanisms.</li>
+            </ul>
+    </div>
+    <div class="expand-button">
+        <button class="hp-button">Show More</button>
+    </div>
+    </div>
+</div>
+
+<div class="timeline-block timeline-block-right">
+    <div class="marker-hp"></div>
+    <div class="card-hp">
+        <div class="timeline-content">
+            <h1 class="title-hp">Dr. Norman Wong</h1>
+            <h3 class="subtitle-hp">Sept 1st</h3>
+            <div class="figure">
+                <img class="img-form2 glass" src="https://static.igem.wiki/teams/4944/wiki/human-centred-design/1-dr-norman-wong.png" alt=""/>
+            </div>
+            <p class="text">Dr. Norman Wong - Clinical researchers at the University of Calgary’s Cumming School of Medicine Professor in the departments of medicine, biochemistry and molecular biology Endocrinologist.</p>
+        </div>
+        <div class="additional-text">
+            <h3 class="subtitle-hp">Purpose/Planning</h3>
+            <p class="text">We wanted to gain insights into health professional’s perspectives and experience with treating high cholesterol patients, and investigate how they view existing medications such as Statin and Praulent. </p>
+            <br><br>
+            <h3 class="subtitle-hp">Highlights</h3>
+            <p class="text">Similar to other healthcare practitioners we had interviewed, Dr Wong began by emphasising that Statins are a preferred first-line of medication for individuals with high cholesterol. Additionally, he stated that although patients may have initial reservations about statins, these fears are often due to misinformation and based on experiences of rare and few cases. He referenced a study called SAMSON revealed that around 90% adverse symptoms related to statins were triggered by placebos, suggesting a strong psychological component to these side effects. In practice, statin intolerance were relatively rare, and many alternative medication or lower dosages were available 
+                Although Statin effectiveness is unchallenged, Dr Wong did highlight that the need for 
+                more options in the field of cholesterol-lowering medication is still an important 
+                endeavour. He shared insights about various recent developments in PCSK9’s (inhibitors 
+                can help treat high cholesterol by directly modifying this gene to reduce the amount of 
+                LDL in your body) that were similar to the product we were trying to develop. He 
+                reiterated however, that it was important that the mechanisms of our proteins were 
+                thoroughly tested and the perspectives of practising practitioners and leading research 
+                should be our compass. The last thing we discussed with Dr Wong was how patients 
+                often take more than one-cholesterol lowering treatment at a time and it's important to 
+                understand how our product would work in tandem with those ones.
+            </p>
+            <br><br>
+            <h3 class="subtitle-hp">Reflection</h3>
+            <p class="text">Dr. Wong gave us insightful perspectives especially regarding the fact that many other groups of researchers were working on similar projects. This showed us that it is 
+                important to continue to seek guidance from the scientific community at large in order to 
+                create a product that is well-rounded in its effectiveness. Additionally, it is worth looking 
+                into how our protein would be implemented in combination with other lipid medications. 
+            </p>
+            <br><br>
+            <h3 class="subtitle-hp">Making Sense/Next Steps</h3>
+            <ul>
+                <li>Engage with researchers, healthcare providers, and patients to gather input on how to shape our solution so it can be implemented in real world.</li>
+                <li>Investigate the effectiveness of our protein in terms of lowering LDL cholesterol and drug to drug interaction.</li>
+            </ul>
+        </div>
+        <div class="expand-button">
+            <button class="hp-button">Show More</button>
+        </div>
+    </div>
+</div>
+</div>
+
+<div id="main-div" class="clearfix">
+    <div id="main-content">
+
+        <div class="sub-section">
+            <h3 id="section1" class="subtitle">Qualitative Stakeholders</h3>
+            <p class="text">Our project, which came from the community's need for alternative cholesterol-lowering medications, was profoundly rooted in the patient’s holistic well-being. Qualitative stakeholders, those most directly impacted by our product, held a pivotal role in shaping our approach. Our team worked diligently to engage with our community, utilising surveys to capture their perspectives, offering us direct insights into the patient's journey. Additionally, we were inspired by non-profit organisations working to address the social determinants of health as they recognize that true healing extends beyond medication to encompass one's entire way of life.</p>
+            <ul>
+                <li><b>Patients and community members:</b> provided input on the healthcare system and changes that need to be made</li>
+                <li><b>Organisations:</b> provided insight into the work that needs to be done to contribute to addressing some of the concerns around health habits and healthy living to prevent cardiovascular diseases.</li>
+            </ul>
+        </div>
+
+        <div class="main-section glass">
+            <h3 class="subtitle-hp">Qualitative - What the community has to say.</h3>
+        </div>
+        
+        <div class="main-section glass">
+            <h3 class="subtitle">Meetings with Patients</h3>
+            <p class="text">During our interviews with community members who have used current cholesterol medications, the need for an alternative medication became evident to our team. In one interview, the patient described the symptoms after their doctor prescribed them two different kinds of statins. The prescription caused the person to experience discomfort that made it seem like their body had aged thirty years. They described extreme joint pain and muscle stiffness in knees, fingers and wrists. The patient described the side effects from the medication as lowering their quality of life to a point where they'd prefer the 10% increased risk of a heart attack than continuing with statin treatments. The patient was referred to a cardiologist who prescribed him Praluent as an alternative treatment and while the patient no longer experienced adverse side effects, the injection added up to $750 a month.</p>
+        </div>
+
+        <div class="main-section glass">
+            <h3 class="subtitle">Survey</h3>
+
+            <h3 class="subtitle-hp">Overview</h3>
+            <p class="text">In pursuit of collecting valuable qualitative and subjective data directly from patients, we conducted a comprehensive survey spanning four months. The survey questions investigates various areas, such as lifestyle, demographics, patient experiences, perspectives on current medication, and medical history. These data are essential for evaluating the efficacy of existing medical treatments and interventions. Furthermore, our survey also allows us to identify potential risk factors, patient-reported outcomes, and levels of patient satisfaction. These insights are instrumental in the development of evidence-based solutions aimed at enhancing the quality of life for our patients. The survey empowers us to investigate their specific needs and preferences in depth, directing our efforts to provide more tailored and effective solutions.</p>
+            <br><br>
+            <h3 class="subtitle-hp">Ethical Considerations and Participant's Safety</h3>
+            <p class="text">As part of our integrated human practices effort, we recognized the importance of prioritising ethical conduct and safeguarding the well-being of the individuals involved. Our team embarked on a journey to understand patients' perspectives on current high cholesterol treatments and the challenges around them. We initiated a survey and interview, capturing insights from patients and addressing the problem from their perspective. To ensure the study proposal met the ethical standards, we approached the University of Calgary Ethics Review Board (REB) to review and approve our study protocol, consent forms, and survey/interview questions, ensuring we addressed all ethical considerations. </p>
+            <br><br>
+            <h3 class="subtitle-hp">Iterative Survey Development Process</h3>
+            <p class="text">The University of Calgary promotes high ethics standards consistent with the Tri-Council Policy Statement (TCPS2 2022), Ethical Conduct for Research Involving Humans, thereby ensuring respect for persons, concern for their welfare and justice. 
+                The review and approval process with REB is collaborative and iterative. They conducted a thorough review of our ethics approval application, including our study proposal, assessing its design, methods, and potential impact on participants. We worked closely with them to continue modifying and improving our study design to ensure that the research approach aligns with established guidelines.
+                <br><br>
+                Furthermore, we actively collaborated with Georgia Balsevich from Genome Alberta to review the survey questions. Her invaluable input led to the incorporation of lifestyle-related inquiries, encompassing exercise frequency, smoking and alcohol consumption, as well as perceived stress levels. These additions were made with the goal of providing a comprehensive perspective on patients' experiences.
+            </p>
+            <br><br>
+            <h3 class="subtitle-hp">Informed Consent and Participant Privacy</h3>
+            <p class="text">Respecting the autonomy of participating and their right to informed consent was a crucial part of our human practices effort. The survey is anonymous and no personal identifiers such as name, location, and contact information are recorded. The interviewed participants' identities are only known to the primary investigators listed in the ethics approval, and their personal information remains protected and encrypted on the REB-approved data retention software. Every participant in the survey and interviews received comprehensive information about the study's purpose, procedures, potential risks, and benefits. Since the interviews are also recorded and shared on various podcast platforms, we ensured that participants were aware of the interview questions and granted us media consent to release their audio to the public.</p>
+            <br><br>
+            <h3 class="subtitle-hp">Data Retention and Protection</h3>
+            <p class="text">We adhere to strict data retention and protection from the REB, ensuring that all collected information is stored securely on the University of Calgary's authorised data retention software. Personal information is stored encrypted and anonymized. All data collected will be retained for five years after the data project is closed in adherence to the retention period enforced by the University of Calgary and will be deleted at the discretion of the principal investigator or the University after the retention period.</p>
+            <br><br>
+
+            <h3 class="subtitle">Survey results</h3>
+            <ul>
+                <li>25/114 people have high cholesterol</li>
+                <li>15/25 are on cholesterol medication or was on the medication</li>
+            </ul>
+            <h3 class="subtitle-hp">Prevalence of High Cholesterol</h3>
+            <div class="figure">
+                <img class="glass img-format" src="https://static.igem.wiki/teams/4944/wiki/human-centred-design/survey1.png" alt="">
+            </div>
+            <p>The survey collected a total of 114 responses. From the individuals with cholesterol,  the survey revealed that only 22% of participants were taking medication.</p>
+            <br><br>
+
+            <h3 class="subtitle-hp">Medication Usage</h3>
+            <div class="figure">
+                <img class="glass img-format" src="https://static.igem.wiki/teams/4944/wiki/human-centred-design/survey2.png" alt="">
+            </div>
+            <p>Among these high cholesterol patients, 40% of them don’t take any medication and 60% of them managed their condition with the use of high cholesterol medication, suggesting that pharmaceutical interventions are commonly employed to manage their condition.</p>
+            <br><br>
+
+            <h3 class="subtitle-hp">Familial High Cholesterol</h3>
+            <div class="figure">
+                <img class="glass img-format" src="https://static.igem.wiki/teams/4944/wiki/human-centred-design/survey3.png" alt="">
+            </div>
+            <p>A significant portion (76%) of the subgroup of high cholesterol patients have familial high cholesterol, indicating potential genetic predisposition to the condition among these individuals. 67% of familial high cholesterol patients are currently taking medication for managing and monitoring their conditions.</p>
+            <br><br>
+
+            <h3 class="subtitle-hp">Satisfaction Levels</h3>
+            <div class="figure">
+                <img class="glass img-format" src="https://static.igem.wiki/teams/4944/wiki/human-centred-design/survey4.png" alt="">
+            </div>
+            <p>While some individuals were neither satisfied nor dissatisfied (6 out of 14) with their medication, others expressed a degree of dissatisfaction (1 out 14).  The majority fell in the “Somewhat Satisfied” and “Satisfied”  categories (7 out 14), suggesting that most patients have generally positive experience with their medications.</p>
+            <br><br>
+
+            <h3 class="subtitle-hp">Long-Term Medication Use</h3>
+            <div class="figure">
+                <img class="glass img-format" src="https://static.igem.wiki/teams/4944/wiki/human-centred-design/survey5.png" alt="">
+            </div>
+            <p>Majority of high cholesterol patients who are on medication had been taking them for more than 3 years (12 out of 15) suggests that chronic management is often necessary for this condition, especially for those who have familial hypercholesterolemia in which diet and exercise are not effective in their case. This highlights the importance of long-term adherence to medication regimens and continuous monitoring of cholesterol level.</p>
+            <br><br>
+
+            <h3 class="subtitle-hp">Reported Side Effects</h3>
+            <ul>
+                <li>Muscle pain</li>
+                <li>Chronic fatigue</li>
+                <li>Migraines</li>
+                <li>Poor vision</li>
+                <li>Difficulties exercising</li>
+            </ul>
+            <p>These side effects can significantly impact an individual’s quality of life and may influence their adherence to medication. However, the survey results indicated that most individuals experiencing these side effects reported “Neither satisfied nor dissatisfied” and “somewhat satisfied/satisfied”, suggesting that these side effects might not have as much impact on their satisfaction level with the drug. It is also worth noting that the sample size is very small so it is difficult to make a definite conclusion from the results.</p>
+            <h3 class="subtitle">Conclusion and Reflection</h3>
+            <p>
+                The survey results on high cholesterol management offer insights into the experiences and strategies of individuals with this health condition. One surprising observation is the prevalence of familial hypercholesterolemia among respondents, as the majority of high cholesterol patients in this  survey fell into this category. This finding has implications for tailoring treatments to address genetic factors in cholesterol management. 
+                <br><br>
+                Another unexpected outcome relates to the satisfaction level results. Despite experiencing side effects that could potentially impact their quality of life, most patients reported a level of satisfaction with their medication. This contrasts with our initial presumptions and biases, which led us to anticipate dissatisfaction due to adverse side effects. This suggests a need for a closer examination of the need of a new medication for high cholesterol patients, and if there are other underlying reasons that may contribute to dissatisfaction toward existing treatments. Further investigation may be necessary to understand the complexity of patient experiences. 
+                <br><br>
+                It is crucial to take into account that the sample size used in this study is relatively small. As a result, the scope and generalizability of the conclusion we can draw are constrained. The reliability and validity of the findings from the survey are in doubt due to the limited sample size. Therefore, while the survey results provide valuable insights, caution should be exercised when making definitive statements based solely on this limited sample. Expanding the sample size in the future may yield a more comprehensive view of patients' experience. 
+            </p>
+        </div>
+    </div>  
+</div>
+
+<div id="main-div" class="clearfix">
+    <div id="main-content">
+        <div class="main-section glass">
+            <h3 class="subtitle">The Essential 8</h3>
+            <p class="text">
+                According to the American Heart Association, Cardiovascular Health (CVH) is defined by a set of eight crucial health behaviours and factors.<sup>1</sup> When these elements are at their best, they contribute to lower risk of cardiovascular disease.
+            </p>
+            <div class="figtext-container">
+                <div class="fig-text">
+                    <p class="text">These eight components, collectively referred to as "The Essential Eight," are assessed as poor, intermediate, or ideal using clinical standards.<sup>1</sup> A lifestyle that follows optimal CVH behaviours can reduce the risk of coronary events by 50%, making a significant impact, especially for those with a high genetic predisposition and it is noteworthy that sustaining a healthy lifestyle from a young age is linked to better cardiovascular health throughout one's life. One's ability to make these healthy choices can be significantly influenced by psychological health factors and various social and structural determinants, often beyond the control of both the healthcare provider and the patient.<sup>1</sup></p>
+                </div>
+                <div class="figure">
+                    <img class="glass img-format" src="https://static.igem.wiki/teams/4944/wiki/human-centred-design/essential8.png" alt="">
+                </div>
+            </div>
+            <p>
+                It is in light of these crucial insights that our team embarked on a mission to address one of the eight components of cardiovascular health, “Healthy Diet”. The following pages outline the work we did that was inspired by the American Heart Association's guidelines. Additionally, it represents our commitment to enhancing the cardiovascular health of our community, one step at a time.
+            </p>
+        </div>
+    </div> 
+</div>
+
+<div id="main-div" class="clearfix">
+    <div id="main-content">
+        <div class="main-section glass">
+            <h1 class="title-hp">Fresh Routes</h1>
+            <h3 class="subtitle-hp">June 13th and July 18th </h3>
+            <div class="figure">
+                <img class="glass img-format" src="https://static.igem.wiki/teams/4944/wiki/human-centred-design/interview-fresh-routes.png" alt=""/>
+            </div>
+            <p class="text">Meeting with Fresh Routes + Volunteering at fresh produce distributions at Foothills, Sunalta, HSCA</p>
+                <h3 class="subtitle-hp">Purpose/Planning</h3>
+                <p class="text">After various interviews with healthcare practitioners, it became evident that recognising the social determinants of cardiovascular diseases such as access to nutritious food was crucial. We noticed that rising food prices were affecting university students across Alberta and as CholesterLock, we aimed to combat these issues by collaborating with FreshRoutes, a non-profit organisation working to improve the affordability and availability of fresh produce. We reached out to Fresh Routes on June 13th to discuss their values, mission and to learn about the work they were doing for the communities in Calgary and again on July 13th to finalise our collaborations with them.</p>
+                <br><br>
+                <h3 class="subtitle-hp">Highlights</h3>
+                <p class="text">FreshRoutes operates a Mobile Grocery Store, bringing fresh and affordable food, including fruits, vegetables, eggs, and bread, to communities in Calgary. The similarities in our missions to combat food insecurity were evident and we discussed potential collaborations and volunteering opportunities with Nikita Scringer, the Director of Operations. Nikita provided us with the contacts of some local farmers and markets  that often had excess produce that they would be willing to give away that we could provide to university students in need of fresh produce. Linking local markets to the community directly seemed like a direct solution to food waste and food insecurity.</p>
+                <br><br>
+                <h3 class="subtitle-hp">Reflection</h3>
+                <p class="text">Our meetings with Nikita were inspiring and motivated us to bridge the gap for the supply and demand of fresh produce.</p>
+                <br><br>
+                <h3 class="subtitle-hp">Making Sense/Next Steps</h3>
+                <ul>
+                    <li>We decided that it was important to aid the efforts of nonprofits such as FreshRoutes that work towards subsidising the cost of fresh produce by volunteering with them over the course of the Summer and Spring.</li>
+                    <li>Additionally, we aim to establish our Free Fresh Produce Distribution, not only to combat food waste but also to provide university students with access to fresh produce.</li>
+                </ul>
+            <br><br>
+            <h3 class="subtitle">Volunteering at various markets</h3>
+            <p>
+                Members of our team volunteered at the following markets: Foothills Hospital Market, Sunalta Market, Hillhurst Sunnyside Community Association and Huntington Hills Community Association.
+                <br><br>
+                During these sessions we helped the Fresh Routes team set up their tables, distribute a range of fresh produce at affordable prices and we also interacted with members of the community. We learnt about how the markets were positively impacting individuals as normal grocery stores often sold the same fresh produce for about 3 times the price that Fresh Routes was providing. Moreover, Fresh Routes promoted sustainability by providing free reusable bags to individuals and further discounts to those that brought their own bags. Lastly, volunteering at different centres in our community also helped us distribute our Surveys related to out project and this allowed us to obtain a diverse range of responses from different corners of our City and from different age groups. 
+            </p>
+        </div>
+
+        <div class="main-section glass">
+            <h1 class="title-hp">Food Drive at SAIT</h1>
+            <h3 class="subtitle-hp">June 26th</h3>
+            <p>
+                In an effort to address the growing concerns of food insecurity and promote healthier eating habits, our recent food drive event at SAIT (Southern Alberta Institute of Technology) residence aimed to make a positive impact on our community. Our food drive event, held on June 26, 2023, was a collaborative effort involving local organisations , and community members. The event featured a donation station at SAIT residence, where various local sponsors - CO-OP, FreshRoutes, DJ Market, Sobeys, Save on Foods, Fresh and Local Market and Kitchens, Chongos Market and Fork on the Road, contributed perishable items, with a focus on healthy foods such as fruits, vegetables, and lean proteins. Thanks to the generosity of our community, we collected a substantial amount of healthy food items during the event. These items were distributed to students to promote the spirit of giving with a focus on healthy eating. By providing nutritious food and education, we hope to empower our community to make healthier choices and reduce food insecurity and we always look forward to future events that continue to address these important issues.
+            </p>
+            <div class="figure">
+                <img class="glass img-format" src="https://static.igem.wiki/teams/4944/wiki/human-centred-design/food-drive.png" alt=""/>
+            </div>
+        </div>
+    </div> 
+</div>
+
+<div class="ref-section glass" onclick="showRef()">
+    <h3 class="sub-subtitle pb-2">References
+        <svg id="toggle-ref-button" width="15" height="10" viewBox="0 0 42 25">
+            <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round"/>
+        </svg>
+    </h3>
+    <div id="ref-text" style="display: none;"> <!-- Initially hide the reference text -->
+        <ol class="text">
+            <li>Lloyd-Jones DM, Allen NB, Anderson CAM, Black T, Brewer LC, Foraker RE, et al. Life’s Essential 8: Updating and Enhancing the American Heart Association’s Construct of Cardiovascular Health: A Presidential Advisory From the American Heart Association. Circulation. 2022 Jun 29;146(5).</li>
+        </ol>
+    </div>
+</div> 
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const buttons = document.querySelectorAll('.hp-button'); // Select all buttons with the class
+    const additionalTexts = document.querySelectorAll('.additional-text'); // Select all additional texts
+
+    buttons.forEach((button, index) => {
+      button.addEventListener('click', function () {
+        if (additionalTexts[index].style.display === 'none' || additionalTexts[index].style.display === '') {
+          additionalTexts[index].style.display = 'block'; // Show the additional text
+          button.textContent = 'Show Less'; // Change the button text
+        } else {
+          additionalTexts[index].style.display = 'none'; // Hide the additional text
+          button.textContent = 'Show More'; // Change the button text
+        }
+      });
+    });
+  });
+</script>
+
+{% endblock %}

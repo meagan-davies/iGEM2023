@@ -1,0 +1,233 @@
+{% extends "layout.html" %}
+
+{% block title %}Parts{% endblock %}
+{% block header %}Parts{% endblock %}
+
+{% block main_content %}
+
+    <style>
+        .parts-table {
+            border-collapse: collapse;
+            place-self: center;
+            width: 100%;
+        }
+
+        .parts-table td {
+            border: 1px solid white;
+            padding: 8px;
+            text-align: left;
+            color: white;
+            font-size: 1em;
+        }
+
+        .parts-table th {
+            background-color: #dd2826;
+            border: 1px solid white;
+            padding: 8px;
+            text-align: center;
+            color: white;
+            font-size: 1.2em;
+        }
+    </style>
+   
+    <div id="main-div" class="clearfix">
+        <div id="sidebar">
+            <div class="side-container">
+                <div class="side-circle side-item">
+                    <div id="side-progress">
+                        <div id="side-progress-value">
+                            <img class="side-lock" src="https://static.igem.wiki/teams/4944/wiki/img/lock.svg" alt=""/>
+                        </div>
+                    </div>
+                </div>
+                <div class="side-nav side-item">
+                    <ul>
+                        <div class="side-title section-link" onclick="scrollToSection('section1')">Fusion Protein Parts Collection</div>
+                        <div class="side-subtitle subsection-link" onclick="scrollToSection('subsection1')">mShh-His</div>
+                        <div class="side-subtitle subsection-link" onclick="scrollToSection('subsection2')">hIgG-Fc</div>
+                        <div class="side-subtitle subsection-link" onclick="scrollToSection('subsection3')">IgG-Shh fusion protein</div>
+                        <div class="side-title section-link" onclick="scrollToSection('section2')">NPC1L1 Parts Collection</div>
+                        <div class="side-subtitle subsection-link" onclick="scrollToSection('subsection4')">hNPC1L1</div>
+                        <div class="side-subtitle subsection-link" onclick="scrollToSection('subsection5')">IRES2</div>
+                        <div class="side-subtitle subsection-link" onclick="scrollToSection('subsection6')">IRES-EGFP reporter system</div>
+                        <div class="side-subtitle subsection-link" onclick="scrollToSection('subsection7')">NPC1L1-IRES-EGFP</div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div id="main-content">
+            <div class="main-section glass">
+                <h3 class="subtitle">Overview</h3>
+                <p class="text">Synthetic biology was crucial in our exploration of an alternative mechanism for lowering high cholesterol. Our project contributed 22 different parts to the iGEM Registry of Standard Biological Parts, which we’ve divided into two collections. The first includes all the different parts involved in the design of our fusion protein. The second includes the parts used in the expression and characterization of our target membrane receptor, NPC1L1.</p>
+            </div>
+
+            <div class="sub-section">
+                <h3 id="section1" class="subtitle">Fusion Protein Parts Collection</h3>
+                <p class="text">Our fusion protein part list consists of the basic and composite parts that form the components of the CholesterLock fusion protein.</p>
+                
+                <div class="sub-subsection">
+                    <h3 id="subsection1" class="subtitle2">mShh-His (BBa_K4944000)</h3>
+                    <p class="text">Coding sequence for mouse sonic hedgehog (mShh) protein, with a 6XHis-tag at the C-terminus for purification. The hedgehog family of proteins is notable for their ability to undergo autocatalytic cleavage and a cholesterol modification. Shh is initially formed as an inactive precursor with a C-terminal and N-terminal domain. The C-terminal domain of the Hedgehog protein contains the components required for autoprocessing, while the N-terminal domain is responsible for signalling activity. In the presence of cholesterol, Shh undergoes autocatalytically-mediated cleavage between residues G257 and C258, covalently attaching a cholesterol molecule to the glycine residue. Shh can also autoprocesses with other sterol molecules, which allows for a modularity future teams can explore.</p>
+                    <div class="figure">
+                        <img class="img-format4" src="https://static.igem.wiki/teams/4944/wiki/wet-lab/parts1.svg">
+                        <div class="fig-label">Figure 1: mShh-His (BBa_K4944000).</div>
+                    </div>
+                </div>
+                
+                <div class="sub-subsection">
+                    <h3 id="subsection2" class="subtitle2">hIgG-Fc (BBa_K4944018)</h3>
+                    <p class="text">Coding sequence for the human IgG1 Fc-domain. Immunoglobulin Fc-domains are the crystallizable fragment of antibodies that mediate interactions with cell receptors and complement proteins. In fusion protein design, attachment of an Fc-domain can improve solubility and stability, as well as prolong the half-life and activity of therapeutic proteins.</p>
+                    <div class="figure">
+                        <img class="img-format4" src="https://static.igem.wiki/teams/4944/wiki/wet-lab/parts2.svg">
+                        <div class="fig-label">Figure 2: hIgG-Fc (BBa_K4944018).</div>
+                    </div>
+                </div>
+
+                <div class="sub-subsection">
+                    <h3 id="subsection3" class="subtitle2">IgG-Shh fusion protein (BBa_K4944002)</h3>
+                    <p class="text">
+                        The design construct for our novel fusion protein. It consists of the coding sequence for the Fc-domain of IgG (BBa_K4944018) and a fragment of the coding sequence for Shh (BBa_K4944000). In between these sequences is an insertion site for a linker sequence using Golden Gate assembly. 
+                    </p>
+                    <div class="figure">
+                        <img class="img-format3" src="https://static.igem.wiki/teams/4944/wiki/wet-lab/parts3.svg">
+                        <div class="fig-label">Figure 3: IgG-Shh fusion protein (BBa_K4944002).</div>
+                    </div>
+                    <p>
+                        The Fc-fragment of IgG was added to act as a chaperone and provide stability to the fusion protein in a gastrointestinal environment. By attaching an Fc-domain, we can prolong the therapeutic activity of our fusion protein by increasing its stability and half-life in the GI tract.
+                        <br><br>
+                        The cholesterol modification Shh undergoes is a central aspect of our fusion protein design. The stable cholesterol adduct that forms after Shh autoprocessing allows us to bind and block the cholesterol binding pocket of NPC1L1. The Shh fragment in our construct includes the sequence for the C-terminal domain and only 18 amino acids from the N-terminal domain (H181 to S437). This removes Shh signalling function while maintaining a site for cholesterol attachment. The entirety of the C-terminal domain is needed for successful autoprocessing where it will then be cleaved off and replaced with a cholesterol molecule.
+                        <br><br>
+                        The linker sequence between the two IgG and Shh is crucial for creating a separation between the two proteins, ensuring their structural integrity and functionality remain intact. To allow for testing of multiple linker sequences with our fusion protein design, we included an insertion site in between the IgG and Shh gene fragments. Two BsaI recognition sites were added on either end of a spacer sequence which allows us to use Golden Gate assembly to add any linker sequences with compatible overhangs into our construct. 
+                    </p>
+                    <div class="figure">
+                        <img class="img-format3" src="https://static.igem.wiki/teams/4944/wiki/wet-lab/parts9.svg">
+                        <div class="fig-label">Figure 4: Linker insertion sites.</div>
+                    </div>
+                    <p>
+                        We have identified 15 possible linker sequences we can test in our fusion protein. All of them are flanked by overhangs compatible with our construct and BsaI recognition sequences for easy swapability using Golden Gate assembly.
+                        <br><br>
+                    </p>
+
+                    <table class="parts-table">
+                        <tr>
+                            <th>Linker</th>
+                            <th>Description</th>
+                        </tr>
+                        <tr>
+                            <td>Linker_1 (BBa_K4944003)</td>
+                            <td>GGGGSGGGGS linker with BsaI cut sites</td>
+                        </tr>
+                        <tr>
+                            <td>Linker_2 (BBa_K4944004)</td>
+                            <td>AGSPKPPEAI linker with BsaI cut sites</td>
+                        </tr>
+                        <tr>
+                            <td>Linker_3 (BBa_K4944005)</td>
+                            <td>AKIYAELVGFG linker with BsaI cut sites</td>
+                        </tr>
+                        <tr>
+                            <td>Linker_4 (BBa_K4944006)</td>
+                            <td>AKSVEAQTF linker with BsaI cut sites</td>
+                        </tr>
+                        <tr>
+                            <td>Linker_5 (BBa_K4944007)</td>
+                            <td>DRKFDELVQT linker with BsaI cut sites</td>
+                        </tr>
+                        <tr>
+                            <td>Linker_6 (BBa_K4944008)</td>
+                            <td>GAGAAVTA linker with BsaI cut sites</td>
+                        </tr>
+                        <tr>
+                            <td>Linker_7 (BBa_K494409)</td>
+                            <td>IAVGADESVV linker with BsaI cut sites</td>
+                        </tr>
+                        <tr>
+                            <td>Linker_8 (BBa_K4944010)</td>
+                            <td>IPVPPTGHG linker with BsaI cut sites</td>
+                        </tr>
+                        <tr>
+                            <td>Linker_9 (BBa_K4944011)</td>
+                            <td>IYQLQDDDCT linker with BsaI cut sites</td>
+                        </tr>
+                        <tr>
+                            <td>Linker_10 (BBa_K4944012)</td>
+                            <td>LKPGTHHTI linker with BsaI cut sites</td>
+                        </tr>
+                        <tr>
+                            <td>Linker_11 (BBa_K4944013)</td>
+                            <td>LNLKGSFAGAMG linker with BsaI cut sites</td>
+                        </tr>
+                        <tr>
+                            <td>Linker_12 (BBa_K4944014)</td>
+                            <td>SIGLFGALA linker with BsaI cut sites</td>
+                        </tr>
+                        <tr>
+                            <td>Linker_13 (BBa_K4944015)</td>
+                            <td>SRPSESEG linker with BsaI cut sites</td>
+                        </tr>
+                        <tr>
+                            <td>Linker_14 (BBa_K4944016)</td>
+                            <td>YQEAGVLKMTL linker with BsaI cut sites</td>
+                        </tr>
+                        <tr>
+                            <td>Linker_15 (BBa_K4944017)</td>
+                            <td>GSAGSAAGSGEF linker with BsaI cut sites</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class="sub-section">
+                <h3 id="section2" class="subtitle">NPC1L1 Parts Collection</h3>
+                <p class="text">Our NPC1L1 parts collection consists of the basic and composite parts used in the expression of the membrane receptor, NPC1L1, in mammalian cells.</p>
+
+                <div class="sub-subsection">
+                    <h3 id="subsection4" class="subtitle2">hNPC1L1 (BBa_K4944001)</h3>
+                    <p class="text">The coding sequence for NPC1L1 or Niemann-Pick C1-Like 1 protein, a membrane receptor protein found in the small intestines and liver in humans. NPC1L1 plays a central role in the absorption of cholesterol in the small intestine by binding and taking in cholesterol molecules into enterocytes. Our fusion protein targets this receptor to inhibit its function.</p>
+                    <div class="figure">
+                        <img class="img-format4" src="https://static.igem.wiki/teams/4944/wiki/wet-lab/parts4.svg">
+                        <div class="fig-label">Figure 5: hNPC1L1 (BBa_K4944001).</div>
+                    </div>
+                </div>
+
+                <div class="sub-subsection">
+                    <h3 id="subsection5" class="subtitle2">IRES2 (BBa_K4944019)</h3>
+                    <p class="text">Sequence variant of an internal ribosome entry site (IRES) from encephalomyocarditis virus (EMCV). IRES2 allows for the initiation of cap-independent translation in order to express multiple genes under the control of one promoter.</p>
+                    <div class="figure">
+                        <img class="img-format4" src="https://static.igem.wiki/teams/4944/wiki/wet-lab/parts5.svg">
+                        <div class="fig-label">Figure 6: IRES2 (BBa_K4944019).</div>
+                    </div>
+                </div>
+
+                <div class="sub-subsection">
+                    <h3 id="subsection6" class="subtitle2">IRES-EGFP reporter system (BBa_K4944020)</h3>
+                    <p class="text">An IRES-mediated reporter system used for polycistronic expression of green fluorescent protein (GFP). This part uses the TU Eindhoven 2013 team’s codon-optimized sequence for enhanced GFP protein (BBa_K1123017), and places it downstream from the IRES2 (BBa_K4944019). This functions as a reporter that can be used to detect gene expression under any promoter.</p>
+                    <div class="figure">
+                        <img class="img-format3" src="https://static.igem.wiki/teams/4944/wiki/wet-lab/parts6.svg">
+                        <div class="fig-label">Figure 7: IRES-EGFP reporter system (BBa_K4944020).</div>
+                    </div>
+                </div>
+
+                <div class="sub-subsection">
+                    <h3 id="subsection7" class="subtitle2">NPC1L1-IRES-EGFP (BBa_K4944021)</h3>
+                    <div class="figtext-container">
+                        <div class="fig-text">
+                            <p class="text">A composite part of NPC1L1 protein paired with the IRES-mediated reporter system (BBa_K4944020). With this part, we were able to fluorescently detect expression of NPC1L1 membrane protein in our transfected mammalian cells, without interfering with protein folding. This part was made after the NPC1L1 gene (BBa_K4944001) was inserted into a destination vector (PB-TAG-ERP2 - Addgene plasmid # 80479) for doxycycline-inducible expression of NPC1L1 in mammalian cells.</p>
+                        </div>
+                        <div class="figure">
+                            <img class="img-format" src="https://static.igem.wiki/teams/4944/wiki/wet-lab/parts7.svg">
+                        </div>
+                    </div>
+                    <div class="figure">
+                        <img class="img-format3" src="https://static.igem.wiki/teams/4944/wiki/wet-lab/parts8.svg">
+                        <div class="fig-label">Figure 8: NPC1L1-IRES-EGFP (BBa_K4944021).</div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+{% endblock %}

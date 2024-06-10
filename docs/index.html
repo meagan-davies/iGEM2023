@@ -1,0 +1,489 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!--<meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+  <link rel="icon" href="https://static.igem.wiki/teams/4944/wiki/img/favicon.svg" type="image/svg">
+
+  <!-- Bootstrap CSS -->
+  <link href="{{ url_for('static', filename = 'bootstrap.min.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename = 'home-styling2.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename = 'style.css') }}" rel="stylesheet">
+  <link id="css-file" href="{{ url_for('static', filename = 'dark-mode.css') }}" rel="stylesheet">
+
+  <title>Home | Calgary - iGEM 2023</title>
+
+</head>
+
+<!-- Navigation -->
+{% include 'menu.html' %}
+
+
+
+{% block main_content %}
+<style>
+.circle8:hover {
+  box-shadow: 0 0 8px 8px #ffffff51;
+  text-decoration: underline;
+  color: #f2f2f2;
+}
+
+</style>
+
+
+<!-- Section 1 Start -->
+<section class="section-1">
+  <div>
+    <img class="logo1" src="https://static.igem.wiki/teams/4944/wiki/img/logo.png"></img>
+  </div>
+</section>
+<!-- Section 1 End -->
+
+<!-- Section 2 Start -->
+<section class=" section-2">
+  <div class="container2">
+    <div class="figure2">
+        <div class="circle2 glass" style="background-color: #ffffff;">
+          <img class="img-format" src="https://static.igem.wiki/teams/4944/wiki/heart-red.png" alt="Heart">
+        </div>
+    </div>
+    <div class="fig-text2">
+      <h2 class="title2">Did You Know?</h2>
+      <p class="text2"><b>Cardiovascular disease</b> (CVD) is a leading cause of death worldwide. A risk factor for CVD is plaque buildup on arterial walls, known as atherosclerosis.
+      </p>
+    </div>
+  </div>
+</section>
+<!-- Section 2 End -->
+
+
+<!-- Section 3 Start -->
+<section class="section-3">
+  <div class="stats-container">
+    <div class="stats">
+      <p>CVD is a <b>leading cause</b> of death</p>
+    </div>
+    <div class="stats">
+      <p>Affected <b>1.2 billion</b> in 2017</p>
+    </div>
+    <div class="stats">
+      <p>Responsible for <b>1.7 million</b> deaths worldwide</p>
+    </div>
+  </div>
+  <div class="container3">
+    <div class="fig-text3">
+      <p class="text3">High cholesterol can worsen cardiovascular disease, and is a growing health concern.
+      </p>
+    </div>
+    <div class="figure3">
+      <div class="circle3 glass" style="background-color: #ffffff;">
+        <img class="img-format" src="https://static.igem.wiki/teams/4944/wiki/heart-yellow.png" alt="Heart">
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Section 3 End -->
+
+
+<!-- Section 4 Start -->
+<section class="section-4">
+  <div class="main-section4 glass">
+    <h2 class="title4">Problem</h2>
+    <p class="text4">The current solution is the usage of statins. But there are many potential downsides. Some of these downsides include <strong>liver damage and muscle related side effects.</strong>
+    Conventional medications, including the class statins or the medication Ezetimibe, can have several side effects that reduce patient adherence and quality of life. 
+    Other types of medications can have prohibitive costs, preventing patients from accessing medications more suited to them.
+    </p>
+  </div>
+  <div class="container4">
+    <div class="stat4">
+      <p class="text-stat4" style="font-size: 2rem;"><br><b>86 million</b> U.S. adults aged 20 or older<br>have total cholesterol levels above the<br>normal of 200 mg/dL.<sup>1</sup></p>
+    </div>
+    <div class="stat4">
+      <p class="text-stat4" style="font-size: 2rem;"><br>Globally, <b>4.4 million deaths</b><br>were attributed to high LDL cholesterol<br>levels in 2019.<sup>2</sup></p>
+    </div>
+  </div>
+</section>
+<!-- Section 4 End -->
+
+<!-- Section 5 Start -->
+<section class="section-5">
+  <h2 class="title5">Therefore, we present</h2>
+  <img class="logo5" src="https://static.igem.wiki/teams/4944/wiki/img/logo-cholesterlock4.svg"></img>
+</section>
+<!-- Section 5 End -->
+
+
+<!-- Section 6 Start -->
+<section class="section-6">
+  <div class="container6-1">
+    <div class="fig-text6">
+      <h2 class="title6">Purpose</h2>
+      <p class="text6-1"> When considering the limitations and side effects associated with current high cholesterol medications, we recognised the need for an alternative. Therefore, we developed CholesterLock, a proof of concept for an alternative cholesterol-lowering medication. 
+      <br><br>CholesterLock is a proof-of-concept for a novel protein therapeutic aimed at reducing high cholesterol levels, and preventing downstream health issues worsened or caused by high cholesterol. This protein therapeutic would be an orally administered medication for the digestive tract, released into the intestines primarily in order to inhibit the  NPC1L1 receptor. Our goal is to make CholesterLock a safer and more affordable option for dealing with high cholesterol.
+        
+      </p>
+    </div>
+  </div>
+  <div class="container6-2">
+    <div class="figure6">
+      <div class="glass" style="max-width: 85%; overflow: hidden" >
+        <img style="float: left; "  src="https://static.igem.wiki/teams/4944/wiki/target-npc1l1.gif" alt="target-npc1l1">
+      </div>
+    </div>
+    <div class="fig-text6">
+      <h2 class="title6">Target</h2>
+      <p class="text6-2"> 
+        Our alternative centers around an engineered fusion protein capable of travelling to the small intestine and targeting the receptor NPC1L1. 
+        <br><br>The Niemann-Pick C1-Like 1 (NPC1L1) is a transmembrane protein found primarily in the liver and intestines in humans.<sup>3</sup> Its primary function is mediating cholesterol absorption, which is why it is the target of the commonly prescribed drug Ezetimibe. This drug is a cholesterol absorption inhibitor used to treat high cholesterol, and the inhibition of NPC1L1 has been shown to lower cholesterol absorption, and is believed to be involved in fatty acid absorption.<sup>4</sup> 
+        <br><br>The aim of CholesterLock is to mimic the action of Ezetimibe and inhibit the NPC1L1 receptor, with fewer off-target side effects. By inhibiting the NPC1L1 receptor, CholesterLock could lower both the amount of cholesterol absorbed through the diet, and synthesised cholesterol which varies between people. 
+         
+      </p>
+    </div>
+  </div>
+</section>
+<!-- Section 6 End -->
+
+<!-- Section 7 Start -->
+
+<section class="section-7">
+  
+
+  <div class="container7-1">
+    <div class="fig-text7">
+      <h2 class="title7">Mechanism</h2>
+      <p class="text7"> 
+        Cholesterol is first captured and recruited to NPC1L1 by binding its N-terminal domain.<sup>3</sup> Upon interaction, NPC1L1 switches from an open state to a closed state, creating a tunnel between the initial recruitment site to a region called the sterol sensing domain within the plasma membrane. The cholesterol is transported from its point of capture to the outer leaflet of the membrane where it will begin to accumulate. This accumulation signals both NPC1L1 and the cholesterol to come into the cell.
+        <br><br>If we can prevent cholesterol from ever even binding NPC1L1 at the N-terminal, we can inhibit the entire mechanism of cholesterol intake in intestinal cells right from the start.
+
+      </p>
+    </div>
+
+    <div class="figure6" style="align-items: flex-end">
+      <div class="glass" style="max-width: 85%; overflow: hidden">
+        <img style="float: right" src="https://static.igem.wiki/teams/4944/wiki/mechanism.gif" alt="mechanism">
+      </div>
+    </div>
+
+  </div>
+  <div class="container7-2">
+
+  </div>
+</section>
+<!-- Section 7 End -->
+
+<!-- Section 8 Start -->
+<section class="section-8">
+  
+  <div class="main-section8 glass">
+    <h2 class="title8-1">Solution</h2>
+    <p class="text8"> Our engineered fusion protein consists of three key components and combines features from two proteins: Immunoglobulin Gamma (IgG) and Sonic Hedgehog protein. IgG serves as a transporter protein, known for its stability even in gastrointestinal conditions.<sup>5</sup> We included its Fc fragment to provide stability and act as a chaperone. Next, we included a fragment of Sonic Hedgehog protein, which plays a vital role. In the presence of cholesterol, hedgehog protein undergoes a process called autoproteolysis, where the protein is cleaved into two fragments: the C-terminal and the N-terminal.<sup>6</sup> During this process, a cholesterol molecule is attached to the end of the N-terminal domain. We can use this cholesterol modification to allow our fusion protein to bind the initial recruitment site on NPC1L1, blocking additional cholesterol molecules from interacting with the receptor.
+    
+      <div class="figure6" style="align-items: center">
+        
+          <img class="glass img-format" src="https://static.igem.wiki/teams/4944/wiki/solution.jpg" alt="target-npc1l1" width="40%" height="40%">
+        
+      </div>
+
+  </div>
+  <div class="ref-section glass" style="max-width: 90vw; align-self: center; margin: 4.5rem;" onclick="showRef()">
+    <h3 class="sub-subtitle pb-2">References
+        <svg id="toggle-ref-button" width="15" height="10" viewBox="0 0 42 25">
+            <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round"/>
+        </svg>
+    </h3>
+    <div id="ref-text" style="display: none;"> <!-- Initially hide the reference text -->
+        <ol class="text" style="text-align: left; ">
+            <li>U.S. Department of Health & Human Services. High cholesterol facts [Internet]. Centers for Disease Control and Prevention; 2023 [cited 2023 Dec 13]. Available from: https://www.cdc.gov/cholesterol/facts.htm#:~:text=High%20total%20cholesterol%20in%20the%20United%20States&text=About%2086%20million%20U.S.%20adults,levels%20above%20240%
+              <br>20mg%2FdL.&text=About%207%25%20of%20U.S.%20children,19%20have%20high%20total%20cholesterol.</li>
+            <li>Zheng J, Wang J, Zhang Y, Xia J, Guo H, Hu H, Shan P, Li T. The Global Burden of Diseases attributed to high low-density lipoprotein cholesterol from 1990 to 2019. Front Public Health. 2022 Aug 16;10:891929. doi: 10.3389/fpubh.2022.891929.</li>
+            <li>Jia L, Betters JL, Yu L. Niemann-pick C1-like 1 (NPC1L1) protein in intestinal and hepatic cholesterol transport. Annu Rev Physiol. 2011;73:239-59. doi: 10.1146/annurev-physiol-012110-142233.</li>
+            <li>Labonté ED, Camarota LM, Rojas JC, Jandacek RJ, Gilham DE, Davies JP, Ioannou YA, Tso P, Hui DY, Howles PN. Reduced absorption of saturated fatty acids and resistance to diet-induced obesity and diabetes by ezetimibe-treated and Npc1l1-/- mice. American Journal of Physiology. Gastrointestinal and Liver Physiology. 2008 Oct;295(4):G776-83. doi: 10.1152/ajpgi.90275.2008.</li>
+            <li>Jasion VS, Burnett BP. Survival and digestibility of orally-administered immunoglobulin preparations containing IgG through the gastrointestinal tract in humans. Nutr J. 2015;14:22. doi:10.1186/s12937-015-0010-7.</li>
+            <li>Randall K. Mann, Philip A. Novel lipid modifications of secreted protein. Annu Rev Biochem. 2004 Mar.26;141(2): 945–51. doi: 10.1146/annurev.biochem.73.011303.073933.</li>
+        </ol>
+    </div>
+</div>
+  <div class="learn-more">
+    <h2 class="title8-2">Learn More</h2>
+    <div class="container8">
+      <div class="circle8 glass subtitle"><a style="font-family: 'Quicksand-Regular'; color: #f99c1c; text-decoration: none;" href="{{url_for('pages', page='description')}}">Project</a></div>
+      <div class="circle8 glass subtitle"><a style="font-family: 'Quicksand-Regular'; color: #f99c1c; text-decoration: none;" href="{{url_for('pages', page='wetlab')}}">Wet Lab</a></div>
+      <div class="circle8 glass subtitle"><a style="font-family: 'Quicksand-Regular'; color: #f99c1c; text-decoration: none;" href="{{url_for('pages', page='drylab')}}">Dry Lab</a></div>
+      <div class="circle8 glass" ><a style="font-family: 'Quicksand-Regular'; color: #f99c1c; text-decoration: none;font-size: 1.3rem;" href="{{url_for('pages', page='human-practices')}}">Human Practices</a></div>
+      <div class="circle8 glass subtitle"><a style="font-family: 'Quicksand-Regular'; color: #f99c1c; text-decoration: none;" href="{{url_for('pages', page='members')}}">Team</a></div>
+    </div>
+  </div>
+</section>
+<!-- Section 8 End -->
+
+
+{% endblock %}
+
+
+  <!-- Footer: MUST mention license AND have a link to team wiki's repository on gitlab.igem.org -->
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="{{ url_for('static', filename = 'bootstrap.bundle.min.js') }}"></script>
+
+{% include 'footer.html' %}
+
+
+
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-pzjYCq+mqQJET5IyDmZqTNRSqf9rdHpf1CGoMv2WU7Y7r8Fp9kSd3b++bQH6Q7N6" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/ScrollTrigger.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+  function togglerCSS() {
+    var styleSheet = document.getElementById('css-file');
+    var currentStyle = styleSheet.getAttribute('href');
+    var darkModeStyle = "{{ url_for('static', filename='dark-mode.css') }}";
+    var lightModeStyle = "{{ url_for('static', filename='light-mode.css') }}";
+
+    if (currentStyle === darkModeStyle) {
+      styleSheet.setAttribute('href', lightModeStyle);
+    } else {
+      styleSheet.setAttribute('href', darkModeStyle);
+    }
+  }
+</script>
+
+<!--GSAP Start-->
+<script>
+  gsap.registerPlugin(ScrollTrigger);
+
+  var timeline = gsap.timeline();
+
+  // SECTION 2
+  document.addEventListener('DOMContentLoaded', function() {
+    if (window.innerWidth >= 1000) {
+      timeline.to(".circle2", {
+        scrollTrigger: {
+          trigger: ".section-2",
+          start: "50px 100%",
+          end: "bottom 300px",
+          scrub: true,
+          markers: false,
+          toggleActions: "restart pause reverse pause"
+        },
+        x: 100,
+      });
+    }
+
+    timeline.fromTo(".text2", {opacity: 0}, {
+      opacity: 1,
+      scrollTrigger: {
+        trigger: ".section-2",
+        start: "top 400px",
+        end: "bottom 60%",
+        scrub: true,
+        markers: false,
+        once: true,
+      }
+    });
+  });
+    
+
+  // SECTION 3
+  document.addEventListener('DOMContentLoaded', function() {
+    if (window.innerWidth >= 1000) {
+      timeline.to(".circle3", {
+        scrollTrigger: {
+          trigger: ".container3",
+          start: "50px 100%",
+          end: "bottom 300px",
+          scrub: true,
+          markers: false,
+          toggleActions: "restart pause reverse pause"
+        },
+        x: -100,
+      });
+    }
+
+    timeline.fromTo(".text3", {opacity: 0}, {
+      opacity: 1,
+      scrollTrigger: {
+        trigger: ".section-3",
+        start: "top 400px",
+        end: "bottom 60%",
+        scrub: true,
+        markers: false,
+        once: true,
+      }
+    });
+  });
+
+  // SECTION 4
+  timeline.fromTo(".text4", {opacity: 0}, {
+      opacity: 1,
+      scrollTrigger: {
+        trigger: ".section-4",
+        start: "top 400px",
+        end: "bottom 70%",
+        scrub: true,
+        markers: false,
+        once: true,
+      }
+    });
+
+    // SECTION 5
+    timeline.fromTo(".section5", {opacity: 0}, {
+      opacity: 1,
+      scrollTrigger: {
+        trigger: ".title5",
+        start: "top 30%",
+        end: "bottom 20%",
+        scrub: true,
+        pin: true,
+        markers: false,
+        once: true,
+      }
+    });
+
+    // SECTION 6
+    timeline.fromTo(".text6-1", {opacity: 0}, {
+      opacity: 1,
+      scrollTrigger: {
+        trigger: ".container6-1",
+        start: "top 400px",
+        end: "bottom 70%",
+        scrub: true,
+        markers: false,
+        once: true,
+      }
+    });
+
+    timeline.fromTo(".text6-2", {opacity: 0}, {
+      opacity: 1,
+      scrollTrigger: {
+        trigger: ".container6-2",
+        start: "top 400px",
+        end: "bottom 70%",
+        scrub: true,
+        markers: false,
+        once: true,
+      }
+    });
+
+    // SECTION 7
+    timeline.fromTo(".text7", {opacity: 0}, {
+      opacity: 1,
+      scrollTrigger: {
+        trigger: ".container7-1",
+        start: "top 400px",
+        end: "bottom 70%",
+        scrub: true,
+        markers: false,
+        once: true,
+      }
+    });
+
+    // SECTION 8
+    timeline.fromTo(".text8", {opacity: 0}, {
+      opacity: 1,
+      scrollTrigger: {
+        trigger: ".main-section8",
+        start: "top 400px",
+        end: "bottom 70%",
+        scrub: true,
+        markers: false,
+        once: true,
+      }
+    });
+
+    timeline.fromTo(".circle8", {opacity: 0}, {
+      opacity: 1,
+      scrollTrigger: {
+        trigger: ".learn-more",
+        start: "top 400px",
+        end: "bottom 70%",
+        scrub: true,
+        markers: false,
+        once: true,
+      }
+    });
+
+
+
+/*
+  timeline.fromTo(".section4-h2", {opacity: 0},
+  {
+    opacity: 1,
+    scrollTrigger: {
+      trigger: ".section-4",
+      start: "40px 80%",
+      end: "bottom 60%",
+      scrub: true,
+      markers: false,
+      toggleActions: "restart pause reverse pause"
+    }
+  });
+
+  timeline.fromTo(".section5-h2", {opacity: 0},
+  {
+    opacity: 1,
+    scrollTrigger: {
+      trigger: ".section5-h2",
+      start: "top 450px",
+      end: "bottom 20%",
+      scrub: true,
+      markers: false,
+      toggleActions: "restart pause reverse pause"
+    }
+  });
+
+  timeline.fromTo(".section5-p", {opacity: 0},
+  {
+    opacity: 1,
+    scrollTrigger: {
+      trigger: ".section5-p",
+      start: "top 700px",
+      end: "bottom 500",
+      scrub: true,
+      markers: false,
+      toggleActions: "restart pause reverse pause"
+    }
+  });
+
+  timeline.fromTo(".section6-h2", {opacity: 0},
+  {
+    opacity: 1,
+    scrollTrigger: {
+      trigger: ".section6-h2",
+      start: "top 30%",
+      end: "bottom 20%",
+      scrub: true,
+      pin: true,
+      markers: false,
+      toggleActions: "restart pause reverse pause"
+    }
+  });
+*/
+
+</script>
+<script>
+  function showRef() {
+      const refText = document.getElementById('ref-text');
+      const toggleRefButton = document.querySelector('#toggle-ref-button');
+
+      // Toggle the display property between 'block' and 'none' for the reference text
+      if (refText.style.display === 'none' || refText.style.display === '') {
+          refText.style.display = 'block';
+          toggleRefButton.style.transform = 'rotate(180deg)'; // Rotate the SVG icon
+      } else {
+          refText.style.display = 'none';
+          toggleRefButton.style.transform = 'rotate(0deg)'; // Reset the rotation
+      }
+  }
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block title %}Dry Lab{% endblock %}
+{% block header %}Dry Lab{% endblock %}
+
+{% block main_content %}
+   
+    <div id="main-div" class="clearfix">
+       
+
+        <div id="main-content">
+            <div class="main-section glass">
+                <h3 class="subtitle">Overview</h3>
+                <p class="text">The iGEM Calgary Dry Lab team played a pivotal role in designing fusion proteins and providing crucial support to the Wet Lab team in comprehending the initial protein designs. Our Dry Lab efforts primarily revolved around two key areas: fusion protein modelling and the development of a linker database web app.
+                    <br><br>
+                    To investigate the effect of different linker sequences on fusion protein design, we created multiple models featuring linker sequences with diverse characteristics. Fusion proteins are intricate constructs formed by combining distinct protein domains, making the choice of linker sequence critical for preserving the structural and functional integrity of these fused proteins. We utilised a variety of protein modelling software tools, starting from tools to construct and adjust the parameters of our models and continuing to simulate their journey in the digestive tract. Additionally, we explored the abilities and restrictions of different software, to provide a complete understanding of their effectiveness.
+                    <br><br>
+                    Our search for a suitable linker was met with significant challenges. The lack of a dedicated linker-specific database, similar to the Protein Data Bank (PDB), presented difficulties. Additionally, it was challenging for the researchers on the Dry Lab team to use the available content for self-learning. In response to this, we took on the task of developing a web application named "LINKED." The primary goal of this web app is to assist researchers in the initial screening and preliminary analysis of potential linkers, thereby paving the way for further linker modifications and improvements. In this way, we aimed to bridge the gap between linker sequence design and making the material more accessible to researchers, ultimately advancing the field of synthetic biology.
+                </p>
+            </div>
+
+            <div class="circle-container pb-5">
+                <a class="circle-nav glass subtitle" href="{{ url_for('pages', page='model') }}">Model</a>
+                <a class="circle-nav glass subtitle" href="{{ url_for('pages', page='software') }}">Software</a>
+            </div>
+            
+        </div>
+    </div>
+
+{% endblock %}

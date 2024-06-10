@@ -1,0 +1,206 @@
+{% extends "layout.html" %}
+
+{% block title %}Software{% endblock %}
+{% block header %}Software{% endblock %}
+
+{% block main_content %}
+   
+    <div id="main-div" class="clearfix">
+        <div id="sidebar">
+            <div class="side-container">
+                <div class="side-circle side-item">
+                    <div id="side-progress">
+                        <div id="side-progress-value">
+                            <img class="side-lock" src="https://static.igem.wiki/teams/4944/wiki/img/lock.svg" alt=""/>
+                        </div>
+                    </div>
+                </div>
+                <div class="side-nav side-item">
+                    <ul>
+                        <div class="side-title section-link" onclick="scrollToSection('section1')">Data Acquisition</div>
+                        <div class="side-title section-link" onclick="scrollToSection('section2')">Data Processing</div>
+                        <div class="side-subtitle subsection-link" onclick="scrollToSection('subsection1')">Flexibility Processing</div>
+                        <div class="side-subtitle subsection-link" onclick="scrollToSection('subsection2')">Hydrophobicity Processing</div>
+                        <div class="side-title section-link" onclick="scrollToSection('section3')">Technical Setup</div>
+                        <div class="side-title section-link" onclick="scrollToSection('section4')">Webapp Aspects</div>
+                        <div class="side-subtitle subsection-link" onclick="scrollToSection('subsection3')">Database Query</div>
+                        <div class="side-subtitle subsection-link" onclick="scrollToSection('subsection4')">Calculator</div>
+                        <div class="side-subtitle subsection-link" onclick="scrollToSection('subsection4')">Submission Form</div>
+                        <div class="side-title section-link" onclick="scrollToSection('section5')">Future Scope</div>
+                        <div class="side-title section-link" onclick="scrollToSection('section6')">Software Access</div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div id="main-content">
+            <div class="main-section glass">
+                <h3 class="subtitle">Overview/ Motivation</h3>
+                <p class="text">Designing a fusion protein presented our team with a significant challenge, notably the search for a suitable linker that aligns with our specific requirements. Constructing a successful recombinant fusion protein depends on two critical components: the component proteins and the linker. The selection of an appropriate linker sequence to connect these proteins can be a complex and often overlooked aspect of fusion protein design. Currently, the selection or rational design of linkers for fusion proteins remains an underexplored domain within the field of recombinant proteins.<br><br>
+                    During our quest to find suitable linker sequences for our fusion protein, we quickly realised the limited resources and empirical methods available for selecting linkers that meet our unique needs. Existing linker databases, such as LinkerDB, and scientific literature offer limited insights into linker sequence characteristics. Additionally, assessing the behaviour of each potential linker through extensive and time-consuming molecular dynamic modelling proved impractical.<br><br>
+                    To streamline the linker search process and determine initial linker characteristics, our dry lab team developed a web application called "LINKED." This tool aims to assist future iGEM teams and synthetic biologists in discovering appropriate linkers for their projects. "LINKED" serves as the foundational resource for linker sequence design. The database within the web app comprises over 1000 natural linkers, complete with their relative flexibility and hydrophobicity profiles. This data empowers users to conduct an initial screening and preliminary analysis of potential linkers, after which they can select linkers that align with their specific requirements and properties, thereby laying the groundwork for further modification to tailor the linker to their needs. <br><br>
+                    Our application enables users to input their desired linker criteria and receive comprehensive information on the most suitable linkers that match those criteria. This information includes details on hydrophobic regions, flexibility, length, and, if applicable, the origin of the linkers. Furthermore, we are committed to enhance the utility of our web application by incorporating educational resources on linker sequence selection. We also intend to facilitate knowledge sharing by providing a submission form for users to document their linker sequences and contribute their research findings. Through this collaborative effort, we will continuously update the existing protein database to include empirical linker data, ensuring that "LINKED" remains a valuable resource for the scientific community.
+                </p>
+            </div>
+
+            <div class="sub-section">
+                <h3 id="section1" class="subtitle">Data Acquisition</h3>
+                <p class="text">There are two main types of linkers: natural and empirical. Natural Linkers are sequences found in naturally occurring multi-domain proteins, which can be considered as the foundation in linker design. Empirical linkers are designed by researchers to perform specific functions.<br><br>
+                    Our database placed a primary emphasis on natural linkers, which are sequences naturally occurring in multi-domain proteins and serve as the foundational elements for linker design. We obtained our database from LinkerDB created by George RA and Heringa J. This database had previously undergone a comprehensive analysis of protein domain linkers and successfully extracted linker sequences from multi-domain proteins within the Protein Data Bank (PDB).<br><br>
+                    Initially, our dry lab team embarked on an ambitious quest to extract natural linkers from the extensive repository of multi-domain proteins found in the PDB using rigorous data processing techniques like clustering, multiple alignment, and etc. Unfortunately, it presented us with a multitude of technical challenges. The data processing posed uncertainties due to various techniques involved, and the sheer size of the dataset proved to be overwhelming for our limited resources and technical knowledge on the subject matter.<br><br>
+                    Recognizing the need to adapt our approach, we made the strategic decision to pivot the scope of our project. Instead of attempting to extract natural linkers directly from the PDB, we turned to the LinkerDB created by George RA and Heringa J. While this database represented a valuable resource, it did have some notable limitations. The user interface provided by the Vrije Universiteit Amsterdam, where the database was hosted, was outdated and not particularly user-friendly. Moreover, a critical shortcoming was the lack of comprehensive information available within this database as not enough information was provided for screening potential linkers. These challenges prompted us to consider alternative solutions to enhance the usability and completeness of the data we were working with.
+                </p>
+            </div>
+
+            <div class="sub-section">
+                <h3 id="section2" class="subtitle">Data Processing</h3>
+                <p class="text">In addition to the information already present within the database, such as PDB codes, linker length, solvent accessibility, and secondary structures or sequences, we also processed the database to include information like flexibility and hydrophobicity as they are essential design components when selecting linker sequences.<br><br>
+                    Our aim is to provide users with a more comprehensive understanding of linker sequences, particularly by including vital metrics like flexibility and hydrophobicity distribution. These additional details are crucial in linker design, as they play a pivotal role in determining the functionality and stability of the linkers.
+                </p>
+                <div class="sub-subsection">
+                    <h3 id="subsection1" class="sub-subtitle">Flexibility Processing</h3>
+                    <p class="text">Our flexibility calculator employs an online API tool known as DynaMine, which serves as a rapid predictor of protein backbone dynamics using only the sequence information as input. To put it simply, backbone dynamics help us understand the flexibility or rigidity of specific parts of a protein, all without the need for detailed 3D structural data. Our function takes a protein sequence and sends it to the API server, where it calculates the backbone dynamics of linker sequences.<br><br>
+                        This capability offers a swift and straightforward initial assessment of protein characteristics, eliminating the need for extensive computational resources associated with molecular dynamics approaches. DynaMine predicts backbone flexibility at the residue level, presenting the data in the form of backbone N-H S^2 order parameter values. These values indicate the degree of restriction on the movement of atomic bond vectors. The algorithm's training is based on experimentally determined nuclear magnetic resonance (NMR) chemical shifts, allowing it to effectively distinguish between regions of varying structural organisation within proteins.<br><br>
+                        The research team responsible for DynaMine's development has reported that this tool exhibits high performance and accuracy, comparable to the most advanced existing tools. For reference, S^2 parameters below 0.69 suggest flexibility, while values above 0.8 indicate rigidity. Values falling in between may be context-dependent, displaying characteristics of both rigidity and flexibility, depending on environmental conditions.<br><br>
+                        We processed all the linker sequences with a number of amino acids greater or equal to five due to the length requirement of linkers. The linker sequences with amino acid less than five are determined to be rigid as literature stated that short linkers are usually rigid. 
+                    </p>
+                </div>
+                <div class="sub-subsection">
+                    <h3 id="subsection2" class="sub-subtitle">Hydrophobicity Processing</h3>
+                    <p class="text">Hydrophobicity provides a measurement of the tendency of molecules to be soluble or repel in water. This value is significant in linker design as it provides insight into potential folding behaviour based on solubility. There are various scales that can be used to encompass the hydrophobicity of individual amino acids. For our hydrophobicity calculations we used two tables of values to provide a wider range of hydrophobicity calculations to better account for differences found through various scoring methods. </p>
+                    <div class="figtext-container">
+                        <div class="fig-text">
+                            <p class="text">The first table found in Figure 1, demonstrates the values for the hydrophobicity of each amino acid in both an acidic environment and in a neutral environment. These values were used to sort each amino acid in the linker into one of the following categories: very hydrophobic, hydrophobic, neutral or hydrophilic. In the calculation process the number of amino acids in each category is counted for both acidic and neutral. An average is then found and a percentage is then outputted as is shown in the following sample equation:</p>
+                            <div class="figure">
+                                <img class="img-format4" src="https://static.igem.wiki/teams/4944/wiki/dry-lab/calc-hydro.png" alt=""/>
+                            </div>
+                            <p>
+                                This value helps to provide the user an overview of the percentage of residues that fall in each hydrophobicity category providing insight into the overall hydrophobicity distribution.
+                            </p>
+                        </div>
+                        <div class="figure">
+                            <img class="glass img-format" src="https://static.igem.wiki/teams/4944/wiki/dry-lab/hydrophobicity-index.png" alt=""/>
+                            <div class="fig-label">Figure 1: Categorised hydrophobicity scale for both acidic (pH2) and neutral (pH7) environments.</div>
+                        </div>
+                    </div>
+                    <p class="text">To provide the user with a more intuitive and clear demonstration of the linker hydrophobicity we created a hydrophobicity distribution function to output a graph showing a colour-based distribution. The graph outputs each amino acid in the linker with a corresponding background colour according to hydrophobicity. In Figure 2 the legend of corresponding hydrophobicity index values to the mapped background colour is shown.</p>
+                    <div class="figtext-container">
+                        <div class="figure">
+                            <img class="glass img-format" src="https://static.igem.wiki/teams/4944/wiki/dry-lab/legend-scale.png" alt=""/>
+                            <div class="fig-label">Figure 2: Hydrophobicity colour distribution legend.</div>
+                        </div>
+                        <div class="fig-text">
+                            <p class="text">The gradient from orange to white to blue demonstrates hydrophobic residues through to hydrophilic residues. This function serves the purpose of helping the user make more informed decisions as this distribution can demonstrate the amphiphilic nature of a linker and can potentially provide insight into folding behaviours.</p>
+                        </div>
+                    </div>
+                    <div class="figtext-container">
+                        <div class="fig-text">
+                            <p class="text">For the hydrophobicity calculations a secondary dataset was used called the Kyte-Doolittle hydropathy scale which is a dataset commonly used for the calculation of the Grand Average of Hydropathy (GRAVY). A GRAVY score is a method for determining the overall hydrophobicity of a peptide sequence. Therefore, this method was utilised to provide insight into the overall hydrophobicity of a sequence while also providing a method to score and sort the linkers in the database. In Figure 3 a table of the Kyte-Doolittle hydropathy scale is shown. </p>
+                        </div>
+                        <div class="figure">
+                            <img class="glass img-format" src="https://static.igem.wiki/teams/4944/wiki/dry-lab/hydropathy-scale.png" alt=""/>
+                            <div class="fig-label">Figure 3: Kyte-Doolittle hydropathy scale.</div>
+                        </div>
+                    </div>
+                    <p class="text">The GRAVY calculation involves determining the sum of the hydropathy values divided by the length. The equation is demonstrated as follows:</p>
+                    <div class="figure">
+                        <img class="img-format6" src="https://static.igem.wiki/teams/4944/wiki/dry-lab/calc-gravy.png" alt=""/>
+                    </div>
+                    <p>
+                        If the GRAVY Score is positive this indicates an overall hydrophobic sequence and if the GRAVY Score is negative this indicates a hydrophilic sequence. 
+                    </p>
+                </div>
+            </div>
+
+            <div class="sub-section">
+                <h3 id="section3" class="subtitle">Technical Setup/ Development Environment</h3>
+                <p class="text">Our web app leverages Django, a Python web framework that seamlessly connects the backend and frontend components. We employed PostgreSQL as our relational database, providing a robust foundation for our data storage needs. Python played a pivotal role in data processing, particularly in the implementation of key features like the flexibility and hydrophobicity calculators. For frontend development, we utilised HTML, CSS, and the Bootstrap framework, ensuring an aesthetically pleasing and responsive user interface.</p>
+                <div class="figtext-container">
+                    <div class="figure">
+                        <img class="glass img-format" src="https://static.igem.wiki/teams/4944/wiki/dry-lab/database-schema.png" alt=""/>
+                        <div class="fig-label">Figure 4: Database schema.</div>
+                    </div>
+                    <div class="fig-text">
+                        <p class="text">Docker was used to guarantee consistency and portability throughout development and deployment. Docker containers encapsulated the entire web app along with its dependencies, enabling reliable execution across diverse environments. This containerization approach not only simplified version control but also streamlined our development workflows, reinforcing a cohesive and efficient development process.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sub-section">
+                <h3 id="section4" class="subtitle">Web App Aspects</h3>
+                <div class="sub-subsection">
+                    <h3 id="subsection3" class="sub-subtitle">Database Query</h3>
+                    <div class="figtext-container">
+                        <div class="fig-text">
+                            <p class="text">In the homepage, users have the option to either enter the linker ID if they want to look for a specific linker, or select their desired properties for linkers in the drop down selection box.</p>
+                        </div>
+                        <div class="figure">
+                            <img class="wide-box-img glass" src="https://static.igem.wiki/teams/4944/wiki/dry-lab/search-database.png" alt=""/>
+                            <div class="fig-label">Figure 5: LINKED Web App search database.</div>
+                        </div>
+                    </div>
+                    <div class="figtext-container">
+                        <div class="fig-text">
+                            <p class="text">The search results page will pop up to display a list of linkers that satisfy the selection.</p>
+                        </div>
+                        <div class="figure">
+                            <img class="wide-box-img glass" src="https://static.igem.wiki/teams/4944/wiki/dry-lab/search-results.png" alt=""/>
+                            <div class="fig-label">Figure 6: LINKED Web App search results.</div>
+                        </div>
+                    </div>
+                    <p class="text">The linker detail page displayed the information about the linker such as its origin, PDB ID if applicable, backbone dynamic plot for displaying the flexibility, and hydrophobicity distribution of the linker. This information served as a preliminary information of linkers. </p>
+                    <div class="figure">
+                        <img class="square-img glass" src="https://static.igem.wiki/teams/4944/wiki/dry-lab/linker-details.png" alt=""/>
+                        <div class="fig-label">Figure 7: LINKED Web App detailed linker results.</div>
+                    </div>
+                </div>
+                <div class="sub-subsection">
+                    <h3 id="subsection4" class="sub-subtitle">Calculator</h3>
+                    <p class="text">The calculator function of the web app employs the data processing techniques used in the data processing step of our database.</p>
+                    <div class="figtext-container">
+                        <div class="figure">
+                            <img class="wide-box-img glass" src="https://static.igem.wiki/teams/4944/wiki/dry-lab/calculator.png" alt=""/>
+                            <div class="fig-label">Figure 8: LINKED Web App calculator.</div>
+                        </div>
+                        <div class="fig-text">
+                            <p class="text">Users can enter the amino acid sequences, which will be connected to the flexibility calculator API tool and the hydrophobicity calculator function to determine its relative flexibility and hydrophobicity, providing a quick preliminary analysis of the sequences with just amino acid sequences. This will help users screen potential linkers before moving on to more extensive simulation and modelling. </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="sub-subsection">
+                    <h3 id="subsection5" class="sub-subtitle">Submission Form</h3>
+                    <p class="text">The submission form has been created with the primary objective of facilitating the continuous growth of our database by incorporating additional linker sequences contributed by future iGEM teams and researchers. We wish to foster collaboration with the synthetic biology community, actively promoting the exchange of valuable information and encouraging engagement from community members. This page serves as a means for users to readily submit their linker sequences for documentation of linker sequences, thereby contributing to the collective knowledge of the field.</p>
+                </div>
+            </div>
+
+            <div class="sub-section">
+                <h3 id="section5" class="subtitle">Future Scope</h3>
+                <ol class="text">
+                    <li>Strengthen security measures for the submission form to facilitate comprehensive documentation.</li>
+                    <li>Enhance result page functionality for displaying the most recommended requirements.</li>
+                    <li>Provide clearer instructions on result interpretation to improve usability and user-friendliness.</li>
+                    <li>Conduct rigorous testing and validation on test results to ensure accuracy and consistency.</li>
+                </ol>
+            </div>
+
+            <div class="sub-section">
+                <h3 id="section6" class="subtitle">Access Software: <a href="https://github.com/meagan-davies/LINKED/">LINKED</a></h3>
+            </div>
+
+            <div class="ref-section glass" onclick="showRef()">
+                <h3 class="sub-subtitle pb-2">References
+                    <svg id="toggle-ref-button" width="15" height="10" viewBox="0 0 42 25">
+                        <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round"/>
+                    </svg>
+                </h3>
+                <div id="ref-text" style="display: none;"> <!-- Initially hide the reference text -->
+                    <ol class="text">
+                        <li>George RA. and Heringa J. (2002) An analysis of protein domain linkers: their classification and role in protein folding. Protein Engineering 15, 871-879.</li>
+                        <li>George R. Linker Database [Internet]. www.ibi.vu.nl. 2002. Available from: https://www.ibi.vu.nl/programs/linkerdbwww/</li>
+                    </ol>
+                </div>
+            </div>            
+        </div>
+    </div>
+
+{% endblock %}

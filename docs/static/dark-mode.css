@@ -1,0 +1,822 @@
+/*** Testing webpage styling ***/
+
+/* Styling for all pages */
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Quicksand-Regular';
+}
+
+
+/*** TOP NAV BAR ***/
+
+.left-aligned { 
+    margin-left: auto; 
+}
+
+.top-nav{
+    border-bottom: 3PX solid white;
+    background-color: black;
+    padding: auto;
+}
+
+.navbar-toggler {
+    background-color: white;
+}
+
+.navbar-toggler .navbar-toggler-icon {
+    background-color: black; /* Set the color for the three lines inside the hamburger button */
+}
+
+.navbar-toggler {
+    background-color: white !important;
+}
+
+.nav-logo {
+    height: 3rem;
+}
+
+.navbar-nav .nav-link {
+    color: #FDF8BE; 
+    font-size: 1rem;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #f99c1c;
+    font-size: 1rem;
+}
+
+.nav-item {
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+}
+
+.dropdown-menu {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.dropdown-menu a:hover {
+    background-color: black;
+}
+
+.dropdown-menu button:hover {
+    background-color: black;
+}
+
+.dropdown-menu .dropdown-item {
+    color: white;
+}
+
+.dropdown-menu .dropdown-item:hover {
+    color: #FDF8BE;
+}
+
+
+/*** CONTENT ***/
+
+body {
+    background-color: #07011B;
+}
+
+#header-banner-div {
+    width: 100;
+    height: 70vh;
+    background-color: #07011B;
+    /*background-image: url("img/Background Design.svg");*/
+    border-bottom: 3PX solid white;
+    color: #fbe395;
+    font-size: 2rem;
+    margin-top: 5rem;
+    padding-top: 15rem;
+    padding-left: 5rem;
+}
+
+#main-div {
+    width: 100%;
+    display: flex;
+}
+
+.clearfix::after {
+    content:"";
+    display: block;
+    clear: both;
+}
+
+/* SIDE BAR */
+
+#sidebar {
+    min-height: 800px;
+    background-color: black;
+    border-right: 3px solid white;
+    color: #FDF8BE;
+    float: left;
+    padding: 2rem;
+}
+
+.side-circle {
+    width: 12rem;
+    height: 12rem;
+    border-radius: 50%;
+    border: 3px solid white;
+    box-shadow: 0 0 5px 5px #ffffff51;
+    margin: 0 auto;
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Horizontally center content */
+    align-items: center; /* Vertically center content */
+}
+
+#side-progress {
+    width: 11rem;
+    height: 11rem;
+    background-color: white;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+}
+
+#side-progress-value {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    background-color: black;
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Horizontally center content */
+    align-items: center; /* Vertically center content */
+}
+
+.side-lock {
+    width: 4rem;
+    height: 4rem;
+    line-height: 12rem; /* Vertically center text within the icon */
+}
+
+.side-nav {
+    padding-top: 2rem;
+    padding-left: 1rem;
+}
+
+
+.side-title {
+    color: white;
+    padding-bottom: 5px;
+}
+
+.side-title:hover {
+    color: #f99c1c;
+}
+
+.side-subtitle {
+    margin-left: 15px; 
+    color: white;
+    padding-bottom: 5px;
+    font-size: 1rem;
+}
+
+.side-subtitle:hover {
+    color: #f99c1c;
+}
+
+.sub-subtitle {
+    font-family: 'Quicksand-Regular';
+    font-size: 1.8rem;
+    color: #f99c1c;
+    padding-top: 20px;
+}
+
+/* Highlighted style */
+.section-link.active {
+    color: #FDF8BE; /* Change color as needed */
+}
+
+.subsection-link.active {
+    color: #FDF8BE; /* Change color as needed */
+}
+
+
+@media (max-width: 900px) {
+    #sidebar {
+        display: none;
+    }
+
+    #main-content {
+        margin-left: 0;
+        width: 100%;
+    }
+}
+
+@media (min-width: 900px) {
+    #sidebar {
+        display: block;
+        width: 17rem;
+    }
+
+    #main-content {
+        flex: 1;
+    }
+}
+
+/* MAIN SECTION */
+
+#main-content {
+    min-height: 800px;
+    background-color: #07011B;
+    color: #fbe395;
+    float: right;
+}
+
+#main-content p {
+    color: white;
+    font-size: 1.2em;
+}
+
+#main-content li {
+    color: white;
+    font-size: 1.2em;
+}
+
+.list-text {
+    color: white;
+    font-size: 1em !important;
+}
+
+.main-section {
+    height: fit-content;
+    border-radius: 20px;
+    padding: 2rem;
+    margin: 2.5rem;
+}
+
+.sub-section {
+    height: fit-content;
+    padding: 3rem;
+}
+
+.ref-section {
+    height: fit-content;
+    border-radius: 20px;
+    padding: 2rem;
+    margin: 2rem;
+    cursor: pointer;
+}
+
+.ref-section.active .toggle-ref-button {
+    transform: rotate(180deg);
+}
+
+.toggle-ref-button {
+    transition: transform 0.5s ease-in;
+    margin-top: 5px;
+    align-items: center;
+}
+
+.ref-text {
+    display: none; /* Initially hide the additional text */
+    color: #fff;
+    padding-bottom: 10px;
+}
+
+.ref-text li {
+    font-size: 1em;
+}
+
+@media (max-width: 1000px) {
+    .main-section {
+        height: fit-content;
+        border-radius: 20px;
+        padding: 1rem;
+        margin: 1rem;
+    }
+    
+    .sub-section {
+        height: fit-content;
+        padding: 1rem;
+        margin: 1rem;
+    }
+}
+
+/* Figure */
+
+.circle-container {
+    width: 100%;
+    text-align: center;
+}
+
+.circle-nav {
+    width: 14rem;
+    height: 14rem;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 1rem;
+    line-height: 14rem;
+}
+
+.circle-nav:hover {
+    box-shadow: 0 0 8px 8px #ffffff51;
+}
+
+/* Figure */
+
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Adjust the width as needed */
+    gap: 2rem;
+    place-content: center;
+    place-items: center;
+    place-self: center;
+}
+
+.photo-grid2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); /* Adjust the width as needed */
+    gap: 5rem;
+    place-content: center;
+    place-items: center;
+    place-self: center;
+}
+
+/* Media query to change the layout to a single column on small screens */
+@media (max-width: 600px) {
+    .photo-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.img-form {
+    width: 20rem;
+    height: 25rem;
+    border-radius: 20px;
+    display: inline-block;
+    margin: 1rem;
+    object-fit: cover; /* Fill the available space while maintaining aspect ratio */
+    object-position: center center; /* Center the image within the container */
+    overflow: hidden;
+}
+
+.img-form2 {
+    width: 30rem;
+    height: 20rem;
+    border-radius: 20px;
+    display: inline-block;
+    margin: 1rem;
+    object-fit: cover; /* Fill the available space while maintaining aspect ratio */
+    object-position: center center; /* Center the image within the container */
+    overflow: hidden;
+}
+
+.img-format { /* Scalable rectangle format */
+    max-height: 30rem;
+    max-width: 85%;
+    width: auto;
+    height: auto;
+    border-radius: 20px;
+    display: inline-block;
+    margin: 1rem;
+    object-fit: cover; /* Fill the available space while maintaining aspect ratio */
+    object-position: center center; /* Center the image within the container */
+    overflow: hidden;
+}
+
+.img-format2 { /* Circle format */
+    max-height: 30rem;
+    max-width: 85%;
+    width: auto;
+    height: auto;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 1rem;
+    object-fit: cover; /* Fill the available space while maintaining aspect ratio */
+    object-position: center center; /* Center the image within the container */
+    overflow: hidden;
+}
+
+.img-format3 { /* Shorter scalable rectangle format */
+    max-height: 15rem;
+    max-width: 85%;
+    width: auto;
+    height: auto;
+    border-radius: 20px;
+    display: inline-block;
+    margin: 1rem;
+    object-fit: cover; /* Fill the available space while maintaining aspect ratio */
+    object-position: center center; /* Center the image within the container */
+    overflow: hidden;
+}
+
+.img-format4 { /* Even Shorter scalable rectangle format */
+    max-height: 10rem;
+    max-width: 85%;
+    width: auto;
+    height: auto;
+    border-radius: 20px;
+    display: inline-block;
+    margin: 1rem;
+    object-fit: cover; /* Fill the available space while maintaining aspect ratio */
+    object-position: center center; /* Center the image within the container */
+    overflow: hidden;
+}
+
+.img-format5 { /* Shorter scalable rectangle format */
+    max-height: 20rem;
+    max-width: 85%;
+    width: auto;
+    height: auto;
+    border-radius: 20px;
+    display: inline-block;
+    margin: 1rem;
+    object-fit: cover; /* Fill the available space while maintaining aspect ratio */
+    object-position: center center; /* Center the image within the container */
+    overflow: hidden;
+}
+
+.img-format6 { 
+    max-height: 5rem;
+    max-width: 85%;
+    width: auto;
+    height: auto;
+    border-radius: 20px;
+    display: inline-block;
+    margin: 1rem;
+    object-fit: cover; /* Fill the available space while maintaining aspect ratio */
+    object-position: center center; /* Center the image within the container */
+    overflow: hidden;
+}
+
+.figtext-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.figure {
+    flex: 1;
+    max-width: 100%;
+    margin: 1.5rem;
+    align-items: center;
+    place-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.box-img {
+    width: 30rem;
+    height: 20rem;
+    border-radius: 20px;
+    margin-bottom: 1rem;
+    object-fit: cover; /* Fill the available space while maintaining aspect ratio */
+    object-position: center center; /* Center the image within the container */
+    overflow: hidden;
+}
+
+.square-img {
+    width: 25rem;
+    height: 25rem;
+    border-radius: 20px;
+    margin-bottom: 1rem;
+    object-fit: cover; /* Fill the available space while maintaining aspect ratio */
+    object-position: center center; /* Center the image within the container */
+    overflow: hidden;
+}
+
+.wide-box-img {
+    width: 40rem;
+    height: 20rem;
+    border-radius: 20px;
+    margin-bottom: 1rem;
+    object-fit: cover; /* Fill the available space while maintaining aspect ratio */
+    object-position: center center; /* Center the image within the container */
+    overflow: hidden;
+}
+
+.tall-box-img {
+    width: 20rem;
+    height: 25rem;
+    border-radius: 20px;
+    margin-bottom: 1rem;
+    object-fit: cover; /* Fill the available space while maintaining aspect ratio */
+    object-position: center center; /* Center the image within the container */
+    overflow: hidden;
+}
+
+.taller-box-img {
+    width: 20rem;
+    height: 40rem;
+    border-radius: 20px;
+    margin-bottom: 1rem;
+    object-fit: cover; /* Fill the available space while maintaining aspect ratio */
+    object-position: center center; /* Center the image within the container */
+    overflow: hidden;
+}
+
+.tall-big-box-img {
+    width: 35rem;
+    height: auto;
+    border-radius: 20px;
+    margin-bottom: 1rem;
+    object-fit: cover; /* Fill the available space while maintaining aspect ratio */
+    object-position: center center; /* Center the image within the container */
+    overflow: hidden;
+}
+
+.circle-img {
+    width: 25rem;
+    height: 25rem;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    object-fit: cover; /* Fill the available space while maintaining aspect ratio */
+    object-position: center center; /* Center the image within the container */
+    overflow: hidden;
+}
+
+.hp-box-img {
+    width: 15rem;
+    height: 20rem;
+    border-radius: 20px;
+    margin-bottom: 1rem;
+    object-fit: cover; /* Fill the available space while maintaining aspect ratio */
+    object-position: center center; /* Center the image within the container */
+    overflow: hidden;
+    border: 3px solid white;
+    box-shadow: 0 10px 32px 0 rgba(0, 0, 0, 0.4);
+}
+
+.fig-label {
+    text-align: center;
+    max-width: 25rem;
+}
+
+.fig-label2 {
+    text-align: center;
+    max-width: 80%;
+}
+
+.fig-text {
+    flex: 1;
+    max-width: 100%;
+    min-width: 45%;
+}
+
+/* Add a media query for screens smaller than 1000px */
+@media (max-width: 1000px) {
+    .figtext-container {
+        flex-direction: column; /* Stack text below figures */
+    }
+
+    .figure {
+        flex-basis: 100%; /* Take up the full width of the container */
+        display: grid; /* Use CSS Grid for layout */
+        grid-template-columns: 1fr; /* Create a single column grid */
+        grid-template-rows: auto auto; /* Allow rows to expand based on content */
+        grid-gap: 1rem; /* Add some spacing between images and text */
+    }
+
+    .box-img {
+        width: 100%; /* Take up 100% of the column width */
+        object-fit: cover; /* Fill the available space while maintaining aspect ratio */
+    }
+
+    .square-img {
+        width: 100%; /* Take up 100% of the column width */
+        object-fit: cover; /* Fill the available space while maintaining aspect ratio */
+    }
+
+    .wide-box-img {
+        width: 100%; /* Take up 100% of the column width */
+        object-fit: cover; /* Fill the available space while maintaining aspect ratio */
+    }
+
+    .tall-box-img {
+        width: 100%; /* Take up 100% of the column width */
+        object-fit: cover; /* Fill the available space while maintaining aspect ratio */
+    }
+
+    .tall-big-box-img {
+        width: 100%; /* Take up 100% of the column width */
+        object-fit: cover; /* Fill the available space while maintaining aspect ratio */
+    }
+
+    .circle-img {
+        width: 100%; /* Take up 100% of the column width */
+        object-fit: cover; /* Fill the available space while maintaining aspect ratio */
+    }
+
+    .fig-label,
+    .fig-text {
+        max-width: 100%; /* Text takes up full width */
+        margin: 1rem 0; /* Add spacing between text elements */
+    }
+}
+
+
+
+/* Glass Effect */
+.glass {
+    background: linear-gradient(
+        325deg,
+        rgba(47, 22, 145, 0.2),
+        rgba(255, 255, 255, 0)
+    );
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 3px solid white;
+    box-shadow: 0 10px 32px 0 rgba(0, 0, 0, 0.4);
+}
+
+
+
+/*** FOOTER ***/
+
+#page-footer {
+    padding: 2rem;
+    background-color: black;
+    border-top: 3PX solid white;
+    color: #fbe395;
+}
+
+
+.footer-logo{
+    width: 10rem;
+    padding-bottom: 2vh;
+}
+
+.social-media{
+    width: 2.5rem;
+    padding: 0.1rem;
+    display: inline-block;
+}
+
+.social-media.fb:hover img{
+    content: url('https://static.igem.wiki/teams/4944/wiki/img/icons/facebook-icon-c.svg');
+}
+
+.social-media.tw:hover img{
+    content: url('https://static.igem.wiki/teams/4944/wiki/img/icons/twitter-icon-c.svg');
+}
+
+.social-media.in:hover img{
+    content: url('https://static.igem.wiki/teams/4944/wiki/img/icons/instagram-icon-c.svg');
+}
+
+.social-media.li:hover img{
+    content: url('https://static.igem.wiki/teams/4944/wiki/img/icons/linkedin-icon-c.svg');
+}
+
+.social-media.yo:hover img{
+    content: url('https://static.igem.wiki/teams/4944/wiki/img/icons/youtube-icon-c.svg');
+}
+
+.social-media.ti:hover img{
+    content: url('https://static.igem.wiki/teams/4944/wiki/img/icons/tiktok-icon-c.svg');
+}
+
+.social-media.ma:hover img{
+    content: url('https://static.igem.wiki/teams/4944/wiki/img/icons/mail-icon-c.svg');
+}
+
+.mail {
+    display:inline-block;
+}
+
+.socials{
+    margin-top: 1rem;
+    padding-left: 0.7rem;
+}
+
+.nav-title{
+    line-height: 10vh;
+    text-decoration: none;
+    color: #fbe395;
+    padding-bottom: 2%;
+}
+
+.nav-title:hover {
+    line-height: 10vh;
+    text-decoration: none;
+    color: #D62923;
+    padding-bottom: 2%;
+}
+
+#footer ul a{
+    color: white; 
+    text-decoration: none;
+    font-weight: 100;
+    padding: 0 0rem;
+    text-align: left;
+}
+
+#footer ul a:hover{
+    text-decoration: underline;
+    color: #FDF8BE;
+}
+
+#footer h3{
+    color: #fbe395; 
+    text-decoration: none;
+    padding: 0 0rem;
+    text-align: left;
+    font-size: large;
+}
+
+#footer .section {
+    padding-top: 2vh;
+}
+
+.license {
+    text-align: center;
+}
+
+
+
+/*** FONT ***/
+
+/* Quicksand-Bold */
+@font-face {
+    font-family: 'Quicksand-Bold';
+    src: url('https://static.igem.wiki/teams/4944/wiki/font/quicksand/quicksand-bold.ttf') format('truetype')
+}
+
+/* Quicksand-Light */
+@font-face {
+    font-family: 'Quicksand-Light';
+    src: url('https://static.igem.wiki/teams/4944/wiki/font/quicksand/quicksand-light.ttf') format('truetype')
+}
+
+/* Quicksand-Medium */
+@font-face {
+    font-family: 'Quicksand-Medium';
+    src: url('https://static.igem.wiki/teams/4944/wiki/font/quicksand/quicksand-medium.ttf') format('truetype')
+}
+
+/* Quicksand-Regular */
+@font-face {
+    font-family: 'Quicksand-Regular';
+    src: url('https://static.igem.wiki/teams/4944/wiki/font/quicksand/quicksand-regular.ttf') format('truetype')
+}
+
+/* Quicksand-SemiBold */
+@font-face {
+    font-family: 'Quicksand-SemiBold';
+    src: url('https://static.igem.wiki/teams/4944/wiki/font/quicksand/quicksand-semibold.ttf') format('truetype')
+}
+
+/* Open Sans-Regular */
+@font-face {
+    font-family: 'Open_Sans-Regular';
+    src: url('https://static.igem.wiki/teams/4944/wiki/font/open-sans/opensans-regular.ttf') format('truetype');
+}
+
+/* Open Sans-Light */
+@font-face {
+    font-family: 'Open_Sans-Light';
+    src: url('https://static.igem.wiki/teams/4944/wiki/font/open-sans/opensans-regular.ttf') format('truetype');
+}
+
+
+
+/*** TEXT ***/
+
+.title{
+    line-height: 10vh;
+    color: #fbe395;
+    padding-bottom: 2%;
+}
+
+.subtitle{
+    font-family: 'Quicksand-Regular';
+    font-size: 2rem;
+    color: #f99c1c;
+}
+
+.subtitle2{
+    font-family: 'Quicksand-Regular';
+    font-size: 1.8rem;
+    color: #fbe395;
+    padding-top: 1%;
+}
+
+.text{
+    font-family: 'Quicksand-Light';
+    font-size: 6h;
+    color: white;
+}
+
+.label {
+    font-family: 'Quicksand-Light';
+    font-size: 4h;
+    color: #fbe395;
+}
+
+.smalltext{
+    font-size: 4vh;
+    color:#fbe395;
+}
+.smallertext{
+    font-size: 2vh;
+    color:#fbe395;
+}
+
+
+
