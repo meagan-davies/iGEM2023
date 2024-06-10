@@ -45,22 +45,59 @@ The static assets are in the `static` directory. The layout and templates are in
   * [Flask](https://palletsprojects.com/p/flask/): Python framework
   * [Fronzen-Flask](https://pythonhosted.org/Frozen-Flask): Library that builds the wiki to be deployed as a static website
   * [Bootstrap](https://getbootstrap.com/docs/5.0/components): CSS and JS components used
-
-### Building locally (advanced users)
+### Building Locally
 
 To work locally with this project, follow the steps below:
 
 #### Install
+
+* Using vscode the repository can be cloned from github
+* Next create a virtual environment by running:
 ```bash
-git clone https://gitlab.igem.org/2023/calgary.git
-cd calgary
 python3 -m venv venv
 . venv/bin/activate # on Linux, MacOS; or
 . venv\Scripts\activate # on Windows
 pip install -r dependencies.txt
 ```
 
-#### Execute
+#### Execute Locally
+
+* To run the website open a terminal and run:
 ```bash
 python app.py
 ```
+* In browser of choice run http://0.0.0.0:8080 or http://localhost:8080/
+
+### Using GitHub
+
+* Note when using GitHub Git commands are used to control the movement of data
+* To push and pull code in the repository
+    - To push code: Use Source Control in side panel to commit changes to the respository and label updates
+    - To pull code: Open a bash terminal and run
+```bash
+git pull
+```
+* Note branches can be used to contain updates and prevent overwriting updates
+    - When merging branches it is important to avoiding overwriting code
+
+### Vscode Extensions
+
+* Note to simplify the use of GitHub in Vscode the following extensions are utlised:
+    - Git Extension Pack
+    - GitHub Codespaces
+    - GitHub Pull Requests
+ 
+#### Building/Using Frozen Flask
+
+* To freeze the website such that it can be deployed using github pages download then following dependencies:
+```bash
+pip install frozen-flask
+pip install flask_flatpages
+```
+* Reference app.py for building features using frozen-flask and flatpages to freeze the webpages.
+* To build/freeze the webpage run:
+```bash
+python app.py build
+```
+* Then rename the generated folder "docs".
+* In the github repository configure the settings under pages such that it builds/deploys from the docs/ folder.
